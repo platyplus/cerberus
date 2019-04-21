@@ -1,0 +1,59 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:11-alpine
+    restart: always
+    ports: # TODO: dev only
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: metabase
+      POSTGRES_USER: metabase
+      POSTGRES_DB: metabase
+      PGDATA: /var/lib/postgresql/data
+    volumes:
+      # declare your mount volume /host/dir:/container/dir
+      - ./postgres-data:/var/lib/postgresql/data
+
+  metabase-app:
+    image: metabase/metabase
+    restart: always
+    #ports:
+    #  - 3001:3000
+    volumes:
+      # declare your mount volume /host/dir:/container/dir
+      - ./metabase-data:/metabase-data
+    environment:
+      MB_DB_TYPE: postgres
+      MB_DB_DBNAME: metabase
+      MB_DB_PORT: 5432
+      MB_DB_USER: metabase
+      MB_DB_PASS: metabase
+      MB_DB_HOST: postgres
+    depends_on:
+      - postgres
+    links:
+      - postgres
+    labels:
+      - 'traefik.frontend.rule=Host:metabase.localhost' # TODO: dev only
+      - 'traefik.port=3000'
+
+  importer:
+    build:
+      context: ./importer
+      #args:
+      #  NODE_ENV: development
+    command: npm run dev # TODO: dev only
+    volumes:
+      - ./importer:/server:delegated # TODO: dev only
+      - ./data:/data # TODO: dev only??
+
+  reverse-proxy:
+    image: traefik # The official Traefik docker image
+    command:
+      - '--api'
+      - '--docker'
+      - '--web'
+    ports:
+      - '80:80' # The HTTP port
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
