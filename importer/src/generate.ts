@@ -19,7 +19,7 @@ const mergeArray = (objValue: any, srcValue: any) => {
 
 // Constants
 const METADATA_FILE = 'metadata.xlsx'
-const DEST_FOLDER = './src/schema'
+const DEST_FOLDER = './src/entity'
 
 // Classes
 enum PropertyType {

@@ -1,4 +1,5 @@
 import chokidar from 'chokidar'
+import 'reflect-metadata'
 
 const DATA_PATH = process.env.DATA_PATH || '/data'
 const log = console.log.bind(console)

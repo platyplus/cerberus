@@ -1,17 +1,17 @@
 version: '3'
 services:
-  # metadata:
-  #   image: postgres:11-alpine
-  #   restart: always
-  #   ports: # TODO: dev only
-  #     - 5432:5432
-  #   environment:
-  #     POSTGRES_PASSWORD: metabase
-  #     POSTGRES_USER: metabase
-  #     POSTGRES_DB: metabase
-  #   volumes:
-  #     # declare your mount volume /host/dir:/container/dir
-  #     - ./postgres-data:/var/lib/postgresql/data
+  postgres:
+    image: postgres:11-alpine
+    restart: always
+    ports: # TODO: dev only
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      # declare your mount volume /host/dir:/container/dir
+      - ./postgres-data:/var/lib/postgresql/data
 
   metabase-app:
     image: metabase/metabase
