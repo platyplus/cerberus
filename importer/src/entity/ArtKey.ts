@@ -1,5 +1,5 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, Column } from 'typeorm'
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm'
 import { ArtKeyCd4Weight } from './ArtKeyCd4Weight'
 import { ArtKeyNewRegimen } from './ArtKeyNewRegimen'
 import { ArtKeyHaartToxicity } from './ArtKeyHaartToxicity'
@@ -95,10 +95,10 @@ export class ArtKey {
   maximumCd4Date: string
 
   @Column()
-  2ndLine: string
+  _2ndLine: string
 
   @Column()
-  2ndLineChangeDate: string
+  _2ndLineChangeDate: string
 
   @Column()
   currentHaartRegimen: string

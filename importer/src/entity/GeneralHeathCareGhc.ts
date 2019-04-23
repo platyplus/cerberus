@@ -1,5 +1,5 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, Column } from 'typeorm'
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm'
 import { GhcCategory } from './GhcCategory'
 import { GhcMedication } from './GhcMedication'
 
