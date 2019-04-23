@@ -66,3 +66,9 @@ postgres-data/
 
 # outDir typescript
 dist/
+
+# Silly temporary excel files
+~$*
+
+# TODO files/repertories
+*TODO*
