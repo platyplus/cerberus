@@ -127,7 +127,8 @@ class Entity {
         `import { ${(<any>dependencies)[curr].join(', ')} } from '${curr}'\n`,
       ''
     )
-    return `${strDependencies}
+    return `// AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
+${strDependencies}
 @Entity()
 export class ${this.name} {
   @PrimaryGeneratedColumn('uuid')

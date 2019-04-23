@@ -1,3 +1,4 @@
+// AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
 import { Entity, Column } from 'typeorm'
 import { TbKeySample } from './TbKeySample'
 
