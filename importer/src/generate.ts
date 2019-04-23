@@ -2,6 +2,10 @@ import _ from 'lodash'
 import { readFile, utils } from 'xlsx'
 import fs from 'fs'
 import rimraf from 'rimraf'
+/** TODO: Works, but still some to be done:
+ * - TbKeySample is not mapped correctly (different way to name repeated fields)
+ * - column types: string, dates, numbers...
+ */
 
 // Log helper
 const log = console.log.bind(console)
@@ -12,8 +16,6 @@ const mergeArray = (objValue: any, srcValue: any) => {
     return _.union(objValue, srcValue)
   }
 }
-// TODO: remove?
-const hasNumber = (myString: string) => /\d/.test(myString)
 
 // Constants
 const METADATA_FILE = 'metadata.xlsx'
@@ -46,7 +48,7 @@ class Property {
     this.name = _.camelCase(name)
   }
   columnType(): string {
-    return '' // TODO:
+    return '' // TODO: numbers, strings, dates...
   }
   dependencies(): Object {
     let dependencies: { [k: string]: any } = { typeorm: ['Column'] }
