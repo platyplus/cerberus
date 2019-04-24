@@ -6,52 +6,88 @@ export class DeathRegister {
   @PrimaryGeneratedColumn('uuid')
   id: string
   
-  @Column()
+  @Column({
+    nullable: true
+  })
   mdMcode: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a01PatientName: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a02FatherName: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a03Sexe: string
 
-  @Column()
-  a05Age: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  a05Age: number
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a07PatientTarget: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   address: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   plh: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   onAntiTb: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   onArt: string
 
-  @Column()
-  expiredDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  expiredDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   placeOfPatientExpired: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   causeOfDeath: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   hivRelated: string
 
-  @Column()
-  verify: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  verify: number
 
-  @Column()
-  dateOfSaving: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  dateOfSaving: Date
 
 }

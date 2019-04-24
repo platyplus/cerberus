@@ -1,5 +1,5 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm'
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm'
 import { Vcct } from './Vcct'
 
 @Entity()
@@ -7,16 +7,24 @@ export class VcctDrugType {
   @PrimaryGeneratedColumn('uuid')
   id: string
   
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctTypeOfDrugs: string
 
-  @ManyToOne(type => Vcct, vcct => vcct.vcctDrugTypes)
-  vcct: Vcct
+  @ManyToOne(type => Vcct, vcct => vcct.vcctDrugTypes, {
+    eager: true
+  })
+  vcct: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctDrugName: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctWayOfUse: string
 
 }

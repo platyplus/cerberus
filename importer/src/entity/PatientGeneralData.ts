@@ -6,76 +6,132 @@ export class PatientGeneralData {
   @PrimaryGeneratedColumn('uuid')
   id: string
   
-  @Column()
+  @Column({
+    nullable: true
+  })
   mdMlocation: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   mdMcode: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   serialNumber: string
 
-  @Column()
-  a00RegistrationDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  a00RegistrationDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a01PatientName: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a02FatherName: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a03Sexe: string
 
-  @Column()
-  a041DateOfBirth: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  a041DateOfBirth: Date
 
-  @Column()
-  a05Age: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  a05Age: number
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a052DateOfBirthEstimated: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a06PlaceOfBirth: string
 
-  @Column()
-  a06AHeight: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  a06AHeight: number
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a07PatientTarget: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a07AMaritalStatus: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a08LevelEducation: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a09Occupation: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a10AddressTownship: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a10AddressTownshipName: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a11GeographicalOrigin: string
 
-  @Column()
-  a12DistanceToMdMclinic: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  a12DistanceToMdMclinic: number
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a13OtherId: string
 
-  @Column()
-  counter: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  counter: number
 
-  @Column()
-  verify: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  verify: number
 
-  @Column()
-  a20DateOfSavingData: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  a20DateOfSavingData: Date
 
 }

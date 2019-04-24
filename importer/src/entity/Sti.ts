@@ -7,244 +7,411 @@ export class Sti {
   @PrimaryGeneratedColumn('uuid')
   id: string
   
-  @Column()
+  @Column({
+    nullable: true
+  })
   mdMcode: string
 
-  @Column()
-  a00RegistrationDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  a00RegistrationDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a01PatientName: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a02FatherName: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a03Sexe: string
 
-  @Column()
-  a041DateOfBirth: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  a041DateOfBirth: Date
 
-  @Column()
-  a05Age: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  a05Age: number
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a07PatientTarget: string
 
-  @Column()
-  stiVisitDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  stiVisitDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiMdMstaff: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiNewPatient: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiBackgroundPreviousSitTreated: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiSymptoms: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiSymptomsScoreThroat: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiSymptomsVaginalDOpt: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiSymptomsVDischarge: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiSymptomsLowAbdoOpt: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiSymptomsLowAbdoPain: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiSymptomsDysuria: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiSymptomsUlcerOpt: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiSymptomsUlcer: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiSymptomstAnalDischarge: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiSymptomsItchinessDescription: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiSymptomsSwellingOverGenitalOpt: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiSymptomsSwelling: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiSymptomsWarts: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiSymptomsScrotal: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiSymptomsUrethralDischarge: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiSymptomsOther: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiSymptomsComment: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiPhysicalExam: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiPExamOralUlcerOpt: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiPExamPyaryngitis: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiPExamSkinRash: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiPExamTendernessOverLowerAbdomen: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiPExamVulva: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiPExamVaginalD: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiPExamCervicalD: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiPExamAdnexalTenderness: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiPExamCervicalMotionTenderness: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiPExamInguinalBubo: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiPExamGenitalUlcer: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiPExamWarts: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiPExamUrethralDischarge: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiPExamAnalDischarge: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiPExamScrotal: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiPExamOther: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiPExamComment: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiTestPregnancyTest: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiPExamTest: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiTestSniffTest: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiTestPh: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiTestUrethralSmear: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiTestVaginalSmear: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiTestAnalSmear: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiTestUlcerSmear: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiTestThroatSwab: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiTestChlamydia: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiTestRpr: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiTestRprDil: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiTestOtherInvestigation: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiPresumptiveDiagnosis: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiPDiagnosisOther: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiM01Lab: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiTreatmentTreatmentPlan: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiTreatmentAllergy: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiTreatmentAllergyOther: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiTreatmentPregnant: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiTreatmentSurgicalIntervention: string
 
-  @OneToMany(type => StiMedication, stiMedication => stiMedication.sti)
+  @OneToMany(type => StiMedication, stiMedication => stiMedication.sti, {
+    cascade: true
+  })
   stiMedications: StiMedication[]
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiN03OtherTreatment: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiReferred: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiStiCondom: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiPartnerTreatment: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiRemark: string
 
-  @Column()
-  stiDateNextVisit: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  stiDateNextVisit: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiPlanForNextVisit: string
 
-  @Column()
-  verify: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  verify: number
 
-  @Column()
-  lastRegistrationDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  lastRegistrationDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   key: string
 
 }

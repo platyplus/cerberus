@@ -7,166 +7,293 @@ export class Vcct {
   @PrimaryGeneratedColumn('uuid')
   id: string
   
-  @Column()
+  @Column({
+    nullable: true
+  })
   mdMcode: string
 
-  @Column()
-  a00RegistrationDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  a00RegistrationDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a01PatientName: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a02FatherName: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a03Sexe: string
 
-  @Column()
-  a041DateOfBirth: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  a041DateOfBirth: Date
 
-  @Column()
-  a05Age: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  a05Age: number
 
-  @Column()
-  vcctVisitDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  vcctVisitDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctTbPatient: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctPlaceofTesting: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a07PatientTarget: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctUnsafeSexInLastSixWeeks: string
 
-  @Column()
-  vcctIdUsince: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  vcctIdUsince: number
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctDrugUseWithinLast1Year: string
 
-  @OneToMany(type => VcctDrugType, vcctDrugType => vcctDrugType.vcct)
+  @OneToMany(type => VcctDrugType, vcctDrugType => vcctDrugType.vcct, {
+    cascade: true
+  })
   vcctDrugTypes: VcctDrugType[]
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctShareNeedleOrSyringeInLastSixWeeks: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctShareNeedleOrSyringeInLastSixWeeks1: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctBloodTransfusionInLastSixWeeks: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctBodyPierceAndTattooInLastSixWeeks: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctPrevHivTesting: string
 
-  @Column()
-  vcctPrevHivTestingDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  vcctPrevHivTestingDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctResultOfLastHivTesting: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctPretestPerformed: string
 
-  @Column()
-  vcctPreTestDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  vcctPreTestDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctHivTest: string
 
-  @Column()
-  vcctHivBloodTest: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  vcctHivBloodTest: number
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctPostTestPerformed: string
 
-  @Column()
-  vcctPostTestDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  vcctPostTestDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctTestResult: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctTestResultByNhl: string
 
-  @Column()
-  vcctNhlDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  vcctNhlDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctHistoryOfSyphilis: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctTestForSyphilisInCurrentVisit: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctCurrentIctTestResult: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctCurrentRprTestResult: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctRprPositiveDilution: string
 
-  @Column()
-  vcct1stTimeHivTest: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  vcct1stTimeHivTest: number
 
-  @Column()
-  vcct1stTimeHivTestAndPositive: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  vcct1stTimeHivTestAndPositive: number
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctPartnerHivTesting: string
 
-  @Column()
-  vcctDateOfPartnerHivTesting: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  vcctDateOfPartnerHivTesting: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctKnownYourPartnerHivStatus: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctIfYouDontKnowOfferPartnerHivTest: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctPatientShouldReturnIn: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctEndOfVisitOther: string
 
-  @Column()
-  vcctDateNextVisit: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  vcctDateNextVisit: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctHivRetesting: string
 
-  @Column()
-  vcctHivRetestingDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  vcctHivRetestingDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctHivRetestingResult: string
 
-  @Column()
-  vcctNhlhivRetestingDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  vcctNhlhivRetestingDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vcctNhlhivRetestingResult: string
 
-  @Column()
-  vcctFollowupvisitdate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  vcctFollowupvisitdate: Date
 
-  @Column()
-  verify: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  verify: number
 
-  @Column()
-  lastRegistrationDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  lastRegistrationDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   key: string
 
 }

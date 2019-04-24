@@ -1,5 +1,5 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm'
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm'
 import { GeneralHeathCareGhc } from './GeneralHeathCareGhc'
 
 @Entity()
@@ -7,19 +7,30 @@ export class GhcMedication {
   @PrimaryGeneratedColumn('uuid')
   id: string
   
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcMedicineName: string
 
-  @ManyToOne(type => GeneralHeathCareGhc, generalHeathCareGhc => generalHeathCareGhc.ghcMedications)
-  generalHeathCareGhc: GeneralHeathCareGhc
+  @ManyToOne(type => GeneralHeathCareGhc, generalHeathCareGhc => generalHeathCareGhc.ghcMedications, {
+    eager: true
+  })
+  generalHeathCareGhc: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcDosage: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcFrequency: string
 
-  @Column()
-  ghcNumberDays: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  ghcNumberDays: number
 
 }

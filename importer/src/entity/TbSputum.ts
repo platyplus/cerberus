@@ -1,5 +1,5 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm'
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm'
 import { ArtConsultationPlha } from './ArtConsultationPlha'
 
 @Entity()
@@ -7,118 +7,198 @@ export class TbSputum {
   @PrimaryGeneratedColumn('uuid')
   id: string
   
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbSputumSmear: string
 
-  @ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.tbSputums)
-  artConsultationPlha: ArtConsultationPlha
+  @ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.tbSputums, {
+    eager: true
+  })
+  artConsultationPlha: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbSputumXpert: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbSputumCulture: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbSputumH: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbSputumR: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbSputumS: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbSputumE: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbSputumLpa: string
 
-  @Column()
-  tbSputumSampleDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  tbSputumSampleDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbOtherSample: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbOtherSample1Smear: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbOtherSample1Xpert: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbOtherSample1Culture: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbOtherSample1H: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbOtherSample1R: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbOtherSample1S: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbOtherSample1E: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbOtherSample1Lpa: string
 
-  @Column()
-  tbOtherSample1SampleDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  tbOtherSample1SampleDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbOtherSample2Smear: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbOtherSample2Xpert: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbOtherSample2Culture: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbOtherSample2H: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbOtherSample2R: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbOtherSample2S: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbOtherSample2E: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbOtherSample2Lpa: string
 
-  @Column()
-  tbOtherSample2SampleDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  tbOtherSample2SampleDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbOtherSample3Smear: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbOtherSample3Xpert: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbOtherSample3Culture: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbOtherSample3H: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbOtherSample3R: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbOtherSample3S: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbOtherSample3E: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbOtherSample3Lpa: string
 
-  @Column()
-  tbOtherSample3SampleDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  tbOtherSample3SampleDate: Date
 
 }

@@ -1,5 +1,5 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm'
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm'
 import { ArtAdherence } from './ArtAdherence'
 
 @Entity()
@@ -7,16 +7,27 @@ export class AdhTbEpisode {
   @PrimaryGeneratedColumn('uuid')
   id: string
   
-  @Column()
-  adhTbStartDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  adhTbStartDate: Date
 
-  @ManyToOne(type => ArtAdherence, artAdherence => artAdherence.adhTbEpisodes)
-  artAdherence: ArtAdherence
+  @ManyToOne(type => ArtAdherence, artAdherence => artAdherence.adhTbEpisodes, {
+    eager: true
+  })
+  artAdherence: string
 
-  @Column()
-  adhTbStopDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  adhTbStopDate: Date
 
-  @Column()
-  adhTbRestartingDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  adhTbRestartingDate: Date
 
 }

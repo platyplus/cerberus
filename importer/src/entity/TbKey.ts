@@ -7,166 +7,286 @@ export class TbKey {
   @PrimaryGeneratedColumn('uuid')
   id: string
   
-  @Column()
+  @Column({
+    nullable: true
+  })
   mdMcode: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a01PatientName: string
 
-  @Column()
-  a05Age: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  a05Age: number
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a03Sexe: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a07PatientTarget: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   hivStatus: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   art: string
 
-  @Column()
-  artStartDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  artStartDate: Date
 
-  @Column()
-  cptDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  cptDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   tbTreatment: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ptbeptb: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   eptbSite: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   eptbSiteOther: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   refeffedIn: string
 
-  @Column()
-  referredInDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  referredInDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   type: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   regimen: string
 
-  @Column()
-  ipDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  ipDate: Date
 
-  @Column()
-  time: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  time: number
 
-  @Column()
-  startCp: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  startCp: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   bacteriologicalConfirmation: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   afbInitialSputum: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   afbInitialX: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   afbInitialCulture: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   afb2MthSputum: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   afb2MthX: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   afb2MthCulture: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   afb3MthSputum: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   afb3MthX: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   afb3MthCulture: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   afb5MthSputum: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   afb5MthX: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   afb5MthCulture: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   endOfTreatmentSputum: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   endOfTreatmentX: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   endOfTreatmentCulture: string
 
-  @Column()
-  afbInitialPositive: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  afbInitialPositive: number
 
-  @Column()
-  afb2MthNegative: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  afb2MthNegative: number
 
-  @Column()
-  afb3MthNegative: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  afb3MthNegative: number
 
-  @OneToMany(type => TbKeySample, tbKeySample => tbKeySample.tbKey)
+  @OneToMany(type => TbKeySample, tbKeySample => tbKeySample.tbKey, {
+    cascade: true
+  })
   tbKeySamples: TbKeySample[]
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   otherSample: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   othStoolResult: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   othUrineResult: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   othLymphNodeResult: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   othOtherTxt: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   othOtherResult: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   radiology: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   cxRayResult: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   xRayResult: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   usgResult: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   outcome: string
 
-  @Column()
-  outcomeDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  outcomeDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   remark: string
 
-  @Column()
-  tbSavingDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  tbSavingDate: Date
 
 }

@@ -8,241 +8,407 @@ export class GeneralHeathCareGhc {
   @PrimaryGeneratedColumn('uuid')
   id: string
   
-  @Column()
+  @Column({
+    nullable: true
+  })
   mdMcode: string
 
-  @Column()
-  a00RegistrationDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  a00RegistrationDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a01PatientName: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a02FatherName: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a03Sexe: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a07PatientTarget: string
 
-  @Column()
-  a041DateOfBirth: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  a041DateOfBirth: Date
 
-  @Column()
-  a05Age: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  a05Age: number
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcNewPatient: string
 
-  @Column()
-  ghcVisitDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  ghcVisitDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcMdMstaff: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcSymptomsConstitutional: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcConstitutionalFatigue: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcConstitutionalFever: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcConstitutionalNightSweats: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcConstitutionalAppetitieLoss: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcConstitutionalWeightLoss: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcConstitutionalPain: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcConstitutionalOther: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcSymptomsRespiratory: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcRespiratoryNonProdCough: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcRespiratoryProductiveCough: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcRespiratoryHemoptysis: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcRespiratoryDiffBreathing: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcRespiratoryChestPain: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcRespiratoryPalpitation: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcRespiratoryOther: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcSymptomsGastrointestinal: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcGastrointestinalAbdPain: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcGastrointestinalNausea: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcGastrointestinalVomiting: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcGastrointestinalDysphagia: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcGastrointestinalDiarrhea: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcGastrointestinalOther: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcSymptomsNeurological: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcNeuroHeadache: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcNeuroConfusion: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcNeuroMemProblem: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcNeuroTingling: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcNeuroInsomnia: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcNeuroYawning: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcSymptomsSkinManifestation: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcSkinItchiness: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcSkinRash: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcSkinLump: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcSkinOther: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcSymptomsAdditionalComments: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcEye: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcEyeComment: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcEarsNose: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcEarsNoseComment: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcOral: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcOralComment: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcLymphNodes: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcLymphNodesComment: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcHeart: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcHeartComment: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcLungs: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcLungsComment: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcAbdomen: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcAbdomenComment: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcNeurological: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcNeurologicalComment: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcAdditionalComments: string
 
-  @OneToMany(type => GhcCategory, ghcCategory => ghcCategory.generalHeathCareGhc)
+  @OneToMany(type => GhcCategory, ghcCategory => ghcCategory.generalHeathCareGhc, {
+    cascade: true
+  })
   ghcCategorys: GhcCategory[]
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcHBsAg: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcHBsAb: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcHcvAb: string
 
-  @Column()
-  ghcApri: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  ghcApri: number
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcLiverFibrosis: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcAllergy: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcAllergyOther: string
 
-  @OneToMany(type => GhcMedication, ghcMedication => ghcMedication.generalHeathCareGhc)
+  @OneToMany(type => GhcMedication, ghcMedication => ghcMedication.generalHeathCareGhc, {
+    cascade: true
+  })
   ghcMedications: GhcMedication[]
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcPatientShouldReturnIn: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   ghcShouldReturnInOther: string
 
-  @Column()
-  ghcDateNextVisit: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  ghcDateNextVisit: Date
 
-  @Column()
-  verify: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  verify: number
 
-  @Column()
-  lastRegistrationDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  lastRegistrationDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   key: string
 
 }

@@ -1,5 +1,5 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm'
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm'
 import { ArtKey } from './ArtKey'
 
 @Entity()
@@ -7,19 +7,32 @@ export class ArtKeyStop {
   @PrimaryGeneratedColumn('uuid')
   id: string
   
-  @Column()
-  artStopDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  artStopDate: Date
 
-  @ManyToOne(type => ArtKey, artKey => artKey.artKeyStops)
-  artKey: ArtKey
+  @ManyToOne(type => ArtKey, artKey => artKey.artKeyStops, {
+    eager: true
+  })
+  artKey: string
 
-  @Column()
-  artRestartDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  artRestartDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   reason: string
 
-  @Column()
-  totalNoOfMissedDose: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  totalNoOfMissedDose: number
 
 }

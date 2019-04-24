@@ -1,5 +1,5 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm'
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm'
 import { TbKey } from './TbKey'
 
 @Entity()
@@ -7,148 +7,245 @@ export class TbKeySample {
   @PrimaryGeneratedColumn('uuid')
   id: string
   
-  @Column()
-  sampleDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  sampleDate: Date
 
-  @ManyToOne(type => TbKey, tbKey => tbKey.tbKeySamples)
-  tbKey: TbKey
+  @ManyToOne(type => TbKey, tbKey => tbKey.tbKeySamples, {
+    eager: true
+  })
+  tbKey: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   method: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result1H: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result1R: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result1E: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result1S: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result1Amk: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result1Km: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result1Cm: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result1Fq: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result1Other: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result2H: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result2R: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result2E: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result2S: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result2Amk: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result2Km: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result2Cm: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result2Fq: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result2Other: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result3H: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result3R: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result3E: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result3S: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result3Amk: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result3Km: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result3Cm: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result3Fq: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result3Other: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result4H: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result4R: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result4E: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result4S: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result4Amk: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result4Km: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result4Cm: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result4Fq: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result4Other: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result5H: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result5R: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result5E: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result5S: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result5Amk: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result5Km: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result5Cm: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result5Fq: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   result5Other: string
 
 }

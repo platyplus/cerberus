@@ -13,184 +13,321 @@ export class ArtKey {
   @PrimaryGeneratedColumn('uuid')
   id: string
   
-  @Column()
+  @Column({
+    nullable: true
+  })
   siteName: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   jailPatient: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   mdMcode: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a01PatientName: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a02FatherName: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a03Sexe: string
 
-  @Column()
-  age: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  age: number
 
-  @Column()
-  a041DateOfBirth: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  a041DateOfBirth: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a07PatientTarget: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   whoStage: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   referral: string
 
-  @Column()
-  referredInDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  referredInDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   referralFrom: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   otherMdmCenter: string
 
-  @Column()
-  durationOnArt: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  durationOnArt: number
 
-  @Column()
-  survivalAt: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  survivalAt: number
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   outcome: string
 
-  @Column()
-  outcomeDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  outcomeDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   remarks: string
 
-  @Column()
-  baselineCd4: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  baselineCd4: number
 
-  @Column()
-  weight: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  weight: number
 
-  @OneToMany(type => ArtKeyCd4Weight, artKeyCd4Weight => artKeyCd4Weight.artKey)
+  @OneToMany(type => ArtKeyCd4Weight, artKeyCd4Weight => artKeyCd4Weight.artKey, {
+    cascade: true
+  })
   artKeyCd4Weights: ArtKeyCd4Weight[]
 
-  @Column()
-  lastCd4: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  lastCd4: number
 
-  @Column()
-  lastWeight: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  lastWeight: number
 
-  @Column()
-  lastCd4Date: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  lastCd4Date: Date
 
-  @Column()
-  maximumCd4: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  maximumCd4: number
 
-  @Column()
-  maximumCd4Date: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  maximumCd4Date: Date
 
-  @Column()
-  _2ndLine: string
+  @Column({
+    nullable: true
+  })
+  '2ndLine': string
 
-  @Column()
-  _2ndLineChangeDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  '2ndLineChangeDate': Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   currentHaartRegimen: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   haarTnaive: string
 
-  @Column()
-  outsideClinicHaartStartDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  outsideClinicHaartStartDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   previousHaartRegimen: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   previousHaartRegimen1: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   previousHaartRegimen2: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   regimen: string
 
-  @Column()
-  mdMhaartStartDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  mdMhaartStartDate: Date
 
-  @OneToMany(type => ArtKeyNewRegimen, artKeyNewRegimen => artKeyNewRegimen.artKey)
+  @OneToMany(type => ArtKeyNewRegimen, artKeyNewRegimen => artKeyNewRegimen.artKey, {
+    cascade: true
+  })
   artKeyNewRegimens: ArtKeyNewRegimen[]
 
-  @OneToMany(type => ArtKeyHaartToxicity, artKeyHaartToxicity => artKeyHaartToxicity.artKey)
+  @OneToMany(type => ArtKeyHaartToxicity, artKeyHaartToxicity => artKeyHaartToxicity.artKey, {
+    cascade: true
+  })
   artKeyHaartToxicitys: ArtKeyHaartToxicity[]
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   methadone: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   treatmentInteruption: string
 
-  @OneToMany(type => ArtKeyStop, artKeyStop => artKeyStop.artKey)
+  @OneToMany(type => ArtKeyStop, artKeyStop => artKeyStop.artKey, {
+    cascade: true
+  })
   artKeyStops: ArtKeyStop[]
 
-  @OneToMany(type => ArtKeyAttb, artKeyAttb => artKeyAttb.artKey)
+  @OneToMany(type => ArtKeyAttb, artKeyAttb => artKeyAttb.artKey, {
+    cascade: true
+  })
   artKeyAttbs: ArtKeyAttb[]
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   presentingInitialOIs: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   otherOIs1: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   otherOIs2: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   otherOIs3: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   otherOIs4: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   otherOIs5: string
 
-  @OneToMany(type => ArtKeyResult, artKeyResult => artKeyResult.artKey)
+  @OneToMany(type => ArtKeyResult, artKeyResult => artKeyResult.artKey, {
+    cascade: true
+  })
   artKeyResults: ArtKeyResult[]
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   abAntiHBs: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   hBeAg: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   hcv: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   agHBs: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   vaccinated: string
 
-  @OneToMany(type => ArtKeyApri, artKeyApri => artKeyApri.artKey)
+  @OneToMany(type => ArtKeyApri, artKeyApri => artKeyApri.artKey, {
+    cascade: true
+  })
   artKeyApris: ArtKeyApri[]
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   liverFibrosis: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   sDate: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   oDate: string
 
-  @Column()
-  artSavingDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  artSavingDate: Date
 
 }

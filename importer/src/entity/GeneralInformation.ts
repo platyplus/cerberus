@@ -6,118 +6,212 @@ export class GeneralInformation {
   @PrimaryGeneratedColumn('uuid')
   id: string
   
-  @Column()
+  @Column({
+    nullable: true
+  })
   mdMcode: string
 
-  @Column()
-  a00RegistrationDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  a00RegistrationDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a01PatientName: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a02FatherName: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a03Sexe: string
 
-  @Column()
-  a041DateOfBirth: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  a041DateOfBirth: Date
 
-  @Column()
-  a05Age: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  a05Age: number
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a07PatientTarget: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   giPlaceOfMedicalCare: string
 
-  @Column()
-  giVisitDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  giVisitDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   a07AMaritalStatus: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   b04CurrentWorkPlace: string
 
-  @Column()
-  a06AHeight: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  a06AHeight: number
 
-  @Column()
-  giBw: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  giBw: number
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   giLbOrKg: string
 
-  @Column()
-  giBmi: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  giBmi: number
 
-  @Column()
-  giTemperature: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  giTemperature: number
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   giCorF: string
 
-  @Column()
-  giBp: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  giBp: number
 
-  @Column()
-  giBp1: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  giBp1: number
 
-  @Column()
-  giRr: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  giRr: number
 
-  @Column()
-  giPulse: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  giPulse: number
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   giReproductiveHealth: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   giContraception: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   giContraceptionType: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   giOtherContraceptionType: string
 
-  @Column()
-  giDrugTakenOn: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  giDrugTakenOn: Date
 
-  @Column()
-  giLmPdate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  giLmPdate: Date
 
-  @Column()
-  giParity: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  giParity: number
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   giCondomUseForLastSex: string
 
-  @Column()
-  giNumberClientsLastWorkingDay: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  giNumberClientsLastWorkingDay: number
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   giShareNeedleOrSyringeInLast: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   giShareNeedleOrSyringeInLastMonth: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   giShareNeedleOrSyringeInLast6Months: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   giRemarks: string
 
-  @Column()
-  verify: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  verify: number
 
-  @Column()
-  lastRegistrationDate: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  lastRegistrationDate: Date
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   key: string
 
 }

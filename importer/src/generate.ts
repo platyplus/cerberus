@@ -2,13 +2,10 @@ import _ from 'lodash'
 import { readFile, utils } from 'xlsx'
 import fs from 'fs'
 import rimraf from 'rimraf'
+import { cursorTo } from 'readline'
 /** TODO: Works, but still some to be done:
  * - TbKeySample is not mapped correctly (different way to name repeated fields)
- * - column types: string, dates, numbers...
- */
-
-/** Important notes to keep in mind
- * - Adds '_' to all the fields starting with a number
+ * - unique columns in the schema such as mdmCode...
  */
 
 // Log helper
@@ -23,7 +20,6 @@ const mergeArray = (objValue: any, srcValue: any): any => {
 
 const propertyName = (rawName: string): string => {
   let result = _.camelCase(rawName)
-  if (result.match(/^\d/)) result = '_' + result
   return result
 }
 
@@ -36,7 +32,10 @@ const entityName = (rawName: string): string => {
 // Constants
 const METADATA_FILE = 'metadata.xlsx'
 const DEST_FOLDER = './src/entity'
-
+const PROPERTY_MAPPING: { [key: string]: string } = {
+  Numeric: 'number',
+  Date: 'date'
+}
 // Classes
 class Property {
   name: string = ''
@@ -45,35 +44,58 @@ class Property {
   isManyToOne: boolean = false
   relation?: Property
   annotations(): string {
+    let annotation = ''
+    let params = ''
     if (this.relation) {
-      const annotation = this.isManyToOne ? 'ManyToOne' : 'OneToMany'
-      return `@${annotation}(type => ${this.type}, ${_.lowerFirst(
+      annotation = this.isManyToOne ? 'ManyToOne' : 'OneToMany'
+      params = `type => ${this.type}, ${_.lowerFirst(
         this.type
-      )} => ${_.lowerFirst(this.type)}.${this.relation.name})`
-    }
-    return `@Column(${this.columnType()})`
+      )} => ${_.lowerFirst(this.type)}.${this.relation.name}, `
+    } else annotation = 'Column'
+    return `@${annotation}(${params}${this.columnOptions()})`
   }
   constructor(name: string) {
     this.name = propertyName(name)
   }
-  columnType(): string {
-    return '' // TODO: numbers, strings, dates...
+  columnOptions(): string {
+    let options = []
+    if (this.relation) {
+      options.push(this.isOneToMany ? 'cascade: true' : 'eager: true')
+    } else {
+      options.push('nullable: true')
+    }
+    if (this.type === 'number') options.push("type: 'integer'")
+    else if (this.type === 'date') options.push("type: 'timestamptz'")
+    return `{
+    ${options.join(',\n\t\t')}
+  }`
   }
   dependencies(): Object {
     // let dependencies: { [k: string]: any } = {}
     if (this.relation) {
-      const columnClass = this.isManyToOne ? 'ManyToOne' : 'OneToMany'
-      return { [`./${this.type}`]: [this.type], typeorm: [columnClass] }
+      let classes = this.isManyToOne
+        ? ['ManyToOne', 'JoinColumn']
+        : ['OneToMany']
+      return {
+        [`./${this.type}`]: [this.type],
+        typeorm: classes
+      }
     } else return { typeorm: ['Column'] }
   }
   strType(): string {
     if (this.isOneToMany) return `${this.type}[]`
-    return this.type
+    if (this.type === 'number') return 'number'
+    if (this.type === 'date') return 'Date'
+    return 'string'
+  }
+  strName(): string {
+    if (this.name.match(/^\d/)) return `'${this.name}'`
+    else return this.name
   }
   render(): string {
     return `
   ${this.annotations()}
-  ${this.name}: ${this.strType()}
+  ${this.strName()}: ${this.strType()}
 `
   }
 }
@@ -107,7 +129,7 @@ class Entity {
     if (type) property.type = type
     return property
   }
-  pushOneToManyProperty(row: Row, relation: Entity): void {
+  pushOneToManyProperty(row: Row, relation: Entity): Property {
     const relationName = `${propertyName(row.entity)}s`
     const relationType = entityName(row.entity)
     let oneToManyProperty = this.findOrCreateProperty(
@@ -123,6 +145,7 @@ class Entity {
 
     oneToManyProperty.relation = manyToOneProperty
     manyToOneProperty.relation = oneToManyProperty
+    return oneToManyProperty
   }
   render(): string {
     let dependencies = this.dependencies()
@@ -148,8 +171,21 @@ export class ${this.name} {
   }
 }
 
+interface ColumnMapping {
+  column: string
+  relation?: string
+  property: string
+  type: string
+}
+export interface Mapping {
+  file: string
+  entity: string
+  columns: ColumnMapping[]
+}
+
 class EntityManager {
   entities: Entity[] = new Array<Entity>()
+  mapping: Mapping[] = []
   findOrCreate(rawName: string): Entity {
     let entity = this.entities.find(curs => curs.name === entityName(rawName))
     if (!entity) {
@@ -160,12 +196,42 @@ class EntityManager {
   }
   pushRow(row: Row): Entity {
     let entity = this.findOrCreate(row.form)
+    let entityMapping: Mapping | undefined = this.mapping.find(
+      curs => curs.file === row.form
+    )
+    if (!entityMapping) {
+      entityMapping = {
+        file: row.form,
+        entity: entity.name,
+        columns: []
+      }
+      this.mapping.push(entityMapping)
+    }
+    let columnName = `${row.number}. ${row.variable}`
+    let propertyMapping = entityMapping.columns.find(
+      curs => curs.column === columnName
+    )
+    const type = PROPERTY_MAPPING[row.type] || 'string'
+    if (!propertyMapping) {
+      propertyMapping = {
+        column: columnName,
+        property: '',
+        type
+      }
+      entityMapping.columns.push(propertyMapping)
+    }
     if (row.entity) {
       let relationEntity = this.findOrCreate(row.entity)
-      relationEntity.findOrCreateProperty(row.variable.replace(/\d+$/, ''))
-      entity.pushOneToManyProperty(row, relationEntity)
+      let relationProperty = relationEntity.findOrCreateProperty(
+        row.variable.replace(/\d+$/, ''),
+        type
+      )
+      let property = entity.pushOneToManyProperty(row, relationEntity)
+      propertyMapping.relation = property.name
+      propertyMapping.property = relationProperty.name
     } else {
-      entity.findOrCreateProperty(row.variable)
+      let property = entity.findOrCreateProperty(row.variable, type)
+      propertyMapping.property = property.name
     }
     return entity
   }
@@ -179,6 +245,19 @@ class EntityManager {
     }
     log('Done')
   }
+  renderIndex(): string {
+    const imports = this.entities.map(
+      entity => `import { ${entity.name} } from './${entity.name}'`
+    )
+    const classes = this.entities.map(
+      entity => `'${entity.name}': ${entity.name}`
+    )
+    return `${imports.join('\n')}
+    
+export const classes: { [key: string]: any } = {
+  ${classes.join(',\n\t')}
+}`
+  }
   export(): void {
     log(`Exporting to ${DEST_FOLDER}...`)
     rimraf.sync(DEST_FOLDER)
@@ -189,9 +268,27 @@ class EntityManager {
           console.error(err)
           return
         }
-        log(`${entity.name}: done`)
+        log(`${entity.name}: done.`)
       })
     }
+    fs.writeFile(
+      `${DEST_FOLDER}/mapping.json`,
+      JSON.stringify(this.mapping, null, 2),
+      err => {
+        if (err) {
+          console.error(err)
+          return
+        }
+        log('Mapping exported.')
+      }
+    )
+    fs.writeFile(`${DEST_FOLDER}/index.ts`, this.renderIndex(), err => {
+      if (err) {
+        console.error(err)
+        return
+      }
+      log('Index created.')
+    })
     log('Done')
   }
 }

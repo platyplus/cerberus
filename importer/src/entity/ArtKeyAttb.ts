@@ -1,5 +1,5 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm'
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm'
 import { ArtKey } from './ArtKey'
 
 @Entity()
@@ -7,25 +7,43 @@ export class ArtKeyAttb {
   @PrimaryGeneratedColumn('uuid')
   id: string
   
-  @Column()
+  @Column({
+    nullable: true
+  })
   tb: string
 
-  @ManyToOne(type => ArtKey, artKey => artKey.artKeyAttbs)
-  artKey: ArtKey
+  @ManyToOne(type => ArtKey, artKey => artKey.artKeyAttbs, {
+    eager: true
+  })
+  artKey: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   attbRegimen: string
 
-  @Column()
-  dateOfDiagnosis: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  dateOfDiagnosis: Date
 
-  @Column()
-  endDateOfAttbip: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  endDateOfAttbip: Date
 
-  @Column()
-  endDateOfAttbcp: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  endDateOfAttbcp: Date
 
-  @Column()
-  dateofDiagnosis: string
+  @Column({
+    nullable: true,
+		type: 'timestamptz'
+  })
+  dateofDiagnosis: Date
 
 }

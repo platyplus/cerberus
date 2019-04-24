@@ -41,7 +41,7 @@ services:
       context: ./importer
       #args:
       #  NODE_ENV: development
-    command: npm run dev # TODO: dev only
+    # command: npm run dev # TODO: dev only
     volumes:
       - ./importer:/server:delegated # TODO: dev only
       - ./data:/data # TODO: dev only??

@@ -1,5 +1,5 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm'
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm'
 import { Sti } from './Sti'
 
 @Entity()
@@ -7,19 +7,30 @@ export class StiMedication {
   @PrimaryGeneratedColumn('uuid')
   id: string
   
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiTreatmentMedicineName: string
 
-  @ManyToOne(type => Sti, sti => sti.stiMedications)
-  sti: Sti
+  @ManyToOne(type => Sti, sti => sti.stiMedications, {
+    eager: true
+  })
+  sti: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiTreatmentDosage: string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   stiTreatmentFrequency: string
 
-  @Column()
-  stiTreatmentNumberDays: string
+  @Column({
+    nullable: true,
+		type: 'integer'
+  })
+  stiTreatmentNumberDays: number
 
 }
