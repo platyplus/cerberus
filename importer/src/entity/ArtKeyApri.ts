@@ -9,6 +9,7 @@ export class ArtKeyApri {
   
   @Column({
     nullable: true,
+		name: 'apri_date',
 		type: 'timestamptz'
   })
   apriDate: Date
@@ -20,6 +21,7 @@ export class ArtKeyApri {
 
   @Column({
     nullable: true,
+		name: 'apri_result',
 		type: 'integer'
   })
   apriResult: number

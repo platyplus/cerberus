@@ -8,7 +8,8 @@ export class ArtKeyAttb {
   id: string
   
   @Column({
-    nullable: true
+    nullable: true,
+		name: 'tb'
   })
   tb: string
 
@@ -18,30 +19,35 @@ export class ArtKeyAttb {
   artKey: string
 
   @Column({
-    nullable: true
+    nullable: true,
+		name: 'attb_regimen'
   })
   attbRegimen: string
 
   @Column({
     nullable: true,
+		name: 'date_of_diagnosis',
 		type: 'timestamptz'
   })
   dateOfDiagnosis: Date
 
   @Column({
     nullable: true,
+		name: 'end_date_of_attbip',
 		type: 'timestamptz'
   })
   endDateOfAttbip: Date
 
   @Column({
     nullable: true,
+		name: 'end_date_of_attbcp',
 		type: 'timestamptz'
   })
   endDateOfAttbcp: Date
 
   @Column({
     nullable: true,
+		name: 'dateof_diagnosis',
 		type: 'timestamptz'
   })
   dateofDiagnosis: Date

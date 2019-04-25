@@ -8,7 +8,8 @@ export class ArtGhcDiagnosis {
   id: string
   
   @Column({
-    nullable: true
+    nullable: true,
+		name: 'art_ghc_dia_code'
   })
   artGhcDiaCode: string
 
@@ -18,7 +19,8 @@ export class ArtGhcDiagnosis {
   artConsultationPlha: string
 
   @Column({
-    nullable: true
+    nullable: true,
+		name: 'art_ghc_dia_description'
   })
   artGhcDiaDescription: string
 

@@ -8,7 +8,8 @@ export class GhcMedication {
   id: string
   
   @Column({
-    nullable: true
+    nullable: true,
+		name: 'ghc_medicine_name'
   })
   ghcMedicineName: string
 
@@ -18,17 +19,20 @@ export class GhcMedication {
   generalHeathCareGhc: string
 
   @Column({
-    nullable: true
+    nullable: true,
+		name: 'ghc_dosage'
   })
   ghcDosage: string
 
   @Column({
-    nullable: true
+    nullable: true,
+		name: 'ghc_frequency'
   })
   ghcFrequency: string
 
   @Column({
     nullable: true,
+		name: 'ghc_number_days',
 		type: 'integer'
   })
   ghcNumberDays: number

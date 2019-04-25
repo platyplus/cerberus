@@ -8,7 +8,8 @@ export class VcctDrugType {
   id: string
   
   @Column({
-    nullable: true
+    nullable: true,
+		name: 'vcct_type_of_drugs'
   })
   vcctTypeOfDrugs: string
 
@@ -18,12 +19,14 @@ export class VcctDrugType {
   vcct: string
 
   @Column({
-    nullable: true
+    nullable: true,
+		name: 'vcct_drug_name'
   })
   vcctDrugName: string
 
   @Column({
-    nullable: true
+    nullable: true,
+		name: 'vcct_way_of_use'
   })
   vcctWayOfUse: string
 

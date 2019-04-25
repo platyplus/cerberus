@@ -8,7 +8,8 @@ export class ArtTreatment {
   id: string
   
   @Column({
-    nullable: true
+    nullable: true,
+		name: 'art_medicine_taken'
   })
   artMedicineTaken: string
 
@@ -18,24 +19,28 @@ export class ArtTreatment {
   artConsultationPlha: string
 
   @Column({
-    nullable: true
+    nullable: true,
+		name: 'art_medicine_name'
   })
   artMedicineName: string
 
   @Column({
     nullable: true,
+		name: 'art_start_date',
 		type: 'timestamptz'
   })
   artStartDate: Date
 
   @Column({
     nullable: true,
+		name: 'art_stop_date',
 		type: 'timestamptz'
   })
   artStopDate: Date
 
   @Column({
-    nullable: true
+    nullable: true,
+		name: 'art_interrupted'
   })
   artInterrupted: string
 

@@ -9,6 +9,7 @@ export class ArtKeyResult {
   
   @Column({
     nullable: true,
+		name: 'v_date',
 		type: 'timestamptz'
   })
   vDate: Date
@@ -19,7 +20,8 @@ export class ArtKeyResult {
   artKey: string
 
   @Column({
-    nullable: true
+    nullable: true,
+		name: 'result'
   })
   result: string
 

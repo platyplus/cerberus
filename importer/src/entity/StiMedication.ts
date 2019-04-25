@@ -8,7 +8,8 @@ export class StiMedication {
   id: string
   
   @Column({
-    nullable: true
+    nullable: true,
+		name: 'sti_treatment_medicine_name'
   })
   stiTreatmentMedicineName: string
 
@@ -18,17 +19,20 @@ export class StiMedication {
   sti: string
 
   @Column({
-    nullable: true
+    nullable: true,
+		name: 'sti_treatment_dosage'
   })
   stiTreatmentDosage: string
 
   @Column({
-    nullable: true
+    nullable: true,
+		name: 'sti_treatment_frequency'
   })
   stiTreatmentFrequency: string
 
   @Column({
     nullable: true,
+		name: 'sti_treatment_number_days',
 		type: 'integer'
   })
   stiTreatmentNumberDays: number

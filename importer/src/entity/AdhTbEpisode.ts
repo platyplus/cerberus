@@ -9,6 +9,7 @@ export class AdhTbEpisode {
   
   @Column({
     nullable: true,
+		name: 'adh_tb_start_date',
 		type: 'timestamptz'
   })
   adhTbStartDate: Date
@@ -20,12 +21,14 @@ export class AdhTbEpisode {
 
   @Column({
     nullable: true,
+		name: 'adh_tb_stop_date',
 		type: 'timestamptz'
   })
   adhTbStopDate: Date
 
   @Column({
     nullable: true,
+		name: 'adh_tb_restarting_date',
 		type: 'timestamptz'
   })
   adhTbRestartingDate: Date

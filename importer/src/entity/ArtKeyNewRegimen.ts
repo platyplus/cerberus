@@ -8,7 +8,8 @@ export class ArtKeyNewRegimen {
   id: string
   
   @Column({
-    nullable: true
+    nullable: true,
+		name: 'new_regimen'
   })
   newRegimen: string
 
@@ -19,12 +20,14 @@ export class ArtKeyNewRegimen {
 
   @Column({
     nullable: true,
+		name: 'change_regimen_date',
 		type: 'timestamptz'
   })
   changeRegimenDate: Date
 
   @Column({
-    nullable: true
+    nullable: true,
+		name: 'change_reason'
   })
   changeReason: string
 

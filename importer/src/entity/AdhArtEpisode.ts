@@ -9,6 +9,7 @@ export class AdhArtEpisode {
   
   @Column({
     nullable: true,
+		name: 'adh_art_start_date',
 		type: 'timestamptz'
   })
   adhArtStartDate: Date
@@ -20,12 +21,14 @@ export class AdhArtEpisode {
 
   @Column({
     nullable: true,
+		name: 'adh_art_stop_date',
 		type: 'timestamptz'
   })
   adhArtStopDate: Date
 
   @Column({
     nullable: true,
+		name: 'adh_art_restarting_date',
 		type: 'timestamptz'
   })
   adhArtRestartingDate: Date

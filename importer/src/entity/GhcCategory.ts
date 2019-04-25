@@ -8,7 +8,8 @@ export class GhcCategory {
   id: string
   
   @Column({
-    nullable: true
+    nullable: true,
+		name: 'ghc_category'
   })
   ghcCategory: string
 
@@ -18,7 +19,8 @@ export class GhcCategory {
   generalHeathCareGhc: string
 
   @Column({
-    nullable: true
+    nullable: true,
+		name: 'ghc_description'
   })
   ghcDescription: string
 

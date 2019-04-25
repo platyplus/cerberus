@@ -8,7 +8,8 @@ export class ArtTbMedication {
   id: string
   
   @Column({
-    nullable: true
+    nullable: true,
+		name: 'art_tb_medicine_name'
   })
   artTbMedicineName: string
 
@@ -18,17 +19,20 @@ export class ArtTbMedication {
   artConsultationPlha: string
 
   @Column({
-    nullable: true
+    nullable: true,
+		name: 'art_tb_dosage'
   })
   artTbDosage: string
 
   @Column({
-    nullable: true
+    nullable: true,
+		name: 'art_tb_frequency'
   })
   artTbFrequency: string
 
   @Column({
     nullable: true,
+		name: 'art_tb_number_days',
 		type: 'integer'
   })
   artTbNumberDays: number

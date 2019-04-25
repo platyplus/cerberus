@@ -9,6 +9,7 @@ export class ArtKeyStop {
   
   @Column({
     nullable: true,
+		name: 'art_stop_date',
 		type: 'timestamptz'
   })
   artStopDate: Date
@@ -20,17 +21,20 @@ export class ArtKeyStop {
 
   @Column({
     nullable: true,
+		name: 'art_restart_date',
 		type: 'timestamptz'
   })
   artRestartDate: Date
 
   @Column({
-    nullable: true
+    nullable: true,
+		name: 'reason'
   })
   reason: string
 
   @Column({
     nullable: true,
+		name: 'total_no_of_missed_dose',
 		type: 'integer'
   })
   totalNoOfMissedDose: number

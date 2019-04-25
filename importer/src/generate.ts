@@ -63,6 +63,7 @@ class Property {
       options.push(this.isOneToMany ? 'cascade: true' : 'eager: true')
     } else {
       options.push('nullable: true')
+      options.push(`name: '${_.snakeCase(this.name)}'`)
     }
     if (this.type === 'number') options.push("type: 'integer'")
     else if (this.type === 'date') options.push("type: 'timestamptz'")

@@ -8,7 +8,8 @@ export class ArtKeyHaartToxicity {
   id: string
   
   @Column({
-    nullable: true
+    nullable: true,
+		name: 'haart_toxicity'
   })
   haartToxicity: string
 
@@ -18,12 +19,14 @@ export class ArtKeyHaartToxicity {
   artKey: string
 
   @Column({
-    nullable: true
+    nullable: true,
+		name: 'toxicity_grade'
   })
   toxicityGrade: string
 
   @Column({
     nullable: true,
+		name: 'toxicity_date',
 		type: 'timestamptz'
   })
   toxicityDate: Date
