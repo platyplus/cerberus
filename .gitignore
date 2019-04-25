@@ -72,3 +72,6 @@ dist/
 
 # TODO files/repertories
 *TODO*
+
+# python venv
+.venv

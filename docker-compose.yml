@@ -28,23 +28,36 @@ services:
     #   MB_DB_USER: metabase
     #   MB_DB_PASS: metabase
     #   MB_DB_HOST: postgres
-    # depends_on:
-    #   - postgres
     # links:
     #   - postgres
     labels:
       - 'traefik.frontend.rule=Host:metabase.localhost' # TODO: dev only
       - 'traefik.port=3000'
 
+  converter:
+    build:
+      context: ./converter
+      #args:
+      #  NODE_ENV: development
+    depends_on: # TODO: wait-for
+      - postgres
+    volumes:
+      - ./converter:/server:delegated # TODO: dev only
+      - ./data:/data # TODO: dev only??
+      - /tmp/cerberus:/tmp/cerberus # TODO: dev only??
+
   importer:
     build:
       context: ./importer
       #args:
       #  NODE_ENV: development
-    # command: npm run dev # TODO: dev only
+    command: npm run dev # TODO: dev only
+    depends_on: # TODO: wait-for
+      - postgres
     volumes:
       - ./importer:/server:delegated # TODO: dev only
       - ./data:/data # TODO: dev only??
+      - /tmp/cerberus:/tmp/cerberus # TODO: dev only??
 
   # TODO: dperson/samba
 

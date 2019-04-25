@@ -5,13 +5,17 @@ import { resolve } from 'path'
 import XLSX from 'xlsx'
 import { Readable } from 'stream'
 import path from 'path'
+import fs from 'fs'
 
 import { Mapping } from './generate'
 import mapping from './entity/mapping.json'
 import { classes } from './entity'
 
 const DATA_PATH = resolve(process.env.DATA_PATH || '/data')
+const TMP_PATH = resolve(process.env.TMP_PATH || '/tmp/cerberus')
 const log = console.log.bind(console)
+
+fs.mkdir(TMP_PATH, { recursive: true }, err => {})
 
 const convertRow: any = (entityMapping: Mapping, row: any) => {
   return entityMapping.columns.reduce(
@@ -69,23 +73,24 @@ function loadFile(file: string, connection: Connection) {
       log(`${Date.now()} ------ Table is loaded`)
       const sheet: XLSX.Sheet = table.Sheets[table.SheetNames[0]]
       log(`${Date.now()} ------ Sheet is loaded`)
-      let stream: Readable = XLSX.stream.to_json(sheet)
-      log(`${Date.now()} ------ Stream is loaded`)
-      if (stream) {
-        stream.on('data', async function(data) {
-          await waitFor()
-          const payload = convertRow(entityMapping, data)
-          let entityClass = classes[entityMapping.entity]
-          let entity = manager.create(entityClass, payload)
-          await manager.save(entity)
-          resumeWait()
-        })
-        stream.on('end', () => {
-          log(`${Date.now()} ====== END ${shortFileName}`)
-        })
-      }
+      var jsonFileName = `${TMP_PATH}/${shortFileName}.json`
+      var stream = XLSX.stream.to_json(sheet)
+      stream.pipe(fs.createWriteStream(jsonFileName))
+      //     let stream: Readable = XLSX.stream.to_json(sheet)
+      //     log(`${Date.now()} ------ Stream is loaded`)
+      //     if (stream) {
+      //       stream.on('data', async function(data) {
+      //         await waitFor()
+      //         const payload = convertRow(entityMapping, data)
+      //         let entityClass = classes[entityMapping.entity]
+      //         let entity = manager.create(entityClass, payload)
+      //         await manager.save(entity)
+      //         resumeWait()
+      //       })
+      // }
     }
-  } finally {
+  } catch (err) {
+    console.error(err)
   }
 }
 
@@ -99,9 +104,9 @@ createConnection()
         pollInterval: 100
       }
     })
-    watcher
-      .on('add', async path => loadFile(path, connection))
-      .on('change', async path => loadFile(path, connection))
+    watcher //TODO: uncomment
+      // .on('add', async path => loadFile(path, connection))
+      // .on('change', async path => loadFile(path, connection))
       .on('unlink', async path => log(`File ${path} has been removed`))
 
     log('Application is up and running')
