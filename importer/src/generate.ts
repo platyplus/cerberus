@@ -2,7 +2,7 @@ import _ from 'lodash'
 import { readFile, utils } from 'xlsx'
 import fs from 'fs'
 import rimraf from 'rimraf'
-import { cursorTo } from 'readline'
+import { mergeArray, propertyName, entityName } from './helpers'
 /** TODO: Works, but still some to be done:
  * - TbKeySample is not mapped correctly (different way to name repeated fields)
  * - unique columns in the schema such as mdmCode...
@@ -10,24 +10,6 @@ import { cursorTo } from 'readline'
 
 // Log helper
 const log = console.log.bind(console)
-
-// Helpers
-const mergeArray = (objValue: any, srcValue: any): any => {
-  if (_.isArray(objValue)) {
-    return _.union(objValue, srcValue)
-  }
-}
-
-const propertyName = (rawName: string): string => {
-  let result = _.camelCase(rawName)
-  return result
-}
-
-const entityName = (rawName: string): string => {
-  let result = _.upperFirst(_.camelCase(rawName))
-  if (result.match(/^\d/)) result = '_' + result
-  return result
-}
 
 // Constants
 const METADATA_FILE = 'metadata.xlsx'
@@ -37,11 +19,14 @@ const PROPERTY_MAPPING: { [key: string]: string } = {
   Date: 'date'
 }
 // Classes
+// TODO: split Property to an abstract class + inherited classes e.g. OneToManyProperty etc
 class Property {
+  parent: Entity
   name: string = ''
   type: string = 'string'
   isOneToMany: boolean = false
   isManyToOne: boolean = false
+  isPk: boolean = false
   relation?: Property
   annotations(): string {
     let annotation = ''
@@ -51,18 +36,35 @@ class Property {
       params = `type => ${this.type}, ${_.lowerFirst(
         this.type
       )} => ${_.lowerFirst(this.type)}.${this.relation.name}, `
-    } else annotation = 'Column'
-    return `@${annotation}(${params}${this.columnOptions()})`
+    } else {
+      annotation = this.isPk ? 'PrimaryColumn' : 'Column'
+    }
+    let other = ''
+    if (this.isManyToOne) {
+      if (this.relation) {
+        const fks = this.relation.parent
+          .pkProperties()
+          .map(
+            prop =>
+              `{ name: '${prop.strName()}', referencedColumnName: '${prop.strName()}'}`
+          )
+        other += `\n\t@JoinColumn([${fks.join(', ')}])`
+      }
+    }
+    return `\t@${annotation}(${params}${this.columnOptions()})${other}`
   }
-  constructor(name: string) {
+  constructor(parent: Entity, name: string) {
+    this.parent = parent
     this.name = propertyName(name)
   }
   columnOptions(): string {
     let options = []
-    if (this.relation) {
-      options.push(this.isOneToMany ? 'cascade: true' : 'eager: true')
+    if (this.isOneToMany) {
+      options.push('cascade: true')
+    } else if (this.isManyToOne) {
+      options.push('eager: true')
     } else {
-      options.push('nullable: true')
+      if (!this.isPk) options.push('nullable: true')
       options.push(`name: '${_.snakeCase(this.name)}'`)
     }
     if (this.type === 'number') options.push("type: 'integer'")
@@ -72,32 +74,44 @@ class Property {
   }`
   }
   dependencies(): Object {
-    // let dependencies: { [k: string]: any } = {}
+    let typeorm = []
+    if (this.isPk) typeorm.push('PrimaryColumn')
     if (this.relation) {
-      let classes = this.isManyToOne
-        ? ['ManyToOne', 'JoinColumn']
-        : ['OneToMany']
+      if (this.isManyToOne) typeorm.push('ManyToOne', 'JoinColumn')
+      else typeorm.push('OneToMany')
       return {
         [`./${this.type}`]: [this.type],
-        typeorm: classes
+        typeorm
       }
-    } else return { typeorm: ['Column'] }
+    } else {
+      typeorm.push('Column')
+      return { typeorm: ['Column'] }
+    }
   }
   strType(): string {
-    if (this.isOneToMany) return `${this.type}[]`
-    if (this.type === 'number') return 'number'
-    if (this.type === 'date') return 'Date'
-    return 'string'
+    let type = this.type
+    if (this.isOneToMany) type = `${this.type}[]`
+    if (this.type === 'date') type = 'Date'
+    return type
   }
   strName(): string {
-    if (this.name.match(/^\d/)) return `'${this.name}'`
-    else return this.name
+    let name = this.name
+    if (this.name.match(/^\d/)) name = `'${this.name}'`
+    return name
+  }
+  strDeclaration(): string {
+    // if (this.isManyToOne && this.relation) {
+    //   log(this.strName() + ' parent: ' + this.relation.parent.name)
+    //   return this.relation.parent
+    //     .pkProperties()
+    //     .map(prop => `${prop.strName()}: ${prop.strType()}`)
+    //     .join('\n\t')
+    // } else {
+    return this.strName() + ': ' + this.strType()
+    // }
   }
   render(): string {
-    return `
-  ${this.annotations()}
-  ${this.strName()}: ${this.strType()}
-`
+    return `${this.annotations()}\n\t${this.strDeclaration()}\n\n`
   }
 }
 
@@ -109,6 +123,7 @@ interface Row {
   label: string
   modalities: string
   entity: string
+  constraint: string
 }
 
 class Entity {
@@ -118,16 +133,24 @@ class Entity {
     this.name = entityName(name)
   }
   dependencies(): Object {
-    return { typeorm: ['Entity', 'PrimaryGeneratedColumn'] }
+    let typeorm = ['Entity']
+    if (_.isEmpty(this.pkProperties())) typeorm.push('PrimaryGeneratedColumn')
+    else typeorm.push('PrimaryColumn')
+    return { typeorm }
   }
-  findOrCreateProperty(rawName: string, type?: string): Property {
+  findOrCreateProperty(
+    rawName: string,
+    type?: string,
+    constraint?: string
+  ): Property {
     const name = propertyName(rawName)
     let property = this.properties.find(curs => curs.name === name)
     if (!property) {
-      property = new Property(name)
+      property = new Property(this, name)
       this.properties.push(property)
     }
     if (type) property.type = type
+    if (constraint && constraint === 'pk') property.isPk = true
     return property
   }
   pushOneToManyProperty(row: Row, relation: Entity): Property {
@@ -135,18 +158,26 @@ class Entity {
     const relationType = entityName(row.entity)
     let oneToManyProperty = this.findOrCreateProperty(
       relationName,
-      relationType
+      relationType,
+      row.constraint
     )
 
     oneToManyProperty.isOneToMany = true
     const name = propertyName(row.form)
     const type = entityName(row.form)
-    let manyToOneProperty = relation.findOrCreateProperty(name, type)
+    let manyToOneProperty = relation.findOrCreateProperty(
+      name,
+      type,
+      row.constraint
+    )
     manyToOneProperty.isManyToOne = true
 
     oneToManyProperty.relation = manyToOneProperty
     manyToOneProperty.relation = oneToManyProperty
     return oneToManyProperty
+  }
+  pkProperties(): Property[] {
+    return this.properties.filter(property => property.isPk)
   }
   render(): string {
     let dependencies = this.dependencies()
@@ -160,15 +191,13 @@ class Entity {
         `import { ${(<any>dependencies)[curr].join(', ')} } from '${curr}'\n`,
       ''
     )
+    const strPk = _.isEmpty(this.pkProperties())
+      ? "\t@PrimaryGeneratedColumn('uuid')\n\tid: string\n\n"
+      : ''
     return `// AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
 ${strDependencies}
 @Entity()
-export class ${this.name} {
-  @PrimaryGeneratedColumn('uuid')
-  id: string
-  ${strProps}
-}
-`
+export class ${this.name} {\n${strPk}${strProps}}\n`
   }
 }
 
@@ -225,13 +254,18 @@ class EntityManager {
       let relationEntity = this.findOrCreate(row.entity)
       let relationProperty = relationEntity.findOrCreateProperty(
         row.variable.replace(/\d+$/, ''),
-        type
+        type,
+        row.constraint
       )
       let property = entity.pushOneToManyProperty(row, relationEntity)
       propertyMapping.relation = property.name
       propertyMapping.property = relationProperty.name
     } else {
-      let property = entity.findOrCreateProperty(row.variable, type)
+      let property = entity.findOrCreateProperty(
+        row.variable,
+        type,
+        row.constraint
+      )
       propertyMapping.property = property.name
     }
     return entity

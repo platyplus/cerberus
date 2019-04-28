@@ -1,161 +1,157 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm'
+import { Entity, PrimaryColumn, Column } from 'typeorm'
 
 @Entity()
 export class PatientGeneralData {
-  @PrimaryGeneratedColumn('uuid')
-  id: string
-  
-  @Column({
+	@Column({
     nullable: true,
 		name: 'md_mlocation'
   })
-  mdMlocation: string
+	mdMlocation: string
 
-  @Column({
-    nullable: true,
-		name: 'md_mcode'
+	@PrimaryColumn({
+    name: 'md_mcode'
   })
-  mdMcode: string
+	mdMcode: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'serial_number'
   })
-  serialNumber: string
+	serialNumber: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_00_registration_date',
 		type: 'timestamptz'
   })
-  a00RegistrationDate: Date
+	a00RegistrationDate: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_01_patient_name'
   })
-  a01PatientName: string
+	a01PatientName: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_02_father_name'
   })
-  a02FatherName: string
+	a02FatherName: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_03_sexe'
   })
-  a03Sexe: string
+	a03Sexe: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_041_date_of_birth',
 		type: 'timestamptz'
   })
-  a041DateOfBirth: Date
+	a041DateOfBirth: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_05_age',
 		type: 'integer'
   })
-  a05Age: number
+	a05Age: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_052_date_of_birth_estimated'
   })
-  a052DateOfBirthEstimated: string
+	a052DateOfBirthEstimated: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_06_place_of_birth'
   })
-  a06PlaceOfBirth: string
+	a06PlaceOfBirth: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_06_a_height',
 		type: 'integer'
   })
-  a06AHeight: number
+	a06AHeight: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_07_patient_target'
   })
-  a07PatientTarget: string
+	a07PatientTarget: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_07_a_marital_status'
   })
-  a07AMaritalStatus: string
+	a07AMaritalStatus: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_08_level_education'
   })
-  a08LevelEducation: string
+	a08LevelEducation: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_09_occupation'
   })
-  a09Occupation: string
+	a09Occupation: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_10_address_township'
   })
-  a10AddressTownship: string
+	a10AddressTownship: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_10_address_township_name'
   })
-  a10AddressTownshipName: string
+	a10AddressTownshipName: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_11_geographical_origin'
   })
-  a11GeographicalOrigin: string
+	a11GeographicalOrigin: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_12_distance_to_md_mclinic',
 		type: 'integer'
   })
-  a12DistanceToMdMclinic: number
+	a12DistanceToMdMclinic: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_13_other_id'
   })
-  a13OtherId: string
+	a13OtherId: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'counter',
 		type: 'integer'
   })
-  counter: number
+	counter: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'verify',
 		type: 'integer'
   })
-  verify: number
+	verify: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_20_date_of_saving_data',
 		type: 'timestamptz'
   })
-  a20DateOfSavingData: Date
+	a20DateOfSavingData: Date
 
 }

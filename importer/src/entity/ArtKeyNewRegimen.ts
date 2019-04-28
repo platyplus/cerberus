@@ -4,31 +4,32 @@ import { ArtKey } from './ArtKey'
 
 @Entity()
 export class ArtKeyNewRegimen {
-  @PrimaryGeneratedColumn('uuid')
-  id: string
-  
-  @Column({
+	@PrimaryGeneratedColumn('uuid')
+	id: string
+
+	@Column({
     nullable: true,
 		name: 'new_regimen'
   })
-  newRegimen: string
+	newRegimen: string
 
-  @ManyToOne(type => ArtKey, artKey => artKey.artKeyNewRegimens, {
+	@ManyToOne(type => ArtKey, artKey => artKey.artKeyNewRegimens, {
     eager: true
   })
-  artKey: string
+	@JoinColumn([{ name: 'mdMcode', referencedColumnName: 'mdMcode'}])
+	artKey: ArtKey
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'change_regimen_date',
 		type: 'timestamptz'
   })
-  changeRegimenDate: Date
+	changeRegimenDate: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'change_reason'
   })
-  changeReason: string
+	changeReason: string
 
 }

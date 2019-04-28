@@ -1,491 +1,487 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm'
+import { Entity, PrimaryColumn, Column, OneToMany } from 'typeorm'
 import { GhcCategory } from './GhcCategory'
 import { GhcMedication } from './GhcMedication'
 
 @Entity()
 export class GeneralHeathCareGhc {
-  @PrimaryGeneratedColumn('uuid')
-  id: string
-  
-  @Column({
+	@Column({
     nullable: true,
 		name: 'md_mcode'
   })
-  mdMcode: string
+	mdMcode: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_00_registration_date',
 		type: 'timestamptz'
   })
-  a00RegistrationDate: Date
+	a00RegistrationDate: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_01_patient_name'
   })
-  a01PatientName: string
+	a01PatientName: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_02_father_name'
   })
-  a02FatherName: string
+	a02FatherName: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_03_sexe'
   })
-  a03Sexe: string
+	a03Sexe: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_07_patient_target'
   })
-  a07PatientTarget: string
+	a07PatientTarget: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_041_date_of_birth',
 		type: 'timestamptz'
   })
-  a041DateOfBirth: Date
+	a041DateOfBirth: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_05_age',
 		type: 'integer'
   })
-  a05Age: number
+	a05Age: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_new_patient'
   })
-  ghcNewPatient: string
+	ghcNewPatient: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_visit_date',
 		type: 'timestamptz'
   })
-  ghcVisitDate: Date
+	ghcVisitDate: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_md_mstaff'
   })
-  ghcMdMstaff: string
+	ghcMdMstaff: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_symptoms_constitutional'
   })
-  ghcSymptomsConstitutional: string
+	ghcSymptomsConstitutional: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_constitutional_fatigue'
   })
-  ghcConstitutionalFatigue: string
+	ghcConstitutionalFatigue: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_constitutional_fever'
   })
-  ghcConstitutionalFever: string
+	ghcConstitutionalFever: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_constitutional_night_sweats'
   })
-  ghcConstitutionalNightSweats: string
+	ghcConstitutionalNightSweats: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_constitutional_appetitie_loss'
   })
-  ghcConstitutionalAppetitieLoss: string
+	ghcConstitutionalAppetitieLoss: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_constitutional_weight_loss'
   })
-  ghcConstitutionalWeightLoss: string
+	ghcConstitutionalWeightLoss: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_constitutional_pain'
   })
-  ghcConstitutionalPain: string
+	ghcConstitutionalPain: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_constitutional_other'
   })
-  ghcConstitutionalOther: string
+	ghcConstitutionalOther: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_symptoms_respiratory'
   })
-  ghcSymptomsRespiratory: string
+	ghcSymptomsRespiratory: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_respiratory_non_prod_cough'
   })
-  ghcRespiratoryNonProdCough: string
+	ghcRespiratoryNonProdCough: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_respiratory_productive_cough'
   })
-  ghcRespiratoryProductiveCough: string
+	ghcRespiratoryProductiveCough: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_respiratory_hemoptysis'
   })
-  ghcRespiratoryHemoptysis: string
+	ghcRespiratoryHemoptysis: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_respiratory_diff_breathing'
   })
-  ghcRespiratoryDiffBreathing: string
+	ghcRespiratoryDiffBreathing: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_respiratory_chest_pain'
   })
-  ghcRespiratoryChestPain: string
+	ghcRespiratoryChestPain: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_respiratory_palpitation'
   })
-  ghcRespiratoryPalpitation: string
+	ghcRespiratoryPalpitation: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_respiratory_other'
   })
-  ghcRespiratoryOther: string
+	ghcRespiratoryOther: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_symptoms_gastrointestinal'
   })
-  ghcSymptomsGastrointestinal: string
+	ghcSymptomsGastrointestinal: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_gastrointestinal_abd_pain'
   })
-  ghcGastrointestinalAbdPain: string
+	ghcGastrointestinalAbdPain: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_gastrointestinal_nausea'
   })
-  ghcGastrointestinalNausea: string
+	ghcGastrointestinalNausea: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_gastrointestinal_vomiting'
   })
-  ghcGastrointestinalVomiting: string
+	ghcGastrointestinalVomiting: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_gastrointestinal_dysphagia'
   })
-  ghcGastrointestinalDysphagia: string
+	ghcGastrointestinalDysphagia: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_gastrointestinal_diarrhea'
   })
-  ghcGastrointestinalDiarrhea: string
+	ghcGastrointestinalDiarrhea: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_gastrointestinal_other'
   })
-  ghcGastrointestinalOther: string
+	ghcGastrointestinalOther: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_symptoms_neurological'
   })
-  ghcSymptomsNeurological: string
+	ghcSymptomsNeurological: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_neuro_headache'
   })
-  ghcNeuroHeadache: string
+	ghcNeuroHeadache: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_neuro_confusion'
   })
-  ghcNeuroConfusion: string
+	ghcNeuroConfusion: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_neuro_mem_problem'
   })
-  ghcNeuroMemProblem: string
+	ghcNeuroMemProblem: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_neuro_tingling'
   })
-  ghcNeuroTingling: string
+	ghcNeuroTingling: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_neuro_insomnia'
   })
-  ghcNeuroInsomnia: string
+	ghcNeuroInsomnia: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_neuro_yawning'
   })
-  ghcNeuroYawning: string
+	ghcNeuroYawning: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_symptoms_skin_manifestation'
   })
-  ghcSymptomsSkinManifestation: string
+	ghcSymptomsSkinManifestation: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_skin_itchiness'
   })
-  ghcSkinItchiness: string
+	ghcSkinItchiness: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_skin_rash'
   })
-  ghcSkinRash: string
+	ghcSkinRash: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_skin_lump'
   })
-  ghcSkinLump: string
+	ghcSkinLump: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_skin_other'
   })
-  ghcSkinOther: string
+	ghcSkinOther: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_symptoms_additional_comments'
   })
-  ghcSymptomsAdditionalComments: string
+	ghcSymptomsAdditionalComments: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_eye'
   })
-  ghcEye: string
+	ghcEye: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_eye_comment'
   })
-  ghcEyeComment: string
+	ghcEyeComment: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_ears_nose'
   })
-  ghcEarsNose: string
+	ghcEarsNose: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_ears_nose_comment'
   })
-  ghcEarsNoseComment: string
+	ghcEarsNoseComment: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_oral'
   })
-  ghcOral: string
+	ghcOral: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_oral_comment'
   })
-  ghcOralComment: string
+	ghcOralComment: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_lymph_nodes'
   })
-  ghcLymphNodes: string
+	ghcLymphNodes: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_lymph_nodes_comment'
   })
-  ghcLymphNodesComment: string
+	ghcLymphNodesComment: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_heart'
   })
-  ghcHeart: string
+	ghcHeart: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_heart_comment'
   })
-  ghcHeartComment: string
+	ghcHeartComment: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_lungs'
   })
-  ghcLungs: string
+	ghcLungs: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_lungs_comment'
   })
-  ghcLungsComment: string
+	ghcLungsComment: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_abdomen'
   })
-  ghcAbdomen: string
+	ghcAbdomen: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_abdomen_comment'
   })
-  ghcAbdomenComment: string
+	ghcAbdomenComment: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_neurological'
   })
-  ghcNeurological: string
+	ghcNeurological: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_neurological_comment'
   })
-  ghcNeurologicalComment: string
+	ghcNeurologicalComment: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_additional_comments'
   })
-  ghcAdditionalComments: string
+	ghcAdditionalComments: string
 
-  @OneToMany(type => GhcCategory, ghcCategory => ghcCategory.generalHeathCareGhc, {
+	@OneToMany(type => GhcCategory, ghcCategory => ghcCategory.generalHeathCareGhc, {
     cascade: true
   })
-  ghcCategorys: GhcCategory[]
+	ghcCategorys: GhcCategory[]
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_h_bs_ag'
   })
-  ghcHBsAg: string
+	ghcHBsAg: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_h_bs_ab'
   })
-  ghcHBsAb: string
+	ghcHBsAb: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_hcv_ab'
   })
-  ghcHcvAb: string
+	ghcHcvAb: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_apri',
 		type: 'integer'
   })
-  ghcApri: number
+	ghcApri: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_liver_fibrosis'
   })
-  ghcLiverFibrosis: string
+	ghcLiverFibrosis: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_allergy'
   })
-  ghcAllergy: string
+	ghcAllergy: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_allergy_other'
   })
-  ghcAllergyOther: string
+	ghcAllergyOther: string
 
-  @OneToMany(type => GhcMedication, ghcMedication => ghcMedication.generalHeathCareGhc, {
+	@OneToMany(type => GhcMedication, ghcMedication => ghcMedication.generalHeathCareGhc, {
     cascade: true
   })
-  ghcMedications: GhcMedication[]
+	ghcMedications: GhcMedication[]
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_patient_should_return_in'
   })
-  ghcPatientShouldReturnIn: string
+	ghcPatientShouldReturnIn: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_should_return_in_other'
   })
-  ghcShouldReturnInOther: string
+	ghcShouldReturnInOther: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_date_next_visit',
 		type: 'timestamptz'
   })
-  ghcDateNextVisit: Date
+	ghcDateNextVisit: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'verify',
 		type: 'integer'
   })
-  verify: number
+	verify: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'last_registration_date',
 		type: 'timestamptz'
   })
-  lastRegistrationDate: Date
+	lastRegistrationDate: Date
 
-  @Column({
-    nullable: true,
-		name: 'key'
+	@PrimaryColumn({
+    name: 'key'
   })
-  key: string
+	key: string
 
 }

@@ -1,5 +1,5 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm'
+import { Entity, PrimaryColumn, Column, OneToMany } from 'typeorm'
 import { ArtKeyCd4Weight } from './ArtKeyCd4Weight'
 import { ArtKeyNewRegimen } from './ArtKeyNewRegimen'
 import { ArtKeyHaartToxicity } from './ArtKeyHaartToxicity'
@@ -10,377 +10,373 @@ import { ArtKeyApri } from './ArtKeyApri'
 
 @Entity()
 export class ArtKey {
-  @PrimaryGeneratedColumn('uuid')
-  id: string
-  
-  @Column({
+	@Column({
     nullable: true,
 		name: 'site_name'
   })
-  siteName: string
+	siteName: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'jail_patient'
   })
-  jailPatient: string
+	jailPatient: string
 
-  @Column({
-    nullable: true,
-		name: 'md_mcode'
+	@PrimaryColumn({
+    name: 'md_mcode'
   })
-  mdMcode: string
+	mdMcode: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_01_patient_name'
   })
-  a01PatientName: string
+	a01PatientName: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_02_father_name'
   })
-  a02FatherName: string
+	a02FatherName: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_03_sexe'
   })
-  a03Sexe: string
+	a03Sexe: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'age',
 		type: 'integer'
   })
-  age: number
+	age: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_041_date_of_birth',
 		type: 'timestamptz'
   })
-  a041DateOfBirth: Date
+	a041DateOfBirth: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_07_patient_target'
   })
-  a07PatientTarget: string
+	a07PatientTarget: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'who_stage'
   })
-  whoStage: string
+	whoStage: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'referral'
   })
-  referral: string
+	referral: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'referred_in_date',
 		type: 'timestamptz'
   })
-  referredInDate: Date
+	referredInDate: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'referral_from'
   })
-  referralFrom: string
+	referralFrom: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'other_mdm_center'
   })
-  otherMdmCenter: string
+	otherMdmCenter: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'duration_on_art',
 		type: 'integer'
   })
-  durationOnArt: number
+	durationOnArt: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'survival_at',
 		type: 'integer'
   })
-  survivalAt: number
+	survivalAt: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'outcome'
   })
-  outcome: string
+	outcome: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'outcome_date',
 		type: 'timestamptz'
   })
-  outcomeDate: Date
+	outcomeDate: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'remarks'
   })
-  remarks: string
+	remarks: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'baseline_cd_4',
 		type: 'integer'
   })
-  baselineCd4: number
+	baselineCd4: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'weight',
 		type: 'integer'
   })
-  weight: number
+	weight: number
 
-  @OneToMany(type => ArtKeyCd4Weight, artKeyCd4Weight => artKeyCd4Weight.artKey, {
+	@OneToMany(type => ArtKeyCd4Weight, artKeyCd4Weight => artKeyCd4Weight.artKey, {
     cascade: true
   })
-  artKeyCd4Weights: ArtKeyCd4Weight[]
+	artKeyCd4Weights: ArtKeyCd4Weight[]
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'last_cd_4',
 		type: 'integer'
   })
-  lastCd4: number
+	lastCd4: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'last_weight',
 		type: 'integer'
   })
-  lastWeight: number
+	lastWeight: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'last_cd_4_date',
 		type: 'timestamptz'
   })
-  lastCd4Date: Date
+	lastCd4Date: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'maximum_cd_4',
 		type: 'integer'
   })
-  maximumCd4: number
+	maximumCd4: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'maximum_cd_4_date',
 		type: 'timestamptz'
   })
-  maximumCd4Date: Date
+	maximumCd4Date: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: '2nd_line'
   })
-  '2ndLine': string
+	'2ndLine': string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: '2nd_line_change_date',
 		type: 'timestamptz'
   })
-  '2ndLineChangeDate': Date
+	'2ndLineChangeDate': Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'current_haart_regimen'
   })
-  currentHaartRegimen: string
+	currentHaartRegimen: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'haar_tnaive'
   })
-  haarTnaive: string
+	haarTnaive: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'outside_clinic_haart_start_date',
 		type: 'timestamptz'
   })
-  outsideClinicHaartStartDate: Date
+	outsideClinicHaartStartDate: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'previous_haart_regimen'
   })
-  previousHaartRegimen: string
+	previousHaartRegimen: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'previous_haart_regimen_1'
   })
-  previousHaartRegimen1: string
+	previousHaartRegimen1: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'previous_haart_regimen_2'
   })
-  previousHaartRegimen2: string
+	previousHaartRegimen2: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'regimen'
   })
-  regimen: string
+	regimen: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'md_mhaart_start_date',
 		type: 'timestamptz'
   })
-  mdMhaartStartDate: Date
+	mdMhaartStartDate: Date
 
-  @OneToMany(type => ArtKeyNewRegimen, artKeyNewRegimen => artKeyNewRegimen.artKey, {
+	@OneToMany(type => ArtKeyNewRegimen, artKeyNewRegimen => artKeyNewRegimen.artKey, {
     cascade: true
   })
-  artKeyNewRegimens: ArtKeyNewRegimen[]
+	artKeyNewRegimens: ArtKeyNewRegimen[]
 
-  @OneToMany(type => ArtKeyHaartToxicity, artKeyHaartToxicity => artKeyHaartToxicity.artKey, {
+	@OneToMany(type => ArtKeyHaartToxicity, artKeyHaartToxicity => artKeyHaartToxicity.artKey, {
     cascade: true
   })
-  artKeyHaartToxicitys: ArtKeyHaartToxicity[]
+	artKeyHaartToxicitys: ArtKeyHaartToxicity[]
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'methadone'
   })
-  methadone: string
+	methadone: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'treatment_interuption'
   })
-  treatmentInteruption: string
+	treatmentInteruption: string
 
-  @OneToMany(type => ArtKeyStop, artKeyStop => artKeyStop.artKey, {
+	@OneToMany(type => ArtKeyStop, artKeyStop => artKeyStop.artKey, {
     cascade: true
   })
-  artKeyStops: ArtKeyStop[]
+	artKeyStops: ArtKeyStop[]
 
-  @OneToMany(type => ArtKeyAttb, artKeyAttb => artKeyAttb.artKey, {
+	@OneToMany(type => ArtKeyAttb, artKeyAttb => artKeyAttb.artKey, {
     cascade: true
   })
-  artKeyAttbs: ArtKeyAttb[]
+	artKeyAttbs: ArtKeyAttb[]
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'presenting_initial_o_is'
   })
-  presentingInitialOIs: string
+	presentingInitialOIs: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'other_o_is_1'
   })
-  otherOIs1: string
+	otherOIs1: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'other_o_is_2'
   })
-  otherOIs2: string
+	otherOIs2: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'other_o_is_3'
   })
-  otherOIs3: string
+	otherOIs3: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'other_o_is_4'
   })
-  otherOIs4: string
+	otherOIs4: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'other_o_is_5'
   })
-  otherOIs5: string
+	otherOIs5: string
 
-  @OneToMany(type => ArtKeyResult, artKeyResult => artKeyResult.artKey, {
+	@OneToMany(type => ArtKeyResult, artKeyResult => artKeyResult.artKey, {
     cascade: true
   })
-  artKeyResults: ArtKeyResult[]
+	artKeyResults: ArtKeyResult[]
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ab_anti_h_bs'
   })
-  abAntiHBs: string
+	abAntiHBs: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'h_be_ag'
   })
-  hBeAg: string
+	hBeAg: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'hcv'
   })
-  hcv: string
+	hcv: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ag_h_bs'
   })
-  agHBs: string
+	agHBs: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'vaccinated'
   })
-  vaccinated: string
+	vaccinated: string
 
-  @OneToMany(type => ArtKeyApri, artKeyApri => artKeyApri.artKey, {
+	@OneToMany(type => ArtKeyApri, artKeyApri => artKeyApri.artKey, {
     cascade: true
   })
-  artKeyApris: ArtKeyApri[]
+	artKeyApris: ArtKeyApri[]
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'liver_fibrosis'
   })
-  liverFibrosis: string
+	liverFibrosis: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 's_date'
   })
-  sDate: string
+	sDate: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'o_date'
   })
-  oDate: string
+	oDate: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'art_saving_date',
 		type: 'timestamptz'
   })
-  artSavingDate: Date
+	artSavingDate: Date
 
 }

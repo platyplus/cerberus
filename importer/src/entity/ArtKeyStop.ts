@@ -4,39 +4,40 @@ import { ArtKey } from './ArtKey'
 
 @Entity()
 export class ArtKeyStop {
-  @PrimaryGeneratedColumn('uuid')
-  id: string
-  
-  @Column({
+	@PrimaryGeneratedColumn('uuid')
+	id: string
+
+	@Column({
     nullable: true,
 		name: 'art_stop_date',
 		type: 'timestamptz'
   })
-  artStopDate: Date
+	artStopDate: Date
 
-  @ManyToOne(type => ArtKey, artKey => artKey.artKeyStops, {
+	@ManyToOne(type => ArtKey, artKey => artKey.artKeyStops, {
     eager: true
   })
-  artKey: string
+	@JoinColumn([{ name: 'mdMcode', referencedColumnName: 'mdMcode'}])
+	artKey: ArtKey
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'art_restart_date',
 		type: 'timestamptz'
   })
-  artRestartDate: Date
+	artRestartDate: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'reason'
   })
-  reason: string
+	reason: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'total_no_of_missed_dose',
 		type: 'integer'
   })
-  totalNoOfMissedDose: number
+	totalNoOfMissedDose: number
 
 }

@@ -1,4 +1,6 @@
 FROM node:11-alpine
+# RUN apk add --update python py-pip && pip install csvkit
+RUN apk add --virtual --update gnumeric ttf-freefont
 
 WORKDIR /server
 # TODO: multistage docker with only the ./dist files in the docker target

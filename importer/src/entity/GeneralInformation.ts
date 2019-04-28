@@ -1,255 +1,251 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm'
+import { Entity, PrimaryColumn, Column } from 'typeorm'
 
 @Entity()
 export class GeneralInformation {
-  @PrimaryGeneratedColumn('uuid')
-  id: string
-  
-  @Column({
+	@Column({
     nullable: true,
 		name: 'md_mcode'
   })
-  mdMcode: string
+	mdMcode: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_00_registration_date',
 		type: 'timestamptz'
   })
-  a00RegistrationDate: Date
+	a00RegistrationDate: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_01_patient_name'
   })
-  a01PatientName: string
+	a01PatientName: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_02_father_name'
   })
-  a02FatherName: string
+	a02FatherName: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_03_sexe'
   })
-  a03Sexe: string
+	a03Sexe: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_041_date_of_birth',
 		type: 'timestamptz'
   })
-  a041DateOfBirth: Date
+	a041DateOfBirth: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_05_age',
 		type: 'integer'
   })
-  a05Age: number
+	a05Age: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_07_patient_target'
   })
-  a07PatientTarget: string
+	a07PatientTarget: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'gi_place_of_medical_care'
   })
-  giPlaceOfMedicalCare: string
+	giPlaceOfMedicalCare: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'gi_visit_date',
 		type: 'timestamptz'
   })
-  giVisitDate: Date
+	giVisitDate: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_07_a_marital_status'
   })
-  a07AMaritalStatus: string
+	a07AMaritalStatus: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'b_04_current_work_place'
   })
-  b04CurrentWorkPlace: string
+	b04CurrentWorkPlace: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_06_a_height',
 		type: 'integer'
   })
-  a06AHeight: number
+	a06AHeight: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'gi_bw',
 		type: 'integer'
   })
-  giBw: number
+	giBw: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'gi_lb_or_kg'
   })
-  giLbOrKg: string
+	giLbOrKg: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'gi_bmi',
 		type: 'integer'
   })
-  giBmi: number
+	giBmi: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'gi_temperature',
 		type: 'integer'
   })
-  giTemperature: number
+	giTemperature: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'gi_cor_f'
   })
-  giCorF: string
+	giCorF: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'gi_bp',
 		type: 'integer'
   })
-  giBp: number
+	giBp: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'gi_bp_1',
 		type: 'integer'
   })
-  giBp1: number
+	giBp1: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'gi_rr',
 		type: 'integer'
   })
-  giRr: number
+	giRr: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'gi_pulse',
 		type: 'integer'
   })
-  giPulse: number
+	giPulse: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'gi_reproductive_health'
   })
-  giReproductiveHealth: string
+	giReproductiveHealth: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'gi_contraception'
   })
-  giContraception: string
+	giContraception: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'gi_contraception_type'
   })
-  giContraceptionType: string
+	giContraceptionType: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'gi_other_contraception_type'
   })
-  giOtherContraceptionType: string
+	giOtherContraceptionType: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'gi_drug_taken_on',
 		type: 'timestamptz'
   })
-  giDrugTakenOn: Date
+	giDrugTakenOn: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'gi_lm_pdate',
 		type: 'timestamptz'
   })
-  giLmPdate: Date
+	giLmPdate: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'gi_parity',
 		type: 'integer'
   })
-  giParity: number
+	giParity: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'gi_condom_use_for_last_sex'
   })
-  giCondomUseForLastSex: string
+	giCondomUseForLastSex: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'gi_number_clients_last_working_day',
 		type: 'integer'
   })
-  giNumberClientsLastWorkingDay: number
+	giNumberClientsLastWorkingDay: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'gi_share_needle_or_syringe_in_last'
   })
-  giShareNeedleOrSyringeInLast: string
+	giShareNeedleOrSyringeInLast: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'gi_share_needle_or_syringe_in_last_month'
   })
-  giShareNeedleOrSyringeInLastMonth: string
+	giShareNeedleOrSyringeInLastMonth: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'gi_share_needle_or_syringe_in_last_6_months'
   })
-  giShareNeedleOrSyringeInLast6Months: string
+	giShareNeedleOrSyringeInLast6Months: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'gi_remarks'
   })
-  giRemarks: string
+	giRemarks: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'verify',
 		type: 'integer'
   })
-  verify: number
+	verify: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'last_registration_date',
 		type: 'timestamptz'
   })
-  lastRegistrationDate: Date
+	lastRegistrationDate: Date
 
-  @Column({
-    nullable: true,
-		name: 'key'
+	@PrimaryColumn({
+    name: 'key'
   })
-  key: string
+	key: string
 
 }

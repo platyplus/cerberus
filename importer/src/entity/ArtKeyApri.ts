@@ -4,26 +4,27 @@ import { ArtKey } from './ArtKey'
 
 @Entity()
 export class ArtKeyApri {
-  @PrimaryGeneratedColumn('uuid')
-  id: string
-  
-  @Column({
+	@PrimaryGeneratedColumn('uuid')
+	id: string
+
+	@Column({
     nullable: true,
 		name: 'apri_date',
 		type: 'timestamptz'
   })
-  apriDate: Date
+	apriDate: Date
 
-  @ManyToOne(type => ArtKey, artKey => artKey.artKeyApris, {
+	@ManyToOne(type => ArtKey, artKey => artKey.artKeyApris, {
     eager: true
   })
-  artKey: string
+	@JoinColumn([{ name: 'mdMcode', referencedColumnName: 'mdMcode'}])
+	artKey: ArtKey
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'apri_result',
 		type: 'integer'
   })
-  apriResult: number
+	apriResult: number
 
 }

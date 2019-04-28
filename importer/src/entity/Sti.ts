@@ -1,496 +1,492 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm'
+import { Entity, PrimaryColumn, Column, OneToMany } from 'typeorm'
 import { StiMedication } from './StiMedication'
 
 @Entity()
 export class Sti {
-  @PrimaryGeneratedColumn('uuid')
-  id: string
-  
-  @Column({
+	@Column({
     nullable: true,
 		name: 'md_mcode'
   })
-  mdMcode: string
+	mdMcode: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_00_registration_date',
 		type: 'timestamptz'
   })
-  a00RegistrationDate: Date
+	a00RegistrationDate: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_01_patient_name'
   })
-  a01PatientName: string
+	a01PatientName: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_02_father_name'
   })
-  a02FatherName: string
+	a02FatherName: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_03_sexe'
   })
-  a03Sexe: string
+	a03Sexe: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_041_date_of_birth',
 		type: 'timestamptz'
   })
-  a041DateOfBirth: Date
+	a041DateOfBirth: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_05_age',
 		type: 'integer'
   })
-  a05Age: number
+	a05Age: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_07_patient_target'
   })
-  a07PatientTarget: string
+	a07PatientTarget: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_visit_date',
 		type: 'timestamptz'
   })
-  stiVisitDate: Date
+	stiVisitDate: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_md_mstaff'
   })
-  stiMdMstaff: string
+	stiMdMstaff: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_new_patient'
   })
-  stiNewPatient: string
+	stiNewPatient: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_background_previous_sit_treated'
   })
-  stiBackgroundPreviousSitTreated: string
+	stiBackgroundPreviousSitTreated: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_symptoms'
   })
-  stiSymptoms: string
+	stiSymptoms: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_symptoms_score_throat'
   })
-  stiSymptomsScoreThroat: string
+	stiSymptomsScoreThroat: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_symptoms_vaginal_d_opt'
   })
-  stiSymptomsVaginalDOpt: string
+	stiSymptomsVaginalDOpt: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_symptoms_v_discharge'
   })
-  stiSymptomsVDischarge: string
+	stiSymptomsVDischarge: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_symptoms_low_abdo_opt'
   })
-  stiSymptomsLowAbdoOpt: string
+	stiSymptomsLowAbdoOpt: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_symptoms_low_abdo_pain'
   })
-  stiSymptomsLowAbdoPain: string
+	stiSymptomsLowAbdoPain: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_symptoms_dysuria'
   })
-  stiSymptomsDysuria: string
+	stiSymptomsDysuria: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_symptoms_ulcer_opt'
   })
-  stiSymptomsUlcerOpt: string
+	stiSymptomsUlcerOpt: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_symptoms_ulcer'
   })
-  stiSymptomsUlcer: string
+	stiSymptomsUlcer: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_symptomst_anal_discharge'
   })
-  stiSymptomstAnalDischarge: string
+	stiSymptomstAnalDischarge: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_symptoms_itchiness_description'
   })
-  stiSymptomsItchinessDescription: string
+	stiSymptomsItchinessDescription: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_symptoms_swelling_over_genital_opt'
   })
-  stiSymptomsSwellingOverGenitalOpt: string
+	stiSymptomsSwellingOverGenitalOpt: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_symptoms_swelling'
   })
-  stiSymptomsSwelling: string
+	stiSymptomsSwelling: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_symptoms_warts'
   })
-  stiSymptomsWarts: string
+	stiSymptomsWarts: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_symptoms_scrotal'
   })
-  stiSymptomsScrotal: string
+	stiSymptomsScrotal: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_symptoms_urethral_discharge'
   })
-  stiSymptomsUrethralDischarge: string
+	stiSymptomsUrethralDischarge: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_symptoms_other'
   })
-  stiSymptomsOther: string
+	stiSymptomsOther: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_symptoms_comment'
   })
-  stiSymptomsComment: string
+	stiSymptomsComment: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_physical_exam'
   })
-  stiPhysicalExam: string
+	stiPhysicalExam: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_p_exam_oral_ulcer_opt'
   })
-  stiPExamOralUlcerOpt: string
+	stiPExamOralUlcerOpt: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_p_exam_pyaryngitis'
   })
-  stiPExamPyaryngitis: string
+	stiPExamPyaryngitis: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_p_exam_skin_rash'
   })
-  stiPExamSkinRash: string
+	stiPExamSkinRash: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_p_exam_tenderness_over_lower_abdomen'
   })
-  stiPExamTendernessOverLowerAbdomen: string
+	stiPExamTendernessOverLowerAbdomen: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_p_exam_vulva'
   })
-  stiPExamVulva: string
+	stiPExamVulva: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_p_exam_vaginal_d'
   })
-  stiPExamVaginalD: string
+	stiPExamVaginalD: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_p_exam_cervical_d'
   })
-  stiPExamCervicalD: string
+	stiPExamCervicalD: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_p_exam_adnexal_tenderness'
   })
-  stiPExamAdnexalTenderness: string
+	stiPExamAdnexalTenderness: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_p_exam_cervical_motion_tenderness'
   })
-  stiPExamCervicalMotionTenderness: string
+	stiPExamCervicalMotionTenderness: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_p_exam_inguinal_bubo'
   })
-  stiPExamInguinalBubo: string
+	stiPExamInguinalBubo: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_p_exam_genital_ulcer'
   })
-  stiPExamGenitalUlcer: string
+	stiPExamGenitalUlcer: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_p_exam_warts'
   })
-  stiPExamWarts: string
+	stiPExamWarts: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_p_exam_urethral_discharge'
   })
-  stiPExamUrethralDischarge: string
+	stiPExamUrethralDischarge: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_p_exam_anal_discharge'
   })
-  stiPExamAnalDischarge: string
+	stiPExamAnalDischarge: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_p_exam_scrotal'
   })
-  stiPExamScrotal: string
+	stiPExamScrotal: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_p_exam_other'
   })
-  stiPExamOther: string
+	stiPExamOther: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_p_exam_comment'
   })
-  stiPExamComment: string
+	stiPExamComment: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_test_pregnancy_test'
   })
-  stiTestPregnancyTest: string
+	stiTestPregnancyTest: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_p_exam_test'
   })
-  stiPExamTest: string
+	stiPExamTest: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_test_sniff_test'
   })
-  stiTestSniffTest: string
+	stiTestSniffTest: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_test_ph'
   })
-  stiTestPh: string
+	stiTestPh: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_test_urethral_smear'
   })
-  stiTestUrethralSmear: string
+	stiTestUrethralSmear: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_test_vaginal_smear'
   })
-  stiTestVaginalSmear: string
+	stiTestVaginalSmear: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_test_anal_smear'
   })
-  stiTestAnalSmear: string
+	stiTestAnalSmear: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_test_ulcer_smear'
   })
-  stiTestUlcerSmear: string
+	stiTestUlcerSmear: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_test_throat_swab'
   })
-  stiTestThroatSwab: string
+	stiTestThroatSwab: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_test_chlamydia'
   })
-  stiTestChlamydia: string
+	stiTestChlamydia: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_test_rpr'
   })
-  stiTestRpr: string
+	stiTestRpr: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_test_rpr_dil'
   })
-  stiTestRprDil: string
+	stiTestRprDil: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_test_other_investigation'
   })
-  stiTestOtherInvestigation: string
+	stiTestOtherInvestigation: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_presumptive_diagnosis'
   })
-  stiPresumptiveDiagnosis: string
+	stiPresumptiveDiagnosis: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_p_diagnosis_other'
   })
-  stiPDiagnosisOther: string
+	stiPDiagnosisOther: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_m_01_lab'
   })
-  stiM01Lab: string
+	stiM01Lab: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_treatment_treatment_plan'
   })
-  stiTreatmentTreatmentPlan: string
+	stiTreatmentTreatmentPlan: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_treatment_allergy'
   })
-  stiTreatmentAllergy: string
+	stiTreatmentAllergy: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_treatment_allergy_other'
   })
-  stiTreatmentAllergyOther: string
+	stiTreatmentAllergyOther: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_treatment_pregnant'
   })
-  stiTreatmentPregnant: string
+	stiTreatmentPregnant: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_treatment_surgical_intervention'
   })
-  stiTreatmentSurgicalIntervention: string
+	stiTreatmentSurgicalIntervention: string
 
-  @OneToMany(type => StiMedication, stiMedication => stiMedication.sti, {
+	@OneToMany(type => StiMedication, stiMedication => stiMedication.sti, {
     cascade: true
   })
-  stiMedications: StiMedication[]
+	stiMedications: StiMedication[]
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_n_03_other_treatment'
   })
-  stiN03OtherTreatment: string
+	stiN03OtherTreatment: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_referred'
   })
-  stiReferred: string
+	stiReferred: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_sti_condom'
   })
-  stiStiCondom: string
+	stiStiCondom: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_partner_treatment'
   })
-  stiPartnerTreatment: string
+	stiPartnerTreatment: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_remark'
   })
-  stiRemark: string
+	stiRemark: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_date_next_visit',
 		type: 'timestamptz'
   })
-  stiDateNextVisit: Date
+	stiDateNextVisit: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_plan_for_next_visit'
   })
-  stiPlanForNextVisit: string
+	stiPlanForNextVisit: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'verify',
 		type: 'integer'
   })
-  verify: number
+	verify: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'last_registration_date',
 		type: 'timestamptz'
   })
-  lastRegistrationDate: Date
+	lastRegistrationDate: Date
 
-  @Column({
-    nullable: true,
-		name: 'key'
+	@PrimaryColumn({
+    name: 'key'
   })
-  key: string
+	key: string
 
 }

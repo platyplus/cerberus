@@ -4,295 +4,296 @@ import { TbKey } from './TbKey'
 
 @Entity()
 export class TbKeySample {
-  @PrimaryGeneratedColumn('uuid')
-  id: string
-  
-  @Column({
+	@PrimaryGeneratedColumn('uuid')
+	id: string
+
+	@Column({
     nullable: true,
 		name: 'sample_date',
 		type: 'timestamptz'
   })
-  sampleDate: Date
+	sampleDate: Date
 
-  @ManyToOne(type => TbKey, tbKey => tbKey.tbKeySamples, {
+	@ManyToOne(type => TbKey, tbKey => tbKey.tbKeySamples, {
     eager: true
   })
-  tbKey: string
+	@JoinColumn([{ name: 'mdMcode', referencedColumnName: 'mdMcode'}])
+	tbKey: TbKey
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'method'
   })
-  method: string
+	method: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_1_h'
   })
-  result1H: string
+	result1H: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_1_r'
   })
-  result1R: string
+	result1R: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_1_e'
   })
-  result1E: string
+	result1E: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_1_s'
   })
-  result1S: string
+	result1S: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_1_amk'
   })
-  result1Amk: string
+	result1Amk: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_1_km'
   })
-  result1Km: string
+	result1Km: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_1_cm'
   })
-  result1Cm: string
+	result1Cm: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_1_fq'
   })
-  result1Fq: string
+	result1Fq: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_1_other'
   })
-  result1Other: string
+	result1Other: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_2_h'
   })
-  result2H: string
+	result2H: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_2_r'
   })
-  result2R: string
+	result2R: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_2_e'
   })
-  result2E: string
+	result2E: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_2_s'
   })
-  result2S: string
+	result2S: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_2_amk'
   })
-  result2Amk: string
+	result2Amk: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_2_km'
   })
-  result2Km: string
+	result2Km: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_2_cm'
   })
-  result2Cm: string
+	result2Cm: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_2_fq'
   })
-  result2Fq: string
+	result2Fq: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_2_other'
   })
-  result2Other: string
+	result2Other: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_3_h'
   })
-  result3H: string
+	result3H: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_3_r'
   })
-  result3R: string
+	result3R: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_3_e'
   })
-  result3E: string
+	result3E: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_3_s'
   })
-  result3S: string
+	result3S: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_3_amk'
   })
-  result3Amk: string
+	result3Amk: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_3_km'
   })
-  result3Km: string
+	result3Km: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_3_cm'
   })
-  result3Cm: string
+	result3Cm: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_3_fq'
   })
-  result3Fq: string
+	result3Fq: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_3_other'
   })
-  result3Other: string
+	result3Other: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_4_h'
   })
-  result4H: string
+	result4H: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_4_r'
   })
-  result4R: string
+	result4R: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_4_e'
   })
-  result4E: string
+	result4E: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_4_s'
   })
-  result4S: string
+	result4S: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_4_amk'
   })
-  result4Amk: string
+	result4Amk: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_4_km'
   })
-  result4Km: string
+	result4Km: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_4_cm'
   })
-  result4Cm: string
+	result4Cm: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_4_fq'
   })
-  result4Fq: string
+	result4Fq: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_4_other'
   })
-  result4Other: string
+	result4Other: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_5_h'
   })
-  result5H: string
+	result5H: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_5_r'
   })
-  result5R: string
+	result5R: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_5_e'
   })
-  result5E: string
+	result5E: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_5_s'
   })
-  result5S: string
+	result5S: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_5_amk'
   })
-  result5Amk: string
+	result5Amk: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_5_km'
   })
-  result5Km: string
+	result5Km: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_5_cm'
   })
-  result5Cm: string
+	result5Cm: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_5_fq'
   })
-  result5Fq: string
+	result5Fq: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'result_5_other'
   })
-  result5Other: string
+	result5Other: string
 
 }

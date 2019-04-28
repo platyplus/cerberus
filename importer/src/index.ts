@@ -2,14 +2,14 @@ import 'reflect-metadata'
 import chokidar from 'chokidar'
 import { createConnection, Connection } from 'typeorm'
 import { resolve } from 'path'
-import XLSX from 'xlsx'
-import { Readable } from 'stream'
 import path from 'path'
 import fs from 'fs'
-
+import { spawnSync, SpawnSyncReturns } from 'child_process'
+import _ from 'lodash'
 import { Mapping } from './generate'
 import mapping from './entity/mapping.json'
 import { classes } from './entity'
+import csv from 'csvtojson'
 
 const DATA_PATH = resolve(process.env.DATA_PATH || '/data')
 const TMP_PATH = resolve(process.env.TMP_PATH || '/tmp/cerberus')
@@ -23,7 +23,7 @@ const convertRow: any = (entityMapping: Mapping, row: any) => {
       let value = row[curr.column]
       if (value) {
         if (curr.type === 'date') {
-          value = new Date((value - (25567 + 1)) * 86400 * 1000)
+          value = new Date(value) || value
         } else if (curr.type === 'number') {
           value = parseInt(value)
           if (isNaN(value)) value = undefined
@@ -48,49 +48,59 @@ const convertRow: any = (entityMapping: Mapping, row: any) => {
   )
 }
 
-var waitForCount: number = 0
-const sleep = (m: number) => new Promise(r => setTimeout(r, m))
-
-const waitFor = async () => {
-  while (waitForCount > 0) {
-    await sleep(2000)
-  }
-  waitForCount = 1
-}
-
-const resumeWait = () => {
-  waitForCount = 0
-}
-
 function loadFile(file: string, connection: Connection) {
   const manager = connection.manager
   const shortFileName = path.basename(file, path.extname(file))
-  try {
-    const entityMapping = mapping.find(entity => entity.file === shortFileName)
-    if (entityMapping) {
-      log(`${Date.now()} ====== BEGIN ${shortFileName}`)
-      const table: XLSX.WorkBook = XLSX.readFile(file)
-      log(`${Date.now()} ------ Table is loaded`)
-      const sheet: XLSX.Sheet = table.Sheets[table.SheetNames[0]]
-      log(`${Date.now()} ------ Sheet is loaded`)
-      var jsonFileName = `${TMP_PATH}/${shortFileName}.json`
-      var stream = XLSX.stream.to_json(sheet)
-      stream.pipe(fs.createWriteStream(jsonFileName))
-      //     let stream: Readable = XLSX.stream.to_json(sheet)
-      //     log(`${Date.now()} ------ Stream is loaded`)
-      //     if (stream) {
-      //       stream.on('data', async function(data) {
-      //         await waitFor()
-      //         const payload = convertRow(entityMapping, data)
-      //         let entityClass = classes[entityMapping.entity]
-      //         let entity = manager.create(entityClass, payload)
-      //         await manager.save(entity)
-      //         resumeWait()
-      //       })
-      // }
+  const entityMapping = mapping.find(entity => entity.file === shortFileName)
+  if (entityMapping) {
+    const csvFileName = `${TMP_PATH}/${shortFileName}.csv`
+
+    log(`Converting ${shortFileName} to ${csvFileName}...`)
+    let child: SpawnSyncReturns<any> = spawnSync('ssconvert', [
+      file,
+      csvFileName
+    ])
+    if (child.status) {
+      log(`Error in streaming ${csvFileName}:`)
+      log(child.stderr.toString('utf8'))
     }
-  } catch (err) {
-    console.error(err)
+    // log(child.stdout.toString('utf8'))
+
+    log(`Finished to create ${csvFileName}. Importing...`)
+    const readStream = fs.createReadStream(csvFileName)
+    csv({
+      checkType: true,
+      ignoreEmpty: true,
+      flatKeys: true
+    })
+      .fromStream(readStream)
+      .subscribe((json: any) => {
+        return new Promise((resolve, reject) => {
+          const data = convertRow(entityMapping, json)
+          let entityClass = classes[entityMapping.entity]
+          // if (entityMapping.pks) {
+          //   const id = entityMapping.pks.reduce(
+          //     (prev, curr) => {
+          //       prev[curr] = data[curr]
+          //       return prev
+          //     },
+          //     {} as { [key: string]: any }
+          //   )
+          //   log(id)
+          //   let oldmanager.findOne(entityClass, id)
+          // }
+          let entity = manager.create(entityClass, data)
+          manager
+            .save(entity)
+            .then(res => {
+              resolve()
+            })
+            .catch(err => {
+              log(err)
+              reject()
+            })
+        })
+      })
   }
 }
 
@@ -105,11 +115,10 @@ createConnection()
       }
     })
     watcher //TODO: uncomment
-      // .on('add', async path => loadFile(path, connection))
-      // .on('change', async path => loadFile(path, connection))
-      .on('unlink', async path => log(`File ${path} has been removed`))
+      .on('add', path => loadFile(path, connection))
+      .on('change', path => loadFile(path, connection))
+      .on('unlink', path => log(`File ${path} has been removed`))
 
     log('Application is up and running')
-    const builder = connection.createQueryBuilder()
   })
   .catch(error => log(error))

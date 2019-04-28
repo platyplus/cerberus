@@ -4,30 +4,31 @@ import { Vcct } from './Vcct'
 
 @Entity()
 export class VcctDrugType {
-  @PrimaryGeneratedColumn('uuid')
-  id: string
-  
-  @Column({
+	@PrimaryGeneratedColumn('uuid')
+	id: string
+
+	@Column({
     nullable: true,
 		name: 'vcct_type_of_drugs'
   })
-  vcctTypeOfDrugs: string
+	vcctTypeOfDrugs: string
 
-  @ManyToOne(type => Vcct, vcct => vcct.vcctDrugTypes, {
+	@ManyToOne(type => Vcct, vcct => vcct.vcctDrugTypes, {
     eager: true
   })
-  vcct: string
+	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
+	vcct: Vcct
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'vcct_drug_name'
   })
-  vcctDrugName: string
+	vcctDrugName: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'vcct_way_of_use'
   })
-  vcctWayOfUse: string
+	vcctWayOfUse: string
 
 }

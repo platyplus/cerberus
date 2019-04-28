@@ -4,37 +4,38 @@ import { Sti } from './Sti'
 
 @Entity()
 export class StiMedication {
-  @PrimaryGeneratedColumn('uuid')
-  id: string
-  
-  @Column({
+	@PrimaryGeneratedColumn('uuid')
+	id: string
+
+	@Column({
     nullable: true,
 		name: 'sti_treatment_medicine_name'
   })
-  stiTreatmentMedicineName: string
+	stiTreatmentMedicineName: string
 
-  @ManyToOne(type => Sti, sti => sti.stiMedications, {
+	@ManyToOne(type => Sti, sti => sti.stiMedications, {
     eager: true
   })
-  sti: string
+	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
+	sti: Sti
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_treatment_dosage'
   })
-  stiTreatmentDosage: string
+	stiTreatmentDosage: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_treatment_frequency'
   })
-  stiTreatmentFrequency: string
+	stiTreatmentFrequency: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'sti_treatment_number_days',
 		type: 'integer'
   })
-  stiTreatmentNumberDays: number
+	stiTreatmentNumberDays: number
 
 }

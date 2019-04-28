@@ -1,109 +1,105 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm'
+import { Entity, PrimaryColumn, Column } from 'typeorm'
 
 @Entity()
 export class DeathRegister {
-  @PrimaryGeneratedColumn('uuid')
-  id: string
-  
-  @Column({
-    nullable: true,
-		name: 'md_mcode'
+	@PrimaryColumn({
+    name: 'md_mcode'
   })
-  mdMcode: string
+	mdMcode: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_01_patient_name'
   })
-  a01PatientName: string
+	a01PatientName: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_02_father_name'
   })
-  a02FatherName: string
+	a02FatherName: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_03_sexe'
   })
-  a03Sexe: string
+	a03Sexe: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_05_age',
 		type: 'integer'
   })
-  a05Age: number
+	a05Age: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_07_patient_target'
   })
-  a07PatientTarget: string
+	a07PatientTarget: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'address'
   })
-  address: string
+	address: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'plh'
   })
-  plh: string
+	plh: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'on_anti_tb'
   })
-  onAntiTb: string
+	onAntiTb: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'on_art'
   })
-  onArt: string
+	onArt: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'expired_date',
 		type: 'timestamptz'
   })
-  expiredDate: Date
+	expiredDate: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'place_of_patient_expired'
   })
-  placeOfPatientExpired: string
+	placeOfPatientExpired: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'cause_of_death'
   })
-  causeOfDeath: string
+	causeOfDeath: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'hiv_related'
   })
-  hivRelated: string
+	hivRelated: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'verify',
 		type: 'integer'
   })
-  verify: number
+	verify: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'date_of_saving',
 		type: 'timestamptz'
   })
-  dateOfSaving: Date
+	dateOfSaving: Date
 
 }

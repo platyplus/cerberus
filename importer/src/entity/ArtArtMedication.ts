@@ -4,37 +4,38 @@ import { ArtConsultationPlha } from './ArtConsultationPlha'
 
 @Entity()
 export class ArtArtMedication {
-  @PrimaryGeneratedColumn('uuid')
-  id: string
-  
-  @Column({
+	@PrimaryGeneratedColumn('uuid')
+	id: string
+
+	@Column({
     nullable: true,
 		name: 'art_art_med_name'
   })
-  artArtMedName: string
+	artArtMedName: string
 
-  @ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.artArtMedications, {
+	@ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.artArtMedications, {
     eager: true
   })
-  artConsultationPlha: string
+	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
+	artConsultationPlha: ArtConsultationPlha
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'art_dosage'
   })
-  artDosage: string
+	artDosage: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'art_frequency'
   })
-  artFrequency: string
+	artFrequency: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'art_number_days',
 		type: 'integer'
   })
-  artNumberDays: number
+	artNumberDays: number
 
 }

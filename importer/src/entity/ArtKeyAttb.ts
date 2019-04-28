@@ -4,52 +4,53 @@ import { ArtKey } from './ArtKey'
 
 @Entity()
 export class ArtKeyAttb {
-  @PrimaryGeneratedColumn('uuid')
-  id: string
-  
-  @Column({
+	@PrimaryGeneratedColumn('uuid')
+	id: string
+
+	@Column({
     nullable: true,
 		name: 'tb'
   })
-  tb: string
+	tb: string
 
-  @ManyToOne(type => ArtKey, artKey => artKey.artKeyAttbs, {
+	@ManyToOne(type => ArtKey, artKey => artKey.artKeyAttbs, {
     eager: true
   })
-  artKey: string
+	@JoinColumn([{ name: 'mdMcode', referencedColumnName: 'mdMcode'}])
+	artKey: ArtKey
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'attb_regimen'
   })
-  attbRegimen: string
+	attbRegimen: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'date_of_diagnosis',
 		type: 'timestamptz'
   })
-  dateOfDiagnosis: Date
+	dateOfDiagnosis: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'end_date_of_attbip',
 		type: 'timestamptz'
   })
-  endDateOfAttbip: Date
+	endDateOfAttbip: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'end_date_of_attbcp',
 		type: 'timestamptz'
   })
-  endDateOfAttbcp: Date
+	endDateOfAttbcp: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'dateof_diagnosis',
 		type: 'timestamptz'
   })
-  dateofDiagnosis: Date
+	dateofDiagnosis: Date
 
 }

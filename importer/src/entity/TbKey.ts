@@ -1,345 +1,341 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm'
+import { Entity, PrimaryColumn, Column, OneToMany } from 'typeorm'
 import { TbKeySample } from './TbKeySample'
 
 @Entity()
 export class TbKey {
-  @PrimaryGeneratedColumn('uuid')
-  id: string
-  
-  @Column({
-    nullable: true,
-		name: 'md_mcode'
+	@PrimaryColumn({
+    name: 'md_mcode'
   })
-  mdMcode: string
+	mdMcode: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_01_patient_name'
   })
-  a01PatientName: string
+	a01PatientName: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_05_age',
 		type: 'integer'
   })
-  a05Age: number
+	a05Age: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_03_sexe'
   })
-  a03Sexe: string
+	a03Sexe: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_07_patient_target'
   })
-  a07PatientTarget: string
+	a07PatientTarget: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'hiv_status'
   })
-  hivStatus: string
+	hivStatus: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'art'
   })
-  art: string
+	art: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'art_start_date',
 		type: 'timestamptz'
   })
-  artStartDate: Date
+	artStartDate: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'cpt_date',
 		type: 'timestamptz'
   })
-  cptDate: Date
+	cptDate: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'tb_treatment'
   })
-  tbTreatment: string
+	tbTreatment: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ptbeptb'
   })
-  ptbeptb: string
+	ptbeptb: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'eptb_site'
   })
-  eptbSite: string
+	eptbSite: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'eptb_site_other'
   })
-  eptbSiteOther: string
+	eptbSiteOther: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'refeffed_in'
   })
-  refeffedIn: string
+	refeffedIn: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'referred_in_date',
 		type: 'timestamptz'
   })
-  referredInDate: Date
+	referredInDate: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'type'
   })
-  type: string
+	type: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'regimen'
   })
-  regimen: string
+	regimen: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ip_date',
 		type: 'timestamptz'
   })
-  ipDate: Date
+	ipDate: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'time',
 		type: 'integer'
   })
-  time: number
+	time: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'start_cp',
 		type: 'timestamptz'
   })
-  startCp: Date
+	startCp: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'bacteriological_confirmation'
   })
-  bacteriologicalConfirmation: string
+	bacteriologicalConfirmation: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'afb_initial_sputum'
   })
-  afbInitialSputum: string
+	afbInitialSputum: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'afb_initial_x'
   })
-  afbInitialX: string
+	afbInitialX: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'afb_initial_culture'
   })
-  afbInitialCulture: string
+	afbInitialCulture: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'afb_2_mth_sputum'
   })
-  afb2MthSputum: string
+	afb2MthSputum: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'afb_2_mth_x'
   })
-  afb2MthX: string
+	afb2MthX: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'afb_2_mth_culture'
   })
-  afb2MthCulture: string
+	afb2MthCulture: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'afb_3_mth_sputum'
   })
-  afb3MthSputum: string
+	afb3MthSputum: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'afb_3_mth_x'
   })
-  afb3MthX: string
+	afb3MthX: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'afb_3_mth_culture'
   })
-  afb3MthCulture: string
+	afb3MthCulture: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'afb_5_mth_sputum'
   })
-  afb5MthSputum: string
+	afb5MthSputum: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'afb_5_mth_x'
   })
-  afb5MthX: string
+	afb5MthX: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'afb_5_mth_culture'
   })
-  afb5MthCulture: string
+	afb5MthCulture: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'end_of_treatment_sputum'
   })
-  endOfTreatmentSputum: string
+	endOfTreatmentSputum: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'end_of_treatment_x'
   })
-  endOfTreatmentX: string
+	endOfTreatmentX: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'end_of_treatment_culture'
   })
-  endOfTreatmentCulture: string
+	endOfTreatmentCulture: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'afb_initial_positive',
 		type: 'integer'
   })
-  afbInitialPositive: number
+	afbInitialPositive: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'afb_2_mth_negative',
 		type: 'integer'
   })
-  afb2MthNegative: number
+	afb2MthNegative: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'afb_3_mth_negative',
 		type: 'integer'
   })
-  afb3MthNegative: number
+	afb3MthNegative: number
 
-  @OneToMany(type => TbKeySample, tbKeySample => tbKeySample.tbKey, {
+	@OneToMany(type => TbKeySample, tbKeySample => tbKeySample.tbKey, {
     cascade: true
   })
-  tbKeySamples: TbKeySample[]
+	tbKeySamples: TbKeySample[]
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'other_sample'
   })
-  otherSample: string
+	otherSample: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'oth_stool_result'
   })
-  othStoolResult: string
+	othStoolResult: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'oth_urine_result'
   })
-  othUrineResult: string
+	othUrineResult: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'oth_lymph_node_result'
   })
-  othLymphNodeResult: string
+	othLymphNodeResult: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'oth_other_txt'
   })
-  othOtherTxt: string
+	othOtherTxt: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'oth_other_result'
   })
-  othOtherResult: string
+	othOtherResult: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'radiology'
   })
-  radiology: string
+	radiology: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'cx_ray_result'
   })
-  cxRayResult: string
+	cxRayResult: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'x_ray_result'
   })
-  xRayResult: string
+	xRayResult: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'usg_result'
   })
-  usgResult: string
+	usgResult: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'outcome'
   })
-  outcome: string
+	outcome: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'outcome_date',
 		type: 'timestamptz'
   })
-  outcomeDate: Date
+	outcomeDate: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'remark'
   })
-  remark: string
+	remark: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'tb_saving_date',
 		type: 'timestamptz'
   })
-  tbSavingDate: Date
+	tbSavingDate: Date
 
 }

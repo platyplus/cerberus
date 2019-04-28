@@ -4,33 +4,34 @@ import { ArtAdherence } from './ArtAdherence'
 
 @Entity()
 export class AdhTbEpisode {
-  @PrimaryGeneratedColumn('uuid')
-  id: string
-  
-  @Column({
+	@PrimaryGeneratedColumn('uuid')
+	id: string
+
+	@Column({
     nullable: true,
 		name: 'adh_tb_start_date',
 		type: 'timestamptz'
   })
-  adhTbStartDate: Date
+	adhTbStartDate: Date
 
-  @ManyToOne(type => ArtAdherence, artAdherence => artAdherence.adhTbEpisodes, {
+	@ManyToOne(type => ArtAdherence, artAdherence => artAdherence.adhTbEpisodes, {
     eager: true
   })
-  artAdherence: string
+	@JoinColumn([{ name: 'mdMcode', referencedColumnName: 'mdMcode'}, { name: 'adhPlaceOfMedicalCare', referencedColumnName: 'adhPlaceOfMedicalCare'}, { name: 'adhVisitDate', referencedColumnName: 'adhVisitDate'}])
+	artAdherence: ArtAdherence
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_tb_stop_date',
 		type: 'timestamptz'
   })
-  adhTbStopDate: Date
+	adhTbStopDate: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_tb_restarting_date',
 		type: 'timestamptz'
   })
-  adhTbRestartingDate: Date
+	adhTbRestartingDate: Date
 
 }

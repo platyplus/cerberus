@@ -4,31 +4,32 @@ import { ArtKey } from './ArtKey'
 
 @Entity()
 export class ArtKeyHaartToxicity {
-  @PrimaryGeneratedColumn('uuid')
-  id: string
-  
-  @Column({
+	@PrimaryGeneratedColumn('uuid')
+	id: string
+
+	@Column({
     nullable: true,
 		name: 'haart_toxicity'
   })
-  haartToxicity: string
+	haartToxicity: string
 
-  @ManyToOne(type => ArtKey, artKey => artKey.artKeyHaartToxicitys, {
+	@ManyToOne(type => ArtKey, artKey => artKey.artKeyHaartToxicitys, {
     eager: true
   })
-  artKey: string
+	@JoinColumn([{ name: 'mdMcode', referencedColumnName: 'mdMcode'}])
+	artKey: ArtKey
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'toxicity_grade'
   })
-  toxicityGrade: string
+	toxicityGrade: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'toxicity_date',
 		type: 'timestamptz'
   })
-  toxicityDate: Date
+	toxicityDate: Date
 
 }

@@ -4,33 +4,34 @@ import { ArtKey } from './ArtKey'
 
 @Entity()
 export class ArtKeyCd4Weight {
-  @PrimaryGeneratedColumn('uuid')
-  id: string
-  
-  @Column({
+	@PrimaryGeneratedColumn('uuid')
+	id: string
+
+	@Column({
     nullable: true,
 		name: 'date',
 		type: 'timestamptz'
   })
-  date: Date
+	date: Date
 
-  @ManyToOne(type => ArtKey, artKey => artKey.artKeyCd4Weights, {
+	@ManyToOne(type => ArtKey, artKey => artKey.artKeyCd4Weights, {
     eager: true
   })
-  artKey: string
+	@JoinColumn([{ name: 'mdMcode', referencedColumnName: 'mdMcode'}])
+	artKey: ArtKey
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'cd_4',
 		type: 'integer'
   })
-  cd4: number
+	cd4: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'weight',
 		type: 'integer'
   })
-  weight: number
+	weight: number
 
 }

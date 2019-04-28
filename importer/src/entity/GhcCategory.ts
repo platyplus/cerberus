@@ -4,24 +4,25 @@ import { GeneralHeathCareGhc } from './GeneralHeathCareGhc'
 
 @Entity()
 export class GhcCategory {
-  @PrimaryGeneratedColumn('uuid')
-  id: string
-  
-  @Column({
+	@PrimaryGeneratedColumn('uuid')
+	id: string
+
+	@Column({
     nullable: true,
 		name: 'ghc_category'
   })
-  ghcCategory: string
+	ghcCategory: string
 
-  @ManyToOne(type => GeneralHeathCareGhc, generalHeathCareGhc => generalHeathCareGhc.ghcCategorys, {
+	@ManyToOne(type => GeneralHeathCareGhc, generalHeathCareGhc => generalHeathCareGhc.ghcCategorys, {
     eager: true
   })
-  generalHeathCareGhc: string
+	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
+	generalHeathCareGhc: GeneralHeathCareGhc
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'ghc_description'
   })
-  ghcDescription: string
+	ghcDescription: string
 
 }

@@ -1,671 +1,665 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm'
+import { Entity, PrimaryColumn, Column, OneToMany } from 'typeorm'
 import { AdhArtEpisode } from './AdhArtEpisode'
 import { AdhTbEpisode } from './AdhTbEpisode'
 
 @Entity()
 export class ArtAdherence {
-  @PrimaryGeneratedColumn('uuid')
-  id: string
-  
-  @Column({
-    nullable: true,
-		name: 'md_mcode'
+	@PrimaryColumn({
+    name: 'md_mcode'
   })
-  mdMcode: string
+	mdMcode: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_00_registration_date',
 		type: 'timestamptz'
   })
-  a00RegistrationDate: Date
+	a00RegistrationDate: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_01_patient_name'
   })
-  a01PatientName: string
+	a01PatientName: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_02_father_name'
   })
-  a02FatherName: string
+	a02FatherName: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_03_sexe'
   })
-  a03Sexe: string
+	a03Sexe: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_041_date_of_birth',
 		type: 'timestamptz'
   })
-  a041DateOfBirth: Date
+	a041DateOfBirth: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_05_age',
 		type: 'integer'
   })
-  a05Age: number
+	a05Age: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_07_patient_target'
   })
-  a07PatientTarget: string
+	a07PatientTarget: string
 
-  @Column({
-    nullable: true,
-		name: 'adh_place_of_medical_care'
+	@PrimaryColumn({
+    name: 'adh_place_of_medical_care'
   })
-  adhPlaceOfMedicalCare: string
+	adhPlaceOfMedicalCare: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_visit'
   })
-  adhVisit: string
+	adhVisit: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_visit_assessment',
 		type: 'integer'
   })
-  adhVisitAssessment: number
+	adhVisitAssessment: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_reason_of_visit'
   })
-  adhReasonOfVisit: string
+	adhReasonOfVisit: string
 
-  @Column({
-    nullable: true,
-		name: 'adh_visit_date',
+	@PrimaryColumn({
+    name: 'adh_visit_date',
 		type: 'timestamptz'
   })
-  adhVisitDate: Date
+	adhVisitDate: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_appointment'
   })
-  adhAppointment: string
+	adhAppointment: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_counselor'
   })
-  adhCounselor: string
+	adhCounselor: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'a_07_a_marital_status'
   })
-  a07AMaritalStatus: string
+	a07AMaritalStatus: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_no_of_children',
 		type: 'integer'
   })
-  adhNoOfChildren: number
+	adhNoOfChildren: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_accommodation'
   })
-  adhAccommodation: string
+	adhAccommodation: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_accomo_if_stable'
   })
-  adhAccomoIfStable: string
+	adhAccomoIfStable: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_occupation'
   })
-  adhOccupation: string
+	adhOccupation: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_occupation_if_yes'
   })
-  adhOccupationIfYes: string
+	adhOccupationIfYes: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_financial_situation'
   })
-  adhFinancialSituation: string
+	adhFinancialSituation: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_level_of_education'
   })
-  adhLevelOfEducation: string
+	adhLevelOfEducation: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_social_remark'
   })
-  adhSocialRemark: string
+	adhSocialRemark: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_patient_has_care_taker'
   })
-  adhPatientHasCareTaker: string
+	adhPatientHasCareTaker: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_if_yes_name'
   })
-  adhIfYesName: string
+	adhIfYesName: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_if_no_why'
   })
-  adhIfNoWhy: string
+	adhIfNoWhy: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_relationship_to_patient_i'
   })
-  adhRelationshipToPatientI: string
+	adhRelationshipToPatientI: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_in_same_house_hold_i'
   })
-  adhInSameHouseHoldI: string
+	adhInSameHouseHoldI: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_care_taker_attend_clinic_i'
   })
-  adhCareTakerAttendClinicI: string
+	adhCareTakerAttendClinicI: string
 
-  @OneToMany(type => AdhArtEpisode, adhArtEpisode => adhArtEpisode.artAdherence, {
+	@OneToMany(type => AdhArtEpisode, adhArtEpisode => adhArtEpisode.artAdherence, {
     cascade: true
   })
-  adhArtEpisodes: AdhArtEpisode[]
+	adhArtEpisodes: AdhArtEpisode[]
 
-  @OneToMany(type => AdhTbEpisode, adhTbEpisode => adhTbEpisode.artAdherence, {
+	@OneToMany(type => AdhTbEpisode, adhTbEpisode => adhTbEpisode.artAdherence, {
     cascade: true
   })
-  adhTbEpisodes: AdhTbEpisode[]
+	adhTbEpisodes: AdhTbEpisode[]
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_adherence_problem'
   })
-  adhAdherenceProblem: string
+	adhAdherenceProblem: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_problem'
   })
-  adhProblem: string
+	adhProblem: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_adh_social_problem'
   })
-  adhAdhSocialProblem: string
+	adhAdhSocialProblem: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_adh_medical_problem'
   })
-  adhAdhMedicalProblem: string
+	adhAdhMedicalProblem: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_adh_medical_problem_other'
   })
-  adhAdhMedicalProblemOther: string
+	adhAdhMedicalProblemOther: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_adh_miscellaneous_problem'
   })
-  adhAdhMiscellaneousProblem: string
+	adhAdhMiscellaneousProblem: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_comment'
   })
-  adhComment: string
+	adhComment: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_no_side_effects'
   })
-  adhNoSideEffects: string
+	adhNoSideEffects: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_side_effects'
   })
-  adhSideEffects: string
+	adhSideEffects: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_severe_side_effects'
   })
-  adhSevereSideEffects: string
+	adhSevereSideEffects: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_long_term_side_effects'
   })
-  adhLongTermSideEffects: string
+	adhLongTermSideEffects: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_short_term_general'
   })
-  adhShortTermGeneral: string
+	adhShortTermGeneral: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_short_term_side_effects_other'
   })
-  adhShortTermSideEffectsOther: string
+	adhShortTermSideEffectsOther: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_severe_se'
   })
-  adhSevereSe: string
+	adhSevereSe: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_refer_to_doctor'
   })
-  adhReferToDoctor: string
+	adhReferToDoctor: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_no_of_missed_doses_last_7_days',
 		type: 'integer'
   })
-  adhNoOfMissedDosesLast7Days: number
+	adhNoOfMissedDosesLast7Days: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_no_of_missed_doses_last_30_days',
 		type: 'integer'
   })
-  adhNoOfMissedDosesLast30Days: number
+	adhNoOfMissedDosesLast30Days: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_total_doses',
 		type: 'integer'
   })
-  adhTotalDoses: number
+	adhTotalDoses: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_adherence_within_last_30_days',
 		type: 'integer'
   })
-  adhAdherenceWithinLast30Days: number
+	adhAdherenceWithinLast30Days: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_doses_found',
 		type: 'integer'
   })
-  adhDosesFound: number
+	adhDosesFound: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_doses_should_have',
 		type: 'integer'
   })
-  adhDosesShouldHave: number
+	adhDosesShouldHave: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_extra_doses_provided',
 		type: 'integer'
   })
-  adhExtraDosesProvided: number
+	adhExtraDosesProvided: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_dose_for',
 		type: 'integer'
   })
-  adhDoseFor: number
+	adhDoseFor: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_adherence_level_since_last_visit'
   })
-  adhAdherenceLevelSinceLastVisit: string
+	adhAdherenceLevelSinceLastVisit: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_social_familialsituation'
   })
-  adhSocialFamilialsituation: string
+	adhSocialFamilialsituation: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_social_if_problem'
   })
-  adhSocialIfProblem: string
+	adhSocialIfProblem: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_care_taker'
   })
-  adhCareTaker: string
+	adhCareTaker: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_care_taker_if_change'
   })
-  adhCareTakerIfChange: string
+	adhCareTakerIfChange: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_in_same_house_hold_f'
   })
-  adhInSameHouseHoldF: string
+	adhInSameHouseHoldF: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_relationship_to_patient_f'
   })
-  adhRelationshipToPatientF: string
+	adhRelationshipToPatientF: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_care_taker_attend_clinic_f'
   })
-  adhCareTakerAttendClinicF: string
+	adhCareTakerAttendClinicF: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_care_taker_attend_clinic_if_problem'
   })
-  adhCareTakerAttendClinicIfProblem: string
+	adhCareTakerAttendClinicIfProblem: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_psychological_disorder'
   })
-  adhPsychologicalDisorder: string
+	adhPsychologicalDisorder: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_psycho_if_yes'
   })
-  adhPsychoIfYes: string
+	adhPsychoIfYes: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_current_drug_use'
   })
-  adhCurrentDrugUse: string
+	adhCurrentDrugUse: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_drug'
   })
-  adhDrug: string
+	adhDrug: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_alcohol_last_use',
 		type: 'timestamptz'
   })
-  adhAlcoholLastUse: Date
+	adhAlcoholLastUse: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_alcohol_time_day',
 		type: 'integer'
   })
-  adhAlcoholTimeDay: number
+	adhAlcoholTimeDay: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_alcohol_days_week',
 		type: 'integer'
   })
-  adhAlcoholDaysWeek: number
+	adhAlcoholDaysWeek: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_alcohol_way_of_use'
   })
-  adhAlcoholWayOfUse: string
+	adhAlcoholWayOfUse: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_ampheataminel_last_use',
 		type: 'timestamptz'
   })
-  adhAmpheataminelLastUse: Date
+	adhAmpheataminelLastUse: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_ampheatamine_time_day',
 		type: 'integer'
   })
-  adhAmpheatamineTimeDay: number
+	adhAmpheatamineTimeDay: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_ampheatamine_days_week',
 		type: 'integer'
   })
-  adhAmpheatamineDaysWeek: number
+	adhAmpheatamineDaysWeek: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_ampheatamine_way_of_use'
   })
-  adhAmpheatamineWayOfUse: string
+	adhAmpheatamineWayOfUse: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_diazepine_last_use',
 		type: 'timestamptz'
   })
-  adhDiazepineLastUse: Date
+	adhDiazepineLastUse: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_diazepine_time_day',
 		type: 'integer'
   })
-  adhDiazepineTimeDay: number
+	adhDiazepineTimeDay: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_diazepine_days_week',
 		type: 'integer'
   })
-  adhDiazepineDaysWeek: number
+	adhDiazepineDaysWeek: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_diazepine_way_of_use'
   })
-  adhDiazepineWayOfUse: string
+	adhDiazepineWayOfUse: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_cannabis_last_use',
 		type: 'timestamptz'
   })
-  adhCannabisLastUse: Date
+	adhCannabisLastUse: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_cannabis_time_day',
 		type: 'integer'
   })
-  adhCannabisTimeDay: number
+	adhCannabisTimeDay: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_cannabis_days_week',
 		type: 'integer'
   })
-  adhCannabisDaysWeek: number
+	adhCannabisDaysWeek: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_cannabis_way_of_use'
   })
-  adhCannabisWayOfUse: string
+	adhCannabisWayOfUse: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_ecstasy_last_use',
 		type: 'timestamptz'
   })
-  adhEcstasyLastUse: Date
+	adhEcstasyLastUse: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_ecstasy_time_day',
 		type: 'integer'
   })
-  adhEcstasyTimeDay: number
+	adhEcstasyTimeDay: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_esctasy_days_week',
 		type: 'integer'
   })
-  adhEsctasyDaysWeek: number
+	adhEsctasyDaysWeek: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_esctasy_way_of_use'
   })
-  adhEsctasyWayOfUse: string
+	adhEsctasyWayOfUse: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_herion_last_use',
 		type: 'timestamptz'
   })
-  adhHerionLastUse: Date
+	adhHerionLastUse: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_herion_time_day',
 		type: 'integer'
   })
-  adhHerionTimeDay: number
+	adhHerionTimeDay: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_herion_days_week',
 		type: 'integer'
   })
-  adhHerionDaysWeek: number
+	adhHerionDaysWeek: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_herion_way_of_use'
   })
-  adhHerionWayOfUse: string
+	adhHerionWayOfUse: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_opium_last_use',
 		type: 'timestamptz'
   })
-  adhOpiumLastUse: Date
+	adhOpiumLastUse: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_opium_time_day',
 		type: 'integer'
   })
-  adhOpiumTimeDay: number
+	adhOpiumTimeDay: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_opium_days_week',
 		type: 'integer'
   })
-  adhOpiumDaysWeek: number
+	adhOpiumDaysWeek: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_opium_way_of_use'
   })
-  adhOpiumWayOfUse: string
+	adhOpiumWayOfUse: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_did_you_share_needle_syringe'
   })
-  adhDidYouShareNeedleSyringe: string
+	adhDidYouShareNeedleSyringe: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_herbal_medicines'
   })
-  adhHerbalMedicines: string
+	adhHerbalMedicines: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_conclusion'
   })
-  adhConclusion: string
+	adhConclusion: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_suggestions'
   })
-  adhSuggestions: string
+	adhSuggestions: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_check_list'
   })
-  adhCheckList: string
+	adhCheckList: string
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'adh_next_appointment_date',
 		type: 'timestamptz'
   })
-  adhNextAppointmentDate: Date
+	adhNextAppointmentDate: Date
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'verify',
 		type: 'integer'
   })
-  verify: number
+	verify: number
 
-  @Column({
+	@Column({
     nullable: true,
 		name: 'last_registration_date',
 		type: 'timestamptz'
   })
-  lastRegistrationDate: Date
+	lastRegistrationDate: Date
 
 }
