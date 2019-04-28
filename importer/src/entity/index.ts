@@ -2,7 +2,12 @@ import { ArtAdherence } from './ArtAdherence'
 import { AdhArtEpisode } from './AdhArtEpisode'
 import { AdhTbEpisode } from './AdhTbEpisode'
 import { ArtConsultationPlha } from './ArtConsultationPlha'
+import { ArtAntiRetroMedicineTaken } from './ArtAntiRetroMedicineTaken'
+import { ArtAntiBioMedicineCode } from './ArtAntiBioMedicineCode'
+import { ArtAntiTbMedicineCode } from './ArtAntiTbMedicineCode'
 import { ArtTreatment } from './ArtTreatment'
+import { ArtAdultStage } from './ArtAdultStage'
+import { ArtChildStage } from './ArtChildStage'
 import { ArtGhcDiagnosis } from './ArtGhcDiagnosis'
 import { TbSputum } from './TbSputum'
 import { ArtArtMedication } from './ArtArtMedication'
@@ -14,6 +19,7 @@ import { ArtKeyNewRegimen } from './ArtKeyNewRegimen'
 import { ArtKeyHaartToxicity } from './ArtKeyHaartToxicity'
 import { ArtKeyStop } from './ArtKeyStop'
 import { ArtKeyAttb } from './ArtKeyAttb'
+import { OtherOIs } from './OtherOIs'
 import { ArtKeyResult } from './ArtKeyResult'
 import { ArtKeyApri } from './ArtKeyApri'
 import { DeathRegister } from './DeathRegister'
@@ -34,7 +40,12 @@ export const classes: { [key: string]: any } = {
 	'AdhArtEpisode': AdhArtEpisode,
 	'AdhTbEpisode': AdhTbEpisode,
 	'ArtConsultationPlha': ArtConsultationPlha,
+	'ArtAntiRetroMedicineTaken': ArtAntiRetroMedicineTaken,
+	'ArtAntiBioMedicineCode': ArtAntiBioMedicineCode,
+	'ArtAntiTbMedicineCode': ArtAntiTbMedicineCode,
 	'ArtTreatment': ArtTreatment,
+	'ArtAdultStage': ArtAdultStage,
+	'ArtChildStage': ArtChildStage,
 	'ArtGhcDiagnosis': ArtGhcDiagnosis,
 	'TbSputum': TbSputum,
 	'ArtArtMedication': ArtArtMedication,
@@ -46,6 +57,7 @@ export const classes: { [key: string]: any } = {
 	'ArtKeyHaartToxicity': ArtKeyHaartToxicity,
 	'ArtKeyStop': ArtKeyStop,
 	'ArtKeyAttb': ArtKeyAttb,
+	'OtherOIs': OtherOIs,
 	'ArtKeyResult': ArtKeyResult,
 	'ArtKeyApri': ArtKeyApri,
 	'DeathRegister': DeathRegister,

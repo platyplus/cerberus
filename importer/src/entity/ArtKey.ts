@@ -5,6 +5,7 @@ import { ArtKeyNewRegimen } from './ArtKeyNewRegimen'
 import { ArtKeyHaartToxicity } from './ArtKeyHaartToxicity'
 import { ArtKeyStop } from './ArtKeyStop'
 import { ArtKeyAttb } from './ArtKeyAttb'
+import { OtherOIs } from './OtherOIs'
 import { ArtKeyResult } from './ArtKeyResult'
 import { ArtKeyApri } from './ArtKeyApri'
 
@@ -284,35 +285,10 @@ export class ArtKey {
   })
 	presentingInitialOIs: string
 
-	@Column({
-    nullable: true,
-		name: 'other_o_is_1'
+	@OneToMany(type => OtherOIs, otherOIs => otherOIs.artKey, {
+    cascade: true
   })
-	otherOIs1: string
-
-	@Column({
-    nullable: true,
-		name: 'other_o_is_2'
-  })
-	otherOIs2: string
-
-	@Column({
-    nullable: true,
-		name: 'other_o_is_3'
-  })
-	otherOIs3: string
-
-	@Column({
-    nullable: true,
-		name: 'other_o_is_4'
-  })
-	otherOIs4: string
-
-	@Column({
-    nullable: true,
-		name: 'other_o_is_5'
-  })
-	otherOIs5: string
+	otherOIss: OtherOIs[]
 
 	@OneToMany(type => ArtKeyResult, artKeyResult => artKeyResult.artKey, {
     cascade: true

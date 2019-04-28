@@ -753,78 +753,93 @@
       },
       {
         "column": "21. ART_AntiRetro_MedicineTaken1",
-        "property": "artAntiRetroMedicineTaken1",
-        "type": "string"
+        "property": "artAntiRetroMedicineTaken",
+        "type": "string",
+        "relation": "artAntiRetroMedicineTakens"
       },
       {
         "column": "22. ART_AntiRetro_MedicineTaken2",
-        "property": "artAntiRetroMedicineTaken2",
-        "type": "string"
+        "property": "artAntiRetroMedicineTaken",
+        "type": "string",
+        "relation": "artAntiRetroMedicineTakens"
       },
       {
         "column": "23. ART_AntiRetro_MedicineTaken3",
-        "property": "artAntiRetroMedicineTaken3",
-        "type": "string"
+        "property": "artAntiRetroMedicineTaken",
+        "type": "string",
+        "relation": "artAntiRetroMedicineTakens"
       },
       {
         "column": "24. ART_AntiRetro_MedicineTaken4",
-        "property": "artAntiRetroMedicineTaken4",
-        "type": "string"
+        "property": "artAntiRetroMedicineTaken",
+        "type": "string",
+        "relation": "artAntiRetroMedicineTakens"
       },
       {
         "column": "25. ART_AntiRetro_MedicineTaken5",
-        "property": "artAntiRetroMedicineTaken5",
-        "type": "string"
+        "property": "artAntiRetroMedicineTaken",
+        "type": "string",
+        "relation": "artAntiRetroMedicineTakens"
       },
       {
         "column": "26. ART_AntiBio_MedicineCode1",
-        "property": "artAntiBioMedicineCode1",
-        "type": "string"
+        "property": "artAntiBioMedicineCode",
+        "type": "string",
+        "relation": "artAntiBioMedicineCodes"
       },
       {
         "column": "27. ART_AntiBio_MedicineCode2",
-        "property": "artAntiBioMedicineCode2",
-        "type": "string"
+        "property": "artAntiBioMedicineCode",
+        "type": "string",
+        "relation": "artAntiBioMedicineCodes"
       },
       {
         "column": "28. ART_AntiBio_MedicineCode3",
-        "property": "artAntiBioMedicineCode3",
-        "type": "string"
+        "property": "artAntiBioMedicineCode",
+        "type": "string",
+        "relation": "artAntiBioMedicineCodes"
       },
       {
         "column": "29. ART_AntiBio_MedicineCode4",
-        "property": "artAntiBioMedicineCode4",
-        "type": "string"
+        "property": "artAntiBioMedicineCode",
+        "type": "string",
+        "relation": "artAntiBioMedicineCodes"
       },
       {
         "column": "30. ART_AntiBio_MedicineCode5",
-        "property": "artAntiBioMedicineCode5",
-        "type": "string"
+        "property": "artAntiBioMedicineCode",
+        "type": "string",
+        "relation": "artAntiBioMedicineCodes"
       },
       {
         "column": "31. ART_AntiTB_MedicineCode1",
-        "property": "artAntiTbMedicineCode1",
-        "type": "string"
+        "property": "artAntiTbMedicineCode",
+        "type": "string",
+        "relation": "artAntiTbMedicineCodes"
       },
       {
         "column": "32. ART_AntiTB_MedicineCode2",
-        "property": "artAntiTbMedicineCode2",
-        "type": "string"
+        "property": "artAntiTbMedicineCode",
+        "type": "string",
+        "relation": "artAntiTbMedicineCodes"
       },
       {
         "column": "33. ART_AntiTB_MedicineCode3",
-        "property": "artAntiTbMedicineCode3",
-        "type": "string"
+        "property": "artAntiTbMedicineCode",
+        "type": "string",
+        "relation": "artAntiTbMedicineCodes"
       },
       {
         "column": "34. ART_AntiTB_MedicineCode4",
-        "property": "artAntiTbMedicineCode4",
-        "type": "string"
+        "property": "artAntiTbMedicineCode",
+        "type": "string",
+        "relation": "artAntiTbMedicineCodes"
       },
       {
         "column": "35. ART_AntiTB_MedicineCode5",
-        "property": "artAntiTbMedicineCode5",
-        "type": "string"
+        "property": "artAntiTbMedicineCode",
+        "type": "string",
+        "relation": "artAntiTbMedicineCodes"
       },
       {
         "column": "36. ART_PatientTakingOther",
@@ -1319,52 +1334,62 @@
       {
         "column": "129. ART_Adult_Stage",
         "property": "artAdultStage",
-        "type": "string"
+        "type": "string",
+        "relation": "artAdultStages"
       },
       {
         "column": "130. ART_Adult_Stage1",
-        "property": "artAdultStage1",
-        "type": "string"
+        "property": "artAdultStage",
+        "type": "string",
+        "relation": "artAdultStages"
       },
       {
         "column": "131. ART_Adult_Stage2",
-        "property": "artAdultStage2",
-        "type": "string"
+        "property": "artAdultStage",
+        "type": "string",
+        "relation": "artAdultStages"
       },
       {
         "column": "132. ART_Adult_Stage3",
-        "property": "artAdultStage3",
-        "type": "string"
+        "property": "artAdultStage",
+        "type": "string",
+        "relation": "artAdultStages"
       },
       {
         "column": "133. ART_Adult_Stage4",
-        "property": "artAdultStage4",
-        "type": "string"
+        "property": "artAdultStage",
+        "type": "string",
+        "relation": "artAdultStages"
       },
       {
         "column": "134. ART_Child_Stage",
         "property": "artChildStage",
-        "type": "string"
+        "type": "string",
+        "relation": "artChildStages"
       },
       {
         "column": "135. ART_Child_Stage1",
-        "property": "artChildStage1",
-        "type": "string"
+        "property": "artChildStage",
+        "type": "string",
+        "relation": "artChildStages"
       },
       {
         "column": "136. ART_Child_Stage2",
-        "property": "artChildStage2",
-        "type": "string"
+        "property": "artChildStage",
+        "type": "string",
+        "relation": "artChildStages"
       },
       {
         "column": "137. ART_Child_Stage3",
-        "property": "artChildStage3",
-        "type": "string"
+        "property": "artChildStage",
+        "type": "string",
+        "relation": "artChildStages"
       },
       {
         "column": "138. ART_Child_Stage4",
-        "property": "artChildStage4",
-        "type": "string"
+        "property": "artChildStage",
+        "type": "string",
+        "relation": "artChildStages"
       },
       {
         "column": "139. ART_PatientStatus",
@@ -3815,28 +3840,33 @@
       },
       {
         "column": "244. OtherOIs1",
-        "property": "otherOIs1",
-        "type": "string"
+        "property": "otherOIs",
+        "type": "string",
+        "relation": "otherOIss"
       },
       {
         "column": "245. OtherOIs2",
-        "property": "otherOIs2",
-        "type": "string"
+        "property": "otherOIs",
+        "type": "string",
+        "relation": "otherOIss"
       },
       {
         "column": "246. OtherOIs3",
-        "property": "otherOIs3",
-        "type": "string"
+        "property": "otherOIs",
+        "type": "string",
+        "relation": "otherOIss"
       },
       {
         "column": "247. OtherOIs4",
-        "property": "otherOIs4",
-        "type": "string"
+        "property": "otherOIs",
+        "type": "string",
+        "relation": "otherOIss"
       },
       {
         "column": "248. OtherOIs5",
-        "property": "otherOIs5",
-        "type": "string"
+        "property": "otherOIs",
+        "type": "string",
+        "relation": "otherOIss"
       },
       {
         "column": "249. V_Date_1",
