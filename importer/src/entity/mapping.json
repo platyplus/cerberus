@@ -11,7 +11,7 @@
       {
         "column": "2. A00_RegistrationDate",
         "property": "a00RegistrationDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "3. A01_PatientName",
@@ -31,7 +31,7 @@
       {
         "column": "6. A041_DateOfBirth",
         "property": "a041DateOfBirth",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "7. A05_Age",
@@ -66,7 +66,7 @@
       {
         "column": "13. ADH_VisitDate",
         "property": "adhVisitDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "14. ADH_Appointment",
@@ -156,133 +156,133 @@
       {
         "column": "31. ADH_ARTStartDate",
         "property": "adhArtStartDate",
-        "type": "date",
+        "type": "Date",
         "relation": "adhArtEpisodes"
       },
       {
         "column": "32. ADH_ARTStopDate1",
         "property": "adhArtStopDate",
-        "type": "date",
+        "type": "Date",
         "relation": "adhArtEpisodes"
       },
       {
         "column": "33. ADH_ARTRestartingDate1",
         "property": "adhArtRestartingDate",
-        "type": "date",
+        "type": "Date",
         "relation": "adhArtEpisodes"
       },
       {
         "column": "34. ADH_ARTStopDate2",
         "property": "adhArtStopDate",
-        "type": "date",
+        "type": "Date",
         "relation": "adhArtEpisodes"
       },
       {
         "column": "35. ADH_ARTRestartingDate2",
         "property": "adhArtRestartingDate",
-        "type": "date",
+        "type": "Date",
         "relation": "adhArtEpisodes"
       },
       {
         "column": "36. ADH_ARTStopDate3",
         "property": "adhArtStopDate",
-        "type": "date",
+        "type": "Date",
         "relation": "adhArtEpisodes"
       },
       {
         "column": "37. ADH_ARTRestartingDate3",
         "property": "adhArtRestartingDate",
-        "type": "date",
+        "type": "Date",
         "relation": "adhArtEpisodes"
       },
       {
         "column": "38. ADH_ARTStopDate4",
         "property": "adhArtStopDate",
-        "type": "date",
+        "type": "Date",
         "relation": "adhArtEpisodes"
       },
       {
         "column": "39. ADH_ARTRestartingDate4",
         "property": "adhArtRestartingDate",
-        "type": "date",
+        "type": "Date",
         "relation": "adhArtEpisodes"
       },
       {
         "column": "40. ADH_ARTStopDate5",
         "property": "adhArtStopDate",
-        "type": "date",
+        "type": "Date",
         "relation": "adhArtEpisodes"
       },
       {
         "column": "41. ADH_ARTRestartingDate5",
         "property": "adhArtRestartingDate",
-        "type": "date",
+        "type": "Date",
         "relation": "adhArtEpisodes"
       },
       {
         "column": "42. ADH_TBStartDate",
         "property": "adhTbStartDate",
-        "type": "date",
+        "type": "Date",
         "relation": "adhTbEpisodes"
       },
       {
         "column": "43. ADH_TBStopDate1",
         "property": "adhTbStopDate",
-        "type": "date",
+        "type": "Date",
         "relation": "adhTbEpisodes"
       },
       {
         "column": "44. ADH_TBRestartingDate1",
         "property": "adhTbRestartingDate",
-        "type": "date",
+        "type": "Date",
         "relation": "adhTbEpisodes"
       },
       {
         "column": "45. ADH_TBStopDate2",
         "property": "adhTbStopDate",
-        "type": "date",
+        "type": "Date",
         "relation": "adhTbEpisodes"
       },
       {
         "column": "46. ADH_TBRestartingDate2",
         "property": "adhTbRestartingDate",
-        "type": "date",
+        "type": "Date",
         "relation": "adhTbEpisodes"
       },
       {
         "column": "47. ADH_TBStopDate3",
         "property": "adhTbStopDate",
-        "type": "date",
+        "type": "Date",
         "relation": "adhTbEpisodes"
       },
       {
         "column": "48. ADH_TBRestartingDate3",
         "property": "adhTbRestartingDate",
-        "type": "date",
+        "type": "Date",
         "relation": "adhTbEpisodes"
       },
       {
         "column": "49. ADH_TBStopDate4",
         "property": "adhTbStopDate",
-        "type": "date",
+        "type": "Date",
         "relation": "adhTbEpisodes"
       },
       {
         "column": "50. ADH_TBRestartingDate4",
         "property": "adhTbRestartingDate",
-        "type": "date",
+        "type": "Date",
         "relation": "adhTbEpisodes"
       },
       {
         "column": "51. ADH_TBStopDate5",
         "property": "adhTbStopDate",
-        "type": "date",
+        "type": "Date",
         "relation": "adhTbEpisodes"
       },
       {
         "column": "52. ADH_TBRestartingDate5",
         "property": "adhTbRestartingDate",
-        "type": "date",
+        "type": "Date",
         "relation": "adhTbEpisodes"
       },
       {
@@ -468,7 +468,7 @@
       {
         "column": "89. ADH_AlcoholLastUse",
         "property": "adhAlcoholLastUse",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "90. ADH_AlcoholTimeDay",
@@ -488,7 +488,7 @@
       {
         "column": "93. ADH_AmpheataminelLastUse",
         "property": "adhAmpheataminelLastUse",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "94. ADH_AmpheatamineTimeDay",
@@ -508,7 +508,7 @@
       {
         "column": "97. ADH_DiazepineLastUse",
         "property": "adhDiazepineLastUse",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "98. ADH_DiazepineTimeDay",
@@ -528,7 +528,7 @@
       {
         "column": "101. ADH_CannabisLastUse",
         "property": "adhCannabisLastUse",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "102. ADH_CannabisTimeDay",
@@ -548,7 +548,7 @@
       {
         "column": "105. ADH_EcstasyLastUse",
         "property": "adhEcstasyLastUse",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "106. ADH_EcstasyTimeDay",
@@ -568,7 +568,7 @@
       {
         "column": "109. ADH_HerionLastUse",
         "property": "adhHerionLastUse",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "110. ADH_HerionTimeDay",
@@ -588,7 +588,7 @@
       {
         "column": "113. ADH_OpiumLastUse",
         "property": "adhOpiumLastUse",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "114. ADH_OpiumTimeDay",
@@ -633,7 +633,7 @@
       {
         "column": "122. ADH_NextAppointmentDate",
         "property": "adhNextAppointmentDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "123. Verify",
@@ -643,7 +643,7 @@
       {
         "column": "124. LastRegistrationDate",
         "property": "lastRegistrationDate",
-        "type": "date"
+        "type": "Date"
       }
     ]
   },
@@ -659,7 +659,7 @@
       {
         "column": "2. A00_RegistrationDate",
         "property": "a00RegistrationDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "3. A01_PatientName",
@@ -679,7 +679,7 @@
       {
         "column": "6. A041_DateOfBirth",
         "property": "a041DateOfBirth",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "7. A05_Age",
@@ -694,7 +694,7 @@
       {
         "column": "9. ART_VisitDate",
         "property": "artVisitDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "10. ART_MDMstaff",
@@ -871,13 +871,13 @@
       {
         "column": "41. ART_StartDate1",
         "property": "artStartDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artTreatments"
       },
       {
         "column": "42. ART_StopDate1",
         "property": "artStopDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artTreatments"
       },
       {
@@ -901,13 +901,13 @@
       {
         "column": "46. ART_StartDate2",
         "property": "artStartDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artTreatments"
       },
       {
         "column": "47. ART_StopDate2",
         "property": "artStopDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artTreatments"
       },
       {
@@ -931,13 +931,13 @@
       {
         "column": "51. ART_StartDate3",
         "property": "artStartDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artTreatments"
       },
       {
         "column": "52. ART_StopDate3",
         "property": "artStopDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artTreatments"
       },
       {
@@ -961,13 +961,13 @@
       {
         "column": "56. ART_StartDate4",
         "property": "artStartDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artTreatments"
       },
       {
         "column": "57. ART_StopDate4",
         "property": "artStopDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artTreatments"
       },
       {
@@ -991,13 +991,13 @@
       {
         "column": "61. ART_StartDate5",
         "property": "artStartDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artTreatments"
       },
       {
         "column": "62. ART_StopDate5",
         "property": "artStopDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artTreatments"
       },
       {
@@ -1555,7 +1555,7 @@
       {
         "column": "168. TB_Sputum_SampleDate",
         "property": "tbSputumSampleDate",
-        "type": "date",
+        "type": "Date",
         "relation": "tbSputums"
       },
       {
@@ -1615,7 +1615,7 @@
       {
         "column": "178. TB_OtherSample1_SampleDate",
         "property": "tbOtherSample1SampleDate",
-        "type": "date",
+        "type": "Date",
         "relation": "tbSputums"
       },
       {
@@ -1675,7 +1675,7 @@
       {
         "column": "188. TB_OtherSample2_SampleDate",
         "property": "tbOtherSample2SampleDate",
-        "type": "date",
+        "type": "Date",
         "relation": "tbSputums"
       },
       {
@@ -1735,13 +1735,13 @@
       {
         "column": "198. TB_OtherSample3_SampleDate",
         "property": "tbOtherSample3SampleDate",
-        "type": "date",
+        "type": "Date",
         "relation": "tbSputums"
       },
       {
         "column": "199. TB_RadiologyDate",
         "property": "tbRadiologyDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "200. TB_Radio_Radiology",
@@ -1826,7 +1826,7 @@
       {
         "column": "216. ART_MDMARTStartingDate",
         "property": "artMdmartStartingDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "217. ART_RemainingPill",
@@ -1956,7 +1956,7 @@
       {
         "column": "238. ART_TB_StartingDate",
         "property": "artTbStartingDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "239. ART_TB_MedicineName1",
@@ -2072,12 +2072,12 @@
       {
         "column": "258. IPT_Initiation_Date",
         "property": "iptInitiationDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "259. IPT_Initial_1st_visitdate",
         "property": "iptInitial1stVisitdate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "260. IPT_Outcome",
@@ -2087,7 +2087,7 @@
       {
         "column": "261. IPT_Outcomedate",
         "property": "iptOutcomedate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "262. IPT_ReasonOfNotStarting",
@@ -2381,7 +2381,7 @@
       {
         "column": "311. ART_DateNextVisit",
         "property": "artDateNextVisit",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "312. ART_Motive",
@@ -2406,7 +2406,7 @@
       {
         "column": "316. LastRegistrationDate",
         "property": "lastRegistrationDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "317. Key",
@@ -2457,7 +2457,7 @@
       {
         "column": "8. A041_DateOfBirth",
         "property": "a041DateOfBirth",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "9. A07_PatientTarget",
@@ -2477,7 +2477,7 @@
       {
         "column": "12. ReferredInDate",
         "property": "referredInDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "13. ReferralFrom",
@@ -2507,7 +2507,7 @@
       {
         "column": "18. OutcomeDate",
         "property": "outcomeDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "19. Remarks",
@@ -2527,7 +2527,7 @@
       {
         "column": "22. Date",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -2545,7 +2545,7 @@
       {
         "column": "25. Date_1",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -2563,7 +2563,7 @@
       {
         "column": "28. Date_2",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -2581,7 +2581,7 @@
       {
         "column": "31. Date_3",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -2599,7 +2599,7 @@
       {
         "column": "34. Date_4",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -2617,7 +2617,7 @@
       {
         "column": "37. Date_5",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -2635,7 +2635,7 @@
       {
         "column": "40. Date_6",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -2653,7 +2653,7 @@
       {
         "column": "43. Date_7",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -2671,7 +2671,7 @@
       {
         "column": "46. Date_8",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -2689,7 +2689,7 @@
       {
         "column": "49. Date_9",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -2707,7 +2707,7 @@
       {
         "column": "52. Date_10",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -2725,7 +2725,7 @@
       {
         "column": "55. Date_11",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -2743,7 +2743,7 @@
       {
         "column": "58. Date_12",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -2761,7 +2761,7 @@
       {
         "column": "61. Date_13",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -2779,7 +2779,7 @@
       {
         "column": "64. Date_14",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -2797,7 +2797,7 @@
       {
         "column": "67. Date_15",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -2815,7 +2815,7 @@
       {
         "column": "70. Date_16",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -2833,7 +2833,7 @@
       {
         "column": "73. Date_17",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -2851,7 +2851,7 @@
       {
         "column": "76. Date_18",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -2869,7 +2869,7 @@
       {
         "column": "79. Date_19",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -2887,7 +2887,7 @@
       {
         "column": "82. Date_20",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -2905,7 +2905,7 @@
       {
         "column": "85. Date_21",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -2923,7 +2923,7 @@
       {
         "column": "88. Date_22",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -2941,7 +2941,7 @@
       {
         "column": "91. Date_23",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -2959,7 +2959,7 @@
       {
         "column": "94. Date_24",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -2977,7 +2977,7 @@
       {
         "column": "97. Date_25",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -2995,7 +2995,7 @@
       {
         "column": "100. Date_26",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -3013,7 +3013,7 @@
       {
         "column": "103. Date_27",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -3031,7 +3031,7 @@
       {
         "column": "106. Date_28",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -3049,7 +3049,7 @@
       {
         "column": "109. Date_29",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -3067,7 +3067,7 @@
       {
         "column": "112. Date_30",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -3085,7 +3085,7 @@
       {
         "column": "115. Date_31",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -3103,7 +3103,7 @@
       {
         "column": "118. Date_32",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -3121,7 +3121,7 @@
       {
         "column": "121. Date_33",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -3139,7 +3139,7 @@
       {
         "column": "124. Date_34",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -3157,7 +3157,7 @@
       {
         "column": "127. Date_35",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -3175,7 +3175,7 @@
       {
         "column": "130. Date_36",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -3193,7 +3193,7 @@
       {
         "column": "133. Date_37",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -3211,7 +3211,7 @@
       {
         "column": "136. Date_38",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -3229,7 +3229,7 @@
       {
         "column": "139. Date_39",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -3247,7 +3247,7 @@
       {
         "column": "142. Date_40",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -3265,7 +3265,7 @@
       {
         "column": "145. Date_41",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -3283,7 +3283,7 @@
       {
         "column": "148. Date_42",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -3301,7 +3301,7 @@
       {
         "column": "151. Date_43",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -3319,7 +3319,7 @@
       {
         "column": "154. Date_44",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -3337,7 +3337,7 @@
       {
         "column": "157. Date_45",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -3355,7 +3355,7 @@
       {
         "column": "160. Date_46",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -3373,7 +3373,7 @@
       {
         "column": "163. Date_47",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -3391,7 +3391,7 @@
       {
         "column": "166. Date_48",
         "property": "date",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyCd4Weights"
       },
       {
@@ -3407,7 +3407,7 @@
       {
         "column": "169. LastCD4Date",
         "property": "lastCd4Date",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "170. Maximum_CD4",
@@ -3417,7 +3417,7 @@
       {
         "column": "171. Maximum_CD4_Date",
         "property": "maximumCd4Date",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "172. 2ndLine",
@@ -3427,7 +3427,7 @@
       {
         "column": "173. 2ndLineChangeDate",
         "property": "2ndLineChangeDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "174. CurrentHAARTRegimen",
@@ -3442,7 +3442,7 @@
       {
         "column": "176. OutsideClinicHAARTStartDate",
         "property": "outsideClinicHaartStartDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "177. PreviousHAARTRegimen",
@@ -3467,7 +3467,7 @@
       {
         "column": "181. MdMHAARTStartDate",
         "property": "mdMhaartStartDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "182. NewRegimen1",
@@ -3478,7 +3478,7 @@
       {
         "column": "183. ChangeRegimenDate1",
         "property": "changeRegimenDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyNewRegimens"
       },
       {
@@ -3496,7 +3496,7 @@
       {
         "column": "186. ChangeRegimenDate2",
         "property": "changeRegimenDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyNewRegimens"
       },
       {
@@ -3514,7 +3514,7 @@
       {
         "column": "189. ChangeRegimenDate3",
         "property": "changeRegimenDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyNewRegimens"
       },
       {
@@ -3532,7 +3532,7 @@
       {
         "column": "192. ChangeRegimenDate4",
         "property": "changeRegimenDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyNewRegimens"
       },
       {
@@ -3550,7 +3550,7 @@
       {
         "column": "195. ChangeRegimenDate5",
         "property": "changeRegimenDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyNewRegimens"
       },
       {
@@ -3568,7 +3568,7 @@
       {
         "column": "198. ChangeRegimenDate6",
         "property": "changeRegimenDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyNewRegimens"
       },
       {
@@ -3586,7 +3586,7 @@
       {
         "column": "201. ChangeRegimenDate7",
         "property": "changeRegimenDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyNewRegimens"
       },
       {
@@ -3604,7 +3604,7 @@
       {
         "column": "204. ChangeRegimenDate8",
         "property": "changeRegimenDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyNewRegimens"
       },
       {
@@ -3628,7 +3628,7 @@
       {
         "column": "208. ToxicityDate",
         "property": "toxicityDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyHaartToxicitys"
       },
       {
@@ -3646,7 +3646,7 @@
       {
         "column": "211. ToxicityDate2",
         "property": "toxicityDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyHaartToxicitys"
       },
       {
@@ -3664,7 +3664,7 @@
       {
         "column": "214. ToxicityDate3",
         "property": "toxicityDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyHaartToxicitys"
       },
       {
@@ -3680,13 +3680,13 @@
       {
         "column": "217. ART_Stop_Date1",
         "property": "artStopDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyStops"
       },
       {
         "column": "218. ART_Restart_Date1",
         "property": "artRestartDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyStops"
       },
       {
@@ -3704,13 +3704,13 @@
       {
         "column": "221. ART_Stop_Date2",
         "property": "artStopDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyStops"
       },
       {
         "column": "222. ART_Restart_Date2",
         "property": "artRestartDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyStops"
       },
       {
@@ -3728,13 +3728,13 @@
       {
         "column": "225. ART_Stop_Date3",
         "property": "artStopDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyStops"
       },
       {
         "column": "226. ART_Restart_Date3",
         "property": "artRestartDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyStops"
       },
       {
@@ -3752,13 +3752,13 @@
       {
         "column": "229. ART_Stop_Date4",
         "property": "artStopDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyStops"
       },
       {
         "column": "230. ART_Restart_Date4",
         "property": "artRestartDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyStops"
       },
       {
@@ -3788,19 +3788,19 @@
       {
         "column": "235. DateOfDiagnosis_1",
         "property": "dateOfDiagnosis",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyAttbs"
       },
       {
         "column": "236. EndDateOfATTBIP_1",
         "property": "endDateOfAttbip",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyAttbs"
       },
       {
         "column": "237. EndDateOfATTBCP_1",
         "property": "endDateOfAttbcp",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyAttbs"
       },
       {
@@ -3818,19 +3818,19 @@
       {
         "column": "240. DateofDiagnosis_2",
         "property": "dateofDiagnosis",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyAttbs"
       },
       {
         "column": "241. EndDateOfATTBIP_2",
         "property": "endDateOfAttbip",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyAttbs"
       },
       {
         "column": "242. EndDateOfATTBCP_2",
         "property": "endDateOfAttbcp",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyAttbs"
       },
       {
@@ -3871,7 +3871,7 @@
       {
         "column": "249. V_Date_1",
         "property": "vDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyResults"
       },
       {
@@ -3883,7 +3883,7 @@
       {
         "column": "251. V_Date_2",
         "property": "vDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyResults"
       },
       {
@@ -3895,7 +3895,7 @@
       {
         "column": "253. V_Date_3",
         "property": "vDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyResults"
       },
       {
@@ -3907,7 +3907,7 @@
       {
         "column": "255. V_Date_4",
         "property": "vDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyResults"
       },
       {
@@ -3919,7 +3919,7 @@
       {
         "column": "257. V_Date_5",
         "property": "vDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyResults"
       },
       {
@@ -3931,7 +3931,7 @@
       {
         "column": "259. V_Date_6",
         "property": "vDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyResults"
       },
       {
@@ -3943,7 +3943,7 @@
       {
         "column": "261. V_Date_7",
         "property": "vDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyResults"
       },
       {
@@ -3955,7 +3955,7 @@
       {
         "column": "263. V_Date_8",
         "property": "vDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyResults"
       },
       {
@@ -3992,7 +3992,7 @@
       {
         "column": "270. APRI_Date1",
         "property": "apriDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyApris"
       },
       {
@@ -4004,7 +4004,7 @@
       {
         "column": "272. APRI_Date2",
         "property": "apriDate",
-        "type": "date",
+        "type": "Date",
         "relation": "artKeyApris"
       },
       {
@@ -4031,7 +4031,7 @@
       {
         "column": "277. ART_SavingDate",
         "property": "artSavingDate",
-        "type": "date"
+        "type": "Date"
       }
     ]
   },
@@ -4092,7 +4092,7 @@
       {
         "column": "11. ExpiredDate",
         "property": "expiredDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "12. PlaceOfPatientExpired",
@@ -4117,7 +4117,7 @@
       {
         "column": "16. DateOfSaving",
         "property": "dateOfSaving",
-        "type": "date"
+        "type": "Date"
       }
     ]
   },
@@ -4133,7 +4133,7 @@
       {
         "column": "2. A00_RegistrationDate",
         "property": "a00RegistrationDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "3. A01_PatientName",
@@ -4158,7 +4158,7 @@
       {
         "column": "7. A041_DateOfBirth",
         "property": "a041DateOfBirth",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "8. A05_Age",
@@ -4173,7 +4173,7 @@
       {
         "column": "10. GHC_VisitDate",
         "property": "ghcVisitDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "11. GHC_MDMstaff",
@@ -4781,7 +4781,7 @@
       {
         "column": "122. GHC_DateNextVisit",
         "property": "ghcDateNextVisit",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "123. Verify",
@@ -4791,7 +4791,7 @@
       {
         "column": "124. LastRegistrationDate",
         "property": "lastRegistrationDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "125. Key",
@@ -4812,7 +4812,7 @@
       {
         "column": "2. A00_RegistrationDate",
         "property": "a00RegistrationDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "3. A01_PatientName",
@@ -4832,7 +4832,7 @@
       {
         "column": "6. A041_DateOfBirth",
         "property": "a041DateOfBirth",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "7. A05_Age",
@@ -4852,7 +4852,7 @@
       {
         "column": "10. GI_VisitDate",
         "property": "giVisitDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "11. A07a_MaritalStatus",
@@ -4937,12 +4937,12 @@
       {
         "column": "27. GI_DrugTakenOn",
         "property": "giDrugTakenOn",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "28. GI_LMPdate",
         "property": "giLmPdate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "29. GI_Parity",
@@ -4987,7 +4987,7 @@
       {
         "column": "37. LastRegistrationDate",
         "property": "lastRegistrationDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "38. Key",
@@ -5018,7 +5018,7 @@
       {
         "column": "4. A00_RegistrationDate",
         "property": "a00RegistrationDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "5. A01_PatientName",
@@ -5038,7 +5038,7 @@
       {
         "column": "8. A041_DateOfBirth",
         "property": "a041DateOfBirth",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "9. A05_Age",
@@ -5118,7 +5118,7 @@
       {
         "column": "24. A20_DateOfSavingData",
         "property": "a20DateOfSavingData",
-        "type": "date"
+        "type": "Date"
       }
     ]
   },
@@ -5134,7 +5134,7 @@
       {
         "column": "2. A00_RegistrationDate",
         "property": "a00RegistrationDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "3. A01_PatientName",
@@ -5154,7 +5154,7 @@
       {
         "column": "6. A041_DateOfBirth",
         "property": "a041DateOfBirth",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "7. A05_Age",
@@ -5169,7 +5169,7 @@
       {
         "column": "9. STI_VisitDate",
         "property": "stiVisitDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "10. STI_MDMstaff",
@@ -5739,7 +5739,7 @@
       {
         "column": "115. STI_DateNextVisit",
         "property": "stiDateNextVisit",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "116. STI_PlanForNextVisit",
@@ -5754,7 +5754,7 @@
       {
         "column": "118. LastRegistrationDate",
         "property": "lastRegistrationDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "119. Key",
@@ -5805,12 +5805,12 @@
       {
         "column": "8. ART_StartDate",
         "property": "artStartDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "9. CPT_Date",
         "property": "cptDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "10. TBTreatment",
@@ -5840,7 +5840,7 @@
       {
         "column": "15. ReferredInDate",
         "property": "referredInDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "16. Type",
@@ -5855,7 +5855,7 @@
       {
         "column": "18. IPDate",
         "property": "ipDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "19. Time",
@@ -5865,7 +5865,7 @@
       {
         "column": "20. StartCP",
         "property": "startCp",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "21. BacteriologicalConfirmation",
@@ -5965,7 +5965,7 @@
       {
         "column": "40. SampleDate1",
         "property": "sampleDate",
-        "type": "date",
+        "type": "Date",
         "relation": "tbKeySamples"
       },
       {
@@ -6031,7 +6031,7 @@
       {
         "column": "51. SampleDate2",
         "property": "sampleDate",
-        "type": "date",
+        "type": "Date",
         "relation": "tbKeySamples"
       },
       {
@@ -6097,7 +6097,7 @@
       {
         "column": "62. SampleDate3",
         "property": "sampleDate",
-        "type": "date",
+        "type": "Date",
         "relation": "tbKeySamples"
       },
       {
@@ -6163,7 +6163,7 @@
       {
         "column": "73. SampleDate4",
         "property": "sampleDate",
-        "type": "date",
+        "type": "Date",
         "relation": "tbKeySamples"
       },
       {
@@ -6229,7 +6229,7 @@
       {
         "column": "84. SampleDate5",
         "property": "sampleDate",
-        "type": "date",
+        "type": "Date",
         "relation": "tbKeySamples"
       },
       {
@@ -6350,7 +6350,7 @@
       {
         "column": "106. OutcomeDate",
         "property": "outcomeDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "107. Remark",
@@ -6360,7 +6360,7 @@
       {
         "column": "108. TB_SavingDate",
         "property": "tbSavingDate",
-        "type": "date"
+        "type": "Date"
       }
     ]
   },
@@ -6376,7 +6376,7 @@
       {
         "column": "2. A00_RegistrationDate",
         "property": "a00RegistrationDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "3. A01_PatientName",
@@ -6396,7 +6396,7 @@
       {
         "column": "6. A041_DateOfBirth",
         "property": "a041DateOfBirth",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "7. A05_Age",
@@ -6406,7 +6406,7 @@
       {
         "column": "8. VCCT_VisitDate",
         "property": "vcctVisitDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "9. VCCT_TBPatient",
@@ -6520,7 +6520,7 @@
       {
         "column": "29. VCCT_PrevHIVTestingDate",
         "property": "vcctPrevHivTestingDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "30. VCCT_ResultOfLastHIVTesting",
@@ -6535,7 +6535,7 @@
       {
         "column": "32. VCCT_PreTestDate",
         "property": "vcctPreTestDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "33. VCCT_HIVTest",
@@ -6555,7 +6555,7 @@
       {
         "column": "36. VCCT_PostTestDate",
         "property": "vcctPostTestDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "37. VCCT_TestResult",
@@ -6570,7 +6570,7 @@
       {
         "column": "39. VCCT_NHLDate",
         "property": "vcctNhlDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "40. VCCT_HistoryOfSyphilis",
@@ -6615,7 +6615,7 @@
       {
         "column": "48. VCCT_DateOfPartnerHIVTesting",
         "property": "vcctDateOfPartnerHivTesting",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "49. VCCT_KnownYourPartnerHIVStatus",
@@ -6640,7 +6640,7 @@
       {
         "column": "53. VCCT_DateNextVisit",
         "property": "vcctDateNextVisit",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "54. VCCT_HIVRetesting",
@@ -6650,7 +6650,7 @@
       {
         "column": "55. VCCT_HIVRetestingDate",
         "property": "vcctHivRetestingDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "56. VCCT_HIVRetestingResult",
@@ -6660,7 +6660,7 @@
       {
         "column": "57. VCCT_NHLHIVRetestingDate",
         "property": "vcctNhlhivRetestingDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "58. VCCT_NHLHIVRetestingResult",
@@ -6670,7 +6670,7 @@
       {
         "column": "59. VCCT_Followupvisitdate",
         "property": "vcctFollowupvisitdate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "60. Verify",
@@ -6680,7 +6680,7 @@
       {
         "column": "61. LastRegistrationDate",
         "property": "lastRegistrationDate",
-        "type": "date"
+        "type": "Date"
       },
       {
         "column": "62. Key",

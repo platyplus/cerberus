@@ -2,7 +2,7 @@ import _ from 'lodash'
 import { readFile, utils } from 'xlsx'
 import fs from 'fs'
 import rimraf from 'rimraf'
-import { mergeArray, propertyName, entityName } from './helpers'
+import { mergeArray, entityName, writeFilePromise } from './helpers'
 /** TODO: Works, but still some to be done:
  * - TbKeySample is not mapped correctly (different way to name repeated fields)
  * - unique columns in the schema such as mdmCode...
@@ -16,17 +16,17 @@ const METADATA_FILE = 'metadata.xlsx'
 const DEST_FOLDER = './src/entity'
 const PROPERTY_MAPPING: { [key: string]: string } = {
   Numeric: 'number',
-  Date: 'date'
+  Date: 'Date'
 }
 // Classes
 // TODO: split Property to an abstract class + inherited classes e.g. OneToManyProperty etc
 class Property {
   parent: Entity
-  name: string = ''
+  name: string
   type: string = 'string'
-  isOneToMany: boolean = false
-  isManyToOne: boolean = false
-  isPk: boolean = false
+  isOneToMany?: boolean
+  isManyToOne?: boolean
+  isPk?: boolean
   relation?: Property
   annotations(): string {
     let annotation = ''
@@ -51,13 +51,13 @@ class Property {
         other += `\n\t@JoinColumn([${fks.join(', ')}])`
       }
     }
-    return `\t@${annotation}(${params}${this.columnOptions()})${other}`
+    return `\t@${annotation}(${params}${this.strColumnOptions()})${other}`
   }
   constructor(parent: Entity, name: string) {
     this.parent = parent
-    this.name = propertyName(name)
+    this.name = _.camelCase(name)
   }
-  columnOptions(): string {
+  strColumnOptions(): string {
     let options = []
     if (this.isOneToMany) {
       options.push('cascade: true')
@@ -68,51 +68,28 @@ class Property {
       options.push(`name: '${_.snakeCase(this.name)}'`)
     }
     if (this.type === 'number') options.push("type: 'integer'")
-    else if (this.type === 'date') options.push("type: 'timestamptz'")
+    else if (this.type === 'Date') options.push("type: 'timestamptz'")
     return `{
     ${options.join(',\n\t\t')}
   }`
   }
-  dependencies(): Object {
-    let typeorm = []
-    if (this.isPk) typeorm.push('PrimaryColumn')
-    if (this.relation) {
-      if (this.isManyToOne) typeorm.push('ManyToOne', 'JoinColumn')
-      else typeorm.push('OneToMany')
-      return {
-        [`./${this.type}`]: [this.type],
-        typeorm
-      }
-    } else {
-      typeorm.push('Column')
-      return { typeorm: ['Column'] }
-    }
-  }
-  strType(): string {
-    let type = this.type
-    if (this.isOneToMany) type = `${this.type}[]`
-    if (this.type === 'date') type = 'Date'
-    return type
-  }
-  strName(): string {
-    let name = this.name
-    if (this.name.match(/^\d/)) name = `'${this.name}'`
-    return name
-  }
-  strDeclaration(): string {
-    // if (this.isManyToOne && this.relation) {
-    //   log(this.strName() + ' parent: ' + this.relation.parent.name)
-    //   return this.relation.parent
-    //     .pkProperties()
-    //     .map(prop => `${prop.strName()}: ${prop.strType()}`)
-    //     .join('\n\t')
-    // } else {
-    return this.strName() + ': ' + this.strType()
-    // }
-  }
-  render(): string {
-    return `${this.annotations()}\n\t${this.strDeclaration()}\n\n`
-  }
+  dependencies = () =>
+    this.relation
+      ? {
+          [`./${this.type}`]: [this.type],
+          typeorm: this.isManyToOne
+            ? ['ManyToOne', 'JoinColumn']
+            : ['OneToMany']
+        }
+      : { typeorm: [this.isPk ? 'PrimaryColumn' : 'Column'] }
+
+  strType = () => (this.isOneToMany ? `${this.type}[]` : this.type)
+
+  strName = () => (this.name.match(/^\d/) ? `'${this.name}'` : this.name)
+
+  strDeclaration = () => this.strName() + ': ' + this.strType()
+
+  render = () => `${this.annotations()}\n\t${this.strDeclaration()}\n\n`
 }
 
 interface Row {
@@ -132,29 +109,28 @@ class Entity {
   constructor(name: string) {
     this.name = entityName(name)
   }
-  dependencies(): Object {
-    let typeorm = ['Entity']
-    if (_.isEmpty(this.pkProperties())) typeorm.push('PrimaryGeneratedColumn')
-    else typeorm.push('PrimaryColumn')
-    return { typeorm }
-  }
+  dependencies = () => ({
+    typeorm: _.isEmpty(this.pkProperties())
+      ? ['Entity', 'PrimaryGeneratedColumn']
+      : ['Entity', 'PrimaryColumn']
+  })
   findOrCreateProperty(
     rawName: string,
-    type?: string,
+    type: string,
     constraint?: string
   ): Property {
-    const name = propertyName(rawName)
+    const name = _.camelCase(rawName)
     let property = this.properties.find(curs => curs.name === name)
     if (!property) {
       property = new Property(this, name)
       this.properties.push(property)
     }
-    if (type) property.type = type
+    property.type = type
     if (constraint && constraint === 'pk') property.isPk = true
     return property
   }
   pushOneToManyProperty(row: Row, relation: Entity): Property {
-    const relationName = `${propertyName(row.entity)}s`
+    const relationName = `${_.camelCase(row.entity)}s`
     const relationType = entityName(row.entity)
     let oneToManyProperty = this.findOrCreateProperty(
       relationName,
@@ -163,7 +139,7 @@ class Entity {
     )
 
     oneToManyProperty.isOneToMany = true
-    const name = propertyName(row.form)
+    const name = _.camelCase(row.form)
     const type = entityName(row.form)
     let manyToOneProperty = relation.findOrCreateProperty(
       name,
@@ -176,26 +152,22 @@ class Entity {
     manyToOneProperty.relation = oneToManyProperty
     return oneToManyProperty
   }
-  pkProperties(): Property[] {
-    return this.properties.filter(property => property.isPk)
-  }
+  pkProperties = () => this.properties.filter(property => property.isPk)
+
   render(): string {
     let dependencies = this.dependencies()
-    const strProps = this.properties.reduce((prev, curr) => {
-      dependencies = _.mergeWith(dependencies, curr.dependencies(), mergeArray)
-      return prev + curr.render()
-    }, '')
-    const strDependencies = Object.keys(dependencies).reduce(
-      (prev, curr) =>
-        prev +
-        `import { ${(<any>dependencies)[curr].join(', ')} } from '${curr}'\n`,
-      ''
-    )
+    for (let prop of this.properties)
+      dependencies = _.mergeWith(dependencies, prop.dependencies(), mergeArray)
+    const strDependencies = Object.keys(dependencies)
+      .map(k => `import { ${(<any>dependencies)[k].join(', ')} } from '${k}'`)
+      .join('\n')
     const strPk = _.isEmpty(this.pkProperties())
       ? "\t@PrimaryGeneratedColumn('uuid')\n\tid: string\n\n"
       : ''
+    const strProps = this.properties.map(p => p.render()).join('')
+
     return `// AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-${strDependencies}
+${strDependencies}\n
 @Entity()
 export class ${this.name} {\n${strPk}${strProps}}\n`
   }
@@ -271,14 +243,13 @@ class EntityManager {
     return entity
   }
   import(fileName: string): void {
-    log(`Importing from ${fileName}...`)
+    log(`Generating from ${fileName}...`)
     const workbook = readFile(fileName)
     const ws = workbook.Sheets[workbook.SheetNames[0]]
     var jsMetadata = <Array<Row>>utils.sheet_to_json(ws)
     for (let row of jsMetadata) {
       this.pushRow(row)
     }
-    log('Done')
   }
   renderIndex(): string {
     const imports = this.entities.map(
@@ -287,43 +258,24 @@ class EntityManager {
     const classes = this.entities.map(
       entity => `'${entity.name}': ${entity.name}`
     )
-    return `${imports.join('\n')}
-    
+    return `${imports.join('\n')}\n
 export const classes: { [key: string]: any } = {
   ${classes.join(',\n\t')}
 }`
   }
-  export(): void {
-    log(`Exporting to ${DEST_FOLDER}...`)
+  async export() {
     rimraf.sync(DEST_FOLDER)
     fs.mkdir(DEST_FOLDER, { recursive: true }, err => {})
-    for (let entity of this.entities) {
-      fs.writeFile(`${DEST_FOLDER}/${entity.name}.ts`, entity.render(), err => {
-        if (err) {
-          console.error(err)
-          return
-        }
-        log(`${entity.name}: done.`)
-      })
-    }
-    fs.writeFile(
+    for (let entity of this.entities)
+      await writeFilePromise(
+        `${DEST_FOLDER}/${entity.name}.ts`,
+        entity.render()
+      )
+    await writeFilePromise(
       `${DEST_FOLDER}/mapping.json`,
-      JSON.stringify(this.mapping, null, 2),
-      err => {
-        if (err) {
-          console.error(err)
-          return
-        }
-        log('Mapping exported.')
-      }
+      JSON.stringify(this.mapping, null, 2)
     )
-    fs.writeFile(`${DEST_FOLDER}/index.ts`, this.renderIndex(), err => {
-      if (err) {
-        console.error(err)
-        return
-      }
-      log('Index created.')
-    })
+    await writeFilePromise(`${DEST_FOLDER}/index.ts`, this.renderIndex())
     log('Done')
   }
 }

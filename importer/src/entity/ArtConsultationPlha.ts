@@ -14,956 +14,917 @@ import { ArtOthMedication } from './ArtOthMedication'
 
 @Entity()
 export class ArtConsultationPlha {
-  @Column({
+	@Column({
     nullable: true,
-    name: 'md_mcode'
+		name: 'md_mcode'
   })
-  mdMcode: string
+	mdMcode: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'a_00_registration_date',
-    type: 'timestamptz'
+		name: 'a_00_registration_date',
+		type: 'timestamptz'
   })
-  a00RegistrationDate: Date
+	a00RegistrationDate: Date
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'a_01_patient_name'
+		name: 'a_01_patient_name'
   })
-  a01PatientName: string
+	a01PatientName: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'a_02_father_name'
+		name: 'a_02_father_name'
   })
-  a02FatherName: string
+	a02FatherName: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'a_03_sexe'
+		name: 'a_03_sexe'
   })
-  a03Sexe: string
+	a03Sexe: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'a_041_date_of_birth',
-    type: 'timestamptz'
+		name: 'a_041_date_of_birth',
+		type: 'timestamptz'
   })
-  a041DateOfBirth: Date
+	a041DateOfBirth: Date
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'a_05_age',
-    type: 'integer'
+		name: 'a_05_age',
+		type: 'integer'
   })
-  a05Age: number
+	a05Age: number
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'a_07_patient_target'
+		name: 'a_07_patient_target'
   })
-  a07PatientTarget: string
+	a07PatientTarget: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_visit_date',
-    type: 'timestamptz'
+		name: 'art_visit_date',
+		type: 'timestamptz'
   })
-  artVisitDate: Date
+	artVisitDate: Date
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_md_mstaff'
+		name: 'art_md_mstaff'
   })
-  artMdMstaff: string
+	artMdMstaff: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_plh_new_patient'
+		name: 'art_plh_new_patient'
   })
-  artPlhNewPatient: string
+	artPlhNewPatient: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_art_new_patient'
+		name: 'art_art_new_patient'
   })
-  artArtNewPatient: string
+	artArtNewPatient: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_art_treatment'
+		name: 'art_art_treatment'
   })
-  artArtTreatment: string
+	artArtTreatment: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_patient_partner_tested'
+		name: 'art_patient_partner_tested'
   })
-  artPatientPartnerTested: string
+	artPatientPartnerTested: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_patient_partner_test_status'
+		name: 'art_patient_partner_test_status'
   })
-  artPatientPartnerTestStatus: string
+	artPatientPartnerTestStatus: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_patient_disclosed_status'
+		name: 'art_patient_disclosed_status'
   })
-  artPatientDisclosedStatus: string
+	artPatientDisclosedStatus: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_status_disclosed_by'
+		name: 'art_status_disclosed_by'
   })
-  artStatusDisclosedBy: string
+	artStatusDisclosedBy: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_status_disclosed_by_other'
+		name: 'art_status_disclosed_by_other'
   })
-  artStatusDisclosedByOther: string
+	artStatusDisclosedByOther: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_patient_taking_medicines'
+		name: 'art_patient_taking_medicines'
   })
-  artPatientTakingMedicines: string
+	artPatientTakingMedicines: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_patient_taking_following_medicines'
+		name: 'art_patient_taking_following_medicines'
   })
-  artPatientTakingFollowingMedicines: string
+	artPatientTakingFollowingMedicines: string
 
-  @OneToMany(
-    type => ArtAntiRetroMedicineTaken,
-    artAntiRetroMedicineTaken => artAntiRetroMedicineTaken.artConsultationPlha,
-    {
-      cascade: true
-    }
-  )
-  artAntiRetroMedicineTakens: ArtAntiRetroMedicineTaken[]
-
-  @OneToMany(
-    type => ArtAntiBioMedicineCode,
-    artAntiBioMedicineCode => artAntiBioMedicineCode.artConsultationPlha,
-    {
-      cascade: true
-    }
-  )
-  artAntiBioMedicineCodes: ArtAntiBioMedicineCode[]
-
-  @OneToMany(
-    type => ArtAntiTbMedicineCode,
-    artAntiTbMedicineCode => artAntiTbMedicineCode.artConsultationPlha,
-    {
-      cascade: true
-    }
-  )
-  artAntiTbMedicineCodes: ArtAntiTbMedicineCode[]
-
-  @Column({
-    nullable: true,
-    name: 'art_patient_taking_other'
-  })
-  artPatientTakingOther: string
-
-  @Column({
-    nullable: true,
-    name: 'art_medications_comment'
-  })
-  artMedicationsComment: string
-
-  @Column({
-    nullable: true,
-    name: 'art_patient_taken_ar_vs_before'
-  })
-  artPatientTakenArVsBefore: string
-
-  @OneToMany(
-    type => ArtTreatment,
-    artTreatment => artTreatment.artConsultationPlha,
-    {
-      cascade: true
-    }
-  )
-  artTreatments: ArtTreatment[]
-
-  @Column({
-    nullable: true,
-    name: 'art_arv_comment'
-  })
-  artArvComment: string
-
-  @Column({
-    nullable: true,
-    name: 'art_medical_history_comment'
-  })
-  artMedicalHistoryComment: string
-
-  @Column({
-    nullable: true,
-    name: 'art_t_bhistory'
-  })
-  artTBhistory: string
-
-  @Column({
-    nullable: true,
-    name: 'art_previous_t_bdiagnosis'
-  })
-  artPreviousTBdiagnosis: string
-
-  @Column({
-    nullable: true,
-    name: 'art_year_of_extrapulmonary_episode',
-    type: 'integer'
-  })
-  artYearOfExtrapulmonaryEpisode: number
-
-  @Column({
-    nullable: true,
-    name: 'art_year_of_pulmonary_episode',
-    type: 'integer'
-  })
-  artYearOfPulmonaryEpisode: number
-
-  @Column({
-    nullable: true,
-    name: 'art_t_bhistory_comments'
-  })
-  artTBhistoryComments: string
-
-  @Column({
-    nullable: true,
-    name: 'art_tb_related_symptoms_opt'
-  })
-  artTbRelatedSymptomsOpt: string
-
-  @Column({
-    nullable: true,
-    name: 'art_tb_related_symptoms'
-  })
-  artTbRelatedSymptoms: string
-
-  @Column({
-    nullable: true,
-    name: 'art_tb_related_fever'
-  })
-  artTbRelatedFever: string
-
-  @Column({
-    nullable: true,
-    name: 'art_tb_related_night_sweats'
-  })
-  artTbRelatedNightSweats: string
-
-  @Column({
-    nullable: true,
-    name: 'art_tb_related_appetite_loss'
-  })
-  artTbRelatedAppetiteLoss: string
-
-  @Column({
-    nullable: true,
-    name: 'art_tb_related_weight_loss'
-  })
-  artTbRelatedWeightLoss: string
-
-  @Column({
-    nullable: true,
-    name: 'art_tb_related_cough'
-  })
-  artTbRelatedCough: string
-
-  @Column({
-    nullable: true,
-    name: 'art_tb_related_haemoptysis'
-  })
-  artTbRelatedHaemoptysis: string
-
-  @Column({
-    nullable: true,
-    name: 'art_tb_related_notice'
-  })
-  artTbRelatedNotice: string
-
-  @Column({
-    nullable: true,
-    name: 'art_constitutional'
-  })
-  artConstitutional: string
-
-  @Column({
-    nullable: true,
-    name: 'art_consti_fatigue'
-  })
-  artConstiFatigue: string
-
-  @Column({
-    nullable: true,
-    name: 'art_consti_pain'
-  })
-  artConstiPain: string
-
-  @Column({
-    nullable: true,
-    name: 'art_consti_other'
-  })
-  artConstiOther: string
-
-  @Column({
-    nullable: true,
-    name: 'art_gastrointestinal'
-  })
-  artGastrointestinal: string
-
-  @Column({
-    nullable: true,
-    name: 'art_gastro_abdominal_pain'
-  })
-  artGastroAbdominalPain: string
-
-  @Column({
-    nullable: true,
-    name: 'art_gastro_nausea'
-  })
-  artGastroNausea: string
-
-  @Column({
-    nullable: true,
-    name: 'art_gastro_vomiting'
-  })
-  artGastroVomiting: string
-
-  @Column({
-    nullable: true,
-    name: 'art_gastro_dysphagia'
-  })
-  artGastroDysphagia: string
-
-  @Column({
-    nullable: true,
-    name: 'art_gastro_diarrhea'
-  })
-  artGastroDiarrhea: string
-
-  @Column({
-    nullable: true,
-    name: 'art_gastro_other'
-  })
-  artGastroOther: string
-
-  @Column({
-    nullable: true,
-    name: 'art_respiratory_c_vs'
-  })
-  artRespiratoryCVs: string
-
-  @Column({
-    nullable: true,
-    name: 'art_respi_difficultly_breathing'
-  })
-  artRespiDifficultlyBreathing: string
-
-  @Column({
-    nullable: true,
-    name: 'art_respi_chest_pain'
-  })
-  artRespiChestPain: string
-
-  @Column({
-    nullable: true,
-    name: 'art_respi_palpitation'
-  })
-  artRespiPalpitation: string
-
-  @Column({
-    nullable: true,
-    name: 'art_respi_other'
-  })
-  artRespiOther: string
-
-  @Column({
-    nullable: true,
-    name: 'art_neurological'
-  })
-  artNeurological: string
-
-  @Column({
-    nullable: true,
-    name: 'art_neuro_headache'
-  })
-  artNeuroHeadache: string
-
-  @Column({
-    nullable: true,
-    name: 'art_neuro_confusion'
-  })
-  artNeuroConfusion: string
-
-  @Column({
-    nullable: true,
-    name: 'art_neuro_memory_problems'
-  })
-  artNeuroMemoryProblems: string
-
-  @Column({
-    nullable: true,
-    name: 'art_neuro_tingling'
-  })
-  artNeuroTingling: string
-
-  @Column({
-    nullable: true,
-    name: 'art_neuro_insomnia'
-  })
-  artNeuroInsomnia: string
-
-  @Column({
-    nullable: true,
-    name: 'art_neuro_yawning'
-  })
-  artNeuroYawning: string
-
-  @Column({
-    nullable: true,
-    name: 'art_skin_manifestation'
-  })
-  artSkinManifestation: string
-
-  @Column({
-    nullable: true,
-    name: 'art_skin_itchiness'
-  })
-  artSkinItchiness: string
-
-  @Column({
-    nullable: true,
-    name: 'art_skin_rash'
-  })
-  artSkinRash: string
-
-  @Column({
-    nullable: true,
-    name: 'art_skin_lump'
-  })
-  artSkinLump: string
-
-  @Column({
-    nullable: true,
-    name: 'art_skin_other'
-  })
-  artSkinOther: string
-
-  @Column({
-    nullable: true,
-    name: 'art_symptoms_comments'
-  })
-  artSymptomsComments: string
-
-  @Column({
-    nullable: true,
-    name: 'art_eye'
-  })
-  artEye: string
-
-  @Column({
-    nullable: true,
-    name: 'art_eye_comment'
-  })
-  artEyeComment: string
-
-  @Column({
-    nullable: true,
-    name: 'art_ears_nose'
-  })
-  artEarsNose: string
-
-  @Column({
-    nullable: true,
-    name: 'art_ears_nose_comment'
-  })
-  artEarsNoseComment: string
-
-  @Column({
-    nullable: true,
-    name: 'art_oral'
-  })
-  artOral: string
-
-  @Column({
-    nullable: true,
-    name: 'art_oral_comment'
-  })
-  artOralComment: string
-
-  @Column({
-    nullable: true,
-    name: 'art_lymph_nodes'
-  })
-  artLymphNodes: string
-
-  @Column({
-    nullable: true,
-    name: 'art_lymph_nodes_comment'
-  })
-  artLymphNodesComment: string
-
-  @Column({
-    nullable: true,
-    name: 'art_heart'
-  })
-  artHeart: string
-
-  @Column({
-    nullable: true,
-    name: 'art_heart_comment'
-  })
-  artHeartComment: string
-
-  @Column({
-    nullable: true,
-    name: 'art_lungs'
-  })
-  artLungs: string
-
-  @Column({
-    nullable: true,
-    name: 'art_lungs_comment'
-  })
-  artLungsComment: string
-
-  @Column({
-    nullable: true,
-    name: 'art_abdomen'
-  })
-  artAbdomen: string
-
-  @Column({
-    nullable: true,
-    name: 'art_abdomen_comment'
-  })
-  artAbdomenComment: string
-
-  @Column({
-    nullable: true,
-    name: 'art_p_exam_neurological'
-  })
-  artPExamNeurological: string
-
-  @Column({
-    nullable: true,
-    name: 'art_neurological_comment'
-  })
-  artNeurologicalComment: string
-
-  @Column({
-    nullable: true,
-    name: 'art_skin'
-  })
-  artSkin: string
-
-  @Column({
-    nullable: true,
-    name: 'art_skin_comment'
-  })
-  artSkinComment: string
-
-  @Column({
-    nullable: true,
-    name: 'art_physical_exam_comments'
-  })
-  artPhysicalExamComments: string
-
-  @Column({
-    nullable: true,
-    name: 'art_child_or_adult'
-  })
-  artChildOrAdult: string
-
-  @OneToMany(
-    type => ArtAdultStage,
-    artAdultStage => artAdultStage.artConsultationPlha,
-    {
-      cascade: true
-    }
-  )
-  artAdultStages: ArtAdultStage[]
-
-  @OneToMany(
-    type => ArtChildStage,
-    artChildStage => artChildStage.artConsultationPlha,
-    {
-      cascade: true
-    }
-  )
-  artChildStages: ArtChildStage[]
-
-  @Column({
-    nullable: true,
-    name: 'art_patient_status'
-  })
-  artPatientStatus: string
-
-  @Column({
-    nullable: true,
-    name: 'art_oi_diagnosis'
-  })
-  artOiDiagnosis: string
-
-  @Column({
-    nullable: true,
-    name: 'art_oi_diagnosis_eptb'
-  })
-  artOiDiagnosisEptb: string
-
-  @Column({
-    nullable: true,
-    name: 'art_oi_diagnosis_other'
-  })
-  artOiDiagnosisOther: string
-
-  @OneToMany(
-    type => ArtGhcDiagnosis,
-    artGhcDiagnosis => artGhcDiagnosis.artConsultationPlha,
-    {
-      cascade: true
-    }
-  )
-  artGhcDiagnosiss: ArtGhcDiagnosis[]
-
-  @Column({
-    nullable: true,
-    name: 'art_diagnosis_comments'
-  })
-  artDiagnosisComments: string
-
-  @Column({
-    nullable: true,
-    name: 'art_first_cd_4',
-    type: 'integer'
-  })
-  artFirstCd4: number
-
-  @Column({
-    nullable: true,
-    name: 'art_last_cd_4',
-    type: 'integer'
-  })
-  artLastCd4: number
-
-  @Column({
-    nullable: true,
-    name: 'art_viral_load_result'
-  })
-  artViralLoadResult: string
-
-  @Column({
-    nullable: true,
-    name: 'art_h_bs_ag'
-  })
-  artHBsAg: string
-
-  @Column({
-    nullable: true,
-    name: 'art_h_bs_ab'
-  })
-  artHBsAb: string
-
-  @Column({
-    nullable: true,
-    name: 'art_hcv_ab'
-  })
-  artHcvAb: string
-
-  @Column({
-    nullable: true,
-    name: 'art_apri',
-    type: 'integer'
-  })
-  artApri: number
-
-  @Column({
-    nullable: true,
-    name: 'art_liver_fibrosis'
-  })
-  artLiverFibrosis: string
-
-  @OneToMany(type => TbSputum, tbSputum => tbSputum.artConsultationPlha, {
+	@OneToMany(type => ArtAntiRetroMedicineTaken, artAntiRetroMedicineTaken => artAntiRetroMedicineTaken.artConsultationPlha, {
     cascade: true
   })
-  tbSputums: TbSputum[]
+	artAntiRetroMedicineTakens: ArtAntiRetroMedicineTaken[]
 
-  @Column({
-    nullable: true,
-    name: 'tb_radiology_date',
-    type: 'timestamptz'
+	@OneToMany(type => ArtAntiBioMedicineCode, artAntiBioMedicineCode => artAntiBioMedicineCode.artConsultationPlha, {
+    cascade: true
   })
-  tbRadiologyDate: Date
+	artAntiBioMedicineCodes: ArtAntiBioMedicineCode[]
 
-  @Column({
-    nullable: true,
-    name: 'tb_radio_radiology'
+	@OneToMany(type => ArtAntiTbMedicineCode, artAntiTbMedicineCode => artAntiTbMedicineCode.artConsultationPlha, {
+    cascade: true
   })
-  tbRadioRadiology: string
+	artAntiTbMedicineCodes: ArtAntiTbMedicineCode[]
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'tb_radio_cx_ray'
+		name: 'art_patient_taking_other'
   })
-  tbRadioCxRay: string
+	artPatientTakingOther: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'tb_radio_x_ray'
+		name: 'art_medications_comment'
   })
-  tbRadioXRay: string
+	artMedicationsComment: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'tb_radio_usg'
+		name: 'art_patient_taken_ar_vs_before'
   })
-  tbRadioUsg: string
+	artPatientTakenArVsBefore: string
 
-  @Column({
+	@OneToMany(type => ArtTreatment, artTreatment => artTreatment.artConsultationPlha, {
+    cascade: true
+  })
+	artTreatments: ArtTreatment[]
+
+	@Column({
     nullable: true,
-    name: 'tb_persons_screened_tb'
+		name: 'art_arv_comment'
   })
-  tbPersonsScreenedTb: string
+	artArvComment: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'tb_screened_tb_yes_where'
+		name: 'art_medical_history_comment'
   })
-  tbScreenedTbYesWhere: string
+	artMedicalHistoryComment: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'tb_referred'
+		name: 'art_t_bhistory'
   })
-  tbReferred: string
+	artTBhistory: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'tb_refer_yes_where'
+		name: 'art_previous_t_bdiagnosis'
   })
-  tbReferYesWhere: string
+	artPreviousTBdiagnosis: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'tb_type_of_case'
+		name: 'art_year_of_extrapulmonary_episode',
+		type: 'integer'
   })
-  tbTypeOfCase: string
+	artYearOfExtrapulmonaryEpisode: number
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'tb_type'
+		name: 'art_year_of_pulmonary_episode',
+		type: 'integer'
   })
-  tbType: string
+	artYearOfPulmonaryEpisode: number
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_allergy'
+		name: 'art_t_bhistory_comments'
   })
-  artAllergy: string
+	artTBhistoryComments: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_allergy_other'
+		name: 'art_tb_related_symptoms_opt'
   })
-  artAllergyOther: string
+	artTbRelatedSymptomsOpt: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_pregnant'
+		name: 'art_tb_related_symptoms'
   })
-  artPregnant: string
+	artTbRelatedSymptoms: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_prophylaxis'
+		name: 'art_tb_related_fever'
   })
-  artProphylaxis: string
+	artTbRelatedFever: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_prophyaxis_primary'
+		name: 'art_tb_related_night_sweats'
   })
-  artProphyaxisPrimary: string
+	artTbRelatedNightSweats: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_prophylaxis_secondary'
+		name: 'art_tb_related_appetite_loss'
   })
-  artProphylaxisSecondary: string
+	artTbRelatedAppetiteLoss: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_mdmart_starting_date',
-    type: 'timestamptz'
+		name: 'art_tb_related_weight_loss'
   })
-  artMdmartStartingDate: Date
+	artTbRelatedWeightLoss: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_remaining_pill',
-    type: 'integer'
+		name: 'art_tb_related_cough'
   })
-  artRemainingPill: number
+	artTbRelatedCough: string
 
-  @OneToMany(
-    type => ArtArtMedication,
-    artArtMedication => artArtMedication.artConsultationPlha,
-    {
-      cascade: true
-    }
-  )
-  artArtMedications: ArtArtMedication[]
-
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_tb_starting_date',
-    type: 'timestamptz'
+		name: 'art_tb_related_haemoptysis'
   })
-  artTbStartingDate: Date
+	artTbRelatedHaemoptysis: string
 
-  @OneToMany(
-    type => ArtTbMedication,
-    artTbMedication => artTbMedication.artConsultationPlha,
-    {
-      cascade: true
-    }
-  )
-  artTbMedications: ArtTbMedication[]
-
-  @Column({
+	@Column({
     nullable: true,
-    name: 'tb_category'
+		name: 'art_tb_related_notice'
   })
-  tbCategory: string
+	artTbRelatedNotice: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'tb_treatment_category'
+		name: 'art_constitutional'
   })
-  tbTreatmentCategory: string
+	artConstitutional: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'ipt_treatment'
+		name: 'art_consti_fatigue'
   })
-  iptTreatment: string
+	artConstiFatigue: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'ipt_initiation_date',
-    type: 'timestamptz'
+		name: 'art_consti_pain'
   })
-  iptInitiationDate: Date
+	artConstiPain: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'ipt_initial_1st_visitdate',
-    type: 'timestamptz'
+		name: 'art_consti_other'
   })
-  iptInitial1stVisitdate: Date
+	artConstiOther: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'ipt_outcome'
+		name: 'art_gastrointestinal'
   })
-  iptOutcome: string
+	artGastrointestinal: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'ipt_outcomedate',
-    type: 'timestamptz'
+		name: 'art_gastro_abdominal_pain'
   })
-  iptOutcomedate: Date
+	artGastroAbdominalPain: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'ipt_reason_of_not_starting'
+		name: 'art_gastro_nausea'
   })
-  iptReasonOfNotStarting: string
+	artGastroNausea: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'ipt_other'
+		name: 'art_gastro_vomiting'
   })
-  iptOther: string
+	artGastroVomiting: string
 
-  @OneToMany(
-    type => ArtOthMedication,
-    artOthMedication => artOthMedication.artConsultationPlha,
-    {
-      cascade: true
-    }
-  )
-  artOthMedications: ArtOthMedication[]
-
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_referred_to'
+		name: 'art_gastro_dysphagia'
   })
-  artReferredTo: string
+	artGastroDysphagia: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_patient_should_return_in'
+		name: 'art_gastro_diarrhea'
   })
-  artPatientShouldReturnIn: string
+	artGastroDiarrhea: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_return_other'
+		name: 'art_gastro_other'
   })
-  artReturnOther: string
+	artGastroOther: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_date_next_visit',
-    type: 'timestamptz'
+		name: 'art_respiratory_c_vs'
   })
-  artDateNextVisit: Date
+	artRespiratoryCVs: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_motive'
+		name: 'art_respi_difficultly_breathing'
   })
-  artMotive: string
+	artRespiDifficultlyBreathing: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_motive_other'
+		name: 'art_respi_chest_pain'
   })
-  artMotiveOther: string
+	artRespiChestPain: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'art_plan_next_visit'
+		name: 'art_respi_palpitation'
   })
-  artPlanNextVisit: string
+	artRespiPalpitation: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'verify',
-    type: 'integer'
+		name: 'art_respi_other'
   })
-  verify: number
+	artRespiOther: string
 
-  @Column({
+	@Column({
     nullable: true,
-    name: 'last_registration_date',
-    type: 'timestamptz'
+		name: 'art_neurological'
   })
-  lastRegistrationDate: Date
+	artNeurological: string
 
-  @PrimaryColumn({
+	@Column({
+    nullable: true,
+		name: 'art_neuro_headache'
+  })
+	artNeuroHeadache: string
+
+	@Column({
+    nullable: true,
+		name: 'art_neuro_confusion'
+  })
+	artNeuroConfusion: string
+
+	@Column({
+    nullable: true,
+		name: 'art_neuro_memory_problems'
+  })
+	artNeuroMemoryProblems: string
+
+	@Column({
+    nullable: true,
+		name: 'art_neuro_tingling'
+  })
+	artNeuroTingling: string
+
+	@Column({
+    nullable: true,
+		name: 'art_neuro_insomnia'
+  })
+	artNeuroInsomnia: string
+
+	@Column({
+    nullable: true,
+		name: 'art_neuro_yawning'
+  })
+	artNeuroYawning: string
+
+	@Column({
+    nullable: true,
+		name: 'art_skin_manifestation'
+  })
+	artSkinManifestation: string
+
+	@Column({
+    nullable: true,
+		name: 'art_skin_itchiness'
+  })
+	artSkinItchiness: string
+
+	@Column({
+    nullable: true,
+		name: 'art_skin_rash'
+  })
+	artSkinRash: string
+
+	@Column({
+    nullable: true,
+		name: 'art_skin_lump'
+  })
+	artSkinLump: string
+
+	@Column({
+    nullable: true,
+		name: 'art_skin_other'
+  })
+	artSkinOther: string
+
+	@Column({
+    nullable: true,
+		name: 'art_symptoms_comments'
+  })
+	artSymptomsComments: string
+
+	@Column({
+    nullable: true,
+		name: 'art_eye'
+  })
+	artEye: string
+
+	@Column({
+    nullable: true,
+		name: 'art_eye_comment'
+  })
+	artEyeComment: string
+
+	@Column({
+    nullable: true,
+		name: 'art_ears_nose'
+  })
+	artEarsNose: string
+
+	@Column({
+    nullable: true,
+		name: 'art_ears_nose_comment'
+  })
+	artEarsNoseComment: string
+
+	@Column({
+    nullable: true,
+		name: 'art_oral'
+  })
+	artOral: string
+
+	@Column({
+    nullable: true,
+		name: 'art_oral_comment'
+  })
+	artOralComment: string
+
+	@Column({
+    nullable: true,
+		name: 'art_lymph_nodes'
+  })
+	artLymphNodes: string
+
+	@Column({
+    nullable: true,
+		name: 'art_lymph_nodes_comment'
+  })
+	artLymphNodesComment: string
+
+	@Column({
+    nullable: true,
+		name: 'art_heart'
+  })
+	artHeart: string
+
+	@Column({
+    nullable: true,
+		name: 'art_heart_comment'
+  })
+	artHeartComment: string
+
+	@Column({
+    nullable: true,
+		name: 'art_lungs'
+  })
+	artLungs: string
+
+	@Column({
+    nullable: true,
+		name: 'art_lungs_comment'
+  })
+	artLungsComment: string
+
+	@Column({
+    nullable: true,
+		name: 'art_abdomen'
+  })
+	artAbdomen: string
+
+	@Column({
+    nullable: true,
+		name: 'art_abdomen_comment'
+  })
+	artAbdomenComment: string
+
+	@Column({
+    nullable: true,
+		name: 'art_p_exam_neurological'
+  })
+	artPExamNeurological: string
+
+	@Column({
+    nullable: true,
+		name: 'art_neurological_comment'
+  })
+	artNeurologicalComment: string
+
+	@Column({
+    nullable: true,
+		name: 'art_skin'
+  })
+	artSkin: string
+
+	@Column({
+    nullable: true,
+		name: 'art_skin_comment'
+  })
+	artSkinComment: string
+
+	@Column({
+    nullable: true,
+		name: 'art_physical_exam_comments'
+  })
+	artPhysicalExamComments: string
+
+	@Column({
+    nullable: true,
+		name: 'art_child_or_adult'
+  })
+	artChildOrAdult: string
+
+	@OneToMany(type => ArtAdultStage, artAdultStage => artAdultStage.artConsultationPlha, {
+    cascade: true
+  })
+	artAdultStages: ArtAdultStage[]
+
+	@OneToMany(type => ArtChildStage, artChildStage => artChildStage.artConsultationPlha, {
+    cascade: true
+  })
+	artChildStages: ArtChildStage[]
+
+	@Column({
+    nullable: true,
+		name: 'art_patient_status'
+  })
+	artPatientStatus: string
+
+	@Column({
+    nullable: true,
+		name: 'art_oi_diagnosis'
+  })
+	artOiDiagnosis: string
+
+	@Column({
+    nullable: true,
+		name: 'art_oi_diagnosis_eptb'
+  })
+	artOiDiagnosisEptb: string
+
+	@Column({
+    nullable: true,
+		name: 'art_oi_diagnosis_other'
+  })
+	artOiDiagnosisOther: string
+
+	@OneToMany(type => ArtGhcDiagnosis, artGhcDiagnosis => artGhcDiagnosis.artConsultationPlha, {
+    cascade: true
+  })
+	artGhcDiagnosiss: ArtGhcDiagnosis[]
+
+	@Column({
+    nullable: true,
+		name: 'art_diagnosis_comments'
+  })
+	artDiagnosisComments: string
+
+	@Column({
+    nullable: true,
+		name: 'art_first_cd_4',
+		type: 'integer'
+  })
+	artFirstCd4: number
+
+	@Column({
+    nullable: true,
+		name: 'art_last_cd_4',
+		type: 'integer'
+  })
+	artLastCd4: number
+
+	@Column({
+    nullable: true,
+		name: 'art_viral_load_result'
+  })
+	artViralLoadResult: string
+
+	@Column({
+    nullable: true,
+		name: 'art_h_bs_ag'
+  })
+	artHBsAg: string
+
+	@Column({
+    nullable: true,
+		name: 'art_h_bs_ab'
+  })
+	artHBsAb: string
+
+	@Column({
+    nullable: true,
+		name: 'art_hcv_ab'
+  })
+	artHcvAb: string
+
+	@Column({
+    nullable: true,
+		name: 'art_apri',
+		type: 'integer'
+  })
+	artApri: number
+
+	@Column({
+    nullable: true,
+		name: 'art_liver_fibrosis'
+  })
+	artLiverFibrosis: string
+
+	@OneToMany(type => TbSputum, tbSputum => tbSputum.artConsultationPlha, {
+    cascade: true
+  })
+	tbSputums: TbSputum[]
+
+	@Column({
+    nullable: true,
+		name: 'tb_radiology_date',
+		type: 'timestamptz'
+  })
+	tbRadiologyDate: Date
+
+	@Column({
+    nullable: true,
+		name: 'tb_radio_radiology'
+  })
+	tbRadioRadiology: string
+
+	@Column({
+    nullable: true,
+		name: 'tb_radio_cx_ray'
+  })
+	tbRadioCxRay: string
+
+	@Column({
+    nullable: true,
+		name: 'tb_radio_x_ray'
+  })
+	tbRadioXRay: string
+
+	@Column({
+    nullable: true,
+		name: 'tb_radio_usg'
+  })
+	tbRadioUsg: string
+
+	@Column({
+    nullable: true,
+		name: 'tb_persons_screened_tb'
+  })
+	tbPersonsScreenedTb: string
+
+	@Column({
+    nullable: true,
+		name: 'tb_screened_tb_yes_where'
+  })
+	tbScreenedTbYesWhere: string
+
+	@Column({
+    nullable: true,
+		name: 'tb_referred'
+  })
+	tbReferred: string
+
+	@Column({
+    nullable: true,
+		name: 'tb_refer_yes_where'
+  })
+	tbReferYesWhere: string
+
+	@Column({
+    nullable: true,
+		name: 'tb_type_of_case'
+  })
+	tbTypeOfCase: string
+
+	@Column({
+    nullable: true,
+		name: 'tb_type'
+  })
+	tbType: string
+
+	@Column({
+    nullable: true,
+		name: 'art_allergy'
+  })
+	artAllergy: string
+
+	@Column({
+    nullable: true,
+		name: 'art_allergy_other'
+  })
+	artAllergyOther: string
+
+	@Column({
+    nullable: true,
+		name: 'art_pregnant'
+  })
+	artPregnant: string
+
+	@Column({
+    nullable: true,
+		name: 'art_prophylaxis'
+  })
+	artProphylaxis: string
+
+	@Column({
+    nullable: true,
+		name: 'art_prophyaxis_primary'
+  })
+	artProphyaxisPrimary: string
+
+	@Column({
+    nullable: true,
+		name: 'art_prophylaxis_secondary'
+  })
+	artProphylaxisSecondary: string
+
+	@Column({
+    nullable: true,
+		name: 'art_mdmart_starting_date',
+		type: 'timestamptz'
+  })
+	artMdmartStartingDate: Date
+
+	@Column({
+    nullable: true,
+		name: 'art_remaining_pill',
+		type: 'integer'
+  })
+	artRemainingPill: number
+
+	@OneToMany(type => ArtArtMedication, artArtMedication => artArtMedication.artConsultationPlha, {
+    cascade: true
+  })
+	artArtMedications: ArtArtMedication[]
+
+	@Column({
+    nullable: true,
+		name: 'art_tb_starting_date',
+		type: 'timestamptz'
+  })
+	artTbStartingDate: Date
+
+	@OneToMany(type => ArtTbMedication, artTbMedication => artTbMedication.artConsultationPlha, {
+    cascade: true
+  })
+	artTbMedications: ArtTbMedication[]
+
+	@Column({
+    nullable: true,
+		name: 'tb_category'
+  })
+	tbCategory: string
+
+	@Column({
+    nullable: true,
+		name: 'tb_treatment_category'
+  })
+	tbTreatmentCategory: string
+
+	@Column({
+    nullable: true,
+		name: 'ipt_treatment'
+  })
+	iptTreatment: string
+
+	@Column({
+    nullable: true,
+		name: 'ipt_initiation_date',
+		type: 'timestamptz'
+  })
+	iptInitiationDate: Date
+
+	@Column({
+    nullable: true,
+		name: 'ipt_initial_1st_visitdate',
+		type: 'timestamptz'
+  })
+	iptInitial1stVisitdate: Date
+
+	@Column({
+    nullable: true,
+		name: 'ipt_outcome'
+  })
+	iptOutcome: string
+
+	@Column({
+    nullable: true,
+		name: 'ipt_outcomedate',
+		type: 'timestamptz'
+  })
+	iptOutcomedate: Date
+
+	@Column({
+    nullable: true,
+		name: 'ipt_reason_of_not_starting'
+  })
+	iptReasonOfNotStarting: string
+
+	@Column({
+    nullable: true,
+		name: 'ipt_other'
+  })
+	iptOther: string
+
+	@OneToMany(type => ArtOthMedication, artOthMedication => artOthMedication.artConsultationPlha, {
+    cascade: true
+  })
+	artOthMedications: ArtOthMedication[]
+
+	@Column({
+    nullable: true,
+		name: 'art_referred_to'
+  })
+	artReferredTo: string
+
+	@Column({
+    nullable: true,
+		name: 'art_patient_should_return_in'
+  })
+	artPatientShouldReturnIn: string
+
+	@Column({
+    nullable: true,
+		name: 'art_return_other'
+  })
+	artReturnOther: string
+
+	@Column({
+    nullable: true,
+		name: 'art_date_next_visit',
+		type: 'timestamptz'
+  })
+	artDateNextVisit: Date
+
+	@Column({
+    nullable: true,
+		name: 'art_motive'
+  })
+	artMotive: string
+
+	@Column({
+    nullable: true,
+		name: 'art_motive_other'
+  })
+	artMotiveOther: string
+
+	@Column({
+    nullable: true,
+		name: 'art_plan_next_visit'
+  })
+	artPlanNextVisit: string
+
+	@Column({
+    nullable: true,
+		name: 'verify',
+		type: 'integer'
+  })
+	verify: number
+
+	@Column({
+    nullable: true,
+		name: 'last_registration_date',
+		type: 'timestamptz'
+  })
+	lastRegistrationDate: Date
+
+	@PrimaryColumn({
     name: 'key'
   })
-  key: string
+	key: string
+
 }

@@ -34,7 +34,7 @@ import { TbKey } from './TbKey'
 import { TbKeySample } from './TbKeySample'
 import { Vcct } from './Vcct'
 import { VcctDrugType } from './VcctDrugType'
-    
+
 export const classes: { [key: string]: any } = {
   'ArtAdherence': ArtAdherence,
 	'AdhArtEpisode': AdhArtEpisode,
