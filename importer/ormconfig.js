@@ -9,6 +9,9 @@ module.exports = {
   synchronize: true,
   logging: false,
   entities: [`${__dirname}/${dest}/entity/**/*{.ts,.js}`],
-  migrations: [__dirname + '/migration/**/*{.ts,.js}'],
-  subscribers: [__dirname + '/subscriber/**/*{.ts,.js}']
+  migrations: [`${__dirname}/${dest}/migration/**/*{.ts,.js}`],
+  subscribers: [`${__dirname}/${dest}/subscriber/**/*{.ts,.js}`],
+  cli: {
+    migrationsDir: `${__dirname}/${dest}/migration`
+  }
 }

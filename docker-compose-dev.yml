@@ -1,0 +1,30 @@
+version: '3'
+services:
+  postgres:
+    ports:
+      - 5432:5432
+
+  metabase-app:
+    volumes:
+      - ./metabase.db:/metabase.db:delegated
+    labels:
+      - 'traefik.frontend.rule=Host:metabase.localhost'
+      - 'traefik.port=3000'
+
+  importer:
+    command: sh -c './wait-for.sh postgres:5432 -- npm run dev'
+    volumes:
+      - ./importer:/server:delegated
+      - ./data:/data # TODO: dev only??
+      - /tmp/cerberus:/tmp/cerberus
+
+  reverse-proxy:
+    image: traefik # The official Traefik docker image
+    command:
+      - '--api'
+      - '--docker'
+      - '--web'
+    ports:
+      - '80:80' # The HTTP port
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro

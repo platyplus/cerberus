@@ -13,7 +13,7 @@ import { classes } from './entity'
 
 const DATA_PATH = resolve(process.env.DATA_PATH || '/data')
 const TMP_PATH = resolve(process.env.TMP_PATH || '/tmp/cerberus')
-const log = console.log.bind(console)
+const log = console.log.bind(console, `[${new Date().toLocaleString()}]`)
 
 fs.mkdir(TMP_PATH, { recursive: true }, err => {})
 
@@ -86,7 +86,7 @@ function loadFile(file: string, connection: Connection) {
 createConnection()
   .then(async connection => {
     const watcher = chokidar.watch(DATA_PATH, {
-      ignored: /(^|[\/\\])\../, // TODO: temp excel files, or any non excel file
+      ignored: /(^|[\/\\])\../,
       persistent: true,
       awaitWriteFinish: {
         stabilityThreshold: 2000,

@@ -3,13 +3,7 @@ import { readFile, utils } from 'xlsx'
 import fs from 'fs'
 import rimraf from 'rimraf'
 import { mergeArray, entityName, writeFilePromise } from './helpers'
-/** TODO: Works, but still some to be done:
- * - TbKeySample is not mapped correctly (different way to name repeated fields)
- * - unique columns in the schema such as mdmCode...
- */
-
-// Log helper
-const log = console.log.bind(console)
+const log = console.log.bind(console, `[${new Date().toLocaleString()}]`)
 
 // Constants
 const METADATA_FILE = 'metadata.xlsx'
@@ -19,7 +13,6 @@ const PROPERTY_MAPPING: { [key: string]: string } = {
   Date: 'Date'
 }
 // Classes
-// TODO: split Property to an abstract class + inherited classes e.g. OneToManyProperty etc
 class Property {
   parent: Entity
   name: string
