@@ -2,14 +2,15 @@
 
 ## TODO
 
-- [ ] metadata for lab and prevention
+- [ ] Metadata for lab and prevention
 - [ ] Filter only excel files to be watched by chokidar
 - [ ] Split Property class to an abstract class + inherited classes e.g. OneToManyProperty etc
 - [ ] TbKeySample is not mapped correctly (different way to name repeated fields)
-- [ ] custom propery names, but with same excel column names
-- [ ] log/output all lines that couldn't be imported
-- [ ] import files from different locations
-- [ ] Write README.md
+- [ ] Custom propery names, but with same excel column names
+- [ ] Log/output all lines that couldn't be imported
+- [ ] Import files from different locations
+- [ ] Complete the README
+- [ ] (big) Link the excel files together with PKs/FKs
 
 ## Installation
 
@@ -28,7 +29,14 @@ cd cerberus
 
 ### Build and run
 
+#### Develpment
+
 ```
 docker-compose -f docker-compose.yml -f docker-compose-dev.yml up --build
+```
+
+#### Production
+
+```
 docker-compose -f docker-compose.yml -f docker-compose-prod.yml up --build
 ```
