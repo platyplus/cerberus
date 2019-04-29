@@ -1,13 +1,10 @@
 export interface Row {
   form: string
-  number: number
-  variable: string
-  type: string
-  label: string
-  modalities: string
-  entity: string
+  relation: string
   constraint: string
-  name: string
+  excel_name: string
+  property_name: string
+  property_type: string
 }
 
 export interface ColumnMapping {

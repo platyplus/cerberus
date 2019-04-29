@@ -110,8 +110,8 @@ class Entity {
     return property
   }
   pushOneToManyProperty(row: Row, relation: Entity): Property {
-    const relationName = `${_.camelCase(row.entity)}s`
-    const relationType = entityName(row.entity)
+    const relationName = `${_.camelCase(row.relation)}s`
+    const relationType = entityName(row.relation)
     let oneToManyProperty = this.findOrCreateProperty(
       relationName,
       relationType,
@@ -177,22 +177,24 @@ class EntityManager {
       }
       this.mapping.push(entityMapping)
     }
-    let columnName = `${row.number}. ${row.variable}`
     let propertyMapping = entityMapping.columns.find(
-      curs => curs.column === columnName
+      curs => curs.column === row.excel_name
     )
     const type = getType(row)
     if (!propertyMapping) {
       propertyMapping = {
-        column: columnName,
+        column: row.excel_name,
         property: '',
         type
       }
       entityMapping.columns.push(propertyMapping)
     }
-    const propertyName = (row.name || row.variable).replace(/\d+$/, '')
-    if (row.entity) {
-      let relationEntity = this.findOrCreate(row.entity)
+    const propertyName = (row.property_name || row.excel_name).replace(
+      /\d+$/,
+      ''
+    )
+    if (row.relation) {
+      let relationEntity = this.findOrCreate(row.relation)
       let relationProperty = relationEntity.findOrCreateProperty(
         propertyName,
         type,

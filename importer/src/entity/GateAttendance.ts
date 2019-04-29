@@ -82,9 +82,9 @@ export class GateAttendance {
 
 	@Column({
     nullable: true,
-		name: 'ga_saving_date',
+		name: 'saving_date',
 		type: 'timestamptz'
   })
-	gaSavingDate: Date
+	savingDate: Date
 
 }

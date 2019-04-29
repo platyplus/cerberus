@@ -22,6 +22,8 @@ import { OtherOIs } from './OtherOIs'
 import { ArtKeyResult } from './ArtKeyResult'
 import { Apri } from './Apri'
 import { DeathRegister } from './DeathRegister'
+import { DicData } from './DicData'
+import { GateAttendance } from './GateAttendance'
 import { GeneralHeathCareGhc } from './GeneralHeathCareGhc'
 import { GhcCategory } from './GhcCategory'
 import { GhcMedication } from './GhcMedication'
@@ -34,8 +36,6 @@ import { AfbToMth } from './AfbToMth'
 import { TbKeySample } from './TbKeySample'
 import { Vcct } from './Vcct'
 import { VcctDrugType } from './VcctDrugType'
-import { GateAttendance } from './GateAttendance'
-import { DicData } from './DicData'
 
 export const classes: { [key: string]: any } = {
   'ArtAdherence': ArtAdherence,
@@ -62,6 +62,8 @@ export const classes: { [key: string]: any } = {
 	'ArtKeyResult': ArtKeyResult,
 	'Apri': Apri,
 	'DeathRegister': DeathRegister,
+	'DicData': DicData,
+	'GateAttendance': GateAttendance,
 	'GeneralHeathCareGhc': GeneralHeathCareGhc,
 	'GhcCategory': GhcCategory,
 	'GhcMedication': GhcMedication,
@@ -73,7 +75,5 @@ export const classes: { [key: string]: any } = {
 	'AfbToMth': AfbToMth,
 	'TbKeySample': TbKeySample,
 	'Vcct': Vcct,
-	'VcctDrugType': VcctDrugType,
-	'GateAttendance': GateAttendance,
-	'DicData': DicData
+	'VcctDrugType': VcctDrugType
 }
