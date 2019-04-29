@@ -6,151 +6,151 @@ import { AdhTbEpisode } from './AdhTbEpisode'
 @Entity()
 export class ArtAdherence {
 	@PrimaryColumn({
-    name: 'md_mcode'
+    name: 'mdm_code'
   })
-	mdMcode: string
+	mdmCode: string
 
 	@Column({
     nullable: true,
-		name: 'a_00_registration_date',
+		name: 'registration_date',
 		type: 'timestamptz'
   })
-	a00RegistrationDate: Date
+	registrationDate: Date
 
 	@Column({
     nullable: true,
-		name: 'a_01_patient_name'
+		name: 'patient_name'
   })
-	a01PatientName: string
+	patientName: string
 
 	@Column({
     nullable: true,
-		name: 'a_02_father_name'
+		name: 'father_name'
   })
-	a02FatherName: string
+	fatherName: string
 
 	@Column({
     nullable: true,
-		name: 'a_03_sexe'
+		name: 'sex'
   })
-	a03Sexe: string
+	sex: string
 
 	@Column({
     nullable: true,
-		name: 'a_041_date_of_birth',
+		name: 'date_of_birth',
 		type: 'timestamptz'
   })
-	a041DateOfBirth: Date
+	dateOfBirth: Date
 
 	@Column({
     nullable: true,
-		name: 'a_05_age',
+		name: 'age',
 		type: 'integer'
   })
-	a05Age: number
+	age: number
 
 	@Column({
     nullable: true,
-		name: 'a_07_patient_target'
+		name: 'patient_target'
   })
-	a07PatientTarget: string
+	patientTarget: string
 
 	@PrimaryColumn({
-    name: 'adh_place_of_medical_care'
+    name: 'place_of_medical_care'
   })
-	adhPlaceOfMedicalCare: string
+	placeOfMedicalCare: string
 
 	@Column({
     nullable: true,
-		name: 'adh_visit'
+		name: 'visit'
   })
-	adhVisit: string
+	visit: string
 
 	@Column({
     nullable: true,
-		name: 'adh_visit_assessment',
+		name: 'visit_assessment',
 		type: 'integer'
   })
-	adhVisitAssessment: number
+	visitAssessment: number
 
 	@Column({
     nullable: true,
-		name: 'adh_reason_of_visit'
+		name: 'visit_reason'
   })
-	adhReasonOfVisit: string
+	visitReason: string
 
 	@PrimaryColumn({
-    name: 'adh_visit_date',
+    name: 'visit_date',
 		type: 'timestamptz'
   })
-	adhVisitDate: Date
+	visitDate: Date
 
 	@Column({
     nullable: true,
-		name: 'adh_appointment'
+		name: 'appointment'
   })
-	adhAppointment: string
+	appointment: string
 
 	@Column({
     nullable: true,
-		name: 'adh_counselor'
+		name: 'counselor'
   })
-	adhCounselor: string
+	counselor: string
 
 	@Column({
     nullable: true,
-		name: 'a_07_a_marital_status'
+		name: 'marital_status'
   })
-	a07AMaritalStatus: string
+	maritalStatus: string
 
 	@Column({
     nullable: true,
-		name: 'adh_no_of_children',
+		name: 'children_number',
 		type: 'integer'
   })
-	adhNoOfChildren: number
+	childrenNumber: number
 
 	@Column({
     nullable: true,
-		name: 'adh_accommodation'
+		name: 'accomodation'
   })
-	adhAccommodation: string
+	accomodation: string
 
 	@Column({
     nullable: true,
-		name: 'adh_accomo_if_stable'
+		name: 'accomodation_if_stable'
   })
-	adhAccomoIfStable: string
+	accomodationIfStable: string
 
 	@Column({
     nullable: true,
-		name: 'adh_occupation'
+		name: 'has_occupation'
   })
-	adhOccupation: string
+	hasOccupation: string
 
 	@Column({
     nullable: true,
-		name: 'adh_occupation_if_yes'
+		name: 'occupation'
   })
-	adhOccupationIfYes: string
+	occupation: string
 
 	@Column({
     nullable: true,
-		name: 'adh_financial_situation'
+		name: 'financial_situation'
   })
-	adhFinancialSituation: string
+	financialSituation: string
 
 	@Column({
     nullable: true,
-		name: 'adh_level_of_education'
+		name: 'level_of_education'
   })
-	adhLevelOfEducation: string
+	levelOfEducation: string
 
 	@Column({
     nullable: true,
-		name: 'adh_social_remark'
+		name: 'social_remark'
   })
-	adhSocialRemark: string
+	socialRemark: string
 
 	@Column({
     nullable: true,
@@ -184,14 +184,28 @@ export class ArtAdherence {
 
 	@Column({
     nullable: true,
-		name: 'adh_care_taker_attend_clinic_i'
+		name: 'caretaker_attend_clinic_i'
   })
-	adhCareTakerAttendClinicI: string
+	caretakerAttendClinicI: string
+
+	@Column({
+    nullable: true,
+		name: 'art_start_date',
+		type: 'timestamptz'
+  })
+	artStartDate: Date
 
 	@OneToMany(type => AdhArtEpisode, adhArtEpisode => adhArtEpisode.artAdherence, {
     cascade: true
   })
 	adhArtEpisodes: AdhArtEpisode[]
+
+	@Column({
+    nullable: true,
+		name: 'adh_tb_start_date',
+		type: 'timestamptz'
+  })
+	adhTbStartDate: Date
 
 	@OneToMany(type => AdhTbEpisode, adhTbEpisode => adhTbEpisode.artAdherence, {
     cascade: true
@@ -200,9 +214,9 @@ export class ArtAdherence {
 
 	@Column({
     nullable: true,
-		name: 'adh_adherence_problem'
+		name: 'adherence_problem'
   })
-	adhAdherenceProblem: string
+	adherenceProblem: string
 
 	@Column({
     nullable: true,
@@ -212,33 +226,33 @@ export class ArtAdherence {
 
 	@Column({
     nullable: true,
-		name: 'adh_adh_social_problem'
+		name: 'social_problem'
   })
-	adhAdhSocialProblem: string
+	socialProblem: string
 
 	@Column({
     nullable: true,
-		name: 'adh_adh_medical_problem'
+		name: 'medical_problem'
   })
-	adhAdhMedicalProblem: string
+	medicalProblem: string
 
 	@Column({
     nullable: true,
-		name: 'adh_adh_medical_problem_other'
+		name: 'medical_problem_other'
   })
-	adhAdhMedicalProblemOther: string
+	medicalProblemOther: string
 
 	@Column({
     nullable: true,
-		name: 'adh_adh_miscellaneous_problem'
+		name: 'misc_problem'
   })
-	adhAdhMiscellaneousProblem: string
+	miscProblem: string
 
 	@Column({
     nullable: true,
-		name: 'adh_comment'
+		name: 'comment'
   })
-	adhComment: string
+	comment: string
 
 	@Column({
     nullable: true,
@@ -304,51 +318,51 @@ export class ArtAdherence {
 
 	@Column({
     nullable: true,
-		name: 'adh_total_doses',
+		name: 'total_doses',
 		type: 'integer'
   })
-	adhTotalDoses: number
+	totalDoses: number
 
 	@Column({
     nullable: true,
-		name: 'adh_adherence_within_last_30_days',
+		name: 'adherence_within_last_30_days',
 		type: 'integer'
   })
-	adhAdherenceWithinLast30Days: number
+	adherenceWithinLast30Days: number
 
 	@Column({
     nullable: true,
-		name: 'adh_doses_found',
+		name: 'doses_number',
 		type: 'integer'
   })
-	adhDosesFound: number
+	dosesNumber: number
 
 	@Column({
     nullable: true,
-		name: 'adh_doses_should_have',
+		name: 'doses_should_have',
 		type: 'integer'
   })
-	adhDosesShouldHave: number
+	dosesShouldHave: number
 
 	@Column({
     nullable: true,
-		name: 'adh_extra_doses_provided',
+		name: 'extra_doses_provided',
 		type: 'integer'
   })
-	adhExtraDosesProvided: number
+	extraDosesProvided: number
 
 	@Column({
     nullable: true,
-		name: 'adh_dose_for',
+		name: 'dose_for',
 		type: 'integer'
   })
-	adhDoseFor: number
+	doseFor: number
 
 	@Column({
     nullable: true,
-		name: 'adh_adherence_level_since_last_visit'
+		name: 'adherence_since_last_visit'
   })
-	adhAdherenceLevelSinceLastVisit: string
+	adherenceSinceLastVisit: string
 
 	@Column({
     nullable: true,
@@ -364,15 +378,15 @@ export class ArtAdherence {
 
 	@Column({
     nullable: true,
-		name: 'adh_care_taker'
+		name: 'caretaker_status'
   })
-	adhCareTaker: string
+	caretakerStatus: string
 
 	@Column({
     nullable: true,
-		name: 'adh_care_taker_if_change'
+		name: 'caretaker_name'
   })
-	adhCareTakerIfChange: string
+	caretakerName: string
 
 	@Column({
     nullable: true,
@@ -388,15 +402,15 @@ export class ArtAdherence {
 
 	@Column({
     nullable: true,
-		name: 'adh_care_taker_attend_clinic_f'
+		name: 'caretaker_attend_clinic_f'
   })
-	adhCareTakerAttendClinicF: string
+	caretakerAttendClinicF: string
 
 	@Column({
     nullable: true,
-		name: 'adh_care_taker_attend_clinic_if_problem'
+		name: 'caretaker_attend_clinic_problem'
   })
-	adhCareTakerAttendClinicIfProblem: string
+	caretakerAttendClinicProblem: string
 
 	@Column({
     nullable: true,
@@ -412,177 +426,177 @@ export class ArtAdherence {
 
 	@Column({
     nullable: true,
-		name: 'adh_current_drug_use'
+		name: 'current_drug_use'
   })
-	adhCurrentDrugUse: string
+	currentDrugUse: string
 
 	@Column({
     nullable: true,
-		name: 'adh_drug'
+		name: 'drug'
   })
-	adhDrug: string
+	drug: string
 
 	@Column({
     nullable: true,
-		name: 'adh_alcohol_last_use',
+		name: 'alcohol_last_use',
 		type: 'timestamptz'
   })
-	adhAlcoholLastUse: Date
+	alcoholLastUse: Date
 
 	@Column({
     nullable: true,
-		name: 'adh_alcohol_time_day',
+		name: 'alcohol_times_dat',
 		type: 'integer'
   })
-	adhAlcoholTimeDay: number
+	alcoholTimesDat: number
 
 	@Column({
     nullable: true,
-		name: 'adh_alcohol_days_week',
+		name: 'alcohol_days_week',
 		type: 'integer'
   })
-	adhAlcoholDaysWeek: number
+	alcoholDaysWeek: number
 
 	@Column({
     nullable: true,
-		name: 'adh_alcohol_way_of_use'
+		name: 'alcohol_way_of_use'
   })
-	adhAlcoholWayOfUse: string
+	alcoholWayOfUse: string
 
 	@Column({
     nullable: true,
-		name: 'adh_ampheataminel_last_use',
+		name: 'amphetamine_last_use',
 		type: 'timestamptz'
   })
-	adhAmpheataminelLastUse: Date
+	amphetamineLastUse: Date
 
 	@Column({
     nullable: true,
-		name: 'adh_ampheatamine_time_day',
+		name: 'amphetamine_times_day',
 		type: 'integer'
   })
-	adhAmpheatamineTimeDay: number
+	amphetamineTimesDay: number
 
 	@Column({
     nullable: true,
-		name: 'adh_ampheatamine_days_week',
+		name: 'amphetamine_days_week',
 		type: 'integer'
   })
-	adhAmpheatamineDaysWeek: number
+	amphetamineDaysWeek: number
 
 	@Column({
     nullable: true,
-		name: 'adh_ampheatamine_way_of_use'
+		name: 'amphetamine_way_of_use'
   })
-	adhAmpheatamineWayOfUse: string
+	amphetamineWayOfUse: string
 
 	@Column({
     nullable: true,
-		name: 'adh_diazepine_last_use',
+		name: 'diazepine_last_use',
 		type: 'timestamptz'
   })
-	adhDiazepineLastUse: Date
+	diazepineLastUse: Date
 
 	@Column({
     nullable: true,
-		name: 'adh_diazepine_time_day',
+		name: 'diazepine_times_day',
 		type: 'integer'
   })
-	adhDiazepineTimeDay: number
+	diazepineTimesDay: number
 
 	@Column({
     nullable: true,
-		name: 'adh_diazepine_days_week',
+		name: 'diazepine_days_week',
 		type: 'integer'
   })
-	adhDiazepineDaysWeek: number
+	diazepineDaysWeek: number
 
 	@Column({
     nullable: true,
-		name: 'adh_diazepine_way_of_use'
+		name: 'diazepine_way_of_use'
   })
-	adhDiazepineWayOfUse: string
+	diazepineWayOfUse: string
 
 	@Column({
     nullable: true,
-		name: 'adh_cannabis_last_use',
+		name: 'cannabis_last_use',
 		type: 'timestamptz'
   })
-	adhCannabisLastUse: Date
+	cannabisLastUse: Date
 
 	@Column({
     nullable: true,
-		name: 'adh_cannabis_time_day',
+		name: 'cannabis_times_day',
 		type: 'integer'
   })
-	adhCannabisTimeDay: number
+	cannabisTimesDay: number
 
 	@Column({
     nullable: true,
-		name: 'adh_cannabis_days_week',
+		name: 'cannabis_days_week',
 		type: 'integer'
   })
-	adhCannabisDaysWeek: number
+	cannabisDaysWeek: number
 
 	@Column({
     nullable: true,
-		name: 'adh_cannabis_way_of_use'
+		name: 'cannabis_way_of_use'
   })
-	adhCannabisWayOfUse: string
+	cannabisWayOfUse: string
 
 	@Column({
     nullable: true,
-		name: 'adh_ecstasy_last_use',
+		name: 'ecstasy_last_use',
 		type: 'timestamptz'
   })
-	adhEcstasyLastUse: Date
+	ecstasyLastUse: Date
 
 	@Column({
     nullable: true,
-		name: 'adh_ecstasy_time_day',
+		name: 'ecstasy_times_day',
 		type: 'integer'
   })
-	adhEcstasyTimeDay: number
+	ecstasyTimesDay: number
 
 	@Column({
     nullable: true,
-		name: 'adh_esctasy_days_week',
+		name: 'ecstasy_days_week',
 		type: 'integer'
   })
-	adhEsctasyDaysWeek: number
+	ecstasyDaysWeek: number
 
 	@Column({
     nullable: true,
-		name: 'adh_esctasy_way_of_use'
+		name: 'ecstasy_way_of_use'
   })
-	adhEsctasyWayOfUse: string
+	ecstasyWayOfUse: string
 
 	@Column({
     nullable: true,
-		name: 'adh_herion_last_use',
+		name: 'heroin_last_use',
 		type: 'timestamptz'
   })
-	adhHerionLastUse: Date
+	heroinLastUse: Date
 
 	@Column({
     nullable: true,
-		name: 'adh_herion_time_day',
+		name: 'heroin_times_day',
 		type: 'integer'
   })
-	adhHerionTimeDay: number
+	heroinTimesDay: number
 
 	@Column({
     nullable: true,
-		name: 'adh_herion_days_week',
+		name: 'heroin_days_week',
 		type: 'integer'
   })
-	adhHerionDaysWeek: number
+	heroinDaysWeek: number
 
 	@Column({
     nullable: true,
-		name: 'adh_herion_way_of_use'
+		name: 'heroin_way_of_use'
   })
-	adhHerionWayOfUse: string
+	heroinWayOfUse: string
 
 	@Column({
     nullable: true,
@@ -613,21 +627,21 @@ export class ArtAdherence {
 
 	@Column({
     nullable: true,
-		name: 'adh_did_you_share_needle_syringe'
+		name: 'shared_syringe'
   })
-	adhDidYouShareNeedleSyringe: string
+	sharedSyringe: string
 
 	@Column({
     nullable: true,
-		name: 'adh_herbal_medicines'
+		name: 'herbal_medicines'
   })
-	adhHerbalMedicines: string
+	herbalMedicines: string
 
 	@Column({
     nullable: true,
-		name: 'adh_conclusion'
+		name: 'conclusion'
   })
-	adhConclusion: string
+	conclusion: string
 
 	@Column({
     nullable: true,
@@ -637,9 +651,9 @@ export class ArtAdherence {
 
 	@Column({
     nullable: true,
-		name: 'adh_check_list'
+		name: 'checklist'
   })
-	adhCheckList: string
+	checklist: string
 
 	@Column({
     nullable: true,

@@ -7,54 +7,54 @@ import { GhcMedication } from './GhcMedication'
 export class GeneralHeathCareGhc {
 	@Column({
     nullable: true,
-		name: 'md_mcode'
+		name: 'mdm_code'
   })
-	mdMcode: string
+	mdmCode: string
 
 	@Column({
     nullable: true,
-		name: 'a_00_registration_date',
+		name: 'registration_date',
 		type: 'timestamptz'
   })
-	a00RegistrationDate: Date
+	registrationDate: Date
 
 	@Column({
     nullable: true,
-		name: 'a_01_patient_name'
+		name: 'patient_name'
   })
-	a01PatientName: string
+	patientName: string
 
 	@Column({
     nullable: true,
-		name: 'a_02_father_name'
+		name: 'father_name'
   })
-	a02FatherName: string
+	fatherName: string
 
 	@Column({
     nullable: true,
-		name: 'a_03_sexe'
+		name: 'sex'
   })
-	a03Sexe: string
+	sex: string
 
 	@Column({
     nullable: true,
-		name: 'a_07_patient_target'
+		name: 'patient_target'
   })
-	a07PatientTarget: string
+	patientTarget: string
 
 	@Column({
     nullable: true,
-		name: 'a_041_date_of_birth',
+		name: 'date_of_birth',
 		type: 'timestamptz'
   })
-	a041DateOfBirth: Date
+	dateOfBirth: Date
 
 	@Column({
     nullable: true,
-		name: 'a_05_age',
+		name: 'age',
 		type: 'integer'
   })
-	a05Age: number
+	age: number
 
 	@Column({
     nullable: true,
@@ -71,9 +71,9 @@ export class GeneralHeathCareGhc {
 
 	@Column({
     nullable: true,
-		name: 'ghc_md_mstaff'
+		name: 'mdm_staff'
   })
-	ghcMdMstaff: string
+	mdmStaff: string
 
 	@Column({
     nullable: true,
@@ -341,15 +341,15 @@ export class GeneralHeathCareGhc {
 
 	@Column({
     nullable: true,
-		name: 'ghc_heart'
+		name: 'heart'
   })
-	ghcHeart: string
+	heart: string
 
 	@Column({
     nullable: true,
-		name: 'ghc_heart_comment'
+		name: 'heart_comment'
   })
-	ghcHeartComment: string
+	heartComment: string
 
 	@Column({
     nullable: true,
@@ -400,21 +400,21 @@ export class GeneralHeathCareGhc {
 
 	@Column({
     nullable: true,
-		name: 'ghc_h_bs_ag'
+		name: 'hbsag'
   })
-	ghcHBsAg: string
+	hbsag: string
 
 	@Column({
     nullable: true,
-		name: 'ghc_h_bs_ab'
+		name: 'hbsab'
   })
-	ghcHBsAb: string
+	hbsab: string
 
 	@Column({
     nullable: true,
-		name: 'ghc_hcv_ab'
+		name: 'hcvab'
   })
-	ghcHcvAb: string
+	hcvab: string
 
 	@Column({
     nullable: true,

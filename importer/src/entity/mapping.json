@@ -5,122 +5,122 @@
     "columns": [
       {
         "column": "1. MDMcode",
-        "property": "mdMcode",
+        "property": "mdmCode",
         "type": "string"
       },
       {
         "column": "2. A00_RegistrationDate",
-        "property": "a00RegistrationDate",
+        "property": "registrationDate",
         "type": "Date"
       },
       {
         "column": "3. A01_PatientName",
-        "property": "a01PatientName",
+        "property": "patientName",
         "type": "string"
       },
       {
         "column": "4. A02_FatherName",
-        "property": "a02FatherName",
+        "property": "fatherName",
         "type": "string"
       },
       {
         "column": "5. A03_Sexe",
-        "property": "a03Sexe",
+        "property": "sex",
         "type": "string"
       },
       {
         "column": "6. A041_DateOfBirth",
-        "property": "a041DateOfBirth",
+        "property": "dateOfBirth",
         "type": "Date"
       },
       {
         "column": "7. A05_Age",
-        "property": "a05Age",
+        "property": "age",
         "type": "number"
       },
       {
         "column": "8. A07_PatientTarget",
-        "property": "a07PatientTarget",
+        "property": "patientTarget",
         "type": "string"
       },
       {
         "column": "9. ADH_PlaceOfMedicalCare",
-        "property": "adhPlaceOfMedicalCare",
+        "property": "placeOfMedicalCare",
         "type": "string"
       },
       {
         "column": "10. ADH_Visit",
-        "property": "adhVisit",
+        "property": "visit",
         "type": "string"
       },
       {
         "column": "11. ADH_Visit_Assessment",
-        "property": "adhVisitAssessment",
+        "property": "visitAssessment",
         "type": "number"
       },
       {
         "column": "12. ADH_ReasonOfVisit",
-        "property": "adhReasonOfVisit",
+        "property": "visitReason",
         "type": "string"
       },
       {
         "column": "13. ADH_VisitDate",
-        "property": "adhVisitDate",
+        "property": "visitDate",
         "type": "Date"
       },
       {
         "column": "14. ADH_Appointment",
-        "property": "adhAppointment",
+        "property": "appointment",
         "type": "string"
       },
       {
         "column": "15. ADH_Counselor",
-        "property": "adhCounselor",
+        "property": "counselor",
         "type": "string"
       },
       {
         "column": "16. A07a_MaritalStatus",
-        "property": "a07AMaritalStatus",
+        "property": "maritalStatus",
         "type": "string"
       },
       {
         "column": "17. ADH_NoOfChildren",
-        "property": "adhNoOfChildren",
+        "property": "childrenNumber",
         "type": "number"
       },
       {
         "column": "18. ADH_Accommodation",
-        "property": "adhAccommodation",
+        "property": "accomodation",
         "type": "string"
       },
       {
         "column": "19. ADH_Accomo_IfStable",
-        "property": "adhAccomoIfStable",
+        "property": "accomodationIfStable",
         "type": "string"
       },
       {
         "column": "20. ADH_Occupation",
-        "property": "adhOccupation",
+        "property": "hasOccupation",
         "type": "string"
       },
       {
         "column": "21. ADH_Occupation_IfYes",
-        "property": "adhOccupationIfYes",
+        "property": "occupation",
         "type": "string"
       },
       {
         "column": "22. ADH_FinancialSituation",
-        "property": "adhFinancialSituation",
+        "property": "financialSituation",
         "type": "string"
       },
       {
         "column": "23. ADH_LevelOfEducation",
-        "property": "adhLevelOfEducation",
+        "property": "levelOfEducation",
         "type": "string"
       },
       {
         "column": "24. ADH_Social_Remark",
-        "property": "adhSocialRemark",
+        "property": "socialRemark",
         "type": "string"
       },
       {
@@ -150,144 +150,142 @@
       },
       {
         "column": "30. ADH_CareTakerAttendClinic_I",
-        "property": "adhCareTakerAttendClinicI",
+        "property": "caretakerAttendClinicI",
         "type": "string"
       },
       {
         "column": "31. ADH_ARTStartDate",
-        "property": "adhArtStartDate",
-        "type": "Date",
-        "relation": "adhArtEpisodes"
+        "property": "artStartDate",
+        "type": "Date"
       },
       {
         "column": "32. ADH_ARTStopDate1",
-        "property": "adhArtStopDate",
+        "property": "artStopDate",
         "type": "Date",
         "relation": "adhArtEpisodes"
       },
       {
         "column": "33. ADH_ARTRestartingDate1",
-        "property": "adhArtRestartingDate",
+        "property": "artRestartingDate",
         "type": "Date",
         "relation": "adhArtEpisodes"
       },
       {
         "column": "34. ADH_ARTStopDate2",
-        "property": "adhArtStopDate",
+        "property": "artStopDate",
         "type": "Date",
         "relation": "adhArtEpisodes"
       },
       {
         "column": "35. ADH_ARTRestartingDate2",
-        "property": "adhArtRestartingDate",
+        "property": "artRestartingDate",
         "type": "Date",
         "relation": "adhArtEpisodes"
       },
       {
         "column": "36. ADH_ARTStopDate3",
-        "property": "adhArtStopDate",
+        "property": "artStopDate",
         "type": "Date",
         "relation": "adhArtEpisodes"
       },
       {
         "column": "37. ADH_ARTRestartingDate3",
-        "property": "adhArtRestartingDate",
+        "property": "artRestartingDate",
         "type": "Date",
         "relation": "adhArtEpisodes"
       },
       {
         "column": "38. ADH_ARTStopDate4",
-        "property": "adhArtStopDate",
+        "property": "artStopDate",
         "type": "Date",
         "relation": "adhArtEpisodes"
       },
       {
         "column": "39. ADH_ARTRestartingDate4",
-        "property": "adhArtRestartingDate",
+        "property": "artRestartingDate",
         "type": "Date",
         "relation": "adhArtEpisodes"
       },
       {
         "column": "40. ADH_ARTStopDate5",
-        "property": "adhArtStopDate",
+        "property": "artStopDate",
         "type": "Date",
         "relation": "adhArtEpisodes"
       },
       {
         "column": "41. ADH_ARTRestartingDate5",
-        "property": "adhArtRestartingDate",
+        "property": "artRestartingDate",
         "type": "Date",
         "relation": "adhArtEpisodes"
       },
       {
         "column": "42. ADH_TBStartDate",
         "property": "adhTbStartDate",
-        "type": "Date",
-        "relation": "adhTbEpisodes"
+        "type": "Date"
       },
       {
         "column": "43. ADH_TBStopDate1",
-        "property": "adhTbStopDate",
+        "property": "tbStopDate",
         "type": "Date",
         "relation": "adhTbEpisodes"
       },
       {
         "column": "44. ADH_TBRestartingDate1",
-        "property": "adhTbRestartingDate",
+        "property": "tbRestartingDate",
         "type": "Date",
         "relation": "adhTbEpisodes"
       },
       {
         "column": "45. ADH_TBStopDate2",
-        "property": "adhTbStopDate",
+        "property": "tbStopDate",
         "type": "Date",
         "relation": "adhTbEpisodes"
       },
       {
         "column": "46. ADH_TBRestartingDate2",
-        "property": "adhTbRestartingDate",
+        "property": "tbRestartingDate",
         "type": "Date",
         "relation": "adhTbEpisodes"
       },
       {
         "column": "47. ADH_TBStopDate3",
-        "property": "adhTbStopDate",
+        "property": "tbStopDate",
         "type": "Date",
         "relation": "adhTbEpisodes"
       },
       {
         "column": "48. ADH_TBRestartingDate3",
-        "property": "adhTbRestartingDate",
+        "property": "tbRestartingDate",
         "type": "Date",
         "relation": "adhTbEpisodes"
       },
       {
         "column": "49. ADH_TBStopDate4",
-        "property": "adhTbStopDate",
+        "property": "tbStopDate",
         "type": "Date",
         "relation": "adhTbEpisodes"
       },
       {
         "column": "50. ADH_TBRestartingDate4",
-        "property": "adhTbRestartingDate",
+        "property": "tbRestartingDate",
         "type": "Date",
         "relation": "adhTbEpisodes"
       },
       {
         "column": "51. ADH_TBStopDate5",
-        "property": "adhTbStopDate",
+        "property": "tbStopDate",
         "type": "Date",
         "relation": "adhTbEpisodes"
       },
       {
         "column": "52. ADH_TBRestartingDate5",
-        "property": "adhTbRestartingDate",
+        "property": "tbRestartingDate",
         "type": "Date",
         "relation": "adhTbEpisodes"
       },
       {
         "column": "53. ADH_AdherenceProblem",
-        "property": "adhAdherenceProblem",
+        "property": "adherenceProblem",
         "type": "string"
       },
       {
@@ -297,27 +295,27 @@
       },
       {
         "column": "55. ADH_AdhSocialProblem",
-        "property": "adhAdhSocialProblem",
+        "property": "socialProblem",
         "type": "string"
       },
       {
         "column": "56. ADH_AdhMedicalProblem",
-        "property": "adhAdhMedicalProblem",
+        "property": "medicalProblem",
         "type": "string"
       },
       {
         "column": "57. ADH_AdhMedicalProblemOther",
-        "property": "adhAdhMedicalProblemOther",
+        "property": "medicalProblemOther",
         "type": "string"
       },
       {
         "column": "58. ADH_AdhMiscellaneousProblem",
-        "property": "adhAdhMiscellaneousProblem",
+        "property": "miscProblem",
         "type": "string"
       },
       {
         "column": "59. ADH_Comment",
-        "property": "adhComment",
+        "property": "comment",
         "type": "string"
       },
       {
@@ -372,37 +370,37 @@
       },
       {
         "column": "70. ADH_TotalDoses",
-        "property": "adhTotalDoses",
+        "property": "totalDoses",
         "type": "number"
       },
       {
         "column": "71. ADH_AdherenceWithinLast30Days",
-        "property": "adhAdherenceWithinLast30Days",
+        "property": "adherenceWithinLast30Days",
         "type": "number"
       },
       {
         "column": "72. ADH_DosesFound",
-        "property": "adhDosesFound",
+        "property": "dosesNumber",
         "type": "number"
       },
       {
         "column": "73. ADH_DosesShouldHave",
-        "property": "adhDosesShouldHave",
+        "property": "dosesShouldHave",
         "type": "number"
       },
       {
         "column": "74. ADH_ExtraDosesProvided",
-        "property": "adhExtraDosesProvided",
+        "property": "extraDosesProvided",
         "type": "number"
       },
       {
         "column": "75. ADH_DoseFor",
-        "property": "adhDoseFor",
+        "property": "doseFor",
         "type": "number"
       },
       {
         "column": "76. ADH_AdherenceLevelSinceLastVisit",
-        "property": "adhAdherenceLevelSinceLastVisit",
+        "property": "adherenceSinceLastVisit",
         "type": "string"
       },
       {
@@ -417,12 +415,12 @@
       },
       {
         "column": "79. ADH_CareTaker",
-        "property": "adhCareTaker",
+        "property": "caretakerStatus",
         "type": "string"
       },
       {
         "column": "80. ADH_CareTaker_IfChange",
-        "property": "adhCareTakerIfChange",
+        "property": "caretakerName",
         "type": "string"
       },
       {
@@ -437,12 +435,12 @@
       },
       {
         "column": "83. ADH_CareTakerAttendClinic_F",
-        "property": "adhCareTakerAttendClinicF",
+        "property": "caretakerAttendClinicF",
         "type": "string"
       },
       {
         "column": "84. ADH_CareTakerAttendClinic_IfProblem",
-        "property": "adhCareTakerAttendClinicIfProblem",
+        "property": "caretakerAttendClinicProblem",
         "type": "string"
       },
       {
@@ -457,132 +455,132 @@
       },
       {
         "column": "87. ADH_CurrentDrugUse",
-        "property": "adhCurrentDrugUse",
+        "property": "currentDrugUse",
         "type": "string"
       },
       {
         "column": "88. ADH_Drug",
-        "property": "adhDrug",
+        "property": "drug",
         "type": "string"
       },
       {
         "column": "89. ADH_AlcoholLastUse",
-        "property": "adhAlcoholLastUse",
+        "property": "alcoholLastUse",
         "type": "Date"
       },
       {
         "column": "90. ADH_AlcoholTimeDay",
-        "property": "adhAlcoholTimeDay",
+        "property": "alcoholTimesDat",
         "type": "number"
       },
       {
         "column": "91. ADH_AlcoholDaysWeek",
-        "property": "adhAlcoholDaysWeek",
+        "property": "alcoholDaysWeek",
         "type": "number"
       },
       {
         "column": "92. ADH_AlcoholWayOfUse",
-        "property": "adhAlcoholWayOfUse",
+        "property": "alcoholWayOfUse",
         "type": "string"
       },
       {
         "column": "93. ADH_AmpheataminelLastUse",
-        "property": "adhAmpheataminelLastUse",
+        "property": "amphetamineLastUse",
         "type": "Date"
       },
       {
         "column": "94. ADH_AmpheatamineTimeDay",
-        "property": "adhAmpheatamineTimeDay",
+        "property": "amphetamineTimesDay",
         "type": "number"
       },
       {
         "column": "95. ADH_AmpheatamineDaysWeek",
-        "property": "adhAmpheatamineDaysWeek",
+        "property": "amphetamineDaysWeek",
         "type": "number"
       },
       {
         "column": "96. ADH_AmpheatamineWayOfUse",
-        "property": "adhAmpheatamineWayOfUse",
+        "property": "amphetamineWayOfUse",
         "type": "string"
       },
       {
         "column": "97. ADH_DiazepineLastUse",
-        "property": "adhDiazepineLastUse",
+        "property": "diazepineLastUse",
         "type": "Date"
       },
       {
         "column": "98. ADH_DiazepineTimeDay",
-        "property": "adhDiazepineTimeDay",
+        "property": "diazepineTimesDay",
         "type": "number"
       },
       {
         "column": "99. ADH_DiazepineDaysWeek",
-        "property": "adhDiazepineDaysWeek",
+        "property": "diazepineDaysWeek",
         "type": "number"
       },
       {
         "column": "100. ADH_DiazepineWayOfUse",
-        "property": "adhDiazepineWayOfUse",
+        "property": "diazepineWayOfUse",
         "type": "string"
       },
       {
         "column": "101. ADH_CannabisLastUse",
-        "property": "adhCannabisLastUse",
+        "property": "cannabisLastUse",
         "type": "Date"
       },
       {
         "column": "102. ADH_CannabisTimeDay",
-        "property": "adhCannabisTimeDay",
+        "property": "cannabisTimesDay",
         "type": "number"
       },
       {
         "column": "103. ADH_CannabisDaysWeek",
-        "property": "adhCannabisDaysWeek",
+        "property": "cannabisDaysWeek",
         "type": "number"
       },
       {
         "column": "104. ADH_CannabisWayOfUse",
-        "property": "adhCannabisWayOfUse",
+        "property": "cannabisWayOfUse",
         "type": "string"
       },
       {
         "column": "105. ADH_EcstasyLastUse",
-        "property": "adhEcstasyLastUse",
+        "property": "ecstasyLastUse",
         "type": "Date"
       },
       {
         "column": "106. ADH_EcstasyTimeDay",
-        "property": "adhEcstasyTimeDay",
+        "property": "ecstasyTimesDay",
         "type": "number"
       },
       {
         "column": "107. ADH_EsctasyDaysWeek",
-        "property": "adhEsctasyDaysWeek",
+        "property": "ecstasyDaysWeek",
         "type": "number"
       },
       {
         "column": "108. ADH_EsctasyWayOfUse",
-        "property": "adhEsctasyWayOfUse",
+        "property": "ecstasyWayOfUse",
         "type": "string"
       },
       {
         "column": "109. ADH_HerionLastUse",
-        "property": "adhHerionLastUse",
+        "property": "heroinLastUse",
         "type": "Date"
       },
       {
         "column": "110. ADH_HerionTimeDay",
-        "property": "adhHerionTimeDay",
+        "property": "heroinTimesDay",
         "type": "number"
       },
       {
         "column": "111. ADH_HerionDaysWeek",
-        "property": "adhHerionDaysWeek",
+        "property": "heroinDaysWeek",
         "type": "number"
       },
       {
         "column": "112. ADH_HerionWayOfUse",
-        "property": "adhHerionWayOfUse",
+        "property": "heroinWayOfUse",
         "type": "string"
       },
       {
@@ -607,17 +605,17 @@
       },
       {
         "column": "117. ADH_DidYouShareNeedleSyringe",
-        "property": "adhDidYouShareNeedleSyringe",
+        "property": "sharedSyringe",
         "type": "string"
       },
       {
         "column": "118. ADH_HerbalMedicines",
-        "property": "adhHerbalMedicines",
+        "property": "herbalMedicines",
         "type": "string"
       },
       {
         "column": "119. ADH_Conclusion",
-        "property": "adhConclusion",
+        "property": "conclusion",
         "type": "string"
       },
       {
@@ -627,7 +625,7 @@
       },
       {
         "column": "121. ADH_CheckList",
-        "property": "adhCheckList",
+        "property": "checklist",
         "type": "string"
       },
       {
@@ -653,42 +651,42 @@
     "columns": [
       {
         "column": "1. MDMcode",
-        "property": "mdMcode",
+        "property": "mdmCode",
         "type": "string"
       },
       {
         "column": "2. A00_RegistrationDate",
-        "property": "a00RegistrationDate",
+        "property": "registrationDate",
         "type": "Date"
       },
       {
         "column": "3. A01_PatientName",
-        "property": "a01PatientName",
+        "property": "patientName",
         "type": "string"
       },
       {
         "column": "4. A02_FatherName",
-        "property": "a02FatherName",
+        "property": "fatherName",
         "type": "string"
       },
       {
         "column": "5. A03_Sexe",
-        "property": "a03Sexe",
+        "property": "sex",
         "type": "string"
       },
       {
         "column": "6. A041_DateOfBirth",
-        "property": "a041DateOfBirth",
+        "property": "dateOfBirth",
         "type": "Date"
       },
       {
         "column": "7. A05_Age",
-        "property": "a05Age",
+        "property": "age",
         "type": "number"
       },
       {
         "column": "8. A07_PatientTarget",
-        "property": "a07PatientTarget",
+        "property": "patientTarget",
         "type": "string"
       },
       {
@@ -1293,12 +1291,12 @@
       },
       {
         "column": "121. ART_Abdomen",
-        "property": "artAbdomen",
+        "property": "abdomen",
         "type": "string"
       },
       {
         "column": "122. ART_AbdomenComment",
-        "property": "artAbdomenComment",
+        "property": "abdomentComment",
         "type": "string"
       },
       {
@@ -1333,33 +1331,28 @@
       },
       {
         "column": "129. ART_Adult_Stage",
-        "property": "artAdultStage",
-        "type": "string",
-        "relation": "artAdultStages"
+        "property": "stage",
+        "type": "string"
       },
       {
         "column": "130. ART_Adult_Stage1",
-        "property": "artAdultStage",
-        "type": "string",
-        "relation": "artAdultStages"
+        "property": "stage",
+        "type": "string"
       },
       {
         "column": "131. ART_Adult_Stage2",
-        "property": "artAdultStage",
-        "type": "string",
-        "relation": "artAdultStages"
+        "property": "stage",
+        "type": "string"
       },
       {
         "column": "132. ART_Adult_Stage3",
-        "property": "artAdultStage",
-        "type": "string",
-        "relation": "artAdultStages"
+        "property": "stage",
+        "type": "string"
       },
       {
         "column": "133. ART_Adult_Stage4",
-        "property": "artAdultStage",
-        "type": "string",
-        "relation": "artAdultStages"
+        "property": "stage",
+        "type": "string"
       },
       {
         "column": "134. ART_Child_Stage",
@@ -1466,12 +1459,12 @@
       },
       {
         "column": "152. ART_FirstCD4",
-        "property": "artFirstCd4",
+        "property": "artFirstCd",
         "type": "number"
       },
       {
         "column": "153. ART_LastCD4",
-        "property": "artLastCd4",
+        "property": "artLastCd",
         "type": "number"
       },
       {
@@ -1800,7 +1793,7 @@
       },
       {
         "column": "211. ART_AllergyOther",
-        "property": "artAllergyOther",
+        "property": "allergy",
         "type": "string"
       },
       {
@@ -2431,22 +2424,22 @@
       },
       {
         "column": "3. MDMcode",
-        "property": "mdMcode",
+        "property": "mdmCode",
         "type": "string"
       },
       {
         "column": "4. A01_PatientName",
-        "property": "a01PatientName",
+        "property": "patientName",
         "type": "string"
       },
       {
         "column": "5. A02_FatherName",
-        "property": "a02FatherName",
+        "property": "fatherName",
         "type": "string"
       },
       {
         "column": "6. A03_Sexe",
-        "property": "a03Sexe",
+        "property": "sex",
         "type": "string"
       },
       {
@@ -2456,12 +2449,12 @@
       },
       {
         "column": "8. A041_DateOfBirth",
-        "property": "a041DateOfBirth",
+        "property": "dateOfBirth",
         "type": "Date"
       },
       {
         "column": "9. A07_PatientTarget",
-        "property": "a07PatientTarget",
+        "property": "patientTarget",
         "type": "string"
       },
       {
@@ -2516,7 +2509,7 @@
       },
       {
         "column": "20. BaselineCD4",
-        "property": "baselineCd4",
+        "property": "baselineCd",
         "type": "number"
       },
       {
@@ -3396,7 +3389,7 @@
       },
       {
         "column": "167. LastCD4",
-        "property": "lastCd4",
+        "property": "lastCd",
         "type": "number"
       },
       {
@@ -3411,7 +3404,7 @@
       },
       {
         "column": "170. Maximum_CD4",
-        "property": "maximumCd4",
+        "property": "maximumCd",
         "type": "number"
       },
       {
@@ -3421,12 +3414,12 @@
       },
       {
         "column": "172. 2ndLine",
-        "property": "2ndLine",
+        "property": "secondLine",
         "type": "string"
       },
       {
         "column": "173. 2ndLineChangeDate",
-        "property": "2ndLineChangeDate",
+        "property": "secondLineChangeDate",
         "type": "Date"
       },
       {
@@ -3436,7 +3429,7 @@
       },
       {
         "column": "175. HAARTnaïve",
-        "property": "haarTnaive",
+        "property": "haartNaive",
         "type": "string"
       },
       {
@@ -3451,12 +3444,12 @@
       },
       {
         "column": "178. PreviousHAARTRegimen1",
-        "property": "previousHaartRegimen1",
+        "property": "previousHaartRegimen",
         "type": "string"
       },
       {
         "column": "179. PreviousHAARTRegimen2",
-        "property": "previousHaartRegimen2",
+        "property": "previousHaartRegimen",
         "type": "string"
       },
       {
@@ -3466,7 +3459,7 @@
       },
       {
         "column": "181. MdMHAARTStartDate",
-        "property": "mdMhaartStartDate",
+        "property": "mdmHaartStartDate",
         "type": "Date"
       },
       {
@@ -3793,13 +3786,13 @@
       },
       {
         "column": "236. EndDateOfATTBIP_1",
-        "property": "endDateOfAttbip",
+        "property": "endDateOfAttbIp",
         "type": "Date",
         "relation": "artKeyAttbs"
       },
       {
         "column": "237. EndDateOfATTBCP_1",
-        "property": "endDateOfAttbcp",
+        "property": "endDateOfAttbCp",
         "type": "Date",
         "relation": "artKeyAttbs"
       },
@@ -3823,13 +3816,13 @@
       },
       {
         "column": "241. EndDateOfATTBIP_2",
-        "property": "endDateOfAttbip",
+        "property": "endDateOfAttbIp",
         "type": "Date",
         "relation": "artKeyAttbs"
       },
       {
         "column": "242. EndDateOfATTBCP_2",
-        "property": "endDateOfAttbcp",
+        "property": "endDateOfAttbCp",
         "type": "Date",
         "relation": "artKeyAttbs"
       },
@@ -3840,31 +3833,31 @@
       },
       {
         "column": "244. OtherOIs1",
-        "property": "otherOIs",
+        "property": "otherOls",
         "type": "string",
         "relation": "otherOIss"
       },
       {
         "column": "245. OtherOIs2",
-        "property": "otherOIs",
+        "property": "otherOls",
         "type": "string",
         "relation": "otherOIss"
       },
       {
         "column": "246. OtherOIs3",
-        "property": "otherOIs",
+        "property": "otherOls",
         "type": "string",
         "relation": "otherOIss"
       },
       {
         "column": "247. OtherOIs4",
-        "property": "otherOIs",
+        "property": "otherOls",
         "type": "string",
         "relation": "otherOIss"
       },
       {
         "column": "248. OtherOIs5",
-        "property": "otherOIs",
+        "property": "otherOls",
         "type": "string",
         "relation": "otherOIss"
       },
@@ -3966,12 +3959,12 @@
       },
       {
         "column": "265. AbAntiHBs",
-        "property": "abAntiHBs",
+        "property": "abAntiHbs",
         "type": "string"
       },
       {
         "column": "266. HBeAg",
-        "property": "hBeAg",
+        "property": "hbeag",
         "type": "string"
       },
       {
@@ -3981,7 +3974,7 @@
       },
       {
         "column": "268. AgHBs",
-        "property": "agHBs",
+        "property": "agHbs",
         "type": "string"
       },
       {
@@ -3991,27 +3984,27 @@
       },
       {
         "column": "270. APRI_Date1",
-        "property": "apriDate",
+        "property": "date",
         "type": "Date",
-        "relation": "artKeyApris"
+        "relation": "apris"
       },
       {
         "column": "271. APRI_Result1",
-        "property": "apriResult",
+        "property": "result",
         "type": "number",
-        "relation": "artKeyApris"
+        "relation": "apris"
       },
       {
         "column": "272. APRI_Date2",
-        "property": "apriDate",
+        "property": "date",
         "type": "Date",
-        "relation": "artKeyApris"
+        "relation": "apris"
       },
       {
         "column": "273. APRI_Result2",
-        "property": "apriResult",
+        "property": "result",
         "type": "number",
-        "relation": "artKeyApris"
+        "relation": "apris"
       },
       {
         "column": "274. Liver_Fibrosis",
@@ -4041,32 +4034,32 @@
     "columns": [
       {
         "column": "1. MDMcode",
-        "property": "mdMcode",
+        "property": "mdmCode",
         "type": "string"
       },
       {
         "column": "2. A01_PatientName",
-        "property": "a01PatientName",
+        "property": "patientName",
         "type": "string"
       },
       {
         "column": "3. A02_FatherName",
-        "property": "a02FatherName",
+        "property": "fatherName",
         "type": "string"
       },
       {
         "column": "4. A03_Sexe",
-        "property": "a03Sexe",
+        "property": "sex",
         "type": "string"
       },
       {
         "column": "5. A05_Age",
-        "property": "a05Age",
+        "property": "age",
         "type": "number"
       },
       {
         "column": "6. A07_PatientTarget",
-        "property": "a07PatientTarget",
+        "property": "patientTarget",
         "type": "string"
       },
       {
@@ -4127,42 +4120,42 @@
     "columns": [
       {
         "column": "1. MDMcode",
-        "property": "mdMcode",
+        "property": "mdmCode",
         "type": "string"
       },
       {
         "column": "2. A00_RegistrationDate",
-        "property": "a00RegistrationDate",
+        "property": "registrationDate",
         "type": "Date"
       },
       {
         "column": "3. A01_PatientName",
-        "property": "a01PatientName",
+        "property": "patientName",
         "type": "string"
       },
       {
         "column": "4. A02_FatherName",
-        "property": "a02FatherName",
+        "property": "fatherName",
         "type": "string"
       },
       {
         "column": "5. A03_Sexe",
-        "property": "a03Sexe",
+        "property": "sex",
         "type": "string"
       },
       {
         "column": "6. A07_PatientTarget",
-        "property": "a07PatientTarget",
+        "property": "patientTarget",
         "type": "string"
       },
       {
         "column": "7. A041_DateOfBirth",
-        "property": "a041DateOfBirth",
+        "property": "dateOfBirth",
         "type": "Date"
       },
       {
         "column": "8. A05_Age",
-        "property": "a05Age",
+        "property": "age",
         "type": "number"
       },
       {
@@ -4177,7 +4170,7 @@
       },
       {
         "column": "11. GHC_MDMstaff",
-        "property": "ghcMdMstaff",
+        "property": "mdmStaff",
         "type": "string"
       },
       {
@@ -4402,12 +4395,12 @@
       },
       {
         "column": "56. GHC_Heart",
-        "property": "ghcHeart",
+        "property": "heart",
         "type": "string"
       },
       {
         "column": "57. GHC_HeartComment",
-        "property": "ghcHeartComment",
+        "property": "heartComment",
         "type": "string"
       },
       {
@@ -4495,17 +4488,17 @@
       },
       {
         "column": "73. GHC_HBsAg",
-        "property": "ghcHBsAg",
+        "property": "hbsag",
         "type": "string"
       },
       {
         "column": "74. GHC_HBsAb",
-        "property": "ghcHBsAb",
+        "property": "hbsab",
         "type": "string"
       },
       {
         "column": "75. GHC_HCVAb",
-        "property": "ghcHcvAb",
+        "property": "hcvab",
         "type": "string"
       },
       {
@@ -4806,42 +4799,42 @@
     "columns": [
       {
         "column": "1. MDMcode",
-        "property": "mdMcode",
+        "property": "mdmCode",
         "type": "string"
       },
       {
         "column": "2. A00_RegistrationDate",
-        "property": "a00RegistrationDate",
+        "property": "registrationDate",
         "type": "Date"
       },
       {
         "column": "3. A01_PatientName",
-        "property": "a01PatientName",
+        "property": "patientName",
         "type": "string"
       },
       {
         "column": "4. A02_FatherName",
-        "property": "a02FatherName",
+        "property": "fatherName",
         "type": "string"
       },
       {
         "column": "5. A03_Sexe",
-        "property": "a03Sexe",
+        "property": "sex",
         "type": "string"
       },
       {
         "column": "6. A041_DateOfBirth",
-        "property": "a041DateOfBirth",
+        "property": "dateOfBirth",
         "type": "Date"
       },
       {
         "column": "7. A05_Age",
-        "property": "a05Age",
+        "property": "age",
         "type": "number"
       },
       {
         "column": "8. A07_PatientTarget",
-        "property": "a07PatientTarget",
+        "property": "patientTarget",
         "type": "string"
       },
       {
@@ -4856,7 +4849,7 @@
       },
       {
         "column": "11. A07a_MaritalStatus",
-        "property": "a07AMaritalStatus",
+        "property": "maritalStatus",
         "type": "string"
       },
       {
@@ -4866,7 +4859,7 @@
       },
       {
         "column": "13. A06a_Height",
-        "property": "a06AHeight",
+        "property": "height",
         "type": "number"
       },
       {
@@ -4901,7 +4894,7 @@
       },
       {
         "column": "20. GI_BP1",
-        "property": "giBp1",
+        "property": "giBp",
         "type": "number"
       },
       {
@@ -5002,12 +4995,12 @@
     "columns": [
       {
         "column": "1. MDMlocation",
-        "property": "mdMlocation",
+        "property": "mdmLocation",
         "type": "string"
       },
       {
         "column": "2. MDMcode",
-        "property": "mdMcode",
+        "property": "mdmCode",
         "type": "string"
       },
       {
@@ -5017,92 +5010,92 @@
       },
       {
         "column": "4. A00_RegistrationDate",
-        "property": "a00RegistrationDate",
+        "property": "registrationDate",
         "type": "Date"
       },
       {
         "column": "5. A01_PatientName",
-        "property": "a01PatientName",
+        "property": "patientName",
         "type": "string"
       },
       {
         "column": "6. A02_FatherName",
-        "property": "a02FatherName",
+        "property": "fatherName",
         "type": "string"
       },
       {
         "column": "7. A03_Sexe",
-        "property": "a03Sexe",
+        "property": "sex",
         "type": "string"
       },
       {
         "column": "8. A041_DateOfBirth",
-        "property": "a041DateOfBirth",
+        "property": "dateOfBirth",
         "type": "Date"
       },
       {
         "column": "9. A05_Age",
-        "property": "a05Age",
+        "property": "age",
         "type": "number"
       },
       {
         "column": "10. A052_DateOfBirthEstimated",
-        "property": "a052DateOfBirthEstimated",
+        "property": "dateOfBirthEstimated",
         "type": "string"
       },
       {
         "column": "11. A06_PlaceOfBirth",
-        "property": "a06PlaceOfBirth",
+        "property": "placeOfBirth",
         "type": "string"
       },
       {
         "column": "12. A06a_Height",
-        "property": "a06AHeight",
+        "property": "height",
         "type": "number"
       },
       {
         "column": "13. A07_PatientTarget",
-        "property": "a07PatientTarget",
+        "property": "patientTarget",
         "type": "string"
       },
       {
         "column": "14. A07a_MaritalStatus",
-        "property": "a07AMaritalStatus",
+        "property": "maritalStatus",
         "type": "string"
       },
       {
         "column": "15. A08_LevelEducation",
-        "property": "a08LevelEducation",
+        "property": "levelEducation",
         "type": "string"
       },
       {
         "column": "16. A09_Occupation",
-        "property": "a09Occupation",
+        "property": "occupation",
         "type": "string"
       },
       {
         "column": "17. A10_AddressTownship",
-        "property": "a10AddressTownship",
+        "property": "addressTownship",
         "type": "string"
       },
       {
         "column": "18. A10_AddressTownshipName",
-        "property": "a10AddressTownshipName",
+        "property": "addressTownshipName",
         "type": "string"
       },
       {
         "column": "19. A11_GeographicalOrigin",
-        "property": "a11GeographicalOrigin",
+        "property": "geographicalOrigin",
         "type": "string"
       },
       {
         "column": "20. A12_DistanceToMDMclinic",
-        "property": "a12DistanceToMdMclinic",
+        "property": "distanceToMdmClinic",
         "type": "number"
       },
       {
         "column": "21. A13_OtherID",
-        "property": "a13OtherId",
+        "property": "otherId",
         "type": "string"
       },
       {
@@ -5117,7 +5110,7 @@
       },
       {
         "column": "24. A20_DateOfSavingData",
-        "property": "a20DateOfSavingData",
+        "property": "dateOfSavingData",
         "type": "Date"
       }
     ]
@@ -5128,42 +5121,42 @@
     "columns": [
       {
         "column": "1. MDMcode",
-        "property": "mdMcode",
+        "property": "mdmCode",
         "type": "string"
       },
       {
         "column": "2. A00_RegistrationDate",
-        "property": "a00RegistrationDate",
+        "property": "registrationDate",
         "type": "Date"
       },
       {
         "column": "3. A01_PatientName",
-        "property": "a01PatientName",
+        "property": "patientName",
         "type": "string"
       },
       {
         "column": "4. A02_FatherName",
-        "property": "a02FatherName",
+        "property": "fatherName",
         "type": "string"
       },
       {
         "column": "5. A03_Sexe",
-        "property": "a03Sexe",
+        "property": "sex",
         "type": "string"
       },
       {
         "column": "6. A041_DateOfBirth",
-        "property": "a041DateOfBirth",
+        "property": "dateOfBirth",
         "type": "Date"
       },
       {
         "column": "7. A05_Age",
-        "property": "a05Age",
+        "property": "age",
         "type": "number"
       },
       {
         "column": "8. A07_PatientTarget",
-        "property": "a07PatientTarget",
+        "property": "patientTarget",
         "type": "string"
       },
       {
@@ -5173,7 +5166,7 @@
       },
       {
         "column": "10. STI_MDMstaff",
-        "property": "stiMdMstaff",
+        "property": "mdmStaff",
         "type": "string"
       },
       {
@@ -5383,7 +5376,7 @@
       },
       {
         "column": "52. STI_Test_PH",
-        "property": "stiTestPh",
+        "property": "testPh",
         "type": "string"
       },
       {
@@ -5418,12 +5411,12 @@
       },
       {
         "column": "59. STI_Test_RPR",
-        "property": "stiTestRpr",
+        "property": "rpr",
         "type": "string"
       },
       {
         "column": "60. STI_Test_RPRDil",
-        "property": "stiTestRprDil",
+        "property": "rprDil",
         "type": "string"
       },
       {
@@ -5438,12 +5431,12 @@
       },
       {
         "column": "63. STI_PDiagnosis_Other",
-        "property": "stiPDiagnosisOther",
+        "property": "partnerDiagnosisOther",
         "type": "string"
       },
       {
         "column": "64. STI_M01_Lab",
-        "property": "stiM01Lab",
+        "property": "labType",
         "type": "string"
       },
       {
@@ -5769,27 +5762,27 @@
     "columns": [
       {
         "column": "1. MDMcode",
-        "property": "mdMcode",
+        "property": "mdmCode",
         "type": "string"
       },
       {
         "column": "2. A01_PatientName",
-        "property": "a01PatientName",
+        "property": "patientName",
         "type": "string"
       },
       {
         "column": "3. A05_Age",
-        "property": "a05Age",
+        "property": "age",
         "type": "number"
       },
       {
         "column": "4. A03_Sexe",
-        "property": "a03Sexe",
+        "property": "sex",
         "type": "string"
       },
       {
         "column": "5. A07_PatientTarget",
-        "property": "a07PatientTarget",
+        "property": "patientTarget",
         "type": "string"
       },
       {
@@ -5819,7 +5812,7 @@
       },
       {
         "column": "11. PTBEPTB",
-        "property": "ptbeptb",
+        "property": "ptbEptb",
         "type": "string"
       },
       {
@@ -5854,7 +5847,7 @@
       },
       {
         "column": "18. IPDate",
-        "property": "ipDate",
+        "property": "ipStartDate",
         "type": "Date"
       },
       {
@@ -5874,63 +5867,75 @@
       },
       {
         "column": "22. AFBInitial_Sputum",
-        "property": "afbInitialSputum",
-        "type": "string"
+        "property": "sputum",
+        "type": "string",
+        "relation": "afbToMths"
       },
       {
         "column": "23. AFBInitial_X",
-        "property": "afbInitialX",
-        "type": "string"
+        "property": "x",
+        "type": "string",
+        "relation": "afbToMths"
       },
       {
         "column": "24. AFBInitial_Culture",
-        "property": "afbInitialCulture",
-        "type": "string"
+        "property": "culture",
+        "type": "string",
+        "relation": "afbToMths"
       },
       {
         "column": "25. AFB2MTH_Sputum",
-        "property": "afb2MthSputum",
-        "type": "string"
+        "property": "sputum",
+        "type": "string",
+        "relation": "afbToMths"
       },
       {
         "column": "26. AFB2MTH_X",
-        "property": "afb2MthX",
-        "type": "string"
+        "property": "x",
+        "type": "string",
+        "relation": "afbToMths"
       },
       {
         "column": "27. AFB2MTH_Culture",
-        "property": "afb2MthCulture",
-        "type": "string"
+        "property": "culture",
+        "type": "string",
+        "relation": "afbToMths"
       },
       {
         "column": "28. AFB3MTH_Sputum",
-        "property": "afb3MthSputum",
-        "type": "string"
+        "property": "sputum",
+        "type": "string",
+        "relation": "afbToMths"
       },
       {
         "column": "29. AFB3MTH_X",
-        "property": "afb3MthX",
-        "type": "string"
+        "property": "x",
+        "type": "string",
+        "relation": "afbToMths"
       },
       {
         "column": "30. AFB3MTH_Culture",
-        "property": "afb3MthCulture",
-        "type": "string"
+        "property": "culture",
+        "type": "string",
+        "relation": "afbToMths"
       },
       {
         "column": "31. AFB5MTH_Sputum",
-        "property": "afb5MthSputum",
-        "type": "string"
+        "property": "sputum",
+        "type": "string",
+        "relation": "afbToMths"
       },
       {
         "column": "32. AFB5MTH_X",
-        "property": "afb5MthX",
-        "type": "string"
+        "property": "x",
+        "type": "string",
+        "relation": "afbToMths"
       },
       {
         "column": "33. AFB5MTH_Culture",
-        "property": "afb5MthCulture",
-        "type": "string"
+        "property": "culture",
+        "type": "string",
+        "relation": "afbToMths"
       },
       {
         "column": "34. EndOfTreatment_Sputum",
@@ -5949,18 +5954,21 @@
       },
       {
         "column": "37. AFBInitial_Positive",
-        "property": "afbInitialPositive",
-        "type": "number"
+        "property": "positive",
+        "type": "number",
+        "relation": "afbToMths"
       },
       {
         "column": "38. AFB2MTH_Negative",
-        "property": "afb2MthNegative",
-        "type": "number"
+        "property": "negative",
+        "type": "number",
+        "relation": "afbToMths"
       },
       {
         "column": "39. AFB3MTH_Negative",
-        "property": "afb3MthNegative",
-        "type": "number"
+        "property": "negative",
+        "type": "number",
+        "relation": "afbToMths"
       },
       {
         "column": "40. SampleDate1",
@@ -6309,7 +6317,7 @@
       },
       {
         "column": "98. OTH_LymphNode_Result",
-        "property": "othLymphNodeResult",
+        "property": "lymphNodeResult",
         "type": "string"
       },
       {
@@ -6329,7 +6337,7 @@
       },
       {
         "column": "102. CXRay_Result",
-        "property": "cxRayResult",
+        "property": "xRayResult",
         "type": "string"
       },
       {
@@ -6370,37 +6378,37 @@
     "columns": [
       {
         "column": "1. MDMcode",
-        "property": "mdMcode",
+        "property": "mdmCode",
         "type": "string"
       },
       {
         "column": "2. A00_RegistrationDate",
-        "property": "a00RegistrationDate",
+        "property": "registrationDate",
         "type": "Date"
       },
       {
         "column": "3. A01_PatientName",
-        "property": "a01PatientName",
+        "property": "patientName",
         "type": "string"
       },
       {
         "column": "4. A02_FatherName",
-        "property": "a02FatherName",
+        "property": "fatherName",
         "type": "string"
       },
       {
         "column": "5. A03_Sexe",
-        "property": "a03Sexe",
+        "property": "sex",
         "type": "string"
       },
       {
         "column": "6. A041_DateOfBirth",
-        "property": "a041DateOfBirth",
+        "property": "dateOfBirth",
         "type": "Date"
       },
       {
         "column": "7. A05_Age",
-        "property": "a05Age",
+        "property": "age",
         "type": "number"
       },
       {
@@ -6420,7 +6428,7 @@
       },
       {
         "column": "11. A07_PatientTarget",
-        "property": "a07PatientTarget",
+        "property": "patientTarget",
         "type": "string"
       },
       {
@@ -6499,7 +6507,7 @@
       },
       {
         "column": "25. VCCT_ShareNeedleOrSyringeInLastSixWeeks1",
-        "property": "vcctShareNeedleOrSyringeInLastSixWeeks1",
+        "property": "vcctShareNeedleOrSyringeInLastSixWeeks",
         "type": "string"
       },
       {

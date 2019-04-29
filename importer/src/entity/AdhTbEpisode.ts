@@ -9,29 +9,22 @@ export class AdhTbEpisode {
 
 	@Column({
     nullable: true,
-		name: 'adh_tb_start_date',
+		name: 'tb_stop_date',
 		type: 'timestamptz'
   })
-	adhTbStartDate: Date
+	tbStopDate: Date
 
 	@ManyToOne(type => ArtAdherence, artAdherence => artAdherence.adhTbEpisodes, {
     eager: true
   })
-	@JoinColumn([{ name: 'mdMcode', referencedColumnName: 'mdMcode'}, { name: 'adhPlaceOfMedicalCare', referencedColumnName: 'adhPlaceOfMedicalCare'}, { name: 'adhVisitDate', referencedColumnName: 'adhVisitDate'}])
+	@JoinColumn([{ name: 'mdmCode', referencedColumnName: 'mdmCode'}, { name: 'placeOfMedicalCare', referencedColumnName: 'placeOfMedicalCare'}, { name: 'visitDate', referencedColumnName: 'visitDate'}])
 	artAdherence: ArtAdherence
 
 	@Column({
     nullable: true,
-		name: 'adh_tb_stop_date',
+		name: 'tb_restarting_date',
 		type: 'timestamptz'
   })
-	adhTbStopDate: Date
-
-	@Column({
-    nullable: true,
-		name: 'adh_tb_restarting_date',
-		type: 'timestamptz'
-  })
-	adhTbRestartingDate: Date
+	tbRestartingDate: Date
 
 }

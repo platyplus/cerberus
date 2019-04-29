@@ -17,7 +17,7 @@ export class TbKeySample {
 	@ManyToOne(type => TbKey, tbKey => tbKey.tbKeySamples, {
     eager: true
   })
-	@JoinColumn([{ name: 'mdMcode', referencedColumnName: 'mdMcode'}])
+	@JoinColumn([{ name: 'mdmCode', referencedColumnName: 'mdmCode'}])
 	tbKey: TbKey
 
 	@Column({

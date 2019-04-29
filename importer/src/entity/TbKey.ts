@@ -1,38 +1,39 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
 import { Entity, PrimaryColumn, Column, OneToMany } from 'typeorm'
+import { AfbToMth } from './AfbToMth'
 import { TbKeySample } from './TbKeySample'
 
 @Entity()
 export class TbKey {
 	@PrimaryColumn({
-    name: 'md_mcode'
+    name: 'mdm_code'
   })
-	mdMcode: string
+	mdmCode: string
 
 	@Column({
     nullable: true,
-		name: 'a_01_patient_name'
+		name: 'patient_name'
   })
-	a01PatientName: string
+	patientName: string
 
 	@Column({
     nullable: true,
-		name: 'a_05_age',
+		name: 'age',
 		type: 'integer'
   })
-	a05Age: number
+	age: number
 
 	@Column({
     nullable: true,
-		name: 'a_03_sexe'
+		name: 'sex'
   })
-	a03Sexe: string
+	sex: string
 
 	@Column({
     nullable: true,
-		name: 'a_07_patient_target'
+		name: 'patient_target'
   })
-	a07PatientTarget: string
+	patientTarget: string
 
 	@Column({
     nullable: true,
@@ -68,9 +69,9 @@ export class TbKey {
 
 	@Column({
     nullable: true,
-		name: 'ptbeptb'
+		name: 'ptb_eptb'
   })
-	ptbeptb: string
+	ptbEptb: string
 
 	@Column({
     nullable: true,
@@ -111,10 +112,10 @@ export class TbKey {
 
 	@Column({
     nullable: true,
-		name: 'ip_date',
+		name: 'ip_start_date',
 		type: 'timestamptz'
   })
-	ipDate: Date
+	ipStartDate: Date
 
 	@Column({
     nullable: true,
@@ -136,77 +137,10 @@ export class TbKey {
   })
 	bacteriologicalConfirmation: string
 
-	@Column({
-    nullable: true,
-		name: 'afb_initial_sputum'
+	@OneToMany(type => AfbToMth, afbToMth => afbToMth.tbKey, {
+    cascade: true
   })
-	afbInitialSputum: string
-
-	@Column({
-    nullable: true,
-		name: 'afb_initial_x'
-  })
-	afbInitialX: string
-
-	@Column({
-    nullable: true,
-		name: 'afb_initial_culture'
-  })
-	afbInitialCulture: string
-
-	@Column({
-    nullable: true,
-		name: 'afb_2_mth_sputum'
-  })
-	afb2MthSputum: string
-
-	@Column({
-    nullable: true,
-		name: 'afb_2_mth_x'
-  })
-	afb2MthX: string
-
-	@Column({
-    nullable: true,
-		name: 'afb_2_mth_culture'
-  })
-	afb2MthCulture: string
-
-	@Column({
-    nullable: true,
-		name: 'afb_3_mth_sputum'
-  })
-	afb3MthSputum: string
-
-	@Column({
-    nullable: true,
-		name: 'afb_3_mth_x'
-  })
-	afb3MthX: string
-
-	@Column({
-    nullable: true,
-		name: 'afb_3_mth_culture'
-  })
-	afb3MthCulture: string
-
-	@Column({
-    nullable: true,
-		name: 'afb_5_mth_sputum'
-  })
-	afb5MthSputum: string
-
-	@Column({
-    nullable: true,
-		name: 'afb_5_mth_x'
-  })
-	afb5MthX: string
-
-	@Column({
-    nullable: true,
-		name: 'afb_5_mth_culture'
-  })
-	afb5MthCulture: string
+	afbToMths: AfbToMth[]
 
 	@Column({
     nullable: true,
@@ -225,27 +159,6 @@ export class TbKey {
 		name: 'end_of_treatment_culture'
   })
 	endOfTreatmentCulture: string
-
-	@Column({
-    nullable: true,
-		name: 'afb_initial_positive',
-		type: 'integer'
-  })
-	afbInitialPositive: number
-
-	@Column({
-    nullable: true,
-		name: 'afb_2_mth_negative',
-		type: 'integer'
-  })
-	afb2MthNegative: number
-
-	@Column({
-    nullable: true,
-		name: 'afb_3_mth_negative',
-		type: 'integer'
-  })
-	afb3MthNegative: number
 
 	@OneToMany(type => TbKeySample, tbKeySample => tbKeySample.tbKey, {
     cascade: true
@@ -272,9 +185,9 @@ export class TbKey {
 
 	@Column({
     nullable: true,
-		name: 'oth_lymph_node_result'
+		name: 'lymph_node_result'
   })
-	othLymphNodeResult: string
+	lymphNodeResult: string
 
 	@Column({
     nullable: true,
@@ -293,12 +206,6 @@ export class TbKey {
 		name: 'radiology'
   })
 	radiology: string
-
-	@Column({
-    nullable: true,
-		name: 'cx_ray_result'
-  })
-	cxRayResult: string
 
 	@Column({
     nullable: true,

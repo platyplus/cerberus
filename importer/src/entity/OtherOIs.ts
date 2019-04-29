@@ -9,14 +9,14 @@ export class OtherOIs {
 
 	@Column({
     nullable: true,
-		name: 'other_o_is'
+		name: 'other_ols'
   })
-	otherOIs: string
+	otherOls: string
 
 	@ManyToOne(type => ArtKey, artKey => artKey.otherOIss, {
     eager: true
   })
-	@JoinColumn([{ name: 'mdMcode', referencedColumnName: 'mdMcode'}])
+	@JoinColumn([{ name: 'mdmCode', referencedColumnName: 'mdmCode'}])
 	artKey: ArtKey
 
 }

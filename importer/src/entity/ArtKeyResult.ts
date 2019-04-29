@@ -17,7 +17,7 @@ export class ArtKeyResult {
 	@ManyToOne(type => ArtKey, artKey => artKey.artKeyResults, {
     eager: true
   })
-	@JoinColumn([{ name: 'mdMcode', referencedColumnName: 'mdMcode'}])
+	@JoinColumn([{ name: 'mdmCode', referencedColumnName: 'mdmCode'}])
 	artKey: ArtKey
 
 	@Column({

@@ -44,6 +44,7 @@ function loadFile(file: string, connection: Connection) {
   const manager = connection.manager
   const shortFileName = path.basename(file, path.extname(file))
   const entityMapping = mapping.find(entity => entity.file === shortFileName)
+  if (path.extname(file) !== '.xlsx') return
   if (entityMapping) {
     const csvFileName = `${TMP_PATH}/${shortFileName}.csv`
     log(`Converting ${shortFileName} to ${csvFileName}...`)
@@ -86,7 +87,7 @@ function loadFile(file: string, connection: Connection) {
 createConnection()
   .then(async connection => {
     const watcher = chokidar.watch(DATA_PATH, {
-      ignored: /(^|[\/\\])\../,
+      ignored: /(^|[\/\\])[\.\~]./,
       persistent: true,
       awaitWriteFinish: {
         stabilityThreshold: 2000,

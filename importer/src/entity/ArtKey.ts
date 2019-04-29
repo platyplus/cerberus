@@ -7,7 +7,7 @@ import { ArtKeyStop } from './ArtKeyStop'
 import { ArtKeyAttb } from './ArtKeyAttb'
 import { OtherOIs } from './OtherOIs'
 import { ArtKeyResult } from './ArtKeyResult'
-import { ArtKeyApri } from './ArtKeyApri'
+import { Apri } from './Apri'
 
 @Entity()
 export class ArtKey {
@@ -24,27 +24,27 @@ export class ArtKey {
 	jailPatient: string
 
 	@PrimaryColumn({
-    name: 'md_mcode'
+    name: 'mdm_code'
   })
-	mdMcode: string
+	mdmCode: string
 
 	@Column({
     nullable: true,
-		name: 'a_01_patient_name'
+		name: 'patient_name'
   })
-	a01PatientName: string
+	patientName: string
 
 	@Column({
     nullable: true,
-		name: 'a_02_father_name'
+		name: 'father_name'
   })
-	a02FatherName: string
+	fatherName: string
 
 	@Column({
     nullable: true,
-		name: 'a_03_sexe'
+		name: 'sex'
   })
-	a03Sexe: string
+	sex: string
 
 	@Column({
     nullable: true,
@@ -55,16 +55,16 @@ export class ArtKey {
 
 	@Column({
     nullable: true,
-		name: 'a_041_date_of_birth',
+		name: 'date_of_birth',
 		type: 'timestamptz'
   })
-	a041DateOfBirth: Date
+	dateOfBirth: Date
 
 	@Column({
     nullable: true,
-		name: 'a_07_patient_target'
+		name: 'patient_target'
   })
-	a07PatientTarget: string
+	patientTarget: string
 
 	@Column({
     nullable: true,
@@ -132,10 +132,10 @@ export class ArtKey {
 
 	@Column({
     nullable: true,
-		name: 'baseline_cd_4',
+		name: 'baseline_cd',
 		type: 'integer'
   })
-	baselineCd4: number
+	baselineCd: number
 
 	@Column({
     nullable: true,
@@ -151,10 +151,10 @@ export class ArtKey {
 
 	@Column({
     nullable: true,
-		name: 'last_cd_4',
+		name: 'last_cd',
 		type: 'integer'
   })
-	lastCd4: number
+	lastCd: number
 
 	@Column({
     nullable: true,
@@ -172,10 +172,10 @@ export class ArtKey {
 
 	@Column({
     nullable: true,
-		name: 'maximum_cd_4',
+		name: 'maximum_cd',
 		type: 'integer'
   })
-	maximumCd4: number
+	maximumCd: number
 
 	@Column({
     nullable: true,
@@ -186,16 +186,16 @@ export class ArtKey {
 
 	@Column({
     nullable: true,
-		name: '2nd_line'
+		name: 'second_line'
   })
-	'2ndLine': string
+	secondLine: string
 
 	@Column({
     nullable: true,
-		name: '2nd_line_change_date',
+		name: 'second_line_change_date',
 		type: 'timestamptz'
   })
-	'2ndLineChangeDate': Date
+	secondLineChangeDate: Date
 
 	@Column({
     nullable: true,
@@ -205,9 +205,9 @@ export class ArtKey {
 
 	@Column({
     nullable: true,
-		name: 'haar_tnaive'
+		name: 'haart_naive'
   })
-	haarTnaive: string
+	haartNaive: string
 
 	@Column({
     nullable: true,
@@ -224,28 +224,16 @@ export class ArtKey {
 
 	@Column({
     nullable: true,
-		name: 'previous_haart_regimen_1'
-  })
-	previousHaartRegimen1: string
-
-	@Column({
-    nullable: true,
-		name: 'previous_haart_regimen_2'
-  })
-	previousHaartRegimen2: string
-
-	@Column({
-    nullable: true,
 		name: 'regimen'
   })
 	regimen: string
 
 	@Column({
     nullable: true,
-		name: 'md_mhaart_start_date',
+		name: 'mdm_haart_start_date',
 		type: 'timestamptz'
   })
-	mdMhaartStartDate: Date
+	mdmHaartStartDate: Date
 
 	@OneToMany(type => ArtKeyNewRegimen, artKeyNewRegimen => artKeyNewRegimen.artKey, {
     cascade: true
@@ -297,15 +285,15 @@ export class ArtKey {
 
 	@Column({
     nullable: true,
-		name: 'ab_anti_h_bs'
+		name: 'ab_anti_hbs'
   })
-	abAntiHBs: string
+	abAntiHbs: string
 
 	@Column({
     nullable: true,
-		name: 'h_be_ag'
+		name: 'hbeag'
   })
-	hBeAg: string
+	hbeag: string
 
 	@Column({
     nullable: true,
@@ -315,9 +303,9 @@ export class ArtKey {
 
 	@Column({
     nullable: true,
-		name: 'ag_h_bs'
+		name: 'ag_hbs'
   })
-	agHBs: string
+	agHbs: string
 
 	@Column({
     nullable: true,
@@ -325,10 +313,10 @@ export class ArtKey {
   })
 	vaccinated: string
 
-	@OneToMany(type => ArtKeyApri, artKeyApri => artKeyApri.artKey, {
+	@OneToMany(type => Apri, apri => apri.artKey, {
     cascade: true
   })
-	artKeyApris: ArtKeyApri[]
+	apris: Apri[]
 
 	@Column({
     nullable: true,

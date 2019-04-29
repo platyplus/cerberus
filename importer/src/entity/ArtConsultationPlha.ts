@@ -4,7 +4,6 @@ import { ArtAntiRetroMedicineTaken } from './ArtAntiRetroMedicineTaken'
 import { ArtAntiBioMedicineCode } from './ArtAntiBioMedicineCode'
 import { ArtAntiTbMedicineCode } from './ArtAntiTbMedicineCode'
 import { ArtTreatment } from './ArtTreatment'
-import { ArtAdultStage } from './ArtAdultStage'
 import { ArtChildStage } from './ArtChildStage'
 import { ArtGhcDiagnosis } from './ArtGhcDiagnosis'
 import { TbSputum } from './TbSputum'
@@ -16,54 +15,54 @@ import { ArtOthMedication } from './ArtOthMedication'
 export class ArtConsultationPlha {
 	@Column({
     nullable: true,
-		name: 'md_mcode'
+		name: 'mdm_code'
   })
-	mdMcode: string
+	mdmCode: string
 
 	@Column({
     nullable: true,
-		name: 'a_00_registration_date',
+		name: 'registration_date',
 		type: 'timestamptz'
   })
-	a00RegistrationDate: Date
+	registrationDate: Date
 
 	@Column({
     nullable: true,
-		name: 'a_01_patient_name'
+		name: 'patient_name'
   })
-	a01PatientName: string
+	patientName: string
 
 	@Column({
     nullable: true,
-		name: 'a_02_father_name'
+		name: 'father_name'
   })
-	a02FatherName: string
+	fatherName: string
 
 	@Column({
     nullable: true,
-		name: 'a_03_sexe'
+		name: 'sex'
   })
-	a03Sexe: string
+	sex: string
 
 	@Column({
     nullable: true,
-		name: 'a_041_date_of_birth',
+		name: 'date_of_birth',
 		type: 'timestamptz'
   })
-	a041DateOfBirth: Date
+	dateOfBirth: Date
 
 	@Column({
     nullable: true,
-		name: 'a_05_age',
+		name: 'age',
 		type: 'integer'
   })
-	a05Age: number
+	age: number
 
 	@Column({
     nullable: true,
-		name: 'a_07_patient_target'
+		name: 'patient_target'
   })
-	a07PatientTarget: string
+	patientTarget: string
 
 	@Column({
     nullable: true,
@@ -522,15 +521,15 @@ export class ArtConsultationPlha {
 
 	@Column({
     nullable: true,
-		name: 'art_abdomen'
+		name: 'abdomen'
   })
-	artAbdomen: string
+	abdomen: string
 
 	@Column({
     nullable: true,
-		name: 'art_abdomen_comment'
+		name: 'abdoment_comment'
   })
-	artAbdomenComment: string
+	abdomentComment: string
 
 	@Column({
     nullable: true,
@@ -568,10 +567,11 @@ export class ArtConsultationPlha {
   })
 	artChildOrAdult: string
 
-	@OneToMany(type => ArtAdultStage, artAdultStage => artAdultStage.artConsultationPlha, {
-    cascade: true
+	@Column({
+    nullable: true,
+		name: 'stage'
   })
-	artAdultStages: ArtAdultStage[]
+	stage: string
 
 	@OneToMany(type => ArtChildStage, artChildStage => artChildStage.artConsultationPlha, {
     cascade: true
@@ -615,17 +615,17 @@ export class ArtConsultationPlha {
 
 	@Column({
     nullable: true,
-		name: 'art_first_cd_4',
+		name: 'art_first_cd',
 		type: 'integer'
   })
-	artFirstCd4: number
+	artFirstCd: number
 
 	@Column({
     nullable: true,
-		name: 'art_last_cd_4',
+		name: 'art_last_cd',
 		type: 'integer'
   })
-	artLastCd4: number
+	artLastCd: number
 
 	@Column({
     nullable: true,
@@ -744,9 +744,9 @@ export class ArtConsultationPlha {
 
 	@Column({
     nullable: true,
-		name: 'art_allergy_other'
+		name: 'allergy'
   })
-	artAllergyOther: string
+	allergy: string
 
 	@Column({
     nullable: true,

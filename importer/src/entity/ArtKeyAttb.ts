@@ -16,7 +16,7 @@ export class ArtKeyAttb {
 	@ManyToOne(type => ArtKey, artKey => artKey.artKeyAttbs, {
     eager: true
   })
-	@JoinColumn([{ name: 'mdMcode', referencedColumnName: 'mdMcode'}])
+	@JoinColumn([{ name: 'mdmCode', referencedColumnName: 'mdmCode'}])
 	artKey: ArtKey
 
 	@Column({
@@ -34,17 +34,17 @@ export class ArtKeyAttb {
 
 	@Column({
     nullable: true,
-		name: 'end_date_of_attbip',
+		name: 'end_date_of_attb_ip',
 		type: 'timestamptz'
   })
-	endDateOfAttbip: Date
+	endDateOfAttbIp: Date
 
 	@Column({
     nullable: true,
-		name: 'end_date_of_attbcp',
+		name: 'end_date_of_attb_cp',
 		type: 'timestamptz'
   })
-	endDateOfAttbcp: Date
+	endDateOfAttbCp: Date
 
 	@Column({
     nullable: true,

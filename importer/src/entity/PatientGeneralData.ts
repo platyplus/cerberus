@@ -5,14 +5,14 @@ import { Entity, PrimaryColumn, Column } from 'typeorm'
 export class PatientGeneralData {
 	@Column({
     nullable: true,
-		name: 'md_mlocation'
+		name: 'mdm_location'
   })
-	mdMlocation: string
+	mdmLocation: string
 
 	@PrimaryColumn({
-    name: 'md_mcode'
+    name: 'mdm_code'
   })
-	mdMcode: string
+	mdmCode: string
 
 	@Column({
     nullable: true,
@@ -22,116 +22,116 @@ export class PatientGeneralData {
 
 	@Column({
     nullable: true,
-		name: 'a_00_registration_date',
+		name: 'registration_date',
 		type: 'timestamptz'
   })
-	a00RegistrationDate: Date
+	registrationDate: Date
 
 	@Column({
     nullable: true,
-		name: 'a_01_patient_name'
+		name: 'patient_name'
   })
-	a01PatientName: string
+	patientName: string
 
 	@Column({
     nullable: true,
-		name: 'a_02_father_name'
+		name: 'father_name'
   })
-	a02FatherName: string
+	fatherName: string
 
 	@Column({
     nullable: true,
-		name: 'a_03_sexe'
+		name: 'sex'
   })
-	a03Sexe: string
+	sex: string
 
 	@Column({
     nullable: true,
-		name: 'a_041_date_of_birth',
+		name: 'date_of_birth',
 		type: 'timestamptz'
   })
-	a041DateOfBirth: Date
+	dateOfBirth: Date
 
 	@Column({
     nullable: true,
-		name: 'a_05_age',
+		name: 'age',
 		type: 'integer'
   })
-	a05Age: number
+	age: number
 
 	@Column({
     nullable: true,
-		name: 'a_052_date_of_birth_estimated'
+		name: 'date_of_birth_estimated'
   })
-	a052DateOfBirthEstimated: string
+	dateOfBirthEstimated: string
 
 	@Column({
     nullable: true,
-		name: 'a_06_place_of_birth'
+		name: 'place_of_birth'
   })
-	a06PlaceOfBirth: string
+	placeOfBirth: string
 
 	@Column({
     nullable: true,
-		name: 'a_06_a_height',
+		name: 'height',
 		type: 'integer'
   })
-	a06AHeight: number
+	height: number
 
 	@Column({
     nullable: true,
-		name: 'a_07_patient_target'
+		name: 'patient_target'
   })
-	a07PatientTarget: string
+	patientTarget: string
 
 	@Column({
     nullable: true,
-		name: 'a_07_a_marital_status'
+		name: 'marital_status'
   })
-	a07AMaritalStatus: string
+	maritalStatus: string
 
 	@Column({
     nullable: true,
-		name: 'a_08_level_education'
+		name: 'level_education'
   })
-	a08LevelEducation: string
+	levelEducation: string
 
 	@Column({
     nullable: true,
-		name: 'a_09_occupation'
+		name: 'occupation'
   })
-	a09Occupation: string
+	occupation: string
 
 	@Column({
     nullable: true,
-		name: 'a_10_address_township'
+		name: 'address_township'
   })
-	a10AddressTownship: string
+	addressTownship: string
 
 	@Column({
     nullable: true,
-		name: 'a_10_address_township_name'
+		name: 'address_township_name'
   })
-	a10AddressTownshipName: string
+	addressTownshipName: string
 
 	@Column({
     nullable: true,
-		name: 'a_11_geographical_origin'
+		name: 'geographical_origin'
   })
-	a11GeographicalOrigin: string
+	geographicalOrigin: string
 
 	@Column({
     nullable: true,
-		name: 'a_12_distance_to_md_mclinic',
+		name: 'distance_to_mdm_clinic',
 		type: 'integer'
   })
-	a12DistanceToMdMclinic: number
+	distanceToMdmClinic: number
 
 	@Column({
     nullable: true,
-		name: 'a_13_other_id'
+		name: 'other_id'
   })
-	a13OtherId: string
+	otherId: string
 
 	@Column({
     nullable: true,
@@ -149,9 +149,9 @@ export class PatientGeneralData {
 
 	@Column({
     nullable: true,
-		name: 'a_20_date_of_saving_data',
+		name: 'date_of_saving_data',
 		type: 'timestamptz'
   })
-	a20DateOfSavingData: Date
+	dateOfSavingData: Date
 
 }

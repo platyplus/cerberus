@@ -21,6 +21,10 @@ class Property {
   isManyToOne?: boolean
   isPk?: boolean
   relation?: Property
+  constructor(parent: Entity, name: string) {
+    this.parent = parent
+    this.name = _.camelCase(name)
+  }
   annotations(): string {
     let annotation = ''
     let params = ''
@@ -45,10 +49,6 @@ class Property {
       }
     }
     return `\t@${annotation}(${params}${this.strColumnOptions()})${other}`
-  }
-  constructor(parent: Entity, name: string) {
-    this.parent = parent
-    this.name = _.camelCase(name)
   }
   strColumnOptions(): string {
     let options = []
@@ -94,6 +94,7 @@ interface Row {
   modalities: string
   entity: string
   constraint: string
+  name: string
 }
 
 class Entity {
@@ -215,10 +216,11 @@ class EntityManager {
       }
       entityMapping.columns.push(propertyMapping)
     }
+    const propertyName = (row.name || row.variable).replace(/\d+$/, '')
     if (row.entity) {
       let relationEntity = this.findOrCreate(row.entity)
       let relationProperty = relationEntity.findOrCreateProperty(
-        row.variable.replace(/\d+$/, ''),
+        propertyName,
         type,
         row.constraint
       )
@@ -227,7 +229,7 @@ class EntityManager {
       propertyMapping.property = relationProperty.name
     } else {
       let property = entity.findOrCreateProperty(
-        row.variable,
+        propertyName,
         type,
         row.constraint
       )

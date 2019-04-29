@@ -1,37 +1,48 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm'
-import { ArtKey } from './ArtKey'
+import { TbKey } from './TbKey'
 
 @Entity()
-export class ArtKeyCd4Weight {
+export class AfbToMth {
 	@PrimaryGeneratedColumn('uuid')
 	id: string
 
 	@Column({
     nullable: true,
-		name: 'date',
-		type: 'timestamptz'
+		name: 'sputum'
   })
-	date: Date
+	sputum: string
 
-	@ManyToOne(type => ArtKey, artKey => artKey.artKeyCd4Weights, {
+	@ManyToOne(type => TbKey, tbKey => tbKey.afbToMths, {
     eager: true
   })
 	@JoinColumn([{ name: 'mdmCode', referencedColumnName: 'mdmCode'}])
-	artKey: ArtKey
+	tbKey: TbKey
 
 	@Column({
     nullable: true,
-		name: 'cd_4',
-		type: 'integer'
+		name: 'x'
   })
-	cd4: number
+	x: string
 
 	@Column({
     nullable: true,
-		name: 'weight',
+		name: 'culture'
+  })
+	culture: string
+
+	@Column({
+    nullable: true,
+		name: 'positive',
 		type: 'integer'
   })
-	weight: number
+	positive: number
+
+	@Column({
+    nullable: true,
+		name: 'negative',
+		type: 'integer'
+  })
+	negative: number
 
 }

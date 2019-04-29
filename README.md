@@ -3,14 +3,20 @@
 ## TODO
 
 - [ ] Metadata for lab and prevention
-- [ ] Filter only excel files to be watched by chokidar
+- [x] Filter only excel files to be watched by chokidar
 - [ ] Split Property class to an abstract class + inherited classes e.g. OneToManyProperty etc
 - [ ] TbKeySample is not mapped correctly (different way to name repeated fields)
-- [ ] Custom propery names, but with same excel column names
+- [x] small caps in columns before snake case
+- [x] Custom propery names, but with same excel column names. e.g. MdM Code
 - [ ] Log/output all lines that couldn't be imported
-- [ ] Import files from different locations
+- [ ] Import files from different locations e.g. YPO etc
 - [ ] Complete the README
 - [ ] (big) Link the excel files together with PKs/FKs
+- [ ] (big) reuse concepts accross tables, e.g. medication
+- [ ] (big) link visit types together
+- [ ] adherence: multiple fields for several drugs, de-embedd them to a generic drug_usage table
+- [ ] yes/no -> boolean
+- [ ] database column and table comments
 
 ## Installation
 

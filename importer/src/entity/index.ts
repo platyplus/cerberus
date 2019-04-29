@@ -6,7 +6,6 @@ import { ArtAntiRetroMedicineTaken } from './ArtAntiRetroMedicineTaken'
 import { ArtAntiBioMedicineCode } from './ArtAntiBioMedicineCode'
 import { ArtAntiTbMedicineCode } from './ArtAntiTbMedicineCode'
 import { ArtTreatment } from './ArtTreatment'
-import { ArtAdultStage } from './ArtAdultStage'
 import { ArtChildStage } from './ArtChildStage'
 import { ArtGhcDiagnosis } from './ArtGhcDiagnosis'
 import { TbSputum } from './TbSputum'
@@ -21,7 +20,7 @@ import { ArtKeyStop } from './ArtKeyStop'
 import { ArtKeyAttb } from './ArtKeyAttb'
 import { OtherOIs } from './OtherOIs'
 import { ArtKeyResult } from './ArtKeyResult'
-import { ArtKeyApri } from './ArtKeyApri'
+import { Apri } from './Apri'
 import { DeathRegister } from './DeathRegister'
 import { GeneralHeathCareGhc } from './GeneralHeathCareGhc'
 import { GhcCategory } from './GhcCategory'
@@ -31,6 +30,7 @@ import { PatientGeneralData } from './PatientGeneralData'
 import { Sti } from './Sti'
 import { StiMedication } from './StiMedication'
 import { TbKey } from './TbKey'
+import { AfbToMth } from './AfbToMth'
 import { TbKeySample } from './TbKeySample'
 import { Vcct } from './Vcct'
 import { VcctDrugType } from './VcctDrugType'
@@ -44,7 +44,6 @@ export const classes: { [key: string]: any } = {
 	'ArtAntiBioMedicineCode': ArtAntiBioMedicineCode,
 	'ArtAntiTbMedicineCode': ArtAntiTbMedicineCode,
 	'ArtTreatment': ArtTreatment,
-	'ArtAdultStage': ArtAdultStage,
 	'ArtChildStage': ArtChildStage,
 	'ArtGhcDiagnosis': ArtGhcDiagnosis,
 	'TbSputum': TbSputum,
@@ -59,7 +58,7 @@ export const classes: { [key: string]: any } = {
 	'ArtKeyAttb': ArtKeyAttb,
 	'OtherOIs': OtherOIs,
 	'ArtKeyResult': ArtKeyResult,
-	'ArtKeyApri': ArtKeyApri,
+	'Apri': Apri,
 	'DeathRegister': DeathRegister,
 	'GeneralHeathCareGhc': GeneralHeathCareGhc,
 	'GhcCategory': GhcCategory,
@@ -69,6 +68,7 @@ export const classes: { [key: string]: any } = {
 	'Sti': Sti,
 	'StiMedication': StiMedication,
 	'TbKey': TbKey,
+	'AfbToMth': AfbToMth,
 	'TbKeySample': TbKeySample,
 	'Vcct': Vcct,
 	'VcctDrugType': VcctDrugType

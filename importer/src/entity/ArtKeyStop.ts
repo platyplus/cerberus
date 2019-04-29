@@ -17,7 +17,7 @@ export class ArtKeyStop {
 	@ManyToOne(type => ArtKey, artKey => artKey.artKeyStops, {
     eager: true
   })
-	@JoinColumn([{ name: 'mdMcode', referencedColumnName: 'mdMcode'}])
+	@JoinColumn([{ name: 'mdmCode', referencedColumnName: 'mdmCode'}])
 	artKey: ArtKey
 
 	@Column({

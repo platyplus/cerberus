@@ -16,7 +16,7 @@ export class ArtKeyHaartToxicity {
 	@ManyToOne(type => ArtKey, artKey => artKey.artKeyHaartToxicitys, {
     eager: true
   })
-	@JoinColumn([{ name: 'mdMcode', referencedColumnName: 'mdMcode'}])
+	@JoinColumn([{ name: 'mdmCode', referencedColumnName: 'mdmCode'}])
 	artKey: ArtKey
 
 	@Column({

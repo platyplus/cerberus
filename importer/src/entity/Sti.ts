@@ -6,54 +6,54 @@ import { StiMedication } from './StiMedication'
 export class Sti {
 	@Column({
     nullable: true,
-		name: 'md_mcode'
+		name: 'mdm_code'
   })
-	mdMcode: string
+	mdmCode: string
 
 	@Column({
     nullable: true,
-		name: 'a_00_registration_date',
+		name: 'registration_date',
 		type: 'timestamptz'
   })
-	a00RegistrationDate: Date
+	registrationDate: Date
 
 	@Column({
     nullable: true,
-		name: 'a_01_patient_name'
+		name: 'patient_name'
   })
-	a01PatientName: string
+	patientName: string
 
 	@Column({
     nullable: true,
-		name: 'a_02_father_name'
+		name: 'father_name'
   })
-	a02FatherName: string
+	fatherName: string
 
 	@Column({
     nullable: true,
-		name: 'a_03_sexe'
+		name: 'sex'
   })
-	a03Sexe: string
+	sex: string
 
 	@Column({
     nullable: true,
-		name: 'a_041_date_of_birth',
+		name: 'date_of_birth',
 		type: 'timestamptz'
   })
-	a041DateOfBirth: Date
+	dateOfBirth: Date
 
 	@Column({
     nullable: true,
-		name: 'a_05_age',
+		name: 'age',
 		type: 'integer'
   })
-	a05Age: number
+	age: number
 
 	@Column({
     nullable: true,
-		name: 'a_07_patient_target'
+		name: 'patient_target'
   })
-	a07PatientTarget: string
+	patientTarget: string
 
 	@Column({
     nullable: true,
@@ -64,9 +64,9 @@ export class Sti {
 
 	@Column({
     nullable: true,
-		name: 'sti_md_mstaff'
+		name: 'mdm_staff'
   })
-	stiMdMstaff: string
+	mdmStaff: string
 
 	@Column({
     nullable: true,
@@ -316,9 +316,9 @@ export class Sti {
 
 	@Column({
     nullable: true,
-		name: 'sti_test_ph'
+		name: 'test_ph'
   })
-	stiTestPh: string
+	testPh: string
 
 	@Column({
     nullable: true,
@@ -358,15 +358,15 @@ export class Sti {
 
 	@Column({
     nullable: true,
-		name: 'sti_test_rpr'
+		name: 'rpr'
   })
-	stiTestRpr: string
+	rpr: string
 
 	@Column({
     nullable: true,
-		name: 'sti_test_rpr_dil'
+		name: 'rpr_dil'
   })
-	stiTestRprDil: string
+	rprDil: string
 
 	@Column({
     nullable: true,
@@ -382,15 +382,15 @@ export class Sti {
 
 	@Column({
     nullable: true,
-		name: 'sti_p_diagnosis_other'
+		name: 'partner_diagnosis_other'
   })
-	stiPDiagnosisOther: string
+	partnerDiagnosisOther: string
 
 	@Column({
     nullable: true,
-		name: 'sti_m_01_lab'
+		name: 'lab_type'
   })
-	stiM01Lab: string
+	labType: string
 
 	@Column({
     nullable: true,

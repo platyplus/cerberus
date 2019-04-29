@@ -3,28 +3,28 @@ import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 't
 import { ArtKey } from './ArtKey'
 
 @Entity()
-export class ArtKeyApri {
+export class Apri {
 	@PrimaryGeneratedColumn('uuid')
 	id: string
 
 	@Column({
     nullable: true,
-		name: 'apri_date',
+		name: 'date',
 		type: 'timestamptz'
   })
-	apriDate: Date
+	date: Date
 
-	@ManyToOne(type => ArtKey, artKey => artKey.artKeyApris, {
+	@ManyToOne(type => ArtKey, artKey => artKey.apris, {
     eager: true
   })
-	@JoinColumn([{ name: 'mdMcode', referencedColumnName: 'mdMcode'}])
+	@JoinColumn([{ name: 'mdmCode', referencedColumnName: 'mdmCode'}])
 	artKey: ArtKey
 
 	@Column({
     nullable: true,
-		name: 'apri_result',
+		name: 'result',
 		type: 'integer'
   })
-	apriResult: number
+	result: number
 
 }
