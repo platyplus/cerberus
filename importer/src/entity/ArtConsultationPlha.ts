@@ -79,21 +79,24 @@ export class ArtConsultationPlha {
 
 	@Column({
     nullable: true,
-		name: 'art_plh_new_patient'
+		name: 'art_plh_new_patient',
+		type: 'boolean'
   })
-	artPlhNewPatient: string
+	artPlhNewPatient: boolean
 
 	@Column({
     nullable: true,
-		name: 'art_art_new_patient'
+		name: 'art_art_new_patient',
+		type: 'boolean'
   })
-	artArtNewPatient: string
+	artArtNewPatient: boolean
 
 	@Column({
     nullable: true,
-		name: 'art_art_treatment'
+		name: 'art_art_treatment',
+		type: 'boolean'
   })
-	artArtTreatment: string
+	artArtTreatment: boolean
 
 	@Column({
     nullable: true,
@@ -702,9 +705,10 @@ export class ArtConsultationPlha {
 
 	@Column({
     nullable: true,
-		name: 'tb_persons_screened_tb'
+		name: 'tb_persons_screened_tb',
+		type: 'boolean'
   })
-	tbPersonsScreenedTb: string
+	tbPersonsScreenedTb: boolean
 
 	@Column({
     nullable: true,
@@ -714,9 +718,10 @@ export class ArtConsultationPlha {
 
 	@Column({
     nullable: true,
-		name: 'tb_referred'
+		name: 'tb_referred',
+		type: 'boolean'
   })
-	tbReferred: string
+	tbReferred: boolean
 
 	@Column({
     nullable: true,
@@ -750,9 +755,10 @@ export class ArtConsultationPlha {
 
 	@Column({
     nullable: true,
-		name: 'art_pregnant'
+		name: 'art_pregnant',
+		type: 'boolean'
   })
-	artPregnant: string
+	artPregnant: boolean
 
 	@Column({
     nullable: true,
@@ -817,9 +823,10 @@ export class ArtConsultationPlha {
 
 	@Column({
     nullable: true,
-		name: 'ipt_treatment'
+		name: 'ipt_treatment',
+		type: 'boolean'
   })
-	iptTreatment: string
+	iptTreatment: boolean
 
 	@Column({
     nullable: true,
@@ -867,9 +874,10 @@ export class ArtConsultationPlha {
 
 	@Column({
     nullable: true,
-		name: 'art_referred_to'
+		name: 'art_referred_to',
+		type: 'boolean'
   })
-	artReferredTo: string
+	artReferredTo: boolean
 
 	@Column({
     nullable: true,

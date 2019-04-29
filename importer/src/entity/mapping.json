@@ -101,7 +101,7 @@
       {
         "column": "20. ADH_Occupation",
         "property": "hasOccupation",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "21. ADH_Occupation_IfYes",
@@ -126,7 +126,7 @@
       {
         "column": "25. ADH_PatientHasCareTaker",
         "property": "adhPatientHasCareTaker",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "26. ADH_IfYesName",
@@ -146,12 +146,12 @@
       {
         "column": "29. ADH_InSameHouseHold_I",
         "property": "adhInSameHouseHoldI",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "30. ADH_CareTakerAttendClinic_I",
         "property": "caretakerAttendClinicI",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "31. ADH_ARTStartDate",
@@ -286,7 +286,7 @@
       {
         "column": "53. ADH_AdherenceProblem",
         "property": "adherenceProblem",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "54. ADH_Problem",
@@ -351,12 +351,12 @@
       {
         "column": "66. ADH_SevereSE",
         "property": "adhSevereSe",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "67. ADH_ReferToDoctor",
         "property": "adhReferToDoctor",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "68. ADH_NoOfMissedDosesLast7days",
@@ -426,7 +426,7 @@
       {
         "column": "81. ADH_InSameHouseHold_F",
         "property": "adhInSameHouseHoldF",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "82. ADH_RelationshipToPatient_F",
@@ -436,7 +436,7 @@
       {
         "column": "83. ADH_CareTakerAttendClinic_F",
         "property": "caretakerAttendClinicF",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "84. ADH_CareTakerAttendClinic_IfProblem",
@@ -446,7 +446,7 @@
       {
         "column": "85. ADH_PsychologicalDisorder",
         "property": "adhPsychologicalDisorder",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "86. ADH_Psycho_IfYes",
@@ -456,7 +456,7 @@
       {
         "column": "87. ADH_CurrentDrugUse",
         "property": "currentDrugUse",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "88. ADH_Drug",
@@ -606,12 +606,12 @@
       {
         "column": "117. ADH_DidYouShareNeedleSyringe",
         "property": "sharedSyringe",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "118. ADH_HerbalMedicines",
         "property": "herbalMedicines",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "119. ADH_Conclusion",
@@ -702,17 +702,17 @@
       {
         "column": "11. ART_PLHNewPatient",
         "property": "artPlhNewPatient",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "12. ART_ARTNewPatient",
         "property": "artArtNewPatient",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "13. ART_ARTTreatment",
         "property": "artArtTreatment",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "14. ART_PatientPartnerTested",
@@ -1759,7 +1759,7 @@
       {
         "column": "204. TB_Persons_screened_TB",
         "property": "tbPersonsScreenedTb",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "205. TB_ScreenedTBYesWhere",
@@ -1769,7 +1769,7 @@
       {
         "column": "206. TB_Referred",
         "property": "tbReferred",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "207. TB_ReferYesWhere",
@@ -1799,7 +1799,7 @@
       {
         "column": "212. ART_Pregnant",
         "property": "artPregnant",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "213. ART_Prophylaxis",
@@ -2060,7 +2060,7 @@
       {
         "column": "257. IPT_Treatment",
         "property": "iptTreatment",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "258. IPT_Initiation_Date",
@@ -2359,7 +2359,7 @@
       {
         "column": "308. ART_ReferredTo",
         "property": "artReferredTo",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "309. ART_PatientShouldReturnIn",
@@ -3415,7 +3415,7 @@
       {
         "column": "172. 2ndLine",
         "property": "secondLine",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "173. 2ndLineChangeDate",
@@ -3430,7 +3430,7 @@
       {
         "column": "175. HAARTnaïve",
         "property": "haartNaive",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "176. OutsideClinicHAARTStartDate",
@@ -3668,7 +3668,7 @@
       {
         "column": "216. Treatment_Interuption",
         "property": "treatmentInteruption",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "217. ART_Stop_Date1",
@@ -4070,17 +4070,17 @@
       {
         "column": "8. PLH",
         "property": "plh",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "9. OnAntiTB",
         "property": "onAntiTb",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "10. OnART",
         "property": "onArt",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "11. ExpiredDate",
@@ -4100,7 +4100,7 @@
       {
         "column": "14. HIVRelated",
         "property": "hivRelated",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "15. Verify",
@@ -4161,7 +4161,7 @@
       {
         "column": "9. GHC_NewPatient",
         "property": "ghcNewPatient",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "10. GHC_VisitDate",
@@ -4915,7 +4915,7 @@
       {
         "column": "24. GI_Contraception",
         "property": "giContraception",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "25. GI_ContraceptionType",
@@ -4945,7 +4945,7 @@
       {
         "column": "30. GI_CondomUseForLastSex",
         "property": "giCondomUseForLastSex",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "31. GI_NumberClientsLastWorkingDay",
@@ -4955,17 +4955,17 @@
       {
         "column": "32. GI_ShareNeedleOrSyringeInLast",
         "property": "giShareNeedleOrSyringeInLast",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "33. GI_ShareNeedleOrSyringeInLastMonth",
         "property": "giShareNeedleOrSyringeInLastMonth",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "34. GI_ShareNeedleOrSyringeInLast6Months",
         "property": "giShareNeedleOrSyringeInLast6Months",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "35. GI_Remarks",
@@ -5172,12 +5172,12 @@
       {
         "column": "11. STI_NewPatient",
         "property": "stiNewPatient",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "12. STI_Background_PreviousSITTreated",
         "property": "stiBackgroundPreviousSitTreated",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "13. STI_Symptoms",
@@ -5362,7 +5362,7 @@
       {
         "column": "49. STI_Test_PregnancyTest",
         "property": "stiTestPregnancyTest",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "50. STI_PExam_Test",
@@ -5382,27 +5382,27 @@
       {
         "column": "53. STI_Test_UrethralSmear",
         "property": "stiTestUrethralSmear",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "54. STI_Test_VaginalSmear",
         "property": "stiTestVaginalSmear",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "55. STI_Test_AnalSmear",
         "property": "stiTestAnalSmear",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "56. STI_Test_UlcerSmear",
         "property": "stiTestUlcerSmear",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "57. STI_Test_ThroatSwab",
         "property": "stiTestThroatSwab",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "58. STI_Test_Chlamydia",
@@ -5457,12 +5457,12 @@
       {
         "column": "68. STI_Treatment_Pregnant",
         "property": "stiTreatmentPregnant",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "69. STI_Treatment_SurgicalIntervention",
         "property": "stiTreatmentSurgicalIntervention",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "70. STI_Treatment_MedicineName1",
@@ -5712,12 +5712,12 @@
       {
         "column": "111. STI_Referred",
         "property": "stiReferred",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "112. STI_STI/Condom",
         "property": "stiStiCondom",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "113. STI_PartnerTreatment",
@@ -5793,7 +5793,7 @@
       {
         "column": "7. ART",
         "property": "art",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "8. ART_StartDate",
@@ -6419,7 +6419,7 @@
       {
         "column": "9. VCCT_TBPatient",
         "property": "vcctTbPatient",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "10. VCCT_PlaceofTesting",
@@ -6434,7 +6434,7 @@
       {
         "column": "12. VCCT_UnsafeSexInLastSixWeeks",
         "property": "vcctUnsafeSexInLastSixWeeks",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "13. VCCT_IDUsince",
@@ -6444,7 +6444,7 @@
       {
         "column": "14. VCCT_DrugUseWithinLast1Year",
         "property": "vcctDrugUseWithinLast1Year",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "15. VCCT_TypeOfDrugs1",
@@ -6503,27 +6503,27 @@
       {
         "column": "24. VCCT_ShareNeedleOrSyringeInLastSixWeeks",
         "property": "vcctShareNeedleOrSyringeInLastSixWeeks",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "25. VCCT_ShareNeedleOrSyringeInLastSixWeeks1",
         "property": "vcctShareNeedleOrSyringeInLastSixWeeks",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "26. VCCT_BloodTransfusionInLastSixWeeks",
         "property": "vcctBloodTransfusionInLastSixWeeks",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "27. VCCT_BodyPierceAndTattooInLastSixWeeks",
         "property": "vcctBodyPierceAndTattooInLastSixWeeks",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "28. VCCT_PrevHIVTesting",
         "property": "vcctPrevHivTesting",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "29. VCCT_PrevHIVTestingDate",
@@ -6583,7 +6583,7 @@
       {
         "column": "40. VCCT_HistoryOfSyphilis",
         "property": "vcctHistoryOfSyphilis",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "41. VCCT_TestForSyphilisInCurrentVisit",
@@ -6618,7 +6618,7 @@
       {
         "column": "47. VCCT_PartnerHIVTesting",
         "property": "vcctPartnerHivTesting",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "48. VCCT_DateOfPartnerHIVTesting",
@@ -6653,7 +6653,7 @@
       {
         "column": "54. VCCT_HIVRetesting",
         "property": "vcctHivRetesting",
-        "type": "string"
+        "type": "boolean"
       },
       {
         "column": "55. VCCT_HIVRetestingDate",

@@ -2,16 +2,13 @@ import _ from 'lodash'
 import { readFile, utils } from 'xlsx'
 import fs from 'fs'
 import rimraf from 'rimraf'
-import { mergeArray, entityName, writeFilePromise } from './helpers'
+import { mergeArray, entityName, writeFilePromise, getType } from './helpers'
+import { Row, Mapping } from './excel-metadata'
 const log = console.log.bind(console, `[${new Date().toLocaleString()}]`)
 
 // Constants
 const METADATA_FILE = 'metadata.xlsx'
 const DEST_FOLDER = './src/entity'
-const PROPERTY_MAPPING: { [key: string]: string } = {
-  Numeric: 'number',
-  Date: 'Date'
-}
 // Classes
 class Property {
   parent: Entity
@@ -62,6 +59,7 @@ class Property {
     }
     if (this.type === 'number') options.push("type: 'integer'")
     else if (this.type === 'Date') options.push("type: 'timestamptz'")
+    else if (this.type === 'boolean') options.push("type: 'boolean'")
     return `{
     ${options.join(',\n\t\t')}
   }`
@@ -83,18 +81,6 @@ class Property {
   strDeclaration = () => this.strName() + ': ' + this.strType()
 
   render = () => `${this.annotations()}\n\t${this.strDeclaration()}\n\n`
-}
-
-interface Row {
-  form: string
-  number: number
-  variable: string
-  type: string
-  label: string
-  modalities: string
-  entity: string
-  constraint: string
-  name: string
 }
 
 class Entity {
@@ -167,18 +153,6 @@ export class ${this.name} {\n${strPk}${strProps}}\n`
   }
 }
 
-interface ColumnMapping {
-  column: string
-  relation?: string
-  property: string
-  type: string
-}
-export interface Mapping {
-  file: string
-  entity: string
-  columns: ColumnMapping[]
-}
-
 class EntityManager {
   entities: Entity[] = new Array<Entity>()
   mapping: Mapping[] = []
@@ -207,7 +181,7 @@ class EntityManager {
     let propertyMapping = entityMapping.columns.find(
       curs => curs.column === columnName
     )
-    const type = PROPERTY_MAPPING[row.type] || 'string'
+    const type = getType(row)
     if (!propertyMapping) {
       propertyMapping = {
         column: columnName,

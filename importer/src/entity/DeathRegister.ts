@@ -47,21 +47,24 @@ export class DeathRegister {
 
 	@Column({
     nullable: true,
-		name: 'plh'
+		name: 'plh',
+		type: 'boolean'
   })
-	plh: string
+	plh: boolean
 
 	@Column({
     nullable: true,
-		name: 'on_anti_tb'
+		name: 'on_anti_tb',
+		type: 'boolean'
   })
-	onAntiTb: string
+	onAntiTb: boolean
 
 	@Column({
     nullable: true,
-		name: 'on_art'
+		name: 'on_art',
+		type: 'boolean'
   })
-	onArt: string
+	onArt: boolean
 
 	@Column({
     nullable: true,
@@ -84,9 +87,10 @@ export class DeathRegister {
 
 	@Column({
     nullable: true,
-		name: 'hiv_related'
+		name: 'hiv_related',
+		type: 'boolean'
   })
-	hivRelated: string
+	hivRelated: boolean
 
 	@Column({
     nullable: true,

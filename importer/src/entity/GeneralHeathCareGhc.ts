@@ -58,9 +58,10 @@ export class GeneralHeathCareGhc {
 
 	@Column({
     nullable: true,
-		name: 'ghc_new_patient'
+		name: 'ghc_new_patient',
+		type: 'boolean'
   })
-	ghcNewPatient: string
+	ghcNewPatient: boolean
 
 	@Column({
     nullable: true,

@@ -43,9 +43,10 @@ export class TbKey {
 
 	@Column({
     nullable: true,
-		name: 'art'
+		name: 'art',
+		type: 'boolean'
   })
-	art: string
+	art: boolean
 
 	@Column({
     nullable: true,

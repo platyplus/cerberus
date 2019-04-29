@@ -15,7 +15,7 @@
 - [ ] (big) reuse concepts accross tables, e.g. medication
 - [ ] (big) link visit types together
 - [ ] adherence: multiple fields for several drugs, de-embedd them to a generic drug_usage table
-- [ ] yes/no -> boolean
+- [x] yes/no -> boolean
 - [ ] database column and table comments
 
 ## Installation

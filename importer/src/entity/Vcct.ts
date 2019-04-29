@@ -58,9 +58,10 @@ export class Vcct {
 
 	@Column({
     nullable: true,
-		name: 'vcct_tb_patient'
+		name: 'vcct_tb_patient',
+		type: 'boolean'
   })
-	vcctTbPatient: string
+	vcctTbPatient: boolean
 
 	@Column({
     nullable: true,
@@ -76,9 +77,10 @@ export class Vcct {
 
 	@Column({
     nullable: true,
-		name: 'vcct_unsafe_sex_in_last_six_weeks'
+		name: 'vcct_unsafe_sex_in_last_six_weeks',
+		type: 'boolean'
   })
-	vcctUnsafeSexInLastSixWeeks: string
+	vcctUnsafeSexInLastSixWeeks: boolean
 
 	@Column({
     nullable: true,
@@ -89,9 +91,10 @@ export class Vcct {
 
 	@Column({
     nullable: true,
-		name: 'vcct_drug_use_within_last_1_year'
+		name: 'vcct_drug_use_within_last_1_year',
+		type: 'boolean'
   })
-	vcctDrugUseWithinLast1Year: string
+	vcctDrugUseWithinLast1Year: boolean
 
 	@OneToMany(type => VcctDrugType, vcctDrugType => vcctDrugType.vcct, {
     cascade: true
@@ -100,27 +103,31 @@ export class Vcct {
 
 	@Column({
     nullable: true,
-		name: 'vcct_share_needle_or_syringe_in_last_six_weeks'
+		name: 'vcct_share_needle_or_syringe_in_last_six_weeks',
+		type: 'boolean'
   })
-	vcctShareNeedleOrSyringeInLastSixWeeks: string
+	vcctShareNeedleOrSyringeInLastSixWeeks: boolean
 
 	@Column({
     nullable: true,
-		name: 'vcct_blood_transfusion_in_last_six_weeks'
+		name: 'vcct_blood_transfusion_in_last_six_weeks',
+		type: 'boolean'
   })
-	vcctBloodTransfusionInLastSixWeeks: string
+	vcctBloodTransfusionInLastSixWeeks: boolean
 
 	@Column({
     nullable: true,
-		name: 'vcct_body_pierce_and_tattoo_in_last_six_weeks'
+		name: 'vcct_body_pierce_and_tattoo_in_last_six_weeks',
+		type: 'boolean'
   })
-	vcctBodyPierceAndTattooInLastSixWeeks: string
+	vcctBodyPierceAndTattooInLastSixWeeks: boolean
 
 	@Column({
     nullable: true,
-		name: 'vcct_prev_hiv_testing'
+		name: 'vcct_prev_hiv_testing',
+		type: 'boolean'
   })
-	vcctPrevHivTesting: string
+	vcctPrevHivTesting: boolean
 
 	@Column({
     nullable: true,
@@ -195,9 +202,10 @@ export class Vcct {
 
 	@Column({
     nullable: true,
-		name: 'vcct_history_of_syphilis'
+		name: 'vcct_history_of_syphilis',
+		type: 'boolean'
   })
-	vcctHistoryOfSyphilis: string
+	vcctHistoryOfSyphilis: boolean
 
 	@Column({
     nullable: true,
@@ -239,9 +247,10 @@ export class Vcct {
 
 	@Column({
     nullable: true,
-		name: 'vcct_partner_hiv_testing'
+		name: 'vcct_partner_hiv_testing',
+		type: 'boolean'
   })
-	vcctPartnerHivTesting: string
+	vcctPartnerHivTesting: boolean
 
 	@Column({
     nullable: true,
@@ -283,9 +292,10 @@ export class Vcct {
 
 	@Column({
     nullable: true,
-		name: 'vcct_hiv_retesting'
+		name: 'vcct_hiv_retesting',
+		type: 'boolean'
   })
-	vcctHivRetesting: string
+	vcctHivRetesting: boolean
 
 	@Column({
     nullable: true,

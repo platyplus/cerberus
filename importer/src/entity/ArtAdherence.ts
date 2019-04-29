@@ -124,9 +124,10 @@ export class ArtAdherence {
 
 	@Column({
     nullable: true,
-		name: 'has_occupation'
+		name: 'has_occupation',
+		type: 'boolean'
   })
-	hasOccupation: string
+	hasOccupation: boolean
 
 	@Column({
     nullable: true,
@@ -154,9 +155,10 @@ export class ArtAdherence {
 
 	@Column({
     nullable: true,
-		name: 'adh_patient_has_care_taker'
+		name: 'adh_patient_has_care_taker',
+		type: 'boolean'
   })
-	adhPatientHasCareTaker: string
+	adhPatientHasCareTaker: boolean
 
 	@Column({
     nullable: true,
@@ -178,15 +180,17 @@ export class ArtAdherence {
 
 	@Column({
     nullable: true,
-		name: 'adh_in_same_house_hold_i'
+		name: 'adh_in_same_house_hold_i',
+		type: 'boolean'
   })
-	adhInSameHouseHoldI: string
+	adhInSameHouseHoldI: boolean
 
 	@Column({
     nullable: true,
-		name: 'caretaker_attend_clinic_i'
+		name: 'caretaker_attend_clinic_i',
+		type: 'boolean'
   })
-	caretakerAttendClinicI: string
+	caretakerAttendClinicI: boolean
 
 	@Column({
     nullable: true,
@@ -214,9 +218,10 @@ export class ArtAdherence {
 
 	@Column({
     nullable: true,
-		name: 'adherence_problem'
+		name: 'adherence_problem',
+		type: 'boolean'
   })
-	adherenceProblem: string
+	adherenceProblem: boolean
 
 	@Column({
     nullable: true,
@@ -292,15 +297,17 @@ export class ArtAdherence {
 
 	@Column({
     nullable: true,
-		name: 'adh_severe_se'
+		name: 'adh_severe_se',
+		type: 'boolean'
   })
-	adhSevereSe: string
+	adhSevereSe: boolean
 
 	@Column({
     nullable: true,
-		name: 'adh_refer_to_doctor'
+		name: 'adh_refer_to_doctor',
+		type: 'boolean'
   })
-	adhReferToDoctor: string
+	adhReferToDoctor: boolean
 
 	@Column({
     nullable: true,
@@ -390,9 +397,10 @@ export class ArtAdherence {
 
 	@Column({
     nullable: true,
-		name: 'adh_in_same_house_hold_f'
+		name: 'adh_in_same_house_hold_f',
+		type: 'boolean'
   })
-	adhInSameHouseHoldF: string
+	adhInSameHouseHoldF: boolean
 
 	@Column({
     nullable: true,
@@ -402,9 +410,10 @@ export class ArtAdherence {
 
 	@Column({
     nullable: true,
-		name: 'caretaker_attend_clinic_f'
+		name: 'caretaker_attend_clinic_f',
+		type: 'boolean'
   })
-	caretakerAttendClinicF: string
+	caretakerAttendClinicF: boolean
 
 	@Column({
     nullable: true,
@@ -414,9 +423,10 @@ export class ArtAdherence {
 
 	@Column({
     nullable: true,
-		name: 'adh_psychological_disorder'
+		name: 'adh_psychological_disorder',
+		type: 'boolean'
   })
-	adhPsychologicalDisorder: string
+	adhPsychologicalDisorder: boolean
 
 	@Column({
     nullable: true,
@@ -426,9 +436,10 @@ export class ArtAdherence {
 
 	@Column({
     nullable: true,
-		name: 'current_drug_use'
+		name: 'current_drug_use',
+		type: 'boolean'
   })
-	currentDrugUse: string
+	currentDrugUse: boolean
 
 	@Column({
     nullable: true,
@@ -627,15 +638,17 @@ export class ArtAdherence {
 
 	@Column({
     nullable: true,
-		name: 'shared_syringe'
+		name: 'shared_syringe',
+		type: 'boolean'
   })
-	sharedSyringe: string
+	sharedSyringe: boolean
 
 	@Column({
     nullable: true,
-		name: 'herbal_medicines'
+		name: 'herbal_medicines',
+		type: 'boolean'
   })
-	herbalMedicines: string
+	herbalMedicines: boolean
 
 	@Column({
     nullable: true,

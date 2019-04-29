@@ -7,9 +7,9 @@ import fs from 'fs'
 import { spawnSync, SpawnSyncReturns } from 'child_process'
 import _ from 'lodash'
 import csv from 'csvtojson'
-import { Mapping } from './generate'
 import mapping from './entity/mapping.json'
 import { classes } from './entity'
+import { Mapping } from './excel-metadata.js'
 
 const DATA_PATH = resolve(process.env.DATA_PATH || '/data')
 const TMP_PATH = resolve(process.env.TMP_PATH || '/tmp/cerberus')
@@ -24,6 +24,7 @@ const convertRow: any = (entityMapping: Mapping, row: any) => {
       if (value) {
         if (curr.type === 'Date') value = new Date(value) || value
         else if (curr.type === 'number') value = parseInt(value) || undefined
+        else if (curr.type === 'boolean') value = value === 'True'
         if (!curr.relation) prev[curr.property] = value
         else {
           // TODO: veeery tricky, probably incorrect

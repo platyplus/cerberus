@@ -186,9 +186,10 @@ export class ArtKey {
 
 	@Column({
     nullable: true,
-		name: 'second_line'
+		name: 'second_line',
+		type: 'boolean'
   })
-	secondLine: string
+	secondLine: boolean
 
 	@Column({
     nullable: true,
@@ -205,9 +206,10 @@ export class ArtKey {
 
 	@Column({
     nullable: true,
-		name: 'haart_naive'
+		name: 'haart_naive',
+		type: 'boolean'
   })
-	haartNaive: string
+	haartNaive: boolean
 
 	@Column({
     nullable: true,
@@ -253,9 +255,10 @@ export class ArtKey {
 
 	@Column({
     nullable: true,
-		name: 'treatment_interuption'
+		name: 'treatment_interuption',
+		type: 'boolean'
   })
-	treatmentInteruption: string
+	treatmentInteruption: boolean
 
 	@OneToMany(type => ArtKeyStop, artKeyStop => artKeyStop.artKey, {
     cascade: true

@@ -70,15 +70,17 @@ export class Sti {
 
 	@Column({
     nullable: true,
-		name: 'sti_new_patient'
+		name: 'sti_new_patient',
+		type: 'boolean'
   })
-	stiNewPatient: string
+	stiNewPatient: boolean
 
 	@Column({
     nullable: true,
-		name: 'sti_background_previous_sit_treated'
+		name: 'sti_background_previous_sit_treated',
+		type: 'boolean'
   })
-	stiBackgroundPreviousSitTreated: string
+	stiBackgroundPreviousSitTreated: boolean
 
 	@Column({
     nullable: true,
@@ -298,9 +300,10 @@ export class Sti {
 
 	@Column({
     nullable: true,
-		name: 'sti_test_pregnancy_test'
+		name: 'sti_test_pregnancy_test',
+		type: 'boolean'
   })
-	stiTestPregnancyTest: string
+	stiTestPregnancyTest: boolean
 
 	@Column({
     nullable: true,
@@ -322,33 +325,38 @@ export class Sti {
 
 	@Column({
     nullable: true,
-		name: 'sti_test_urethral_smear'
+		name: 'sti_test_urethral_smear',
+		type: 'boolean'
   })
-	stiTestUrethralSmear: string
+	stiTestUrethralSmear: boolean
 
 	@Column({
     nullable: true,
-		name: 'sti_test_vaginal_smear'
+		name: 'sti_test_vaginal_smear',
+		type: 'boolean'
   })
-	stiTestVaginalSmear: string
+	stiTestVaginalSmear: boolean
 
 	@Column({
     nullable: true,
-		name: 'sti_test_anal_smear'
+		name: 'sti_test_anal_smear',
+		type: 'boolean'
   })
-	stiTestAnalSmear: string
+	stiTestAnalSmear: boolean
 
 	@Column({
     nullable: true,
-		name: 'sti_test_ulcer_smear'
+		name: 'sti_test_ulcer_smear',
+		type: 'boolean'
   })
-	stiTestUlcerSmear: string
+	stiTestUlcerSmear: boolean
 
 	@Column({
     nullable: true,
-		name: 'sti_test_throat_swab'
+		name: 'sti_test_throat_swab',
+		type: 'boolean'
   })
-	stiTestThroatSwab: string
+	stiTestThroatSwab: boolean
 
 	@Column({
     nullable: true,
@@ -412,15 +420,17 @@ export class Sti {
 
 	@Column({
     nullable: true,
-		name: 'sti_treatment_pregnant'
+		name: 'sti_treatment_pregnant',
+		type: 'boolean'
   })
-	stiTreatmentPregnant: string
+	stiTreatmentPregnant: boolean
 
 	@Column({
     nullable: true,
-		name: 'sti_treatment_surgical_intervention'
+		name: 'sti_treatment_surgical_intervention',
+		type: 'boolean'
   })
-	stiTreatmentSurgicalIntervention: string
+	stiTreatmentSurgicalIntervention: boolean
 
 	@OneToMany(type => StiMedication, stiMedication => stiMedication.sti, {
     cascade: true
@@ -435,15 +445,17 @@ export class Sti {
 
 	@Column({
     nullable: true,
-		name: 'sti_referred'
+		name: 'sti_referred',
+		type: 'boolean'
   })
-	stiReferred: string
+	stiReferred: boolean
 
 	@Column({
     nullable: true,
-		name: 'sti_sti_condom'
+		name: 'sti_sti_condom',
+		type: 'boolean'
   })
-	stiStiCondom: string
+	stiStiCondom: boolean
 
 	@Column({
     nullable: true,

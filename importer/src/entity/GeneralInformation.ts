@@ -155,9 +155,10 @@ export class GeneralInformation {
 
 	@Column({
     nullable: true,
-		name: 'gi_contraception'
+		name: 'gi_contraception',
+		type: 'boolean'
   })
-	giContraception: string
+	giContraception: boolean
 
 	@Column({
     nullable: true,
@@ -194,9 +195,10 @@ export class GeneralInformation {
 
 	@Column({
     nullable: true,
-		name: 'gi_condom_use_for_last_sex'
+		name: 'gi_condom_use_for_last_sex',
+		type: 'boolean'
   })
-	giCondomUseForLastSex: string
+	giCondomUseForLastSex: boolean
 
 	@Column({
     nullable: true,
@@ -207,21 +209,24 @@ export class GeneralInformation {
 
 	@Column({
     nullable: true,
-		name: 'gi_share_needle_or_syringe_in_last'
+		name: 'gi_share_needle_or_syringe_in_last',
+		type: 'boolean'
   })
-	giShareNeedleOrSyringeInLast: string
+	giShareNeedleOrSyringeInLast: boolean
 
 	@Column({
     nullable: true,
-		name: 'gi_share_needle_or_syringe_in_last_month'
+		name: 'gi_share_needle_or_syringe_in_last_month',
+		type: 'boolean'
   })
-	giShareNeedleOrSyringeInLastMonth: string
+	giShareNeedleOrSyringeInLastMonth: boolean
 
 	@Column({
     nullable: true,
-		name: 'gi_share_needle_or_syringe_in_last_6_months'
+		name: 'gi_share_needle_or_syringe_in_last_6_months',
+		type: 'boolean'
   })
-	giShareNeedleOrSyringeInLast6Months: string
+	giShareNeedleOrSyringeInLast6Months: boolean
 
 	@Column({
     nullable: true,
