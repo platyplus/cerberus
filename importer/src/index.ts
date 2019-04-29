@@ -26,6 +26,7 @@ const convertRow: any = (entityMapping: Mapping, row: any) => {
         else if (curr.type === 'number') value = parseInt(value) || undefined
         if (!curr.relation) prev[curr.property] = value
         else {
+          // TODO: veeery tricky, probably incorrect
           if (!prev[curr.relation]) prev[curr.relation] = []
           let el = prev[curr.relation].find(
             (e: { [key: string]: any }) => e[curr.property] === undefined

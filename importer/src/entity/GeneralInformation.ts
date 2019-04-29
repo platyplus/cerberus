@@ -121,10 +121,17 @@ export class GeneralInformation {
 
 	@Column({
     nullable: true,
-		name: 'gi_bp',
+		name: 'blood_pressure_systolic',
 		type: 'integer'
   })
-	giBp: number
+	bloodPressureSystolic: number
+
+	@Column({
+    nullable: true,
+		name: 'blood_pressure_diastolic',
+		type: 'integer'
+  })
+	bloodPressureDiastolic: number
 
 	@Column({
     nullable: true,

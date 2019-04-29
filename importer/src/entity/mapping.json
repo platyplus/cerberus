@@ -4889,12 +4889,12 @@
       },
       {
         "column": "19. GI_BP",
-        "property": "giBp",
+        "property": "bloodPressureSystolic",
         "type": "number"
       },
       {
         "column": "20. GI_BP1",
-        "property": "giBp",
+        "property": "bloodPressureDiastolic",
         "type": "number"
       },
       {
@@ -5984,55 +5984,55 @@
       },
       {
         "column": "42. Result1_H",
-        "property": "result1H",
+        "property": "h",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "43. Result1_R",
-        "property": "result1R",
+        "property": "r",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "44. Result1_E",
-        "property": "result1E",
+        "property": "e",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "45. Result1_S",
-        "property": "result1S",
+        "property": "s",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "46. Result1_Amk",
-        "property": "result1Amk",
+        "property": "amk",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "47. Result1_Km",
-        "property": "result1Km",
+        "property": "km",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "48. Result1_Cm",
-        "property": "result1Cm",
+        "property": "cm",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "49. Result1_FQ",
-        "property": "result1Fq",
+        "property": "fq",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "50. Result1_Other",
-        "property": "result1Other",
+        "property": "other",
         "type": "string",
         "relation": "tbKeySamples"
       },
@@ -6050,55 +6050,55 @@
       },
       {
         "column": "53. Result2_H",
-        "property": "result2H",
+        "property": "h",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "54. Result2_R",
-        "property": "result2R",
+        "property": "r",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "55. Result2_E",
-        "property": "result2E",
+        "property": "e",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "56. Result2_S",
-        "property": "result2S",
+        "property": "s",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "57. Result2_Amk",
-        "property": "result2Amk",
+        "property": "amk",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "58. Result2_Km",
-        "property": "result2Km",
+        "property": "km",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "59. Result2_Cm",
-        "property": "result2Cm",
+        "property": "cm",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "60. Result2_FQ",
-        "property": "result2Fq",
+        "property": "fq",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "61. Result2_Other",
-        "property": "result2Other",
+        "property": "other",
         "type": "string",
         "relation": "tbKeySamples"
       },
@@ -6116,55 +6116,55 @@
       },
       {
         "column": "64. Result3_H",
-        "property": "result3H",
+        "property": "h",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "65. Result3_R",
-        "property": "result3R",
+        "property": "r",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "66. Result3_E",
-        "property": "result3E",
+        "property": "e",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "67. Result3_S",
-        "property": "result3S",
+        "property": "s",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "68. Result3_Amk",
-        "property": "result3Amk",
+        "property": "amk",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "69. Result3_Km",
-        "property": "result3Km",
+        "property": "km",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "70. Result3_Cm",
-        "property": "result3Cm",
+        "property": "cm",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "71. Result3_FQ",
-        "property": "result3Fq",
+        "property": "fq",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "72. Result3_Other",
-        "property": "result3Other",
+        "property": "other",
         "type": "string",
         "relation": "tbKeySamples"
       },
@@ -6182,55 +6182,55 @@
       },
       {
         "column": "75. Result4_H",
-        "property": "result4H",
+        "property": "h",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "76. Result4_R",
-        "property": "result4R",
+        "property": "r",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "77. Result4_E",
-        "property": "result4E",
+        "property": "e",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "78. Result4_S",
-        "property": "result4S",
+        "property": "s",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "79. Result4_Amk",
-        "property": "result4Amk",
+        "property": "amk",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "80. Result4_Km",
-        "property": "result4Km",
+        "property": "km",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "81. Result4_Cm",
-        "property": "result4Cm",
+        "property": "cm",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "82. Result4_FQ",
-        "property": "result4Fq",
+        "property": "fq",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "83. Result4_Other",
-        "property": "result4Other",
+        "property": "other",
         "type": "string",
         "relation": "tbKeySamples"
       },
@@ -6248,55 +6248,55 @@
       },
       {
         "column": "86. Result5_H",
-        "property": "result5H",
+        "property": "h",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "87. Result5_R",
-        "property": "result5R",
+        "property": "r",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "88. Result5_E",
-        "property": "result5E",
+        "property": "e",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "89. Result5_S",
-        "property": "result5S",
+        "property": "s",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "90. Result5_Amk",
-        "property": "result5Amk",
+        "property": "amk",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "91. Result5_Km",
-        "property": "result5Km",
+        "property": "km",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "92. Result5_Cm",
-        "property": "result5Cm",
+        "property": "cm",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "93. Result5_FQ",
-        "property": "result5Fq",
+        "property": "fq",
         "type": "string",
         "relation": "tbKeySamples"
       },
       {
         "column": "94. Result5_Other",
-        "property": "result5Other",
+        "property": "other",
         "type": "string",
         "relation": "tbKeySamples"
       },

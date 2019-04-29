@@ -5,7 +5,7 @@
 - [ ] Metadata for lab and prevention
 - [x] Filter only excel files to be watched by chokidar
 - [ ] Split Property class to an abstract class + inherited classes e.g. OneToManyProperty etc
-- [ ] TbKeySample is not mapped correctly (different way to name repeated fields)
+- [x] TbKeySample is not mapped correctly (different way to name repeated fields)
 - [x] small caps in columns before snake case
 - [x] Custom propery names, but with same excel column names. e.g. MdM Code
 - [ ] Log/output all lines that couldn't be imported
