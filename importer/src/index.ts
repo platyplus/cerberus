@@ -43,10 +43,10 @@ const convertRow: any = (entityMapping: Mapping, row: any) => {
 }
 
 function loadFile(file: string, connection: Connection) {
+  if (path.extname(file) !== '.xlsx') return
   const manager = connection.manager
   const shortFileName = path.basename(file, path.extname(file))
   const entityMapping = mapping.find(entity => entity.file === shortFileName)
-  if (path.extname(file) !== '.xlsx') return
   if (entityMapping) {
     const csvFileName = `${TMP_PATH}/${shortFileName}.csv`
     log(`Converting ${shortFileName} to ${csvFileName}...`)

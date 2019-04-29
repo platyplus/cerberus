@@ -34,6 +34,8 @@ import { AfbToMth } from './AfbToMth'
 import { TbKeySample } from './TbKeySample'
 import { Vcct } from './Vcct'
 import { VcctDrugType } from './VcctDrugType'
+import { GateAttendance } from './GateAttendance'
+import { DicData } from './DicData'
 
 export const classes: { [key: string]: any } = {
   'ArtAdherence': ArtAdherence,
@@ -71,5 +73,7 @@ export const classes: { [key: string]: any } = {
 	'AfbToMth': AfbToMth,
 	'TbKeySample': TbKeySample,
 	'Vcct': Vcct,
-	'VcctDrugType': VcctDrugType
+	'VcctDrugType': VcctDrugType,
+	'GateAttendance': GateAttendance,
+	'DicData': DicData
 }
