@@ -14,30 +14,27 @@ export class ArtTbMedication {
 	artConsultationPlha: ArtConsultationPlha
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_tb_dosage'
+		name: 'art_tb_dosage',
+		nullable: true
 	})
 	artTbDosage: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_tb_frequency'
+		name: 'art_tb_frequency',
+		nullable: true
 	})
 	artTbFrequency: string
 
 	@Column({
+		name: 'art_tb_number_days',
 		type: 'integer',
-		nullable: true,
-		name: 'art_tb_number_days'
+		nullable: true
 	})
 	artTbNumberDays: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_tb_medicine_name'
+		name: 'art_tb_medicine_name',
+		nullable: true
 	})
 	artTbMedicineName: string
 

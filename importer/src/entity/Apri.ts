@@ -14,16 +14,16 @@ export class Apri {
 	artKey: ArtKey
 
 	@Column({
+		name: 'result',
 		type: 'integer',
-		nullable: true,
-		name: 'result'
+		nullable: true
 	})
 	result: number
 
 	@Column({
+		name: 'date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'date'
+		nullable: true
 	})
 	date: Date
 

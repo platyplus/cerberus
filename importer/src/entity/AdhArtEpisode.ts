@@ -14,16 +14,16 @@ export class AdhArtEpisode {
 	artAdherence: ArtAdherence
 
 	@Column({
+		name: 'art_restarting_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'art_restarting_date'
+		nullable: true
 	})
 	artRestartingDate: Date
 
 	@Column({
+		name: 'art_stop_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'art_stop_date'
+		nullable: true
 	})
 	artStopDate: Date
 

@@ -14,37 +14,34 @@ export class ArtTreatment {
 	artConsultationPlha: ArtConsultationPlha
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_medicine_name'
+		name: 'art_medicine_name',
+		nullable: true
 	})
 	artMedicineName: string
 
 	@Column({
+		name: 'art_start_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'art_start_date'
+		nullable: true
 	})
 	artStartDate: Date
 
 	@Column({
+		name: 'art_stop_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'art_stop_date'
+		nullable: true
 	})
 	artStopDate: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_interrupted'
+		name: 'art_interrupted',
+		nullable: true
 	})
 	artInterrupted: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_medicine_taken'
+		name: 'art_medicine_taken',
+		nullable: true
 	})
 	artMedicineTaken: string
 

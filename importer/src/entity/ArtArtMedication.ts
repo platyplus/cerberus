@@ -14,30 +14,27 @@ export class ArtArtMedication {
 	artConsultationPlha: ArtConsultationPlha
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_dosage'
+		name: 'art_dosage',
+		nullable: true
 	})
 	artDosage: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_frequency'
+		name: 'art_frequency',
+		nullable: true
 	})
 	artFrequency: string
 
 	@Column({
+		name: 'art_number_days',
 		type: 'integer',
-		nullable: true,
-		name: 'art_number_days'
+		nullable: true
 	})
 	artNumberDays: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_art_med_name'
+		name: 'art_art_med_name',
+		nullable: true
 	})
 	artArtMedName: string
 

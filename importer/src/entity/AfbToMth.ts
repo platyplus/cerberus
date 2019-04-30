@@ -14,37 +14,34 @@ export class AfbToMth {
 	tbKey: TbKey
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'x'
+		name: 'x',
+		nullable: true
 	})
 	x: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'culture'
+		name: 'culture',
+		nullable: true
 	})
 	culture: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sputum'
+		name: 'sputum',
+		nullable: true
 	})
 	sputum: string
 
 	@Column({
+		name: 'positive',
 		type: 'integer',
-		nullable: true,
-		name: 'positive'
+		nullable: true
 	})
 	positive: number
 
 	@Column({
+		name: 'negative',
 		type: 'integer',
-		nullable: true,
-		name: 'negative'
+		nullable: true
 	})
 	negative: number
 

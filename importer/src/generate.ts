@@ -68,9 +68,9 @@ class SimpleProperty extends Property {
       Date: 'timestamptz',
       boolean: 'boolean'
     } as { [key: string]: string }
-    let options = [`type: '${optionTypes[this.type] || 'string'}'`]
-    if (!this.isPk) options.push('nullable: true')
-    options.push(`name: '${_.snakeCase(this.name)}'`)
+    let options = [`name: '${_.snakeCase(this.name)}'`]
+    optionTypes[this.type] && options.push(`type: '${optionTypes[this.type]}'`)
+    !this.isPk && options.push('nullable: true')
     return options
   }
 }

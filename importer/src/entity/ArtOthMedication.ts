@@ -14,30 +14,27 @@ export class ArtOthMedication {
 	artConsultationPlha: ArtConsultationPlha
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_oth_dosage'
+		name: 'art_oth_dosage',
+		nullable: true
 	})
 	artOthDosage: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_oth_frequency'
+		name: 'art_oth_frequency',
+		nullable: true
 	})
 	artOthFrequency: string
 
 	@Column({
+		name: 'art_oth_number_days',
 		type: 'integer',
-		nullable: true,
-		name: 'art_oth_number_days'
+		nullable: true
 	})
 	artOthNumberDays: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_oth_med_name'
+		name: 'art_oth_med_name',
+		nullable: true
 	})
 	artOthMedName: string
 

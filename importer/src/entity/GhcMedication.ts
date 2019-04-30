@@ -14,30 +14,27 @@ export class GhcMedication {
 	generalHeathCareGhc: GeneralHeathCareGhc
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_dosage'
+		name: 'ghc_dosage',
+		nullable: true
 	})
 	ghcDosage: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_frequency'
+		name: 'ghc_frequency',
+		nullable: true
 	})
 	ghcFrequency: string
 
 	@Column({
+		name: 'ghc_number_days',
 		type: 'integer',
-		nullable: true,
-		name: 'ghc_number_days'
+		nullable: true
 	})
 	ghcNumberDays: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_medicine_name'
+		name: 'ghc_medicine_name',
+		nullable: true
 	})
 	ghcMedicineName: string
 

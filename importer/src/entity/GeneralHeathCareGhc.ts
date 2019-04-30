@@ -6,450 +6,391 @@ import { GhcMedication } from './GhcMedication'
 @Entity()
 export class GeneralHeathCareGhc {
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'mdm_code'
+		name: 'mdm_code',
+		nullable: true
 	})
 	mdmCode: string
 
 	@Column({
+		name: 'registration_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'registration_date'
+		nullable: true
 	})
 	registrationDate: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'patient_name'
+		name: 'patient_name',
+		nullable: true
 	})
 	patientName: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'father_name'
+		name: 'father_name',
+		nullable: true
 	})
 	fatherName: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sex'
+		name: 'sex',
+		nullable: true
 	})
 	sex: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'patient_target'
+		name: 'patient_target',
+		nullable: true
 	})
 	patientTarget: string
 
 	@Column({
+		name: 'date_of_birth',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'date_of_birth'
+		nullable: true
 	})
 	dateOfBirth: Date
 
 	@Column({
+		name: 'age',
 		type: 'integer',
-		nullable: true,
-		name: 'age'
+		nullable: true
 	})
 	age: number
 
 	@Column({
+		name: 'ghc_new_patient',
 		type: 'boolean',
-		nullable: true,
-		name: 'ghc_new_patient'
+		nullable: true
 	})
 	ghcNewPatient: boolean
 
 	@Column({
+		name: 'ghc_visit_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'ghc_visit_date'
+		nullable: true
 	})
 	ghcVisitDate: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'mdm_staff'
+		name: 'mdm_staff',
+		nullable: true
 	})
 	mdmStaff: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_symptoms_constitutional'
+		name: 'ghc_symptoms_constitutional',
+		nullable: true
 	})
 	ghcSymptomsConstitutional: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_constitutional_fatigue'
+		name: 'ghc_constitutional_fatigue',
+		nullable: true
 	})
 	ghcConstitutionalFatigue: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_constitutional_fever'
+		name: 'ghc_constitutional_fever',
+		nullable: true
 	})
 	ghcConstitutionalFever: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_constitutional_night_sweats'
+		name: 'ghc_constitutional_night_sweats',
+		nullable: true
 	})
 	ghcConstitutionalNightSweats: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_constitutional_appetitie_loss'
+		name: 'ghc_constitutional_appetitie_loss',
+		nullable: true
 	})
 	ghcConstitutionalAppetitieLoss: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_constitutional_weight_loss'
+		name: 'ghc_constitutional_weight_loss',
+		nullable: true
 	})
 	ghcConstitutionalWeightLoss: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_constitutional_pain'
+		name: 'ghc_constitutional_pain',
+		nullable: true
 	})
 	ghcConstitutionalPain: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_constitutional_other'
+		name: 'ghc_constitutional_other',
+		nullable: true
 	})
 	ghcConstitutionalOther: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_symptoms_respiratory'
+		name: 'ghc_symptoms_respiratory',
+		nullable: true
 	})
 	ghcSymptomsRespiratory: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_respiratory_non_prod_cough'
+		name: 'ghc_respiratory_non_prod_cough',
+		nullable: true
 	})
 	ghcRespiratoryNonProdCough: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_respiratory_productive_cough'
+		name: 'ghc_respiratory_productive_cough',
+		nullable: true
 	})
 	ghcRespiratoryProductiveCough: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_respiratory_hemoptysis'
+		name: 'ghc_respiratory_hemoptysis',
+		nullable: true
 	})
 	ghcRespiratoryHemoptysis: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_respiratory_diff_breathing'
+		name: 'ghc_respiratory_diff_breathing',
+		nullable: true
 	})
 	ghcRespiratoryDiffBreathing: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_respiratory_chest_pain'
+		name: 'ghc_respiratory_chest_pain',
+		nullable: true
 	})
 	ghcRespiratoryChestPain: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_respiratory_palpitation'
+		name: 'ghc_respiratory_palpitation',
+		nullable: true
 	})
 	ghcRespiratoryPalpitation: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_respiratory_other'
+		name: 'ghc_respiratory_other',
+		nullable: true
 	})
 	ghcRespiratoryOther: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_symptoms_gastrointestinal'
+		name: 'ghc_symptoms_gastrointestinal',
+		nullable: true
 	})
 	ghcSymptomsGastrointestinal: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_gastrointestinal_abd_pain'
+		name: 'ghc_gastrointestinal_abd_pain',
+		nullable: true
 	})
 	ghcGastrointestinalAbdPain: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_gastrointestinal_nausea'
+		name: 'ghc_gastrointestinal_nausea',
+		nullable: true
 	})
 	ghcGastrointestinalNausea: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_gastrointestinal_vomiting'
+		name: 'ghc_gastrointestinal_vomiting',
+		nullable: true
 	})
 	ghcGastrointestinalVomiting: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_gastrointestinal_dysphagia'
+		name: 'ghc_gastrointestinal_dysphagia',
+		nullable: true
 	})
 	ghcGastrointestinalDysphagia: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_gastrointestinal_diarrhea'
+		name: 'ghc_gastrointestinal_diarrhea',
+		nullable: true
 	})
 	ghcGastrointestinalDiarrhea: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_gastrointestinal_other'
+		name: 'ghc_gastrointestinal_other',
+		nullable: true
 	})
 	ghcGastrointestinalOther: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_symptoms_neurological'
+		name: 'ghc_symptoms_neurological',
+		nullable: true
 	})
 	ghcSymptomsNeurological: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_neuro_headache'
+		name: 'ghc_neuro_headache',
+		nullable: true
 	})
 	ghcNeuroHeadache: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_neuro_confusion'
+		name: 'ghc_neuro_confusion',
+		nullable: true
 	})
 	ghcNeuroConfusion: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_neuro_mem_problem'
+		name: 'ghc_neuro_mem_problem',
+		nullable: true
 	})
 	ghcNeuroMemProblem: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_neuro_tingling'
+		name: 'ghc_neuro_tingling',
+		nullable: true
 	})
 	ghcNeuroTingling: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_neuro_insomnia'
+		name: 'ghc_neuro_insomnia',
+		nullable: true
 	})
 	ghcNeuroInsomnia: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_neuro_yawning'
+		name: 'ghc_neuro_yawning',
+		nullable: true
 	})
 	ghcNeuroYawning: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_symptoms_skin_manifestation'
+		name: 'ghc_symptoms_skin_manifestation',
+		nullable: true
 	})
 	ghcSymptomsSkinManifestation: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_skin_itchiness'
+		name: 'ghc_skin_itchiness',
+		nullable: true
 	})
 	ghcSkinItchiness: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_skin_rash'
+		name: 'ghc_skin_rash',
+		nullable: true
 	})
 	ghcSkinRash: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_skin_lump'
+		name: 'ghc_skin_lump',
+		nullable: true
 	})
 	ghcSkinLump: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_skin_other'
+		name: 'ghc_skin_other',
+		nullable: true
 	})
 	ghcSkinOther: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_symptoms_additional_comments'
+		name: 'ghc_symptoms_additional_comments',
+		nullable: true
 	})
 	ghcSymptomsAdditionalComments: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_eye'
+		name: 'ghc_eye',
+		nullable: true
 	})
 	ghcEye: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_eye_comment'
+		name: 'ghc_eye_comment',
+		nullable: true
 	})
 	ghcEyeComment: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_ears_nose'
+		name: 'ghc_ears_nose',
+		nullable: true
 	})
 	ghcEarsNose: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_ears_nose_comment'
+		name: 'ghc_ears_nose_comment',
+		nullable: true
 	})
 	ghcEarsNoseComment: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_oral'
+		name: 'ghc_oral',
+		nullable: true
 	})
 	ghcOral: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_oral_comment'
+		name: 'ghc_oral_comment',
+		nullable: true
 	})
 	ghcOralComment: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_lymph_nodes'
+		name: 'ghc_lymph_nodes',
+		nullable: true
 	})
 	ghcLymphNodes: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_lymph_nodes_comment'
+		name: 'ghc_lymph_nodes_comment',
+		nullable: true
 	})
 	ghcLymphNodesComment: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'heart'
+		name: 'heart',
+		nullable: true
 	})
 	heart: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'heart_comment'
+		name: 'heart_comment',
+		nullable: true
 	})
 	heartComment: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_lungs'
+		name: 'ghc_lungs',
+		nullable: true
 	})
 	ghcLungs: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_lungs_comment'
+		name: 'ghc_lungs_comment',
+		nullable: true
 	})
 	ghcLungsComment: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_abdomen'
+		name: 'ghc_abdomen',
+		nullable: true
 	})
 	ghcAbdomen: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_abdomen_comment'
+		name: 'ghc_abdomen_comment',
+		nullable: true
 	})
 	ghcAbdomenComment: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_neurological'
+		name: 'ghc_neurological',
+		nullable: true
 	})
 	ghcNeurological: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_neurological_comment'
+		name: 'ghc_neurological_comment',
+		nullable: true
 	})
 	ghcNeurologicalComment: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_additional_comments'
+		name: 'ghc_additional_comments',
+		nullable: true
 	})
 	ghcAdditionalComments: string
 
@@ -459,51 +400,45 @@ export class GeneralHeathCareGhc {
 	ghcCategorys: GhcCategory[]
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'hbsag'
+		name: 'hbsag',
+		nullable: true
 	})
 	hbsag: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'hbsab'
+		name: 'hbsab',
+		nullable: true
 	})
 	hbsab: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'hcvab'
+		name: 'hcvab',
+		nullable: true
 	})
 	hcvab: string
 
 	@Column({
+		name: 'ghc_apri',
 		type: 'integer',
-		nullable: true,
-		name: 'ghc_apri'
+		nullable: true
 	})
 	ghcApri: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_liver_fibrosis'
+		name: 'ghc_liver_fibrosis',
+		nullable: true
 	})
 	ghcLiverFibrosis: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_allergy'
+		name: 'ghc_allergy',
+		nullable: true
 	})
 	ghcAllergy: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_allergy_other'
+		name: 'ghc_allergy_other',
+		nullable: true
 	})
 	ghcAllergyOther: string
 
@@ -513,42 +448,39 @@ export class GeneralHeathCareGhc {
 	ghcMedications: GhcMedication[]
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_patient_should_return_in'
+		name: 'ghc_patient_should_return_in',
+		nullable: true
 	})
 	ghcPatientShouldReturnIn: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ghc_should_return_in_other'
+		name: 'ghc_should_return_in_other',
+		nullable: true
 	})
 	ghcShouldReturnInOther: string
 
 	@Column({
+		name: 'ghc_date_next_visit',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'ghc_date_next_visit'
+		nullable: true
 	})
 	ghcDateNextVisit: Date
 
 	@Column({
+		name: 'verify',
 		type: 'integer',
-		nullable: true,
-		name: 'verify'
+		nullable: true
 	})
 	verify: number
 
 	@Column({
+		name: 'last_registration_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'last_registration_date'
+		nullable: true
 	})
 	lastRegistrationDate: Date
 
 	@PrimaryColumn({
-		type: 'string',
 		name: 'key'
 	})
 	key: string

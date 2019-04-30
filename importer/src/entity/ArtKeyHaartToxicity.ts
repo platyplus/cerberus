@@ -14,23 +14,21 @@ export class ArtKeyHaartToxicity {
 	artKey: ArtKey
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'toxicity_grade'
+		name: 'toxicity_grade',
+		nullable: true
 	})
 	toxicityGrade: string
 
 	@Column({
+		name: 'toxicity_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'toxicity_date'
+		nullable: true
 	})
 	toxicityDate: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'haart_toxicity'
+		name: 'haart_toxicity',
+		nullable: true
 	})
 	haartToxicity: string
 

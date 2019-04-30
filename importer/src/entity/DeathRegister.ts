@@ -4,113 +4,105 @@ import { Entity, PrimaryColumn, Column } from 'typeorm'
 @Entity()
 export class DeathRegister {
 	@PrimaryColumn({
-		type: 'string',
 		name: 'mdm_code'
 	})
 	mdmCode: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'patient_name'
+		name: 'patient_name',
+		nullable: true
 	})
 	patientName: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'father_name'
+		name: 'father_name',
+		nullable: true
 	})
 	fatherName: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sex'
+		name: 'sex',
+		nullable: true
 	})
 	sex: string
 
 	@Column({
+		name: 'age',
 		type: 'integer',
-		nullable: true,
-		name: 'age'
+		nullable: true
 	})
 	age: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'patient_target'
+		name: 'patient_target',
+		nullable: true
 	})
 	patientTarget: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'address'
+		name: 'address',
+		nullable: true
 	})
 	address: string
 
 	@Column({
+		name: 'plh',
 		type: 'boolean',
-		nullable: true,
-		name: 'plh'
+		nullable: true
 	})
 	plh: boolean
 
 	@Column({
+		name: 'on_anti_tb',
 		type: 'boolean',
-		nullable: true,
-		name: 'on_anti_tb'
+		nullable: true
 	})
 	onAntiTb: boolean
 
 	@Column({
+		name: 'on_art',
 		type: 'boolean',
-		nullable: true,
-		name: 'on_art'
+		nullable: true
 	})
 	onArt: boolean
 
 	@Column({
+		name: 'expired_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'expired_date'
+		nullable: true
 	})
 	expiredDate: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'place_of_patient_expired'
+		name: 'place_of_patient_expired',
+		nullable: true
 	})
 	placeOfPatientExpired: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'cause_of_death'
+		name: 'cause_of_death',
+		nullable: true
 	})
 	causeOfDeath: string
 
 	@Column({
+		name: 'hiv_related',
 		type: 'boolean',
-		nullable: true,
-		name: 'hiv_related'
+		nullable: true
 	})
 	hivRelated: boolean
 
 	@Column({
+		name: 'verify',
 		type: 'integer',
-		nullable: true,
-		name: 'verify'
+		nullable: true
 	})
 	verify: number
 
 	@Column({
+		name: 'date_of_saving',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'date_of_saving'
+		nullable: true
 	})
 	dateOfSaving: Date
 

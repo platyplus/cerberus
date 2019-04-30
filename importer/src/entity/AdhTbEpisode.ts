@@ -14,16 +14,16 @@ export class AdhTbEpisode {
 	artAdherence: ArtAdherence
 
 	@Column({
+		name: 'tb_restarting_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'tb_restarting_date'
+		nullable: true
 	})
 	tbRestartingDate: Date
 
 	@Column({
+		name: 'tb_stop_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'tb_stop_date'
+		nullable: true
 	})
 	tbStopDate: Date
 

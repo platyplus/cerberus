@@ -14,79 +14,69 @@ export class TbKeySample {
 	tbKey: TbKey
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'method'
+		name: 'method',
+		nullable: true
 	})
 	method: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'h'
+		name: 'h',
+		nullable: true
 	})
 	h: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'r'
+		name: 'r',
+		nullable: true
 	})
 	r: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'e'
+		name: 'e',
+		nullable: true
 	})
 	e: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 's'
+		name: 's',
+		nullable: true
 	})
 	s: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'amk'
+		name: 'amk',
+		nullable: true
 	})
 	amk: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'km'
+		name: 'km',
+		nullable: true
 	})
 	km: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'cm'
+		name: 'cm',
+		nullable: true
 	})
 	cm: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'fq'
+		name: 'fq',
+		nullable: true
 	})
 	fq: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'other'
+		name: 'other',
+		nullable: true
 	})
 	other: string
 
 	@Column({
+		name: 'sample_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'sample_date'
+		nullable: true
 	})
 	sampleDate: Date
 

@@ -14,9 +14,8 @@ export class OtherOIs {
 	artKey: ArtKey
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'other_ols'
+		name: 'other_ols',
+		nullable: true
 	})
 	otherOls: string
 

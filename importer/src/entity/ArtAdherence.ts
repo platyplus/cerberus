@@ -6,216 +6,196 @@ import { AdhTbEpisode } from './AdhTbEpisode'
 @Entity()
 export class ArtAdherence {
 	@PrimaryColumn({
-		type: 'string',
 		name: 'mdm_code'
 	})
 	mdmCode: string
 
 	@Column({
+		name: 'registration_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'registration_date'
+		nullable: true
 	})
 	registrationDate: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'patient_name'
+		name: 'patient_name',
+		nullable: true
 	})
 	patientName: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'father_name'
+		name: 'father_name',
+		nullable: true
 	})
 	fatherName: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sex'
+		name: 'sex',
+		nullable: true
 	})
 	sex: string
 
 	@Column({
+		name: 'date_of_birth',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'date_of_birth'
+		nullable: true
 	})
 	dateOfBirth: Date
 
 	@Column({
+		name: 'age',
 		type: 'integer',
-		nullable: true,
-		name: 'age'
+		nullable: true
 	})
 	age: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'patient_target'
+		name: 'patient_target',
+		nullable: true
 	})
 	patientTarget: string
 
 	@PrimaryColumn({
-		type: 'string',
 		name: 'place_of_medical_care'
 	})
 	placeOfMedicalCare: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'visit'
+		name: 'visit',
+		nullable: true
 	})
 	visit: string
 
 	@Column({
+		name: 'visit_assessment',
 		type: 'integer',
-		nullable: true,
-		name: 'visit_assessment'
+		nullable: true
 	})
 	visitAssessment: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'visit_reason'
+		name: 'visit_reason',
+		nullable: true
 	})
 	visitReason: string
 
 	@PrimaryColumn({
-		type: 'timestamptz',
-		name: 'visit_date'
+		name: 'visit_date',
+		type: 'timestamptz'
 	})
 	visitDate: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'appointment'
+		name: 'appointment',
+		nullable: true
 	})
 	appointment: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'counselor'
+		name: 'counselor',
+		nullable: true
 	})
 	counselor: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'marital_status'
+		name: 'marital_status',
+		nullable: true
 	})
 	maritalStatus: string
 
 	@Column({
+		name: 'children_number',
 		type: 'integer',
-		nullable: true,
-		name: 'children_number'
+		nullable: true
 	})
 	childrenNumber: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'accomodation'
+		name: 'accomodation',
+		nullable: true
 	})
 	accomodation: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'accomodation_if_stable'
+		name: 'accomodation_if_stable',
+		nullable: true
 	})
 	accomodationIfStable: string
 
 	@Column({
+		name: 'has_occupation',
 		type: 'boolean',
-		nullable: true,
-		name: 'has_occupation'
+		nullable: true
 	})
 	hasOccupation: boolean
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'occupation'
+		name: 'occupation',
+		nullable: true
 	})
 	occupation: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'financial_situation'
+		name: 'financial_situation',
+		nullable: true
 	})
 	financialSituation: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'level_of_education'
+		name: 'level_of_education',
+		nullable: true
 	})
 	levelOfEducation: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'social_remark'
+		name: 'social_remark',
+		nullable: true
 	})
 	socialRemark: string
 
 	@Column({
+		name: 'adh_patient_has_care_taker',
 		type: 'boolean',
-		nullable: true,
-		name: 'adh_patient_has_care_taker'
+		nullable: true
 	})
 	adhPatientHasCareTaker: boolean
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'adh_if_yes_name'
+		name: 'adh_if_yes_name',
+		nullable: true
 	})
 	adhIfYesName: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'adh_if_no_why'
+		name: 'adh_if_no_why',
+		nullable: true
 	})
 	adhIfNoWhy: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'adh_relationship_to_patient_i'
+		name: 'adh_relationship_to_patient_i',
+		nullable: true
 	})
 	adhRelationshipToPatientI: string
 
 	@Column({
+		name: 'adh_in_same_house_hold_i',
 		type: 'boolean',
-		nullable: true,
-		name: 'adh_in_same_house_hold_i'
+		nullable: true
 	})
 	adhInSameHouseHoldI: boolean
 
 	@Column({
+		name: 'caretaker_attend_clinic_i',
 		type: 'boolean',
-		nullable: true,
-		name: 'caretaker_attend_clinic_i'
+		nullable: true
 	})
 	caretakerAttendClinicI: boolean
 
 	@Column({
+		name: 'art_start_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'art_start_date'
+		nullable: true
 	})
 	artStartDate: Date
 
@@ -225,9 +205,9 @@ export class ArtAdherence {
 	adhArtEpisodes: AdhArtEpisode[]
 
 	@Column({
+		name: 'adh_tb_start_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'adh_tb_start_date'
+		nullable: true
 	})
 	adhTbStartDate: Date
 
@@ -237,506 +217,475 @@ export class ArtAdherence {
 	adhTbEpisodes: AdhTbEpisode[]
 
 	@Column({
+		name: 'adherence_problem',
 		type: 'boolean',
-		nullable: true,
-		name: 'adherence_problem'
+		nullable: true
 	})
 	adherenceProblem: boolean
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'adh_problem'
+		name: 'adh_problem',
+		nullable: true
 	})
 	adhProblem: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'social_problem'
+		name: 'social_problem',
+		nullable: true
 	})
 	socialProblem: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'medical_problem'
+		name: 'medical_problem',
+		nullable: true
 	})
 	medicalProblem: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'medical_problem_other'
+		name: 'medical_problem_other',
+		nullable: true
 	})
 	medicalProblemOther: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'misc_problem'
+		name: 'misc_problem',
+		nullable: true
 	})
 	miscProblem: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'comment'
+		name: 'comment',
+		nullable: true
 	})
 	comment: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'adh_no_side_effects'
+		name: 'adh_no_side_effects',
+		nullable: true
 	})
 	adhNoSideEffects: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'adh_side_effects'
+		name: 'adh_side_effects',
+		nullable: true
 	})
 	adhSideEffects: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'adh_severe_side_effects'
+		name: 'adh_severe_side_effects',
+		nullable: true
 	})
 	adhSevereSideEffects: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'adh_long_term_side_effects'
+		name: 'adh_long_term_side_effects',
+		nullable: true
 	})
 	adhLongTermSideEffects: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'adh_short_term_general'
+		name: 'adh_short_term_general',
+		nullable: true
 	})
 	adhShortTermGeneral: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'adh_short_term_side_effects_other'
+		name: 'adh_short_term_side_effects_other',
+		nullable: true
 	})
 	adhShortTermSideEffectsOther: string
 
 	@Column({
+		name: 'adh_severe_se',
 		type: 'boolean',
-		nullable: true,
-		name: 'adh_severe_se'
+		nullable: true
 	})
 	adhSevereSe: boolean
 
 	@Column({
+		name: 'adh_refer_to_doctor',
 		type: 'boolean',
-		nullable: true,
-		name: 'adh_refer_to_doctor'
+		nullable: true
 	})
 	adhReferToDoctor: boolean
 
 	@Column({
+		name: 'adh_no_of_missed_doses_last_7_days',
 		type: 'integer',
-		nullable: true,
-		name: 'adh_no_of_missed_doses_last_7_days'
+		nullable: true
 	})
 	adhNoOfMissedDosesLast7Days: number
 
 	@Column({
+		name: 'adh_no_of_missed_doses_last_30_days',
 		type: 'integer',
-		nullable: true,
-		name: 'adh_no_of_missed_doses_last_30_days'
+		nullable: true
 	})
 	adhNoOfMissedDosesLast30Days: number
 
 	@Column({
+		name: 'total_doses',
 		type: 'integer',
-		nullable: true,
-		name: 'total_doses'
+		nullable: true
 	})
 	totalDoses: number
 
 	@Column({
+		name: 'adherence_within_last_30_days',
 		type: 'integer',
-		nullable: true,
-		name: 'adherence_within_last_30_days'
+		nullable: true
 	})
 	adherenceWithinLast30Days: number
 
 	@Column({
+		name: 'doses_number',
 		type: 'integer',
-		nullable: true,
-		name: 'doses_number'
+		nullable: true
 	})
 	dosesNumber: number
 
 	@Column({
+		name: 'doses_should_have',
 		type: 'integer',
-		nullable: true,
-		name: 'doses_should_have'
+		nullable: true
 	})
 	dosesShouldHave: number
 
 	@Column({
+		name: 'extra_doses_provided',
 		type: 'integer',
-		nullable: true,
-		name: 'extra_doses_provided'
+		nullable: true
 	})
 	extraDosesProvided: number
 
 	@Column({
+		name: 'dose_for',
 		type: 'integer',
-		nullable: true,
-		name: 'dose_for'
+		nullable: true
 	})
 	doseFor: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'adherence_since_last_visit'
+		name: 'adherence_since_last_visit',
+		nullable: true
 	})
 	adherenceSinceLastVisit: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'adh_social_familialsituation'
+		name: 'adh_social_familialsituation',
+		nullable: true
 	})
 	adhSocialFamilialsituation: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'adh_social_if_problem'
+		name: 'adh_social_if_problem',
+		nullable: true
 	})
 	adhSocialIfProblem: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'caretaker_status'
+		name: 'caretaker_status',
+		nullable: true
 	})
 	caretakerStatus: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'caretaker_name'
+		name: 'caretaker_name',
+		nullable: true
 	})
 	caretakerName: string
 
 	@Column({
+		name: 'adh_in_same_house_hold_f',
 		type: 'boolean',
-		nullable: true,
-		name: 'adh_in_same_house_hold_f'
+		nullable: true
 	})
 	adhInSameHouseHoldF: boolean
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'adh_relationship_to_patient_f'
+		name: 'adh_relationship_to_patient_f',
+		nullable: true
 	})
 	adhRelationshipToPatientF: string
 
 	@Column({
+		name: 'caretaker_attend_clinic_f',
 		type: 'boolean',
-		nullable: true,
-		name: 'caretaker_attend_clinic_f'
+		nullable: true
 	})
 	caretakerAttendClinicF: boolean
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'caretaker_attend_clinic_problem'
+		name: 'caretaker_attend_clinic_problem',
+		nullable: true
 	})
 	caretakerAttendClinicProblem: string
 
 	@Column({
+		name: 'adh_psychological_disorder',
 		type: 'boolean',
-		nullable: true,
-		name: 'adh_psychological_disorder'
+		nullable: true
 	})
 	adhPsychologicalDisorder: boolean
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'adh_psycho_if_yes'
+		name: 'adh_psycho_if_yes',
+		nullable: true
 	})
 	adhPsychoIfYes: string
 
 	@Column({
+		name: 'current_drug_use',
 		type: 'boolean',
-		nullable: true,
-		name: 'current_drug_use'
+		nullable: true
 	})
 	currentDrugUse: boolean
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'drug'
+		name: 'drug',
+		nullable: true
 	})
 	drug: string
 
 	@Column({
+		name: 'alcohol_last_use',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'alcohol_last_use'
+		nullable: true
 	})
 	alcoholLastUse: Date
 
 	@Column({
+		name: 'alcohol_times_dat',
 		type: 'integer',
-		nullable: true,
-		name: 'alcohol_times_dat'
+		nullable: true
 	})
 	alcoholTimesDat: number
 
 	@Column({
+		name: 'alcohol_days_week',
 		type: 'integer',
-		nullable: true,
-		name: 'alcohol_days_week'
+		nullable: true
 	})
 	alcoholDaysWeek: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'alcohol_way_of_use'
+		name: 'alcohol_way_of_use',
+		nullable: true
 	})
 	alcoholWayOfUse: string
 
 	@Column({
+		name: 'amphetamine_last_use',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'amphetamine_last_use'
+		nullable: true
 	})
 	amphetamineLastUse: Date
 
 	@Column({
+		name: 'amphetamine_times_day',
 		type: 'integer',
-		nullable: true,
-		name: 'amphetamine_times_day'
+		nullable: true
 	})
 	amphetamineTimesDay: number
 
 	@Column({
+		name: 'amphetamine_days_week',
 		type: 'integer',
-		nullable: true,
-		name: 'amphetamine_days_week'
+		nullable: true
 	})
 	amphetamineDaysWeek: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'amphetamine_way_of_use'
+		name: 'amphetamine_way_of_use',
+		nullable: true
 	})
 	amphetamineWayOfUse: string
 
 	@Column({
+		name: 'diazepine_last_use',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'diazepine_last_use'
+		nullable: true
 	})
 	diazepineLastUse: Date
 
 	@Column({
+		name: 'diazepine_times_day',
 		type: 'integer',
-		nullable: true,
-		name: 'diazepine_times_day'
+		nullable: true
 	})
 	diazepineTimesDay: number
 
 	@Column({
+		name: 'diazepine_days_week',
 		type: 'integer',
-		nullable: true,
-		name: 'diazepine_days_week'
+		nullable: true
 	})
 	diazepineDaysWeek: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'diazepine_way_of_use'
+		name: 'diazepine_way_of_use',
+		nullable: true
 	})
 	diazepineWayOfUse: string
 
 	@Column({
+		name: 'cannabis_last_use',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'cannabis_last_use'
+		nullable: true
 	})
 	cannabisLastUse: Date
 
 	@Column({
+		name: 'cannabis_times_day',
 		type: 'integer',
-		nullable: true,
-		name: 'cannabis_times_day'
+		nullable: true
 	})
 	cannabisTimesDay: number
 
 	@Column({
+		name: 'cannabis_days_week',
 		type: 'integer',
-		nullable: true,
-		name: 'cannabis_days_week'
+		nullable: true
 	})
 	cannabisDaysWeek: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'cannabis_way_of_use'
+		name: 'cannabis_way_of_use',
+		nullable: true
 	})
 	cannabisWayOfUse: string
 
 	@Column({
+		name: 'ecstasy_last_use',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'ecstasy_last_use'
+		nullable: true
 	})
 	ecstasyLastUse: Date
 
 	@Column({
+		name: 'ecstasy_times_day',
 		type: 'integer',
-		nullable: true,
-		name: 'ecstasy_times_day'
+		nullable: true
 	})
 	ecstasyTimesDay: number
 
 	@Column({
+		name: 'ecstasy_days_week',
 		type: 'integer',
-		nullable: true,
-		name: 'ecstasy_days_week'
+		nullable: true
 	})
 	ecstasyDaysWeek: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ecstasy_way_of_use'
+		name: 'ecstasy_way_of_use',
+		nullable: true
 	})
 	ecstasyWayOfUse: string
 
 	@Column({
+		name: 'heroin_last_use',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'heroin_last_use'
+		nullable: true
 	})
 	heroinLastUse: Date
 
 	@Column({
+		name: 'heroin_times_day',
 		type: 'integer',
-		nullable: true,
-		name: 'heroin_times_day'
+		nullable: true
 	})
 	heroinTimesDay: number
 
 	@Column({
+		name: 'heroin_days_week',
 		type: 'integer',
-		nullable: true,
-		name: 'heroin_days_week'
+		nullable: true
 	})
 	heroinDaysWeek: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'heroin_way_of_use'
+		name: 'heroin_way_of_use',
+		nullable: true
 	})
 	heroinWayOfUse: string
 
 	@Column({
+		name: 'adh_opium_last_use',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'adh_opium_last_use'
+		nullable: true
 	})
 	adhOpiumLastUse: Date
 
 	@Column({
+		name: 'adh_opium_time_day',
 		type: 'integer',
-		nullable: true,
-		name: 'adh_opium_time_day'
+		nullable: true
 	})
 	adhOpiumTimeDay: number
 
 	@Column({
+		name: 'adh_opium_days_week',
 		type: 'integer',
-		nullable: true,
-		name: 'adh_opium_days_week'
+		nullable: true
 	})
 	adhOpiumDaysWeek: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'adh_opium_way_of_use'
+		name: 'adh_opium_way_of_use',
+		nullable: true
 	})
 	adhOpiumWayOfUse: string
 
 	@Column({
+		name: 'shared_syringe',
 		type: 'boolean',
-		nullable: true,
-		name: 'shared_syringe'
+		nullable: true
 	})
 	sharedSyringe: boolean
 
 	@Column({
+		name: 'herbal_medicines',
 		type: 'boolean',
-		nullable: true,
-		name: 'herbal_medicines'
+		nullable: true
 	})
 	herbalMedicines: boolean
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'conclusion'
+		name: 'conclusion',
+		nullable: true
 	})
 	conclusion: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'adh_suggestions'
+		name: 'adh_suggestions',
+		nullable: true
 	})
 	adhSuggestions: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'checklist'
+		name: 'checklist',
+		nullable: true
 	})
 	checklist: string
 
 	@Column({
+		name: 'adh_next_appointment_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'adh_next_appointment_date'
+		nullable: true
 	})
 	adhNextAppointmentDate: Date
 
 	@Column({
+		name: 'verify',
 		type: 'integer',
-		nullable: true,
-		name: 'verify'
+		nullable: true
 	})
 	verify: number
 
 	@Column({
+		name: 'last_registration_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'last_registration_date'
+		nullable: true
 	})
 	lastRegistrationDate: Date
 

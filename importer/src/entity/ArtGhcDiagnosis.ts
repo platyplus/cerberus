@@ -14,16 +14,14 @@ export class ArtGhcDiagnosis {
 	artConsultationPlha: ArtConsultationPlha
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_ghc_dia_description'
+		name: 'art_ghc_dia_description',
+		nullable: true
 	})
 	artGhcDiaDescription: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_ghc_dia_code'
+		name: 'art_ghc_dia_code',
+		nullable: true
 	})
 	artGhcDiaCode: string
 

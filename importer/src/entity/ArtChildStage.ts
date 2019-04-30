@@ -14,9 +14,8 @@ export class ArtChildStage {
 	artConsultationPlha: ArtConsultationPlha
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_child_stage'
+		name: 'art_child_stage',
+		nullable: true
 	})
 	artChildStage: string
 

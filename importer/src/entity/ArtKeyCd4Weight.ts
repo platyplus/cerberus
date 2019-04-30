@@ -14,23 +14,23 @@ export class ArtKeyCd4Weight {
 	artKey: ArtKey
 
 	@Column({
+		name: 'cd',
 		type: 'integer',
-		nullable: true,
-		name: 'cd'
+		nullable: true
 	})
 	cd: number
 
 	@Column({
+		name: 'weight',
 		type: 'integer',
-		nullable: true,
-		name: 'weight'
+		nullable: true
 	})
 	weight: number
 
 	@Column({
+		name: 'date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'date'
+		nullable: true
 	})
 	date: Date
 

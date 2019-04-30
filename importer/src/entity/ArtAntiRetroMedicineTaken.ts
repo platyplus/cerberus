@@ -14,9 +14,8 @@ export class ArtAntiRetroMedicineTaken {
 	artConsultationPlha: ArtConsultationPlha
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_anti_retro_medicine_taken'
+		name: 'art_anti_retro_medicine_taken',
+		nullable: true
 	})
 	artAntiRetroMedicineTaken: string
 

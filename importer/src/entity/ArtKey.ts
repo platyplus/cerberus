@@ -12,148 +12,135 @@ import { Apri } from './Apri'
 @Entity()
 export class ArtKey {
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'site_name'
+		name: 'site_name',
+		nullable: true
 	})
 	siteName: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'jail_patient'
+		name: 'jail_patient',
+		nullable: true
 	})
 	jailPatient: string
 
 	@PrimaryColumn({
-		type: 'string',
 		name: 'mdm_code'
 	})
 	mdmCode: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'patient_name'
+		name: 'patient_name',
+		nullable: true
 	})
 	patientName: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'father_name'
+		name: 'father_name',
+		nullable: true
 	})
 	fatherName: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sex'
+		name: 'sex',
+		nullable: true
 	})
 	sex: string
 
 	@Column({
+		name: 'age',
 		type: 'integer',
-		nullable: true,
-		name: 'age'
+		nullable: true
 	})
 	age: number
 
 	@Column({
+		name: 'date_of_birth',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'date_of_birth'
+		nullable: true
 	})
 	dateOfBirth: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'patient_target'
+		name: 'patient_target',
+		nullable: true
 	})
 	patientTarget: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'who_stage'
+		name: 'who_stage',
+		nullable: true
 	})
 	whoStage: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'referral'
+		name: 'referral',
+		nullable: true
 	})
 	referral: string
 
 	@Column({
+		name: 'referred_in_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'referred_in_date'
+		nullable: true
 	})
 	referredInDate: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'referral_from'
+		name: 'referral_from',
+		nullable: true
 	})
 	referralFrom: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'other_mdm_center'
+		name: 'other_mdm_center',
+		nullable: true
 	})
 	otherMdmCenter: string
 
 	@Column({
+		name: 'duration_on_art',
 		type: 'integer',
-		nullable: true,
-		name: 'duration_on_art'
+		nullable: true
 	})
 	durationOnArt: number
 
 	@Column({
+		name: 'survival_at',
 		type: 'integer',
-		nullable: true,
-		name: 'survival_at'
+		nullable: true
 	})
 	survivalAt: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'outcome'
+		name: 'outcome',
+		nullable: true
 	})
 	outcome: string
 
 	@Column({
+		name: 'outcome_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'outcome_date'
+		nullable: true
 	})
 	outcomeDate: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'remarks'
+		name: 'remarks',
+		nullable: true
 	})
 	remarks: string
 
 	@Column({
+		name: 'baseline_cd',
 		type: 'integer',
-		nullable: true,
-		name: 'baseline_cd'
+		nullable: true
 	})
 	baselineCd: number
 
 	@Column({
+		name: 'weight',
 		type: 'integer',
-		nullable: true,
-		name: 'weight'
+		nullable: true
 	})
 	weight: number
 
@@ -163,93 +150,90 @@ export class ArtKey {
 	artKeyCd4Weights: ArtKeyCd4Weight[]
 
 	@Column({
+		name: 'last_cd',
 		type: 'integer',
-		nullable: true,
-		name: 'last_cd'
+		nullable: true
 	})
 	lastCd: number
 
 	@Column({
+		name: 'last_weight',
 		type: 'integer',
-		nullable: true,
-		name: 'last_weight'
+		nullable: true
 	})
 	lastWeight: number
 
 	@Column({
+		name: 'last_cd_4_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'last_cd_4_date'
+		nullable: true
 	})
 	lastCd4Date: Date
 
 	@Column({
+		name: 'maximum_cd',
 		type: 'integer',
-		nullable: true,
-		name: 'maximum_cd'
+		nullable: true
 	})
 	maximumCd: number
 
 	@Column({
+		name: 'maximum_cd_4_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'maximum_cd_4_date'
+		nullable: true
 	})
 	maximumCd4Date: Date
 
 	@Column({
+		name: 'second_line',
 		type: 'boolean',
-		nullable: true,
-		name: 'second_line'
+		nullable: true
 	})
 	secondLine: boolean
 
 	@Column({
+		name: 'second_line_change_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'second_line_change_date'
+		nullable: true
 	})
 	secondLineChangeDate: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'current_haart_regimen'
+		name: 'current_haart_regimen',
+		nullable: true
 	})
 	currentHaartRegimen: string
 
 	@Column({
+		name: 'haart_naive',
 		type: 'boolean',
-		nullable: true,
-		name: 'haart_naive'
+		nullable: true
 	})
 	haartNaive: boolean
 
 	@Column({
+		name: 'outside_clinic_haart_start_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'outside_clinic_haart_start_date'
+		nullable: true
 	})
 	outsideClinicHaartStartDate: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'previous_haart_regimen'
+		name: 'previous_haart_regimen',
+		nullable: true
 	})
 	previousHaartRegimen: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'regimen'
+		name: 'regimen',
+		nullable: true
 	})
 	regimen: string
 
 	@Column({
+		name: 'mdm_haart_start_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'mdm_haart_start_date'
+		nullable: true
 	})
 	mdmHaartStartDate: Date
 
@@ -264,16 +248,15 @@ export class ArtKey {
 	artKeyHaartToxicitys: ArtKeyHaartToxicity[]
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'methadone'
+		name: 'methadone',
+		nullable: true
 	})
 	methadone: string
 
 	@Column({
+		name: 'treatment_interuption',
 		type: 'boolean',
-		nullable: true,
-		name: 'treatment_interuption'
+		nullable: true
 	})
 	treatmentInteruption: boolean
 
@@ -288,9 +271,8 @@ export class ArtKey {
 	artKeyAttbs: ArtKeyAttb[]
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'presenting_initial_o_is'
+		name: 'presenting_initial_o_is',
+		nullable: true
 	})
 	presentingInitialOIs: string
 
@@ -305,37 +287,32 @@ export class ArtKey {
 	artKeyResults: ArtKeyResult[]
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ab_anti_hbs'
+		name: 'ab_anti_hbs',
+		nullable: true
 	})
 	abAntiHbs: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'hbeag'
+		name: 'hbeag',
+		nullable: true
 	})
 	hbeag: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'hcv'
+		name: 'hcv',
+		nullable: true
 	})
 	hcv: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ag_hbs'
+		name: 'ag_hbs',
+		nullable: true
 	})
 	agHbs: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'vaccinated'
+		name: 'vaccinated',
+		nullable: true
 	})
 	vaccinated: string
 
@@ -345,30 +322,27 @@ export class ArtKey {
 	apris: Apri[]
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'liver_fibrosis'
+		name: 'liver_fibrosis',
+		nullable: true
 	})
 	liverFibrosis: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 's_date'
+		name: 's_date',
+		nullable: true
 	})
 	sDate: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'o_date'
+		name: 'o_date',
+		nullable: true
 	})
 	oDate: string
 
 	@Column({
+		name: 'art_saving_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'art_saving_date'
+		nullable: true
 	})
 	artSavingDate: Date
 

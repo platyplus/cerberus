@@ -14,44 +14,42 @@ export class ArtKeyAttb {
 	artKey: ArtKey
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'attb_regimen'
+		name: 'attb_regimen',
+		nullable: true
 	})
 	attbRegimen: string
 
 	@Column({
+		name: 'date_of_diagnosis',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'date_of_diagnosis'
+		nullable: true
 	})
 	dateOfDiagnosis: Date
 
 	@Column({
+		name: 'end_date_of_attb_ip',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'end_date_of_attb_ip'
+		nullable: true
 	})
 	endDateOfAttbIp: Date
 
 	@Column({
+		name: 'end_date_of_attb_cp',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'end_date_of_attb_cp'
+		nullable: true
 	})
 	endDateOfAttbCp: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'tb'
+		name: 'tb',
+		nullable: true
 	})
 	tb: string
 
 	@Column({
+		name: 'dateof_diagnosis',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'dateof_diagnosis'
+		nullable: true
 	})
 	dateofDiagnosis: Date
 

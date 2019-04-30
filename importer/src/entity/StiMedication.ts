@@ -14,30 +14,27 @@ export class StiMedication {
 	sti: Sti
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_treatment_dosage'
+		name: 'sti_treatment_dosage',
+		nullable: true
 	})
 	stiTreatmentDosage: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_treatment_frequency'
+		name: 'sti_treatment_frequency',
+		nullable: true
 	})
 	stiTreatmentFrequency: string
 
 	@Column({
+		name: 'sti_treatment_number_days',
 		type: 'integer',
-		nullable: true,
-		name: 'sti_treatment_number_days'
+		nullable: true
 	})
 	stiTreatmentNumberDays: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_treatment_medicine_name'
+		name: 'sti_treatment_medicine_name',
+		nullable: true
 	})
 	stiTreatmentMedicineName: string
 

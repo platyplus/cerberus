@@ -5,485 +5,430 @@ import { StiMedication } from './StiMedication'
 @Entity()
 export class Sti {
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'mdm_code'
+		name: 'mdm_code',
+		nullable: true
 	})
 	mdmCode: string
 
 	@Column({
+		name: 'registration_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'registration_date'
+		nullable: true
 	})
 	registrationDate: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'patient_name'
+		name: 'patient_name',
+		nullable: true
 	})
 	patientName: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'father_name'
+		name: 'father_name',
+		nullable: true
 	})
 	fatherName: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sex'
+		name: 'sex',
+		nullable: true
 	})
 	sex: string
 
 	@Column({
+		name: 'date_of_birth',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'date_of_birth'
+		nullable: true
 	})
 	dateOfBirth: Date
 
 	@Column({
+		name: 'age',
 		type: 'integer',
-		nullable: true,
-		name: 'age'
+		nullable: true
 	})
 	age: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'patient_target'
+		name: 'patient_target',
+		nullable: true
 	})
 	patientTarget: string
 
 	@Column({
+		name: 'sti_visit_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'sti_visit_date'
+		nullable: true
 	})
 	stiVisitDate: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'mdm_staff'
+		name: 'mdm_staff',
+		nullable: true
 	})
 	mdmStaff: string
 
 	@Column({
+		name: 'sti_new_patient',
 		type: 'boolean',
-		nullable: true,
-		name: 'sti_new_patient'
+		nullable: true
 	})
 	stiNewPatient: boolean
 
 	@Column({
+		name: 'sti_background_previous_sit_treated',
 		type: 'boolean',
-		nullable: true,
-		name: 'sti_background_previous_sit_treated'
+		nullable: true
 	})
 	stiBackgroundPreviousSitTreated: boolean
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_symptoms'
+		name: 'sti_symptoms',
+		nullable: true
 	})
 	stiSymptoms: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_symptoms_score_throat'
+		name: 'sti_symptoms_score_throat',
+		nullable: true
 	})
 	stiSymptomsScoreThroat: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_symptoms_vaginal_d_opt'
+		name: 'sti_symptoms_vaginal_d_opt',
+		nullable: true
 	})
 	stiSymptomsVaginalDOpt: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_symptoms_v_discharge'
+		name: 'sti_symptoms_v_discharge',
+		nullable: true
 	})
 	stiSymptomsVDischarge: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_symptoms_low_abdo_opt'
+		name: 'sti_symptoms_low_abdo_opt',
+		nullable: true
 	})
 	stiSymptomsLowAbdoOpt: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_symptoms_low_abdo_pain'
+		name: 'sti_symptoms_low_abdo_pain',
+		nullable: true
 	})
 	stiSymptomsLowAbdoPain: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_symptoms_dysuria'
+		name: 'sti_symptoms_dysuria',
+		nullable: true
 	})
 	stiSymptomsDysuria: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_symptoms_ulcer_opt'
+		name: 'sti_symptoms_ulcer_opt',
+		nullable: true
 	})
 	stiSymptomsUlcerOpt: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_symptoms_ulcer'
+		name: 'sti_symptoms_ulcer',
+		nullable: true
 	})
 	stiSymptomsUlcer: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_symptomst_anal_discharge'
+		name: 'sti_symptomst_anal_discharge',
+		nullable: true
 	})
 	stiSymptomstAnalDischarge: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_symptoms_itchiness_description'
+		name: 'sti_symptoms_itchiness_description',
+		nullable: true
 	})
 	stiSymptomsItchinessDescription: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_symptoms_swelling_over_genital_opt'
+		name: 'sti_symptoms_swelling_over_genital_opt',
+		nullable: true
 	})
 	stiSymptomsSwellingOverGenitalOpt: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_symptoms_swelling'
+		name: 'sti_symptoms_swelling',
+		nullable: true
 	})
 	stiSymptomsSwelling: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_symptoms_warts'
+		name: 'sti_symptoms_warts',
+		nullable: true
 	})
 	stiSymptomsWarts: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_symptoms_scrotal'
+		name: 'sti_symptoms_scrotal',
+		nullable: true
 	})
 	stiSymptomsScrotal: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_symptoms_urethral_discharge'
+		name: 'sti_symptoms_urethral_discharge',
+		nullable: true
 	})
 	stiSymptomsUrethralDischarge: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_symptoms_other'
+		name: 'sti_symptoms_other',
+		nullable: true
 	})
 	stiSymptomsOther: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_symptoms_comment'
+		name: 'sti_symptoms_comment',
+		nullable: true
 	})
 	stiSymptomsComment: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_physical_exam'
+		name: 'sti_physical_exam',
+		nullable: true
 	})
 	stiPhysicalExam: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_p_exam_oral_ulcer_opt'
+		name: 'sti_p_exam_oral_ulcer_opt',
+		nullable: true
 	})
 	stiPExamOralUlcerOpt: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_p_exam_pyaryngitis'
+		name: 'sti_p_exam_pyaryngitis',
+		nullable: true
 	})
 	stiPExamPyaryngitis: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_p_exam_skin_rash'
+		name: 'sti_p_exam_skin_rash',
+		nullable: true
 	})
 	stiPExamSkinRash: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_p_exam_tenderness_over_lower_abdomen'
+		name: 'sti_p_exam_tenderness_over_lower_abdomen',
+		nullable: true
 	})
 	stiPExamTendernessOverLowerAbdomen: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_p_exam_vulva'
+		name: 'sti_p_exam_vulva',
+		nullable: true
 	})
 	stiPExamVulva: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_p_exam_vaginal_d'
+		name: 'sti_p_exam_vaginal_d',
+		nullable: true
 	})
 	stiPExamVaginalD: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_p_exam_cervical_d'
+		name: 'sti_p_exam_cervical_d',
+		nullable: true
 	})
 	stiPExamCervicalD: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_p_exam_adnexal_tenderness'
+		name: 'sti_p_exam_adnexal_tenderness',
+		nullable: true
 	})
 	stiPExamAdnexalTenderness: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_p_exam_cervical_motion_tenderness'
+		name: 'sti_p_exam_cervical_motion_tenderness',
+		nullable: true
 	})
 	stiPExamCervicalMotionTenderness: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_p_exam_inguinal_bubo'
+		name: 'sti_p_exam_inguinal_bubo',
+		nullable: true
 	})
 	stiPExamInguinalBubo: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_p_exam_genital_ulcer'
+		name: 'sti_p_exam_genital_ulcer',
+		nullable: true
 	})
 	stiPExamGenitalUlcer: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_p_exam_warts'
+		name: 'sti_p_exam_warts',
+		nullable: true
 	})
 	stiPExamWarts: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_p_exam_urethral_discharge'
+		name: 'sti_p_exam_urethral_discharge',
+		nullable: true
 	})
 	stiPExamUrethralDischarge: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_p_exam_anal_discharge'
+		name: 'sti_p_exam_anal_discharge',
+		nullable: true
 	})
 	stiPExamAnalDischarge: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_p_exam_scrotal'
+		name: 'sti_p_exam_scrotal',
+		nullable: true
 	})
 	stiPExamScrotal: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_p_exam_other'
+		name: 'sti_p_exam_other',
+		nullable: true
 	})
 	stiPExamOther: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_p_exam_comment'
+		name: 'sti_p_exam_comment',
+		nullable: true
 	})
 	stiPExamComment: string
 
 	@Column({
+		name: 'sti_test_pregnancy_test',
 		type: 'boolean',
-		nullable: true,
-		name: 'sti_test_pregnancy_test'
+		nullable: true
 	})
 	stiTestPregnancyTest: boolean
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_p_exam_test'
+		name: 'sti_p_exam_test',
+		nullable: true
 	})
 	stiPExamTest: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_test_sniff_test'
+		name: 'sti_test_sniff_test',
+		nullable: true
 	})
 	stiTestSniffTest: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'test_ph'
+		name: 'test_ph',
+		nullable: true
 	})
 	testPh: string
 
 	@Column({
+		name: 'sti_test_urethral_smear',
 		type: 'boolean',
-		nullable: true,
-		name: 'sti_test_urethral_smear'
+		nullable: true
 	})
 	stiTestUrethralSmear: boolean
 
 	@Column({
+		name: 'sti_test_vaginal_smear',
 		type: 'boolean',
-		nullable: true,
-		name: 'sti_test_vaginal_smear'
+		nullable: true
 	})
 	stiTestVaginalSmear: boolean
 
 	@Column({
+		name: 'sti_test_anal_smear',
 		type: 'boolean',
-		nullable: true,
-		name: 'sti_test_anal_smear'
+		nullable: true
 	})
 	stiTestAnalSmear: boolean
 
 	@Column({
+		name: 'sti_test_ulcer_smear',
 		type: 'boolean',
-		nullable: true,
-		name: 'sti_test_ulcer_smear'
+		nullable: true
 	})
 	stiTestUlcerSmear: boolean
 
 	@Column({
+		name: 'sti_test_throat_swab',
 		type: 'boolean',
-		nullable: true,
-		name: 'sti_test_throat_swab'
+		nullable: true
 	})
 	stiTestThroatSwab: boolean
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_test_chlamydia'
+		name: 'sti_test_chlamydia',
+		nullable: true
 	})
 	stiTestChlamydia: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'rpr'
+		name: 'rpr',
+		nullable: true
 	})
 	rpr: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'rpr_dil'
+		name: 'rpr_dil',
+		nullable: true
 	})
 	rprDil: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_test_other_investigation'
+		name: 'sti_test_other_investigation',
+		nullable: true
 	})
 	stiTestOtherInvestigation: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_presumptive_diagnosis'
+		name: 'sti_presumptive_diagnosis',
+		nullable: true
 	})
 	stiPresumptiveDiagnosis: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'partner_diagnosis_other'
+		name: 'partner_diagnosis_other',
+		nullable: true
 	})
 	partnerDiagnosisOther: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'lab_type'
+		name: 'lab_type',
+		nullable: true
 	})
 	labType: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_treatment_treatment_plan'
+		name: 'sti_treatment_treatment_plan',
+		nullable: true
 	})
 	stiTreatmentTreatmentPlan: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_treatment_allergy'
+		name: 'sti_treatment_allergy',
+		nullable: true
 	})
 	stiTreatmentAllergy: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_treatment_allergy_other'
+		name: 'sti_treatment_allergy_other',
+		nullable: true
 	})
 	stiTreatmentAllergyOther: string
 
 	@Column({
+		name: 'sti_treatment_pregnant',
 		type: 'boolean',
-		nullable: true,
-		name: 'sti_treatment_pregnant'
+		nullable: true
 	})
 	stiTreatmentPregnant: boolean
 
 	@Column({
+		name: 'sti_treatment_surgical_intervention',
 		type: 'boolean',
-		nullable: true,
-		name: 'sti_treatment_surgical_intervention'
+		nullable: true
 	})
 	stiTreatmentSurgicalIntervention: boolean
 
@@ -493,70 +438,65 @@ export class Sti {
 	stiMedications: StiMedication[]
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_n_03_other_treatment'
+		name: 'sti_n_03_other_treatment',
+		nullable: true
 	})
 	stiN03OtherTreatment: string
 
 	@Column({
+		name: 'sti_referred',
 		type: 'boolean',
-		nullable: true,
-		name: 'sti_referred'
+		nullable: true
 	})
 	stiReferred: boolean
 
 	@Column({
+		name: 'sti_sti_condom',
 		type: 'boolean',
-		nullable: true,
-		name: 'sti_sti_condom'
+		nullable: true
 	})
 	stiStiCondom: boolean
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_partner_treatment'
+		name: 'sti_partner_treatment',
+		nullable: true
 	})
 	stiPartnerTreatment: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_remark'
+		name: 'sti_remark',
+		nullable: true
 	})
 	stiRemark: string
 
 	@Column({
+		name: 'sti_date_next_visit',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'sti_date_next_visit'
+		nullable: true
 	})
 	stiDateNextVisit: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sti_plan_for_next_visit'
+		name: 'sti_plan_for_next_visit',
+		nullable: true
 	})
 	stiPlanForNextVisit: string
 
 	@Column({
+		name: 'verify',
 		type: 'integer',
-		nullable: true,
-		name: 'verify'
+		nullable: true
 	})
 	verify: number
 
 	@Column({
+		name: 'last_registration_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'last_registration_date'
+		nullable: true
 	})
 	lastRegistrationDate: Date
 
 	@PrimaryColumn({
-		type: 'string',
 		name: 'key'
 	})
 	key: string

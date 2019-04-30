@@ -6,148 +6,135 @@ import { TbKeySample } from './TbKeySample'
 @Entity()
 export class TbKey {
 	@PrimaryColumn({
-		type: 'string',
 		name: 'mdm_code'
 	})
 	mdmCode: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'patient_name'
+		name: 'patient_name',
+		nullable: true
 	})
 	patientName: string
 
 	@Column({
+		name: 'age',
 		type: 'integer',
-		nullable: true,
-		name: 'age'
+		nullable: true
 	})
 	age: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sex'
+		name: 'sex',
+		nullable: true
 	})
 	sex: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'patient_target'
+		name: 'patient_target',
+		nullable: true
 	})
 	patientTarget: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'hiv_status'
+		name: 'hiv_status',
+		nullable: true
 	})
 	hivStatus: string
 
 	@Column({
+		name: 'art',
 		type: 'boolean',
-		nullable: true,
-		name: 'art'
+		nullable: true
 	})
 	art: boolean
 
 	@Column({
+		name: 'art_start_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'art_start_date'
+		nullable: true
 	})
 	artStartDate: Date
 
 	@Column({
+		name: 'cpt_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'cpt_date'
+		nullable: true
 	})
 	cptDate: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'tb_treatment'
+		name: 'tb_treatment',
+		nullable: true
 	})
 	tbTreatment: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ptb_eptb'
+		name: 'ptb_eptb',
+		nullable: true
 	})
 	ptbEptb: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'eptb_site'
+		name: 'eptb_site',
+		nullable: true
 	})
 	eptbSite: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'eptb_site_other'
+		name: 'eptb_site_other',
+		nullable: true
 	})
 	eptbSiteOther: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'refeffed_in'
+		name: 'refeffed_in',
+		nullable: true
 	})
 	refeffedIn: string
 
 	@Column({
+		name: 'referred_in_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'referred_in_date'
+		nullable: true
 	})
 	referredInDate: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'type'
+		name: 'type',
+		nullable: true
 	})
 	type: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'regimen'
+		name: 'regimen',
+		nullable: true
 	})
 	regimen: string
 
 	@Column({
+		name: 'ip_start_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'ip_start_date'
+		nullable: true
 	})
 	ipStartDate: Date
 
 	@Column({
+		name: 'time',
 		type: 'integer',
-		nullable: true,
-		name: 'time'
+		nullable: true
 	})
 	time: number
 
 	@Column({
+		name: 'start_cp',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'start_cp'
+		nullable: true
 	})
 	startCp: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'bacteriological_confirmation'
+		name: 'bacteriological_confirmation',
+		nullable: true
 	})
 	bacteriologicalConfirmation: string
 
@@ -157,23 +144,20 @@ export class TbKey {
 	afbToMths: AfbToMth[]
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'end_of_treatment_sputum'
+		name: 'end_of_treatment_sputum',
+		nullable: true
 	})
 	endOfTreatmentSputum: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'end_of_treatment_x'
+		name: 'end_of_treatment_x',
+		nullable: true
 	})
 	endOfTreatmentX: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'end_of_treatment_culture'
+		name: 'end_of_treatment_culture',
+		nullable: true
 	})
 	endOfTreatmentCulture: string
 
@@ -183,93 +167,82 @@ export class TbKey {
 	tbKeySamples: TbKeySample[]
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'other_sample'
+		name: 'other_sample',
+		nullable: true
 	})
 	otherSample: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'oth_stool_result'
+		name: 'oth_stool_result',
+		nullable: true
 	})
 	othStoolResult: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'oth_urine_result'
+		name: 'oth_urine_result',
+		nullable: true
 	})
 	othUrineResult: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'lymph_node_result'
+		name: 'lymph_node_result',
+		nullable: true
 	})
 	lymphNodeResult: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'oth_other_txt'
+		name: 'oth_other_txt',
+		nullable: true
 	})
 	othOtherTxt: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'oth_other_result'
+		name: 'oth_other_result',
+		nullable: true
 	})
 	othOtherResult: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'radiology'
+		name: 'radiology',
+		nullable: true
 	})
 	radiology: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'x_ray_result'
+		name: 'x_ray_result',
+		nullable: true
 	})
 	xRayResult: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'usg_result'
+		name: 'usg_result',
+		nullable: true
 	})
 	usgResult: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'outcome'
+		name: 'outcome',
+		nullable: true
 	})
 	outcome: string
 
 	@Column({
+		name: 'outcome_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'outcome_date'
+		nullable: true
 	})
 	outcomeDate: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'remark'
+		name: 'remark',
+		nullable: true
 	})
 	remark: string
 
 	@Column({
+		name: 'tb_saving_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'tb_saving_date'
+		nullable: true
 	})
 	tbSavingDate: Date
 

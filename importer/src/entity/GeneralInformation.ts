@@ -4,266 +4,251 @@ import { Entity, PrimaryColumn, Column } from 'typeorm'
 @Entity()
 export class GeneralInformation {
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'mdm_code'
+		name: 'mdm_code',
+		nullable: true
 	})
 	mdmCode: string
 
 	@Column({
+		name: 'registration_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'registration_date'
+		nullable: true
 	})
 	registrationDate: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'patient_name'
+		name: 'patient_name',
+		nullable: true
 	})
 	patientName: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'father_name'
+		name: 'father_name',
+		nullable: true
 	})
 	fatherName: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sex'
+		name: 'sex',
+		nullable: true
 	})
 	sex: string
 
 	@Column({
+		name: 'date_of_birth',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'date_of_birth'
+		nullable: true
 	})
 	dateOfBirth: Date
 
 	@Column({
+		name: 'age',
 		type: 'integer',
-		nullable: true,
-		name: 'age'
+		nullable: true
 	})
 	age: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'patient_target'
+		name: 'patient_target',
+		nullable: true
 	})
 	patientTarget: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'gi_place_of_medical_care'
+		name: 'gi_place_of_medical_care',
+		nullable: true
 	})
 	giPlaceOfMedicalCare: string
 
 	@Column({
+		name: 'gi_visit_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'gi_visit_date'
+		nullable: true
 	})
 	giVisitDate: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'marital_status'
+		name: 'marital_status',
+		nullable: true
 	})
 	maritalStatus: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'b_04_current_work_place'
+		name: 'b_04_current_work_place',
+		nullable: true
 	})
 	b04CurrentWorkPlace: string
 
 	@Column({
+		name: 'height',
 		type: 'integer',
-		nullable: true,
-		name: 'height'
+		nullable: true
 	})
 	height: number
 
 	@Column({
+		name: 'gi_bw',
 		type: 'integer',
-		nullable: true,
-		name: 'gi_bw'
+		nullable: true
 	})
 	giBw: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'gi_lb_or_kg'
+		name: 'gi_lb_or_kg',
+		nullable: true
 	})
 	giLbOrKg: string
 
 	@Column({
+		name: 'gi_bmi',
 		type: 'integer',
-		nullable: true,
-		name: 'gi_bmi'
+		nullable: true
 	})
 	giBmi: number
 
 	@Column({
+		name: 'gi_temperature',
 		type: 'integer',
-		nullable: true,
-		name: 'gi_temperature'
+		nullable: true
 	})
 	giTemperature: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'gi_cor_f'
+		name: 'gi_cor_f',
+		nullable: true
 	})
 	giCorF: string
 
 	@Column({
+		name: 'blood_pressure_systolic',
 		type: 'integer',
-		nullable: true,
-		name: 'blood_pressure_systolic'
+		nullable: true
 	})
 	bloodPressureSystolic: number
 
 	@Column({
+		name: 'blood_pressure_diastolic',
 		type: 'integer',
-		nullable: true,
-		name: 'blood_pressure_diastolic'
+		nullable: true
 	})
 	bloodPressureDiastolic: number
 
 	@Column({
+		name: 'gi_rr',
 		type: 'integer',
-		nullable: true,
-		name: 'gi_rr'
+		nullable: true
 	})
 	giRr: number
 
 	@Column({
+		name: 'gi_pulse',
 		type: 'integer',
-		nullable: true,
-		name: 'gi_pulse'
+		nullable: true
 	})
 	giPulse: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'gi_reproductive_health'
+		name: 'gi_reproductive_health',
+		nullable: true
 	})
 	giReproductiveHealth: string
 
 	@Column({
+		name: 'gi_contraception',
 		type: 'boolean',
-		nullable: true,
-		name: 'gi_contraception'
+		nullable: true
 	})
 	giContraception: boolean
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'gi_contraception_type'
+		name: 'gi_contraception_type',
+		nullable: true
 	})
 	giContraceptionType: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'gi_other_contraception_type'
+		name: 'gi_other_contraception_type',
+		nullable: true
 	})
 	giOtherContraceptionType: string
 
 	@Column({
+		name: 'gi_drug_taken_on',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'gi_drug_taken_on'
+		nullable: true
 	})
 	giDrugTakenOn: Date
 
 	@Column({
+		name: 'gi_lm_pdate',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'gi_lm_pdate'
+		nullable: true
 	})
 	giLmPdate: Date
 
 	@Column({
+		name: 'gi_parity',
 		type: 'integer',
-		nullable: true,
-		name: 'gi_parity'
+		nullable: true
 	})
 	giParity: number
 
 	@Column({
+		name: 'gi_condom_use_for_last_sex',
 		type: 'boolean',
-		nullable: true,
-		name: 'gi_condom_use_for_last_sex'
+		nullable: true
 	})
 	giCondomUseForLastSex: boolean
 
 	@Column({
+		name: 'gi_number_clients_last_working_day',
 		type: 'integer',
-		nullable: true,
-		name: 'gi_number_clients_last_working_day'
+		nullable: true
 	})
 	giNumberClientsLastWorkingDay: number
 
 	@Column({
+		name: 'gi_share_needle_or_syringe_in_last',
 		type: 'boolean',
-		nullable: true,
-		name: 'gi_share_needle_or_syringe_in_last'
+		nullable: true
 	})
 	giShareNeedleOrSyringeInLast: boolean
 
 	@Column({
+		name: 'gi_share_needle_or_syringe_in_last_month',
 		type: 'boolean',
-		nullable: true,
-		name: 'gi_share_needle_or_syringe_in_last_month'
+		nullable: true
 	})
 	giShareNeedleOrSyringeInLastMonth: boolean
 
 	@Column({
+		name: 'gi_share_needle_or_syringe_in_last_6_months',
 		type: 'boolean',
-		nullable: true,
-		name: 'gi_share_needle_or_syringe_in_last_6_months'
+		nullable: true
 	})
 	giShareNeedleOrSyringeInLast6Months: boolean
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'gi_remarks'
+		name: 'gi_remarks',
+		nullable: true
 	})
 	giRemarks: string
 
 	@Column({
+		name: 'verify',
 		type: 'integer',
-		nullable: true,
-		name: 'verify'
+		nullable: true
 	})
 	verify: number
 
 	@Column({
+		name: 'last_registration_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'last_registration_date'
+		nullable: true
 	})
 	lastRegistrationDate: Date
 
 	@PrimaryColumn({
-		type: 'string',
 		name: 'key'
 	})
 	key: string

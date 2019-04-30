@@ -4,169 +4,153 @@ import { Entity, PrimaryColumn, Column } from 'typeorm'
 @Entity()
 export class PatientGeneralData {
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'mdm_location'
+		name: 'mdm_location',
+		nullable: true
 	})
 	mdmLocation: string
 
 	@PrimaryColumn({
-		type: 'string',
 		name: 'mdm_code'
 	})
 	mdmCode: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'serial_number'
+		name: 'serial_number',
+		nullable: true
 	})
 	serialNumber: string
 
 	@Column({
+		name: 'registration_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'registration_date'
+		nullable: true
 	})
 	registrationDate: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'patient_name'
+		name: 'patient_name',
+		nullable: true
 	})
 	patientName: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'father_name'
+		name: 'father_name',
+		nullable: true
 	})
 	fatherName: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sex'
+		name: 'sex',
+		nullable: true
 	})
 	sex: string
 
 	@Column({
+		name: 'date_of_birth',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'date_of_birth'
+		nullable: true
 	})
 	dateOfBirth: Date
 
 	@Column({
+		name: 'age',
 		type: 'integer',
-		nullable: true,
-		name: 'age'
+		nullable: true
 	})
 	age: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'date_of_birth_estimated'
+		name: 'date_of_birth_estimated',
+		nullable: true
 	})
 	dateOfBirthEstimated: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'place_of_birth'
+		name: 'place_of_birth',
+		nullable: true
 	})
 	placeOfBirth: string
 
 	@Column({
+		name: 'height',
 		type: 'integer',
-		nullable: true,
-		name: 'height'
+		nullable: true
 	})
 	height: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'patient_target'
+		name: 'patient_target',
+		nullable: true
 	})
 	patientTarget: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'marital_status'
+		name: 'marital_status',
+		nullable: true
 	})
 	maritalStatus: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'level_education'
+		name: 'level_education',
+		nullable: true
 	})
 	levelEducation: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'occupation'
+		name: 'occupation',
+		nullable: true
 	})
 	occupation: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'address_township'
+		name: 'address_township',
+		nullable: true
 	})
 	addressTownship: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'address_township_name'
+		name: 'address_township_name',
+		nullable: true
 	})
 	addressTownshipName: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'geographical_origin'
+		name: 'geographical_origin',
+		nullable: true
 	})
 	geographicalOrigin: string
 
 	@Column({
+		name: 'distance_to_mdm_clinic',
 		type: 'integer',
-		nullable: true,
-		name: 'distance_to_mdm_clinic'
+		nullable: true
 	})
 	distanceToMdmClinic: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'other_id'
+		name: 'other_id',
+		nullable: true
 	})
 	otherId: string
 
 	@Column({
+		name: 'counter',
 		type: 'integer',
-		nullable: true,
-		name: 'counter'
+		nullable: true
 	})
 	counter: number
 
 	@Column({
+		name: 'verify',
 		type: 'integer',
-		nullable: true,
-		name: 'verify'
+		nullable: true
 	})
 	verify: number
 
 	@Column({
+		name: 'date_of_saving_data',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'date_of_saving_data'
+		nullable: true
 	})
 	dateOfSavingData: Date
 

@@ -14,23 +14,21 @@ export class ArtKeyNewRegimen {
 	artKey: ArtKey
 
 	@Column({
+		name: 'change_regimen_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'change_regimen_date'
+		nullable: true
 	})
 	changeRegimenDate: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'change_reason'
+		name: 'change_reason',
+		nullable: true
 	})
 	changeReason: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'new_regimen'
+		name: 'new_regimen',
+		nullable: true
 	})
 	newRegimen: string
 

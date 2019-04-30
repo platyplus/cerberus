@@ -14,16 +14,15 @@ export class ArtKeyResult {
 	artKey: ArtKey
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'result'
+		name: 'result',
+		nullable: true
 	})
 	result: string
 
 	@Column({
+		name: 'v_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'v_date'
+		nullable: true
 	})
 	vDate: Date
 

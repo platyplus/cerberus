@@ -14,9 +14,8 @@ export class ArtAntiBioMedicineCode {
 	artConsultationPlha: ArtConsultationPlha
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_anti_bio_medicine_code'
+		name: 'art_anti_bio_medicine_code',
+		nullable: true
 	})
 	artAntiBioMedicineCode: string
 

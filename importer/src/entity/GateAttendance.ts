@@ -4,98 +4,86 @@ import { Entity, PrimaryColumn, Column } from 'typeorm'
 @Entity()
 export class GateAttendance {
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'other_mdm_center'
+		name: 'other_mdm_center',
+		nullable: true
 	})
 	otherMdmCenter: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'serial_number'
+		name: 'serial_number',
+		nullable: true
 	})
 	serialNumber: string
 
 	@PrimaryColumn({
-		type: 'string',
 		name: 'mdm_code'
 	})
 	mdmCode: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'patient_name'
+		name: 'patient_name',
+		nullable: true
 	})
 	patientName: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sex'
+		name: 'sex',
+		nullable: true
 	})
 	sex: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'patient_target'
+		name: 'patient_target',
+		nullable: true
 	})
 	patientTarget: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'mdm_code_other'
+		name: 'mdm_code_other',
+		nullable: true
 	})
 	mdmCodeOther: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'patient_name_other'
+		name: 'patient_name_other',
+		nullable: true
 	})
 	patientNameOther: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sex_other'
+		name: 'sex_other',
+		nullable: true
 	})
 	sexOther: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'patient_target_other'
+		name: 'patient_target_other',
+		nullable: true
 	})
 	patientTargetOther: string
 
 	@PrimaryColumn({
-		type: 'timestamptz',
-		name: 'visit_date'
+		name: 'visit_date',
+		type: 'timestamptz'
 	})
 	visitDate: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'new_repeater'
+		name: 'new_repeater',
+		nullable: true
 	})
 	newRepeater: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'current_target'
+		name: 'current_target',
+		nullable: true
 	})
 	currentTarget: string
 
 	@Column({
+		name: 'saving_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'saving_date'
+		nullable: true
 	})
 	savingDate: Date
 

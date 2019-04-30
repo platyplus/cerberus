@@ -14,142 +14,129 @@ import { ArtOthMedication } from './ArtOthMedication'
 @Entity()
 export class ArtConsultationPlha {
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'mdm_code'
+		name: 'mdm_code',
+		nullable: true
 	})
 	mdmCode: string
 
 	@Column({
+		name: 'registration_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'registration_date'
+		nullable: true
 	})
 	registrationDate: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'patient_name'
+		name: 'patient_name',
+		nullable: true
 	})
 	patientName: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'father_name'
+		name: 'father_name',
+		nullable: true
 	})
 	fatherName: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'sex'
+		name: 'sex',
+		nullable: true
 	})
 	sex: string
 
 	@Column({
+		name: 'date_of_birth',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'date_of_birth'
+		nullable: true
 	})
 	dateOfBirth: Date
 
 	@Column({
+		name: 'age',
 		type: 'integer',
-		nullable: true,
-		name: 'age'
+		nullable: true
 	})
 	age: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'patient_target'
+		name: 'patient_target',
+		nullable: true
 	})
 	patientTarget: string
 
 	@Column({
+		name: 'art_visit_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'art_visit_date'
+		nullable: true
 	})
 	artVisitDate: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_md_mstaff'
+		name: 'art_md_mstaff',
+		nullable: true
 	})
 	artMdMstaff: string
 
 	@Column({
+		name: 'art_plh_new_patient',
 		type: 'boolean',
-		nullable: true,
-		name: 'art_plh_new_patient'
+		nullable: true
 	})
 	artPlhNewPatient: boolean
 
 	@Column({
+		name: 'art_art_new_patient',
 		type: 'boolean',
-		nullable: true,
-		name: 'art_art_new_patient'
+		nullable: true
 	})
 	artArtNewPatient: boolean
 
 	@Column({
+		name: 'art_art_treatment',
 		type: 'boolean',
-		nullable: true,
-		name: 'art_art_treatment'
+		nullable: true
 	})
 	artArtTreatment: boolean
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_patient_partner_tested'
+		name: 'art_patient_partner_tested',
+		nullable: true
 	})
 	artPatientPartnerTested: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_patient_partner_test_status'
+		name: 'art_patient_partner_test_status',
+		nullable: true
 	})
 	artPatientPartnerTestStatus: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_patient_disclosed_status'
+		name: 'art_patient_disclosed_status',
+		nullable: true
 	})
 	artPatientDisclosedStatus: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_status_disclosed_by'
+		name: 'art_status_disclosed_by',
+		nullable: true
 	})
 	artStatusDisclosedBy: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_status_disclosed_by_other'
+		name: 'art_status_disclosed_by_other',
+		nullable: true
 	})
 	artStatusDisclosedByOther: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_patient_taking_medicines'
+		name: 'art_patient_taking_medicines',
+		nullable: true
 	})
 	artPatientTakingMedicines: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_patient_taking_following_medicines'
+		name: 'art_patient_taking_following_medicines',
+		nullable: true
 	})
 	artPatientTakingFollowingMedicines: string
 
@@ -169,23 +156,20 @@ export class ArtConsultationPlha {
 	artAntiTbMedicineCodes: ArtAntiTbMedicineCode[]
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_patient_taking_other'
+		name: 'art_patient_taking_other',
+		nullable: true
 	})
 	artPatientTakingOther: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_medications_comment'
+		name: 'art_medications_comment',
+		nullable: true
 	})
 	artMedicationsComment: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_patient_taken_ar_vs_before'
+		name: 'art_patient_taken_ar_vs_before',
+		nullable: true
 	})
 	artPatientTakenArVsBefore: string
 
@@ -195,464 +179,400 @@ export class ArtConsultationPlha {
 	artTreatments: ArtTreatment[]
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_arv_comment'
+		name: 'art_arv_comment',
+		nullable: true
 	})
 	artArvComment: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_medical_history_comment'
+		name: 'art_medical_history_comment',
+		nullable: true
 	})
 	artMedicalHistoryComment: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_t_bhistory'
+		name: 'art_t_bhistory',
+		nullable: true
 	})
 	artTBhistory: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_previous_t_bdiagnosis'
+		name: 'art_previous_t_bdiagnosis',
+		nullable: true
 	})
 	artPreviousTBdiagnosis: string
 
 	@Column({
+		name: 'art_year_of_extrapulmonary_episode',
 		type: 'integer',
-		nullable: true,
-		name: 'art_year_of_extrapulmonary_episode'
+		nullable: true
 	})
 	artYearOfExtrapulmonaryEpisode: number
 
 	@Column({
+		name: 'art_year_of_pulmonary_episode',
 		type: 'integer',
-		nullable: true,
-		name: 'art_year_of_pulmonary_episode'
+		nullable: true
 	})
 	artYearOfPulmonaryEpisode: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_t_bhistory_comments'
+		name: 'art_t_bhistory_comments',
+		nullable: true
 	})
 	artTBhistoryComments: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_tb_related_symptoms_opt'
+		name: 'art_tb_related_symptoms_opt',
+		nullable: true
 	})
 	artTbRelatedSymptomsOpt: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_tb_related_symptoms'
+		name: 'art_tb_related_symptoms',
+		nullable: true
 	})
 	artTbRelatedSymptoms: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_tb_related_fever'
+		name: 'art_tb_related_fever',
+		nullable: true
 	})
 	artTbRelatedFever: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_tb_related_night_sweats'
+		name: 'art_tb_related_night_sweats',
+		nullable: true
 	})
 	artTbRelatedNightSweats: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_tb_related_appetite_loss'
+		name: 'art_tb_related_appetite_loss',
+		nullable: true
 	})
 	artTbRelatedAppetiteLoss: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_tb_related_weight_loss'
+		name: 'art_tb_related_weight_loss',
+		nullable: true
 	})
 	artTbRelatedWeightLoss: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_tb_related_cough'
+		name: 'art_tb_related_cough',
+		nullable: true
 	})
 	artTbRelatedCough: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_tb_related_haemoptysis'
+		name: 'art_tb_related_haemoptysis',
+		nullable: true
 	})
 	artTbRelatedHaemoptysis: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_tb_related_notice'
+		name: 'art_tb_related_notice',
+		nullable: true
 	})
 	artTbRelatedNotice: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_constitutional'
+		name: 'art_constitutional',
+		nullable: true
 	})
 	artConstitutional: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_consti_fatigue'
+		name: 'art_consti_fatigue',
+		nullable: true
 	})
 	artConstiFatigue: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_consti_pain'
+		name: 'art_consti_pain',
+		nullable: true
 	})
 	artConstiPain: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_consti_other'
+		name: 'art_consti_other',
+		nullable: true
 	})
 	artConstiOther: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_gastrointestinal'
+		name: 'art_gastrointestinal',
+		nullable: true
 	})
 	artGastrointestinal: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_gastro_abdominal_pain'
+		name: 'art_gastro_abdominal_pain',
+		nullable: true
 	})
 	artGastroAbdominalPain: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_gastro_nausea'
+		name: 'art_gastro_nausea',
+		nullable: true
 	})
 	artGastroNausea: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_gastro_vomiting'
+		name: 'art_gastro_vomiting',
+		nullable: true
 	})
 	artGastroVomiting: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_gastro_dysphagia'
+		name: 'art_gastro_dysphagia',
+		nullable: true
 	})
 	artGastroDysphagia: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_gastro_diarrhea'
+		name: 'art_gastro_diarrhea',
+		nullable: true
 	})
 	artGastroDiarrhea: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_gastro_other'
+		name: 'art_gastro_other',
+		nullable: true
 	})
 	artGastroOther: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_respiratory_c_vs'
+		name: 'art_respiratory_c_vs',
+		nullable: true
 	})
 	artRespiratoryCVs: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_respi_difficultly_breathing'
+		name: 'art_respi_difficultly_breathing',
+		nullable: true
 	})
 	artRespiDifficultlyBreathing: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_respi_chest_pain'
+		name: 'art_respi_chest_pain',
+		nullable: true
 	})
 	artRespiChestPain: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_respi_palpitation'
+		name: 'art_respi_palpitation',
+		nullable: true
 	})
 	artRespiPalpitation: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_respi_other'
+		name: 'art_respi_other',
+		nullable: true
 	})
 	artRespiOther: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_neurological'
+		name: 'art_neurological',
+		nullable: true
 	})
 	artNeurological: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_neuro_headache'
+		name: 'art_neuro_headache',
+		nullable: true
 	})
 	artNeuroHeadache: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_neuro_confusion'
+		name: 'art_neuro_confusion',
+		nullable: true
 	})
 	artNeuroConfusion: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_neuro_memory_problems'
+		name: 'art_neuro_memory_problems',
+		nullable: true
 	})
 	artNeuroMemoryProblems: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_neuro_tingling'
+		name: 'art_neuro_tingling',
+		nullable: true
 	})
 	artNeuroTingling: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_neuro_insomnia'
+		name: 'art_neuro_insomnia',
+		nullable: true
 	})
 	artNeuroInsomnia: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_neuro_yawning'
+		name: 'art_neuro_yawning',
+		nullable: true
 	})
 	artNeuroYawning: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_skin_manifestation'
+		name: 'art_skin_manifestation',
+		nullable: true
 	})
 	artSkinManifestation: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_skin_itchiness'
+		name: 'art_skin_itchiness',
+		nullable: true
 	})
 	artSkinItchiness: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_skin_rash'
+		name: 'art_skin_rash',
+		nullable: true
 	})
 	artSkinRash: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_skin_lump'
+		name: 'art_skin_lump',
+		nullable: true
 	})
 	artSkinLump: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_skin_other'
+		name: 'art_skin_other',
+		nullable: true
 	})
 	artSkinOther: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_symptoms_comments'
+		name: 'art_symptoms_comments',
+		nullable: true
 	})
 	artSymptomsComments: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_eye'
+		name: 'art_eye',
+		nullable: true
 	})
 	artEye: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_eye_comment'
+		name: 'art_eye_comment',
+		nullable: true
 	})
 	artEyeComment: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_ears_nose'
+		name: 'art_ears_nose',
+		nullable: true
 	})
 	artEarsNose: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_ears_nose_comment'
+		name: 'art_ears_nose_comment',
+		nullable: true
 	})
 	artEarsNoseComment: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_oral'
+		name: 'art_oral',
+		nullable: true
 	})
 	artOral: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_oral_comment'
+		name: 'art_oral_comment',
+		nullable: true
 	})
 	artOralComment: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_lymph_nodes'
+		name: 'art_lymph_nodes',
+		nullable: true
 	})
 	artLymphNodes: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_lymph_nodes_comment'
+		name: 'art_lymph_nodes_comment',
+		nullable: true
 	})
 	artLymphNodesComment: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_heart'
+		name: 'art_heart',
+		nullable: true
 	})
 	artHeart: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_heart_comment'
+		name: 'art_heart_comment',
+		nullable: true
 	})
 	artHeartComment: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_lungs'
+		name: 'art_lungs',
+		nullable: true
 	})
 	artLungs: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_lungs_comment'
+		name: 'art_lungs_comment',
+		nullable: true
 	})
 	artLungsComment: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'abdomen'
+		name: 'abdomen',
+		nullable: true
 	})
 	abdomen: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'abdoment_comment'
+		name: 'abdoment_comment',
+		nullable: true
 	})
 	abdomentComment: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_p_exam_neurological'
+		name: 'art_p_exam_neurological',
+		nullable: true
 	})
 	artPExamNeurological: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_neurological_comment'
+		name: 'art_neurological_comment',
+		nullable: true
 	})
 	artNeurologicalComment: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_skin'
+		name: 'art_skin',
+		nullable: true
 	})
 	artSkin: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_skin_comment'
+		name: 'art_skin_comment',
+		nullable: true
 	})
 	artSkinComment: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_physical_exam_comments'
+		name: 'art_physical_exam_comments',
+		nullable: true
 	})
 	artPhysicalExamComments: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_child_or_adult'
+		name: 'art_child_or_adult',
+		nullable: true
 	})
 	artChildOrAdult: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'stage'
+		name: 'stage',
+		nullable: true
 	})
 	stage: string
 
@@ -662,30 +582,26 @@ export class ArtConsultationPlha {
 	artChildStages: ArtChildStage[]
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_patient_status'
+		name: 'art_patient_status',
+		nullable: true
 	})
 	artPatientStatus: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_oi_diagnosis'
+		name: 'art_oi_diagnosis',
+		nullable: true
 	})
 	artOiDiagnosis: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_oi_diagnosis_eptb'
+		name: 'art_oi_diagnosis_eptb',
+		nullable: true
 	})
 	artOiDiagnosisEptb: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_oi_diagnosis_other'
+		name: 'art_oi_diagnosis_other',
+		nullable: true
 	})
 	artOiDiagnosisOther: string
 
@@ -695,65 +611,59 @@ export class ArtConsultationPlha {
 	artGhcDiagnosiss: ArtGhcDiagnosis[]
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_diagnosis_comments'
+		name: 'art_diagnosis_comments',
+		nullable: true
 	})
 	artDiagnosisComments: string
 
 	@Column({
+		name: 'art_first_cd',
 		type: 'integer',
-		nullable: true,
-		name: 'art_first_cd'
+		nullable: true
 	})
 	artFirstCd: number
 
 	@Column({
+		name: 'art_last_cd',
 		type: 'integer',
-		nullable: true,
-		name: 'art_last_cd'
+		nullable: true
 	})
 	artLastCd: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_viral_load_result'
+		name: 'art_viral_load_result',
+		nullable: true
 	})
 	artViralLoadResult: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_h_bs_ag'
+		name: 'art_h_bs_ag',
+		nullable: true
 	})
 	artHBsAg: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_h_bs_ab'
+		name: 'art_h_bs_ab',
+		nullable: true
 	})
 	artHBsAb: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_hcv_ab'
+		name: 'art_hcv_ab',
+		nullable: true
 	})
 	artHcvAb: string
 
 	@Column({
+		name: 'art_apri',
 		type: 'integer',
-		nullable: true,
-		name: 'art_apri'
+		nullable: true
 	})
 	artApri: number
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_liver_fibrosis'
+		name: 'art_liver_fibrosis',
+		nullable: true
 	})
 	artLiverFibrosis: string
 
@@ -763,135 +673,122 @@ export class ArtConsultationPlha {
 	tbSputums: TbSputum[]
 
 	@Column({
+		name: 'tb_radiology_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'tb_radiology_date'
+		nullable: true
 	})
 	tbRadiologyDate: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'tb_radio_radiology'
+		name: 'tb_radio_radiology',
+		nullable: true
 	})
 	tbRadioRadiology: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'tb_radio_cx_ray'
+		name: 'tb_radio_cx_ray',
+		nullable: true
 	})
 	tbRadioCxRay: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'tb_radio_x_ray'
+		name: 'tb_radio_x_ray',
+		nullable: true
 	})
 	tbRadioXRay: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'tb_radio_usg'
+		name: 'tb_radio_usg',
+		nullable: true
 	})
 	tbRadioUsg: string
 
 	@Column({
+		name: 'tb_persons_screened_tb',
 		type: 'boolean',
-		nullable: true,
-		name: 'tb_persons_screened_tb'
+		nullable: true
 	})
 	tbPersonsScreenedTb: boolean
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'tb_screened_tb_yes_where'
+		name: 'tb_screened_tb_yes_where',
+		nullable: true
 	})
 	tbScreenedTbYesWhere: string
 
 	@Column({
+		name: 'tb_referred',
 		type: 'boolean',
-		nullable: true,
-		name: 'tb_referred'
+		nullable: true
 	})
 	tbReferred: boolean
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'tb_refer_yes_where'
+		name: 'tb_refer_yes_where',
+		nullable: true
 	})
 	tbReferYesWhere: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'tb_type_of_case'
+		name: 'tb_type_of_case',
+		nullable: true
 	})
 	tbTypeOfCase: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'tb_type'
+		name: 'tb_type',
+		nullable: true
 	})
 	tbType: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_allergy'
+		name: 'art_allergy',
+		nullable: true
 	})
 	artAllergy: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'allergy'
+		name: 'allergy',
+		nullable: true
 	})
 	allergy: string
 
 	@Column({
+		name: 'art_pregnant',
 		type: 'boolean',
-		nullable: true,
-		name: 'art_pregnant'
+		nullable: true
 	})
 	artPregnant: boolean
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_prophylaxis'
+		name: 'art_prophylaxis',
+		nullable: true
 	})
 	artProphylaxis: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_prophyaxis_primary'
+		name: 'art_prophyaxis_primary',
+		nullable: true
 	})
 	artProphyaxisPrimary: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_prophylaxis_secondary'
+		name: 'art_prophylaxis_secondary',
+		nullable: true
 	})
 	artProphylaxisSecondary: string
 
 	@Column({
+		name: 'art_mdmart_starting_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'art_mdmart_starting_date'
+		nullable: true
 	})
 	artMdmartStartingDate: Date
 
 	@Column({
+		name: 'art_remaining_pill',
 		type: 'integer',
-		nullable: true,
-		name: 'art_remaining_pill'
+		nullable: true
 	})
 	artRemainingPill: number
 
@@ -901,9 +798,9 @@ export class ArtConsultationPlha {
 	artArtMedications: ArtArtMedication[]
 
 	@Column({
+		name: 'art_tb_starting_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'art_tb_starting_date'
+		nullable: true
 	})
 	artTbStartingDate: Date
 
@@ -913,65 +810,60 @@ export class ArtConsultationPlha {
 	artTbMedications: ArtTbMedication[]
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'tb_category'
+		name: 'tb_category',
+		nullable: true
 	})
 	tbCategory: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'tb_treatment_category'
+		name: 'tb_treatment_category',
+		nullable: true
 	})
 	tbTreatmentCategory: string
 
 	@Column({
+		name: 'ipt_treatment',
 		type: 'boolean',
-		nullable: true,
-		name: 'ipt_treatment'
+		nullable: true
 	})
 	iptTreatment: boolean
 
 	@Column({
+		name: 'ipt_initiation_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'ipt_initiation_date'
+		nullable: true
 	})
 	iptInitiationDate: Date
 
 	@Column({
+		name: 'ipt_initial_1st_visitdate',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'ipt_initial_1st_visitdate'
+		nullable: true
 	})
 	iptInitial1stVisitdate: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ipt_outcome'
+		name: 'ipt_outcome',
+		nullable: true
 	})
 	iptOutcome: string
 
 	@Column({
+		name: 'ipt_outcomedate',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'ipt_outcomedate'
+		nullable: true
 	})
 	iptOutcomedate: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ipt_reason_of_not_starting'
+		name: 'ipt_reason_of_not_starting',
+		nullable: true
 	})
 	iptReasonOfNotStarting: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'ipt_other'
+		name: 'ipt_other',
+		nullable: true
 	})
 	iptOther: string
 
@@ -981,70 +873,64 @@ export class ArtConsultationPlha {
 	artOthMedications: ArtOthMedication[]
 
 	@Column({
+		name: 'art_referred_to',
 		type: 'boolean',
-		nullable: true,
-		name: 'art_referred_to'
+		nullable: true
 	})
 	artReferredTo: boolean
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_patient_should_return_in'
+		name: 'art_patient_should_return_in',
+		nullable: true
 	})
 	artPatientShouldReturnIn: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_return_other'
+		name: 'art_return_other',
+		nullable: true
 	})
 	artReturnOther: string
 
 	@Column({
+		name: 'art_date_next_visit',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'art_date_next_visit'
+		nullable: true
 	})
 	artDateNextVisit: Date
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_motive'
+		name: 'art_motive',
+		nullable: true
 	})
 	artMotive: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_motive_other'
+		name: 'art_motive_other',
+		nullable: true
 	})
 	artMotiveOther: string
 
 	@Column({
-		type: 'string',
-		nullable: true,
-		name: 'art_plan_next_visit'
+		name: 'art_plan_next_visit',
+		nullable: true
 	})
 	artPlanNextVisit: string
 
 	@Column({
+		name: 'verify',
 		type: 'integer',
-		nullable: true,
-		name: 'verify'
+		nullable: true
 	})
 	verify: number
 
 	@Column({
+		name: 'last_registration_date',
 		type: 'timestamptz',
-		nullable: true,
-		name: 'last_registration_date'
+		nullable: true
 	})
 	lastRegistrationDate: Date
 
 	@PrimaryColumn({
-		type: 'string',
 		name: 'key'
 	})
 	key: string
