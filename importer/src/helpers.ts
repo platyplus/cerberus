@@ -12,14 +12,20 @@ const PROPERTY_MAPPING: { [key: string]: string } = {
 export const getType = (row: Row) =>
   PROPERTY_MAPPING[row.property_type] || 'string'
 
+export const getName = (row: Row) =>
+  _.camelCase(row.property_name).replace(/\d+$/, '')
+
 export const mergeArray = (objValue: any, srcValue: any): any => {
   if (_.isArray(objValue)) {
     return _.union(objValue, srcValue)
   }
 }
 
-export const entityName = (rawName: string): string => {
-  let result = _.upperFirst(_.camelCase(rawName))
+export const entityName = (rawName: string): string =>
+  _.upperFirst(relationName(rawName))
+
+export const relationName = (rawName: string): string => {
+  let result = _.camelCase(rawName)
   if (result.match(/^\d/)) result = '_' + result
   return result
 }

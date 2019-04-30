@@ -1,5 +1,5 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm'
+import { Entity, PrimaryGeneratedColumn, ManyToOne, JoinColumn, Column } from 'typeorm'
 import { ArtConsultationPlha } from './ArtConsultationPlha'
 
 @Entity()
@@ -7,35 +7,38 @@ export class ArtArtMedication {
 	@PrimaryGeneratedColumn('uuid')
 	id: string
 
-	@Column({
-    nullable: true,
-		name: 'art_art_med_name'
-  })
-	artArtMedName: string
-
 	@ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.artArtMedications, {
-    eager: true
-  })
+		eager: true
+	})
 	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
 	artConsultationPlha: ArtConsultationPlha
 
 	@Column({
-    nullable: true,
+		type: 'string',
+		nullable: true,
 		name: 'art_dosage'
-  })
+	})
 	artDosage: string
 
 	@Column({
-    nullable: true,
+		type: 'string',
+		nullable: true,
 		name: 'art_frequency'
-  })
+	})
 	artFrequency: string
 
 	@Column({
-    nullable: true,
-		name: 'art_number_days',
-		type: 'integer'
-  })
+		type: 'integer',
+		nullable: true,
+		name: 'art_number_days'
+	})
 	artNumberDays: number
+
+	@Column({
+		type: 'string',
+		nullable: true,
+		name: 'art_art_med_name'
+	})
+	artArtMedName: string
 
 }

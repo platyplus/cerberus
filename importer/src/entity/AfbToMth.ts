@@ -1,5 +1,5 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm'
+import { Entity, PrimaryGeneratedColumn, ManyToOne, JoinColumn, Column } from 'typeorm'
 import { TbKey } from './TbKey'
 
 @Entity()
@@ -7,42 +7,45 @@ export class AfbToMth {
 	@PrimaryGeneratedColumn('uuid')
 	id: string
 
-	@Column({
-    nullable: true,
-		name: 'sputum'
-  })
-	sputum: string
-
 	@ManyToOne(type => TbKey, tbKey => tbKey.afbToMths, {
-    eager: true
-  })
+		eager: true
+	})
 	@JoinColumn([{ name: 'mdmCode', referencedColumnName: 'mdmCode'}])
 	tbKey: TbKey
 
 	@Column({
-    nullable: true,
+		type: 'string',
+		nullable: true,
 		name: 'x'
-  })
+	})
 	x: string
 
 	@Column({
-    nullable: true,
+		type: 'string',
+		nullable: true,
 		name: 'culture'
-  })
+	})
 	culture: string
 
 	@Column({
-    nullable: true,
-		name: 'positive',
-		type: 'integer'
-  })
+		type: 'string',
+		nullable: true,
+		name: 'sputum'
+	})
+	sputum: string
+
+	@Column({
+		type: 'integer',
+		nullable: true,
+		name: 'positive'
+	})
 	positive: number
 
 	@Column({
-    nullable: true,
-		name: 'negative',
-		type: 'integer'
-  })
+		type: 'integer',
+		nullable: true,
+		name: 'negative'
+	})
 	negative: number
 
 }

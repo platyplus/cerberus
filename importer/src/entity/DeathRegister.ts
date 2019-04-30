@@ -4,106 +4,114 @@ import { Entity, PrimaryColumn, Column } from 'typeorm'
 @Entity()
 export class DeathRegister {
 	@PrimaryColumn({
-    name: 'mdm_code'
-  })
+		type: 'string',
+		name: 'mdm_code'
+	})
 	mdmCode: string
 
 	@Column({
-    nullable: true,
+		type: 'string',
+		nullable: true,
 		name: 'patient_name'
-  })
+	})
 	patientName: string
 
 	@Column({
-    nullable: true,
+		type: 'string',
+		nullable: true,
 		name: 'father_name'
-  })
+	})
 	fatherName: string
 
 	@Column({
-    nullable: true,
+		type: 'string',
+		nullable: true,
 		name: 'sex'
-  })
+	})
 	sex: string
 
 	@Column({
-    nullable: true,
-		name: 'age',
-		type: 'integer'
-  })
+		type: 'integer',
+		nullable: true,
+		name: 'age'
+	})
 	age: number
 
 	@Column({
-    nullable: true,
+		type: 'string',
+		nullable: true,
 		name: 'patient_target'
-  })
+	})
 	patientTarget: string
 
 	@Column({
-    nullable: true,
+		type: 'string',
+		nullable: true,
 		name: 'address'
-  })
+	})
 	address: string
 
 	@Column({
-    nullable: true,
-		name: 'plh',
-		type: 'boolean'
-  })
+		type: 'boolean',
+		nullable: true,
+		name: 'plh'
+	})
 	plh: boolean
 
 	@Column({
-    nullable: true,
-		name: 'on_anti_tb',
-		type: 'boolean'
-  })
+		type: 'boolean',
+		nullable: true,
+		name: 'on_anti_tb'
+	})
 	onAntiTb: boolean
 
 	@Column({
-    nullable: true,
-		name: 'on_art',
-		type: 'boolean'
-  })
+		type: 'boolean',
+		nullable: true,
+		name: 'on_art'
+	})
 	onArt: boolean
 
 	@Column({
-    nullable: true,
-		name: 'expired_date',
-		type: 'timestamptz'
-  })
+		type: 'timestamptz',
+		nullable: true,
+		name: 'expired_date'
+	})
 	expiredDate: Date
 
 	@Column({
-    nullable: true,
+		type: 'string',
+		nullable: true,
 		name: 'place_of_patient_expired'
-  })
+	})
 	placeOfPatientExpired: string
 
 	@Column({
-    nullable: true,
+		type: 'string',
+		nullable: true,
 		name: 'cause_of_death'
-  })
+	})
 	causeOfDeath: string
 
 	@Column({
-    nullable: true,
-		name: 'hiv_related',
-		type: 'boolean'
-  })
+		type: 'boolean',
+		nullable: true,
+		name: 'hiv_related'
+	})
 	hivRelated: boolean
 
 	@Column({
-    nullable: true,
-		name: 'verify',
-		type: 'integer'
-  })
+		type: 'integer',
+		nullable: true,
+		name: 'verify'
+	})
 	verify: number
 
 	@Column({
-    nullable: true,
-		name: 'date_of_saving',
-		type: 'timestamptz'
-  })
+		type: 'timestamptz',
+		nullable: true,
+		name: 'date_of_saving'
+	})
 	dateOfSaving: Date
 
 }

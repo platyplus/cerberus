@@ -1,5 +1,5 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm'
+import { Entity, PrimaryGeneratedColumn, ManyToOne, JoinColumn, Column } from 'typeorm'
 import { ArtKey } from './ArtKey'
 
 @Entity()
@@ -7,29 +7,31 @@ export class ArtKeyHaartToxicity {
 	@PrimaryGeneratedColumn('uuid')
 	id: string
 
-	@Column({
-    nullable: true,
-		name: 'haart_toxicity'
-  })
-	haartToxicity: string
-
 	@ManyToOne(type => ArtKey, artKey => artKey.artKeyHaartToxicitys, {
-    eager: true
-  })
+		eager: true
+	})
 	@JoinColumn([{ name: 'mdmCode', referencedColumnName: 'mdmCode'}])
 	artKey: ArtKey
 
 	@Column({
-    nullable: true,
+		type: 'string',
+		nullable: true,
 		name: 'toxicity_grade'
-  })
+	})
 	toxicityGrade: string
 
 	@Column({
-    nullable: true,
-		name: 'toxicity_date',
-		type: 'timestamptz'
-  })
+		type: 'timestamptz',
+		nullable: true,
+		name: 'toxicity_date'
+	})
 	toxicityDate: Date
+
+	@Column({
+		type: 'string',
+		nullable: true,
+		name: 'haart_toxicity'
+	})
+	haartToxicity: string
 
 }

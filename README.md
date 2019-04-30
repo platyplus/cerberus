@@ -5,7 +5,7 @@
 - [ ] Metadata for lab
 - [x] Metadata for prevention
 - [x] Filter only excel files to be watched by chokidar
-- [ ] Split Property class to an abstract class + inherited classes e.g. OneToManyProperty etc
+- [x] Split Property class to an abstract class + inherited classes e.g. OneToManyProperty etc
 - [x] TbKeySample is not mapped correctly (different way to name repeated fields)
 - [x] small caps in columns before snake case
 - [x] Custom propery names, but with same excel column names. e.g. MdM Code
@@ -20,6 +20,7 @@
 - [ ] database column and table comments
 - [ ] migrations after generating new classes? (tricky as we need postgres to be running -> in the readme)
 - [ ] structure DIC data in a better way
+- [ ] handle enums?
 
 ## Installation
 

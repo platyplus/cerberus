@@ -1,5 +1,5 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm'
+import { Entity, PrimaryGeneratedColumn, ManyToOne, JoinColumn, Column } from 'typeorm'
 import { ArtKey } from './ArtKey'
 
 @Entity()
@@ -7,24 +7,24 @@ export class Apri {
 	@PrimaryGeneratedColumn('uuid')
 	id: string
 
-	@Column({
-    nullable: true,
-		name: 'date',
-		type: 'timestamptz'
-  })
-	date: Date
-
 	@ManyToOne(type => ArtKey, artKey => artKey.apris, {
-    eager: true
-  })
+		eager: true
+	})
 	@JoinColumn([{ name: 'mdmCode', referencedColumnName: 'mdmCode'}])
 	artKey: ArtKey
 
 	@Column({
-    nullable: true,
-		name: 'result',
-		type: 'integer'
-  })
+		type: 'integer',
+		nullable: true,
+		name: 'result'
+	})
 	result: number
+
+	@Column({
+		type: 'timestamptz',
+		nullable: true,
+		name: 'date'
+	})
+	date: Date
 
 }

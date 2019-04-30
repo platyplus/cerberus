@@ -1,5 +1,5 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm'
+import { Entity, PrimaryGeneratedColumn, ManyToOne, JoinColumn, Column } from 'typeorm'
 import { ArtKey } from './ArtKey'
 
 @Entity()
@@ -7,29 +7,31 @@ export class ArtKeyNewRegimen {
 	@PrimaryGeneratedColumn('uuid')
 	id: string
 
-	@Column({
-    nullable: true,
-		name: 'new_regimen'
-  })
-	newRegimen: string
-
 	@ManyToOne(type => ArtKey, artKey => artKey.artKeyNewRegimens, {
-    eager: true
-  })
+		eager: true
+	})
 	@JoinColumn([{ name: 'mdmCode', referencedColumnName: 'mdmCode'}])
 	artKey: ArtKey
 
 	@Column({
-    nullable: true,
-		name: 'change_regimen_date',
-		type: 'timestamptz'
-  })
+		type: 'timestamptz',
+		nullable: true,
+		name: 'change_regimen_date'
+	})
 	changeRegimenDate: Date
 
 	@Column({
-    nullable: true,
+		type: 'string',
+		nullable: true,
 		name: 'change_reason'
-  })
+	})
 	changeReason: string
+
+	@Column({
+		type: 'string',
+		nullable: true,
+		name: 'new_regimen'
+	})
+	newRegimen: string
 
 }

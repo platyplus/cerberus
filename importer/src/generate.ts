@@ -2,85 +2,151 @@ import _ from 'lodash'
 import { readFile, utils } from 'xlsx'
 import fs from 'fs'
 import rimraf from 'rimraf'
-import { mergeArray, entityName, writeFilePromise, getType } from './helpers'
-import { Row, Mapping } from './excel-metadata'
+import {
+  mergeArray,
+  entityName,
+  writeFilePromise,
+  getType,
+  getName,
+  relationName
+} from './helpers'
+import { Row, Mapping, ColumnMapping } from './excel-metadata'
+import { Column } from 'typeorm'
+import { mergeParams } from 'csvtojson/v2/Parameters'
 const log = console.log.bind(console, `[${new Date().toLocaleString()}]`)
 
 // Constants
 const METADATA_FILE = 'metadata.xlsx'
 const DEST_FOLDER = './src/entity'
+
 // Classes
-class Property {
+abstract class Property {
   parent: Entity
   name: string
-  type: string = 'string'
-  isOneToMany?: boolean
-  isManyToOne?: boolean
-  isPk?: boolean
-  relation?: Property
-  constructor(parent: Entity, name: string) {
+  type: string
+  isPk: boolean
+  constructor(row: Row, parent: Entity) {
     this.parent = parent
-    this.name = _.camelCase(name)
+    this.name = getName(row)
+    this.type = getType(row)
+    this.isPk = row.constraint === 'pk'
+    parent.properties.push(this)
   }
-  annotations(): string {
-    let annotation = ''
-    let params = ''
-    if (this.relation) {
-      annotation = this.isManyToOne ? 'ManyToOne' : 'OneToMany'
-      params = `type => ${this.type}, ${_.lowerFirst(
-        this.type
-      )} => ${_.lowerFirst(this.type)}.${this.relation.name}, `
-    } else {
-      annotation = this.isPk ? 'PrimaryColumn' : 'Column'
-    }
-    let other = ''
-    if (this.isManyToOne) {
-      if (this.relation) {
-        const fks = this.relation.parent
-          .pkProperties()
-          .map(
-            prop =>
-              `{ name: '${prop.strName()}', referencedColumnName: '${prop.strName()}'}`
-          )
-        other += `\n\t@JoinColumn([${fks.join(', ')}])`
-      }
-    }
-    return `\t@${annotation}(${params}${this.strColumnOptions()})${other}`
+  abstract dependencies(): { [key: string]: string[] }
+  abstract decorators(): string
+  abstract columnOptions(): string[]
+  strType() {
+    return this.type
   }
-  strColumnOptions(): string {
-    let options = []
-    if (this.isOneToMany) {
-      options.push('cascade: true')
-    } else if (this.isManyToOne) {
-      options.push('eager: true')
-    } else {
-      if (!this.isPk) options.push('nullable: true')
-      options.push(`name: '${_.snakeCase(this.name)}'`)
-    }
-    if (this.type === 'number') options.push("type: 'integer'")
-    else if (this.type === 'Date') options.push("type: 'timestamptz'")
-    else if (this.type === 'boolean') options.push("type: 'boolean'")
-    return `{
-    ${options.join(',\n\t\t')}
-  }`
+  strColumnOptions() {
+    return `{\n\t\t${this.columnOptions().join(',\n\t\t')}\n\t}`
   }
-  dependencies = () =>
-    this.relation
-      ? {
-          [`./${this.type}`]: [this.type],
-          typeorm: this.isManyToOne
-            ? ['ManyToOne', 'JoinColumn']
-            : ['OneToMany']
-        }
-      : { typeorm: [this.isPk ? 'PrimaryColumn' : 'Column'] }
 
-  strType = () => (this.isOneToMany ? `${this.type}[]` : this.type)
+  strName() {
+    return this.name.match(/^\d/) ? `'${this.name}'` : this.name
+  }
+  render = () =>
+    `${this.decorators()}\n\t${this.strName() + ': ' + this.strType()}\n\n`
+}
 
-  strName = () => (this.name.match(/^\d/) ? `'${this.name}'` : this.name)
+class SimpleProperty extends Property {
+  columnName: string
+  constructor(row: Row, parent: Entity) {
+    super(row, parent)
+    this.columnName = row.excel_name
+  }
+  dependencies() {
+    return { typeorm: [this.isPk ? 'PrimaryColumn' : 'Column'] }
+  }
+  decorators() {
+    return `\t@${
+      this.isPk ? 'PrimaryColumn' : 'Column'
+    }(${this.strColumnOptions()})`
+  }
 
-  strDeclaration = () => this.strName() + ': ' + this.strType()
+  columnOptions() {
+    const optionTypes = {
+      number: 'integer',
+      Date: 'timestamptz',
+      boolean: 'boolean'
+    } as { [key: string]: string }
+    let options = [`type: '${optionTypes[this.type] || 'string'}'`]
+    if (!this.isPk) options.push('nullable: true')
+    options.push(`name: '${_.snakeCase(this.name)}'`)
+    return options
+  }
+}
 
-  render = () => `${this.annotations()}\n\t${this.strDeclaration()}\n\n`
+abstract class RelationProperty extends Property {
+  relation: RelationProperty
+  constructor(row: Row, parent: Entity, relation?: RelationProperty) {
+    super(row, parent)
+    if (relation) this.relation = relation
+  }
+  dependencies() {
+    return {
+      [`./${this.type}`]: [this.type]
+    }
+  }
+  strColumnOptions() {
+    return `type => ${this.type}, ${_.lowerFirst(this.type)} => ${_.lowerFirst(
+      this.type
+    )}.${this.relation.strName()}, ${super.strColumnOptions()}`
+  }
+}
+
+class OneToManyProperty extends RelationProperty {
+  constructor(row: Row, parent: Entity, relationEntity: Entity) {
+    super(row, parent)
+    this.name = _.camelCase(row.relation)
+    this.type = entityName(row.relation)
+    this.relation =
+      <RelationProperty>relationEntity.findProperty(row.relation) ||
+      new ManyToOneProperty(row, relationEntity, this)
+  }
+  dependencies() {
+    return {
+      ...super.dependencies(),
+      typeorm: ['OneToMany']
+    }
+  }
+  strType() {
+    return super.strType() + '[]'
+  }
+  strName() {
+    return super.strName() + 's'
+  }
+  columnOptions() {
+    return ['cascade: true']
+  }
+  decorators() {
+    return `\t@OneToMany(${this.strColumnOptions()})`
+  }
+}
+class ManyToOneProperty extends RelationProperty {
+  constructor(row: Row, parent: Entity, relation: OneToManyProperty) {
+    super(row, parent, relation)
+    this.name = _.camelCase(row.form)
+    this.type = _.upperFirst(_.camelCase(row.form))
+  }
+  dependencies() {
+    return {
+      ...super.dependencies(),
+      typeorm: ['ManyToOne', 'JoinColumn']
+    }
+  }
+  columnOptions() {
+    return ['eager: true']
+  }
+  decorators() {
+    const fks = this.relation.parent
+      .pkProperties()
+      .map(
+        p => `{ name: '${p.strName()}', referencedColumnName: '${p.strName()}'}`
+      )
+      .join(', ')
+    return `\t@ManyToOne(${this.strColumnOptions()})\n\t@JoinColumn([${fks}])`
+  }
 }
 
 class Entity {
@@ -89,49 +155,27 @@ class Entity {
   constructor(name: string) {
     this.name = entityName(name)
   }
+
   dependencies = () => ({
     typeorm: _.isEmpty(this.pkProperties())
       ? ['Entity', 'PrimaryGeneratedColumn']
       : ['Entity', 'PrimaryColumn']
   })
-  findOrCreateProperty(
-    rawName: string,
-    type: string,
-    constraint?: string
-  ): Property {
-    const name = _.camelCase(rawName)
-    let property = this.properties.find(curs => curs.name === name)
-    if (!property) {
-      property = new Property(this, name)
-      this.properties.push(property)
-    }
-    property.type = type
-    if (constraint && constraint === 'pk') property.isPk = true
-    return property
-  }
-  pushOneToManyProperty(row: Row, relation: Entity): Property {
-    const relationName = `${_.camelCase(row.relation)}s`
-    const relationType = entityName(row.relation)
-    let oneToManyProperty = this.findOrCreateProperty(
-      relationName,
-      relationType,
-      row.constraint
-    )
 
-    oneToManyProperty.isOneToMany = true
-    const name = _.camelCase(row.form)
-    const type = entityName(row.form)
-    let manyToOneProperty = relation.findOrCreateProperty(
-      name,
-      type,
-      row.constraint
-    )
-    manyToOneProperty.isManyToOne = true
+  findProperty = (prop: string) =>
+    this.properties.find(p => p.name === _.camelCase(prop).replace(/\d+$/, ''))
 
-    oneToManyProperty.relation = manyToOneProperty
-    manyToOneProperty.relation = oneToManyProperty
-    return oneToManyProperty
+  push = (row: Row, repository: EntityManager) => {
+    if (row.relation) {
+      let relationEntity = repository.findOrCreate(row.relation)
+      if (!this.findProperty(row.relation))
+        return new OneToManyProperty(row, this, relationEntity)
+      if (!relationEntity.findProperty(row.property_name))
+        return new SimpleProperty(row, relationEntity)
+    } else if (!this.findProperty(row.property_name))
+      return new SimpleProperty(row, this)
   }
+
   pkProperties = () => this.properties.filter(property => property.isPk)
 
   render(): string {
@@ -145,7 +189,6 @@ class Entity {
       ? "\t@PrimaryGeneratedColumn('uuid')\n\tid: string\n\n"
       : ''
     const strProps = this.properties.map(p => p.render()).join('')
-
     return `// AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
 ${strDependencies}\n
 @Entity()
@@ -156,6 +199,7 @@ export class ${this.name} {\n${strPk}${strProps}}\n`
 class EntityManager {
   entities: Entity[] = new Array<Entity>()
   mapping: Mapping[] = []
+
   findOrCreate(rawName: string): Entity {
     let entity = this.entities.find(curs => curs.name === entityName(rawName))
     if (!entity) {
@@ -164,11 +208,11 @@ class EntityManager {
     }
     return entity
   }
-  pushRow(row: Row): Entity {
+
+  pushRow(row: Row): void {
     let entity = this.findOrCreate(row.form)
-    let entityMapping: Mapping | undefined = this.mapping.find(
-      curs => curs.file === row.form
-    )
+    let property = <Property>entity.push(row, this)
+    let entityMapping = this.mapping.find(m => m.entity === entity.name)
     if (!entityMapping) {
       entityMapping = {
         file: row.form,
@@ -177,42 +221,16 @@ class EntityManager {
       }
       this.mapping.push(entityMapping)
     }
-    let propertyMapping = entityMapping.columns.find(
-      curs => curs.column === row.excel_name
-    )
-    const type = getType(row)
-    if (!propertyMapping) {
-      propertyMapping = {
+    if (!entityMapping.columns.find(c => c.column === row.excel_name)) {
+      entityMapping.columns.push({
         column: row.excel_name,
-        property: '',
-        type
-      }
-      entityMapping.columns.push(propertyMapping)
+        relation: row.relation && relationName(row.relation) + 's',
+        property: getName(row),
+        type: getType(row)
+      })
     }
-    const propertyName = (row.property_name || row.excel_name).replace(
-      /\d+$/,
-      ''
-    )
-    if (row.relation) {
-      let relationEntity = this.findOrCreate(row.relation)
-      let relationProperty = relationEntity.findOrCreateProperty(
-        propertyName,
-        type,
-        row.constraint
-      )
-      let property = entity.pushOneToManyProperty(row, relationEntity)
-      propertyMapping.relation = property.name
-      propertyMapping.property = relationProperty.name
-    } else {
-      let property = entity.findOrCreateProperty(
-        propertyName,
-        type,
-        row.constraint
-      )
-      propertyMapping.property = property.name
-    }
-    return entity
   }
+
   import(fileName: string): void {
     log(`Generating from ${fileName}...`)
     const workbook = readFile(fileName)
@@ -222,6 +240,7 @@ class EntityManager {
       this.pushRow(row)
     }
   }
+
   renderIndex(): string {
     const imports = this.entities.map(
       entity => `import { ${entity.name} } from './${entity.name}'`
@@ -234,6 +253,7 @@ export const classes: { [key: string]: any } = {
   ${classes.join(',\n\t')}
 }`
   }
+
   async export() {
     rimraf.sync(DEST_FOLDER)
     fs.mkdir(DEST_FOLDER, { recursive: true }, err => {})

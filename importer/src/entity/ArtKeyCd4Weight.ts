@@ -1,5 +1,5 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm'
+import { Entity, PrimaryGeneratedColumn, ManyToOne, JoinColumn, Column } from 'typeorm'
 import { ArtKey } from './ArtKey'
 
 @Entity()
@@ -7,31 +7,31 @@ export class ArtKeyCd4Weight {
 	@PrimaryGeneratedColumn('uuid')
 	id: string
 
-	@Column({
-    nullable: true,
-		name: 'date',
-		type: 'timestamptz'
-  })
-	date: Date
-
 	@ManyToOne(type => ArtKey, artKey => artKey.artKeyCd4Weights, {
-    eager: true
-  })
+		eager: true
+	})
 	@JoinColumn([{ name: 'mdmCode', referencedColumnName: 'mdmCode'}])
 	artKey: ArtKey
 
 	@Column({
-    nullable: true,
-		name: 'cd_4',
-		type: 'integer'
-  })
-	cd4: number
+		type: 'integer',
+		nullable: true,
+		name: 'cd'
+	})
+	cd: number
 
 	@Column({
-    nullable: true,
-		name: 'weight',
-		type: 'integer'
-  })
+		type: 'integer',
+		nullable: true,
+		name: 'weight'
+	})
 	weight: number
+
+	@Column({
+		type: 'timestamptz',
+		nullable: true,
+		name: 'date'
+	})
+	date: Date
 
 }

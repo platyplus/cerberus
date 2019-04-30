@@ -1,5 +1,5 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm'
+import { Entity, PrimaryGeneratedColumn, ManyToOne, JoinColumn, Column } from 'typeorm'
 import { ArtKey } from './ArtKey'
 
 @Entity()
@@ -7,50 +7,52 @@ export class ArtKeyAttb {
 	@PrimaryGeneratedColumn('uuid')
 	id: string
 
-	@Column({
-    nullable: true,
-		name: 'tb'
-  })
-	tb: string
-
 	@ManyToOne(type => ArtKey, artKey => artKey.artKeyAttbs, {
-    eager: true
-  })
+		eager: true
+	})
 	@JoinColumn([{ name: 'mdmCode', referencedColumnName: 'mdmCode'}])
 	artKey: ArtKey
 
 	@Column({
-    nullable: true,
+		type: 'string',
+		nullable: true,
 		name: 'attb_regimen'
-  })
+	})
 	attbRegimen: string
 
 	@Column({
-    nullable: true,
-		name: 'date_of_diagnosis',
-		type: 'timestamptz'
-  })
+		type: 'timestamptz',
+		nullable: true,
+		name: 'date_of_diagnosis'
+	})
 	dateOfDiagnosis: Date
 
 	@Column({
-    nullable: true,
-		name: 'end_date_of_attb_ip',
-		type: 'timestamptz'
-  })
+		type: 'timestamptz',
+		nullable: true,
+		name: 'end_date_of_attb_ip'
+	})
 	endDateOfAttbIp: Date
 
 	@Column({
-    nullable: true,
-		name: 'end_date_of_attb_cp',
-		type: 'timestamptz'
-  })
+		type: 'timestamptz',
+		nullable: true,
+		name: 'end_date_of_attb_cp'
+	})
 	endDateOfAttbCp: Date
 
 	@Column({
-    nullable: true,
-		name: 'dateof_diagnosis',
-		type: 'timestamptz'
-  })
+		type: 'string',
+		nullable: true,
+		name: 'tb'
+	})
+	tb: string
+
+	@Column({
+		type: 'timestamptz',
+		nullable: true,
+		name: 'dateof_diagnosis'
+	})
 	dateofDiagnosis: Date
 
 }
