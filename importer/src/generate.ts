@@ -10,9 +10,7 @@ import {
   getName,
   relationName
 } from './helpers'
-import { Row, Mapping, ColumnMapping } from './excel-metadata'
-import { Column } from 'typeorm'
-import { mergeParams } from 'csvtojson/v2/Parameters'
+import { Row, Mapping } from './excel-metadata'
 const log = console.log.bind(console, `[${new Date().toLocaleString()}]`)
 
 // Constants
@@ -211,7 +209,7 @@ class EntityManager {
 
   pushRow(row: Row): void {
     let entity = this.findOrCreate(row.form)
-    let property = <Property>entity.push(row, this)
+    entity.push(row, this)
     let entityMapping = this.mapping.find(m => m.entity === entity.name)
     if (!entityMapping) {
       entityMapping = {
