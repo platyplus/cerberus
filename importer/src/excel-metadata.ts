@@ -5,6 +5,8 @@ export interface Row {
   excel_name: string
   property_name: string
   property_type: string
+  group_names: string
+  group_values: string
 }
 
 export interface ColumnMapping {
@@ -19,3 +21,15 @@ export interface Mapping {
   entity: string
   columns: ColumnMapping[]
 }
+
+export const emptyRow = () =>
+  ({
+    form: '',
+    relation: '',
+    constraint: '',
+    excel_name: '',
+    property_name: '',
+    property_type: '',
+    group_names: '',
+    group_values: ''
+  } as Row)

@@ -23,6 +23,7 @@ import { ArtKeyResult } from './ArtKeyResult'
 import { Apri } from './Apri'
 import { DeathRegister } from './DeathRegister'
 import { DicData } from './DicData'
+import { DicDataRow } from './DicDataRow'
 import { GateAttendance } from './GateAttendance'
 import { GeneralHeathCareGhc } from './GeneralHeathCareGhc'
 import { GhcCategory } from './GhcCategory'
@@ -63,6 +64,7 @@ export const classes: { [key: string]: any } = {
 	'Apri': Apri,
 	'DeathRegister': DeathRegister,
 	'DicData': DicData,
+	'DicDataRow': DicDataRow,
 	'GateAttendance': GateAttendance,
 	'GeneralHeathCareGhc': GeneralHeathCareGhc,
 	'GhcCategory': GhcCategory,

@@ -10,7 +10,7 @@ import {
   getName,
   relationName
 } from './helpers'
-import { Row, Mapping } from './excel-metadata'
+import { Row, Mapping, emptyRow } from './excel-metadata'
 const log = console.log.bind(console, `[${new Date().toLocaleString()}]`)
 
 // Constants
@@ -27,7 +27,7 @@ abstract class Property {
     this.parent = parent
     this.name = getName(row)
     this.type = getType(row)
-    this.isPk = row.constraint === 'pk'
+    this.isPk = _.split(row.constraint, ';').includes('pk')
     parent.properties.push(this)
   }
   abstract dependencies(): { [key: string]: string[] }
@@ -75,6 +75,36 @@ class SimpleProperty extends Property {
   }
 }
 
+class EnumProperty extends SimpleProperty {
+  defaultValue?: string
+  options: string[]
+  constructor(
+    row: Row,
+    parent: Entity,
+    options: string[] = [],
+    defaultValue?: string
+  ) {
+    super(row, parent)
+    this.columnName = row.excel_name
+    this.type = `${_.upperFirst(this.name)}Enum`
+    this.options = options
+    this.defaultValue = defaultValue
+  }
+  columnOptions(): string[] {
+    let colOptions = super.columnOptions()
+    let options = this.options.map(
+      option => `'${_.replace(option, "'", "\\'")}'`
+    )
+    colOptions.push(`enum: [${options.join(', ')}]`)
+    if (this.defaultValue)
+      colOptions.push(`default: '${_.replace(this.defaultValue, "'", "\\'")}'`)
+    return colOptions
+  }
+  addOption(option: string) {
+    if (!_.isEmpty(option) && !this.options.includes(option))
+      this.options.push(option)
+  }
+}
 abstract class RelationProperty extends Property {
   relation: RelationProperty
   constructor(row: Row, parent: Entity, relation?: RelationProperty) {
@@ -147,6 +177,26 @@ class ManyToOneProperty extends RelationProperty {
   }
 }
 
+const createGroupRelations = (entity: Entity, row: Row) => {
+  if (row.group_names && row.group_values) {
+    let groups = _.zipObject(
+      _.split(row.group_names, ';').map(s => _.trim(s)),
+      _.split(row.group_values, ';').map(s => _.trim(s))
+    )
+    let r = emptyRow()
+    for (let key of Object.keys(groups)) {
+      let enumPropery = <EnumProperty>entity.findProperty(relationName(key))
+      if (!enumPropery) {
+        r.form = row.form
+        r.property_name = relationName(key)
+        r.property_type = entityName(key)
+        enumPropery = new EnumProperty(r, entity)
+      }
+      enumPropery.addOption(groups[key])
+    }
+  }
+}
+
 class Entity {
   name: string
   properties: Property[] = []
@@ -166,31 +216,49 @@ class Entity {
   push = (row: Row, repository: EntityManager) => {
     if (row.relation) {
       let relationEntity = repository.findOrCreate(row.relation)
+      createGroupRelations(relationEntity, row)
       if (!this.findProperty(row.relation))
         return new OneToManyProperty(row, this, relationEntity)
       if (!relationEntity.findProperty(row.property_name))
         return new SimpleProperty(row, relationEntity)
-    } else if (!this.findProperty(row.property_name))
-      return new SimpleProperty(row, this)
+    } else {
+      createGroupRelations(this, row)
+      if (!this.findProperty(row.property_name))
+        return new SimpleProperty(row, this)
+    }
   }
 
-  pkProperties = () => this.properties.filter(property => property.isPk)
+  pkProperties = () => this.properties.filter(p => p.isPk)
 
   render(): string {
+    let result =
+      '// AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST\n'
     let dependencies = this.dependencies()
     for (let prop of this.properties)
       dependencies = _.mergeWith(dependencies, prop.dependencies(), mergeArray)
-    const strDependencies = Object.keys(dependencies)
-      .map(k => `import { ${(<any>dependencies)[k].join(', ')} } from '${k}'`)
-      .join('\n')
+    result +=
+      Object.keys(dependencies)
+        .map(k => `import { ${(<any>dependencies)[k].join(', ')} } from '${k}'`)
+        .join('\n') + '\n\n'
+    const enumProperties = <EnumProperty[]>(
+      this.properties.filter(p => p instanceof EnumProperty)
+    )
+    let strEnumClasses = enumProperties
+      .map(p => {
+        const options = p.options
+          .map(o => `\n\t${_.snakeCase(o).toUpperCase()} = '${o}'`)
+          .join(', ')
+        return `export enum ${p.type} { ${options} \n}`
+      })
+      .join('\n\n')
+    if (strEnumClasses) result += strEnumClasses + '\n\n'
+    result += '@Entity()\n'
     const strPk = _.isEmpty(this.pkProperties())
       ? "\t@PrimaryGeneratedColumn('uuid')\n\tid: string\n\n"
       : ''
     const strProps = this.properties.map(p => p.render()).join('')
-    return `// AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-${strDependencies}\n
-@Entity()
-export class ${this.name} {\n${strPk}${strProps}}\n`
+    result += `export class ${this.name} {\n${strPk}${strProps}}\n`
+    return result
   }
 }
 

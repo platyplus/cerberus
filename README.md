@@ -19,8 +19,8 @@
 - [x] yes/no -> boolean
 - [ ] database column and table comments
 - [ ] migrations after generating new classes? (tricky as we need postgres to be running -> in the readme)
-- [ ] structure DIC data in a better way
-- [ ] handle enums?
+- [x] structure DIC data in a better way
+- [ ] handle enums? => generation ok, import to be done
 
 ## Installation
 
