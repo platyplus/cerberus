@@ -20,7 +20,7 @@
 - [ ] database column and table comments
 - [ ] migrations after generating new classes? (tricky as we need postgres to be running -> in the readme)
 - [x] structure DIC data in a better way
-- [ ] handle enums? => generation ok, import to be done
+- [ ] handle group enums => generation ok, import to be done. But no simple property with type enum!
 
 ## Installation
 
