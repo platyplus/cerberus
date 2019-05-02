@@ -465,7 +465,7 @@
       },
       {
         "column": "89. ADH_AlcoholLastUse",
-        "relation": "drugTypes",
+        "relation": "drugUsages",
         "property": "lastUse",
         "type": "Date",
         "entityValues": {

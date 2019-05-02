@@ -31,6 +31,13 @@ export class DrugUsage {
 	artAdherence: ArtAdherence
 
 	@Column({
+		name: 'times_day',
+		type: 'integer',
+		nullable: true
+	})
+	timesDay: number
+
+	@Column({
 		name: 'days_week',
 		type: 'integer',
 		nullable: true
@@ -49,12 +56,5 @@ export class DrugUsage {
 		nullable: true
 	})
 	lastUse: Date
-
-	@Column({
-		name: 'times_day',
-		type: 'integer',
-		nullable: true
-	})
-	timesDay: number
 
 }

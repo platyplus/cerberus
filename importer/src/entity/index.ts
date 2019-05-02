@@ -1,7 +1,6 @@
 import { ArtAdherence } from './ArtAdherence'
 import { AdhArtEpisode } from './AdhArtEpisode'
 import { AdhTbEpisode } from './AdhTbEpisode'
-import { DrugType } from './DrugType'
 import { DrugUsage } from './DrugUsage'
 import { ArtConsultationPlha } from './ArtConsultationPlha'
 import { ArtAntiRetroMedicineTaken } from './ArtAntiRetroMedicineTaken'
@@ -44,7 +43,6 @@ export const classes: { [key: string]: any } = {
   'ArtAdherence': ArtAdherence,
 	'AdhArtEpisode': AdhArtEpisode,
 	'AdhTbEpisode': AdhTbEpisode,
-	'DrugType': DrugType,
 	'DrugUsage': DrugUsage,
 	'ArtConsultationPlha': ArtConsultationPlha,
 	'ArtAntiRetroMedicineTaken': ArtAntiRetroMedicineTaken,

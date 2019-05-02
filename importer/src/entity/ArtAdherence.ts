@@ -2,7 +2,6 @@
 import { Entity, PrimaryColumn, Column, OneToMany } from 'typeorm'
 import { AdhArtEpisode } from './AdhArtEpisode'
 import { AdhTbEpisode } from './AdhTbEpisode'
-import { DrugType } from './DrugType'
 import { DrugUsage } from './DrugUsage'
 
 @Entity()
@@ -448,11 +447,6 @@ export class ArtAdherence {
 		nullable: true
 	})
 	drug: string
-
-	@OneToMany(type => DrugType, drugType => drugType.artAdherence, {
-		cascade: true
-	})
-	drugTypes: DrugType[]
 
 	@OneToMany(type => DrugUsage, drugUsage => drugUsage.artAdherence, {
 		cascade: true
