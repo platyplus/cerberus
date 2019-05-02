@@ -57,18 +57,18 @@ export class GeneralHeathCareGhc {
 	age: number
 
 	@Column({
-		name: 'ghc_new_patient',
+		name: 'is_new_patient',
 		type: 'boolean',
 		nullable: true
 	})
-	ghcNewPatient: boolean
+	isNewPatient: boolean
 
 	@Column({
-		name: 'ghc_visit_date',
+		name: 'visit_date',
 		type: 'timestamptz',
 		nullable: true
 	})
-	ghcVisitDate: Date
+	visitDate: Date
 
 	@Column({
 		name: 'mdm_staff',

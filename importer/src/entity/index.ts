@@ -1,6 +1,5 @@
 import { ArtAdherence } from './ArtAdherence'
-import { AdhArtEpisode } from './AdhArtEpisode'
-import { AdhTbEpisode } from './AdhTbEpisode'
+import { TreatmentEpisode } from './TreatmentEpisode'
 import { DrugUsage } from './DrugUsage'
 import { ArtConsultationPlha } from './ArtConsultationPlha'
 import { ArtAntiRetroMedicineTaken } from './ArtAntiRetroMedicineTaken'
@@ -8,16 +7,14 @@ import { ArtAntiBioMedicineCode } from './ArtAntiBioMedicineCode'
 import { ArtAntiTbMedicineCode } from './ArtAntiTbMedicineCode'
 import { ArtTreatment } from './ArtTreatment'
 import { ArtStage } from './ArtStage'
-import { ArtGhcDiagnosis } from './ArtGhcDiagnosis'
+import { Diagnosis } from './Diagnosis'
 import { TbSputum } from './TbSputum'
-import { ArtArtMedication } from './ArtArtMedication'
-import { ArtTbMedication } from './ArtTbMedication'
-import { ArtOthMedication } from './ArtOthMedication'
+import { Medication } from './Medication'
 import { ArtKey } from './ArtKey'
-import { ArtKeyCd4Weight } from './ArtKeyCd4Weight'
-import { ArtKeyNewRegimen } from './ArtKeyNewRegimen'
-import { ArtKeyHaartToxicity } from './ArtKeyHaartToxicity'
-import { ArtKeyStop } from './ArtKeyStop'
+import { Cd4Measurement } from './Cd4Measurement'
+import { Regimen } from './Regimen'
+import { HaartToxicity } from './HaartToxicity'
+import { TreatmentInterruption } from './TreatmentInterruption'
 import { ArtKeyAttb } from './ArtKeyAttb'
 import { OtherOIs } from './OtherOIs'
 import { ArtKeyResult } from './ArtKeyResult'
@@ -41,8 +38,7 @@ import { VcctDrugType } from './VcctDrugType'
 
 export const classes: { [key: string]: any } = {
   'ArtAdherence': ArtAdherence,
-	'AdhArtEpisode': AdhArtEpisode,
-	'AdhTbEpisode': AdhTbEpisode,
+	'TreatmentEpisode': TreatmentEpisode,
 	'DrugUsage': DrugUsage,
 	'ArtConsultationPlha': ArtConsultationPlha,
 	'ArtAntiRetroMedicineTaken': ArtAntiRetroMedicineTaken,
@@ -50,16 +46,14 @@ export const classes: { [key: string]: any } = {
 	'ArtAntiTbMedicineCode': ArtAntiTbMedicineCode,
 	'ArtTreatment': ArtTreatment,
 	'ArtStage': ArtStage,
-	'ArtGhcDiagnosis': ArtGhcDiagnosis,
+	'Diagnosis': Diagnosis,
 	'TbSputum': TbSputum,
-	'ArtArtMedication': ArtArtMedication,
-	'ArtTbMedication': ArtTbMedication,
-	'ArtOthMedication': ArtOthMedication,
+	'Medication': Medication,
 	'ArtKey': ArtKey,
-	'ArtKeyCd4Weight': ArtKeyCd4Weight,
-	'ArtKeyNewRegimen': ArtKeyNewRegimen,
-	'ArtKeyHaartToxicity': ArtKeyHaartToxicity,
-	'ArtKeyStop': ArtKeyStop,
+	'Cd4Measurement': Cd4Measurement,
+	'Regimen': Regimen,
+	'HaartToxicity': HaartToxicity,
+	'TreatmentInterruption': TreatmentInterruption,
 	'ArtKeyAttb': ArtKeyAttb,
 	'OtherOIs': OtherOIs,
 	'ArtKeyResult': ArtKeyResult,

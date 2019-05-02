@@ -1,30 +1,42 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, ManyToOne, JoinColumn, Column } from 'typeorm'
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm'
 import { ArtAdherence } from './ArtAdherence'
 
+export enum TreatmentTypeEnum { 
+	ART = 'art', 
+	TB = 'tb' 
+}
+
 @Entity()
-export class AdhTbEpisode {
+export class TreatmentEpisode {
 	@PrimaryGeneratedColumn('uuid')
 	id: string
 
-	@ManyToOne(type => ArtAdherence, artAdherence => artAdherence.adhTbEpisodes, {
+	@Column({
+		name: 'treatment_type',
+		nullable: true,
+		enum: ['art', 'tb']
+	})
+	treatmentType: TreatmentTypeEnum
+
+	@ManyToOne(type => ArtAdherence, artAdherence => artAdherence.treatmentEpisodes, {
 		eager: true
 	})
 	@JoinColumn([{ name: 'mdmCode', referencedColumnName: 'mdmCode'}, { name: 'placeOfMedicalCare', referencedColumnName: 'placeOfMedicalCare'}, { name: 'visitDate', referencedColumnName: 'visitDate'}])
 	artAdherence: ArtAdherence
 
 	@Column({
-		name: 'tb_restarting_date',
+		name: 'restarting_date',
 		type: 'timestamptz',
 		nullable: true
 	})
-	tbRestartingDate: Date
+	restartingDate: Date
 
 	@Column({
-		name: 'tb_stop_date',
+		name: 'stop_date',
 		type: 'timestamptz',
 		nullable: true
 	})
-	tbStopDate: Date
+	stopDate: Date
 
 }

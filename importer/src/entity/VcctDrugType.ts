@@ -14,21 +14,21 @@ export class VcctDrugType {
 	vcct: Vcct
 
 	@Column({
-		name: 'vcct_drug_name',
+		name: 'drug_name',
 		nullable: true
 	})
-	vcctDrugName: string
+	drugName: string
 
 	@Column({
-		name: 'vcct_way_of_use',
+		name: 'way_of_use',
 		nullable: true
 	})
-	vcctWayOfUse: string
+	wayOfUse: string
 
 	@Column({
-		name: 'vcct_type_of_drugs',
+		name: 'type_of_drugs',
 		nullable: true
 	})
-	vcctTypeOfDrugs: string
+	typeOfDrugs: string
 
 }

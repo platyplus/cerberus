@@ -1,9 +1,8 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
 import { Entity, PrimaryColumn, Column, OneToMany } from 'typeorm'
-import { ArtKeyCd4Weight } from './ArtKeyCd4Weight'
-import { ArtKeyNewRegimen } from './ArtKeyNewRegimen'
-import { ArtKeyHaartToxicity } from './ArtKeyHaartToxicity'
-import { ArtKeyStop } from './ArtKeyStop'
+import { Cd4Measurement } from './Cd4Measurement'
+import { HaartToxicity } from './HaartToxicity'
+import { TreatmentInterruption } from './TreatmentInterruption'
 import { ArtKeyAttb } from './ArtKeyAttb'
 import { OtherOIs } from './OtherOIs'
 import { ArtKeyResult } from './ArtKeyResult'
@@ -137,10 +136,10 @@ export class ArtKey {
 	})
 	baselineCd: number
 
-	@OneToMany(type => ArtKeyCd4Weight, artKeyCd4Weight => artKeyCd4Weight.artKey, {
+	@OneToMany(type => Cd4Measurement, cd4Measurement => cd4Measurement.artKey, {
 		cascade: true
 	})
-	artKeyCd4Weights: ArtKeyCd4Weight[]
+	cd4Measurements: Cd4Measurement[]
 
 	@Column({
 		name: 'last_cd',
@@ -230,15 +229,10 @@ export class ArtKey {
 	})
 	mdmHaartStartDate: Date
 
-	@OneToMany(type => ArtKeyNewRegimen, artKeyNewRegimen => artKeyNewRegimen.artKey, {
+	@OneToMany(type => HaartToxicity, haartToxicity => haartToxicity.artKey, {
 		cascade: true
 	})
-	artKeyNewRegimens: ArtKeyNewRegimen[]
-
-	@OneToMany(type => ArtKeyHaartToxicity, artKeyHaartToxicity => artKeyHaartToxicity.artKey, {
-		cascade: true
-	})
-	artKeyHaartToxicitys: ArtKeyHaartToxicity[]
+	haartToxicitys: HaartToxicity[]
 
 	@Column({
 		name: 'methadone',
@@ -253,10 +247,10 @@ export class ArtKey {
 	})
 	treatmentInteruption: boolean
 
-	@OneToMany(type => ArtKeyStop, artKeyStop => artKeyStop.artKey, {
+	@OneToMany(type => TreatmentInterruption, treatmentInterruption => treatmentInterruption.artKey, {
 		cascade: true
 	})
-	artKeyStops: ArtKeyStop[]
+	treatmentInterruptions: TreatmentInterruption[]
 
 	@OneToMany(type => ArtKeyAttb, artKeyAttb => artKeyAttb.artKey, {
 		cascade: true

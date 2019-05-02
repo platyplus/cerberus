@@ -3,26 +3,26 @@ import { Entity, PrimaryGeneratedColumn, ManyToOne, JoinColumn, Column } from 't
 import { ArtConsultationPlha } from './ArtConsultationPlha'
 
 @Entity()
-export class ArtGhcDiagnosis {
+export class Diagnosis {
 	@PrimaryGeneratedColumn('uuid')
 	id: string
 
-	@ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.artGhcDiagnosiss, {
+	@ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.diagnosiss, {
 		eager: true
 	})
 	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
 	artConsultationPlha: ArtConsultationPlha
 
 	@Column({
-		name: 'art_ghc_dia_description',
+		name: 'description',
 		nullable: true
 	})
-	artGhcDiaDescription: string
+	description: string
 
 	@Column({
-		name: 'art_ghc_dia_code',
+		name: 'code',
 		nullable: true
 	})
-	artGhcDiaCode: string
+	code: string
 
 }

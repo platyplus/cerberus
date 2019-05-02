@@ -5,11 +5,9 @@ import { ArtAntiBioMedicineCode } from './ArtAntiBioMedicineCode'
 import { ArtAntiTbMedicineCode } from './ArtAntiTbMedicineCode'
 import { ArtTreatment } from './ArtTreatment'
 import { ArtStage } from './ArtStage'
-import { ArtGhcDiagnosis } from './ArtGhcDiagnosis'
+import { Diagnosis } from './Diagnosis'
 import { TbSputum } from './TbSputum'
-import { ArtArtMedication } from './ArtArtMedication'
-import { ArtTbMedication } from './ArtTbMedication'
-import { ArtOthMedication } from './ArtOthMedication'
+import { Medication } from './Medication'
 
 @Entity()
 export class ArtConsultationPlha {
@@ -599,10 +597,10 @@ export class ArtConsultationPlha {
 	})
 	artOiDiagnosisOther: string
 
-	@OneToMany(type => ArtGhcDiagnosis, artGhcDiagnosis => artGhcDiagnosis.artConsultationPlha, {
+	@OneToMany(type => Diagnosis, diagnosis => diagnosis.artConsultationPlha, {
 		cascade: true
 	})
-	artGhcDiagnosiss: ArtGhcDiagnosis[]
+	diagnosiss: Diagnosis[]
 
 	@Column({
 		name: 'art_diagnosis_comments',
@@ -786,10 +784,10 @@ export class ArtConsultationPlha {
 	})
 	artRemainingPill: number
 
-	@OneToMany(type => ArtArtMedication, artArtMedication => artArtMedication.artConsultationPlha, {
+	@OneToMany(type => Medication, medication => medication.artConsultationPlha, {
 		cascade: true
 	})
-	artArtMedications: ArtArtMedication[]
+	medications: Medication[]
 
 	@Column({
 		name: 'art_tb_starting_date',
@@ -797,11 +795,6 @@ export class ArtConsultationPlha {
 		nullable: true
 	})
 	artTbStartingDate: Date
-
-	@OneToMany(type => ArtTbMedication, artTbMedication => artTbMedication.artConsultationPlha, {
-		cascade: true
-	})
-	artTbMedications: ArtTbMedication[]
 
 	@Column({
 		name: 'tb_category',
@@ -860,11 +853,6 @@ export class ArtConsultationPlha {
 		nullable: true
 	})
 	iptOther: string
-
-	@OneToMany(type => ArtOthMedication, artOthMedication => artOthMedication.artConsultationPlha, {
-		cascade: true
-	})
-	artOthMedications: ArtOthMedication[]
 
 	@Column({
 		name: 'art_referred_to',

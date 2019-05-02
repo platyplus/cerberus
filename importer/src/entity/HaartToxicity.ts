@@ -3,11 +3,11 @@ import { Entity, PrimaryGeneratedColumn, ManyToOne, JoinColumn, Column } from 't
 import { ArtKey } from './ArtKey'
 
 @Entity()
-export class ArtKeyHaartToxicity {
+export class HaartToxicity {
 	@PrimaryGeneratedColumn('uuid')
 	id: string
 
-	@ManyToOne(type => ArtKey, artKey => artKey.artKeyHaartToxicitys, {
+	@ManyToOne(type => ArtKey, artKey => artKey.haartToxicitys, {
 		eager: true
 	})
 	@JoinColumn([{ name: 'mdmCode', referencedColumnName: 'mdmCode'}])

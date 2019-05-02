@@ -2,7 +2,9 @@
 
 ## TODO
 
+- [ ] Reuse relations in more than one form e.g. medication, diagnosis...
 - [ ] Metadata for lab
+- [ ] Metadata for viral load and tracking
 - [x] Metadata for prevention
 - [x] Filter only excel files to be watched by chokidar
 - [x] Split Property class to an abstract class + inherited classes e.g. OneToManyProperty etc

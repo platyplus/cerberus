@@ -14,15 +14,15 @@ export class GhcCategory {
 	generalHeathCareGhc: GeneralHeathCareGhc
 
 	@Column({
-		name: 'ghc_description',
+		name: 'description',
 		nullable: true
 	})
-	ghcDescription: string
+	description: string
 
 	@Column({
-		name: 'ghc_category',
+		name: 'name',
 		nullable: true
 	})
-	ghcCategory: string
+	name: string
 
 }

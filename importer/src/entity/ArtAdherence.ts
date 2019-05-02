@@ -1,7 +1,6 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
 import { Entity, PrimaryColumn, Column, OneToMany } from 'typeorm'
-import { AdhArtEpisode } from './AdhArtEpisode'
-import { AdhTbEpisode } from './AdhTbEpisode'
+import { TreatmentEpisode } from './TreatmentEpisode'
 import { DrugUsage } from './DrugUsage'
 
 @Entity()
@@ -200,35 +199,30 @@ export class ArtAdherence {
 	})
 	artStartDate: Date
 
-	@OneToMany(type => AdhArtEpisode, adhArtEpisode => adhArtEpisode.artAdherence, {
+	@OneToMany(type => TreatmentEpisode, treatmentEpisode => treatmentEpisode.artAdherence, {
 		cascade: true
 	})
-	adhArtEpisodes: AdhArtEpisode[]
+	treatmentEpisodes: TreatmentEpisode[]
 
 	@Column({
-		name: 'adh_tb_start_date',
+		name: 'tb_start_date',
 		type: 'timestamptz',
 		nullable: true
 	})
-	adhTbStartDate: Date
-
-	@OneToMany(type => AdhTbEpisode, adhTbEpisode => adhTbEpisode.artAdherence, {
-		cascade: true
-	})
-	adhTbEpisodes: AdhTbEpisode[]
+	tbStartDate: Date
 
 	@Column({
-		name: 'adherence_problem',
+		name: 'has_adherence_problem',
 		type: 'boolean',
 		nullable: true
 	})
-	adherenceProblem: boolean
+	hasAdherenceProblem: boolean
 
 	@Column({
-		name: 'adh_problem',
+		name: 'problem',
 		nullable: true
 	})
-	adhProblem: string
+	problem: string
 
 	@Column({
 		name: 'social_problem',
@@ -261,28 +255,28 @@ export class ArtAdherence {
 	comment: string
 
 	@Column({
-		name: 'adh_no_side_effects',
+		name: 'no_side_effects',
 		nullable: true
 	})
-	adhNoSideEffects: string
+	noSideEffects: string
 
 	@Column({
-		name: 'adh_side_effects',
+		name: 'side_effects',
 		nullable: true
 	})
-	adhSideEffects: string
+	sideEffects: string
 
 	@Column({
-		name: 'adh_severe_side_effects',
+		name: 'severe_side_effects',
 		nullable: true
 	})
-	adhSevereSideEffects: string
+	severeSideEffects: string
 
 	@Column({
-		name: 'adh_long_term_side_effects',
+		name: 'long_term_side_effects',
 		nullable: true
 	})
-	adhLongTermSideEffects: string
+	longTermSideEffects: string
 
 	@Column({
 		name: 'adh_short_term_general',
@@ -339,11 +333,11 @@ export class ArtAdherence {
 	adherenceWithinLast30Days: number
 
 	@Column({
-		name: 'doses_number',
+		name: 'doses_found',
 		type: 'integer',
 		nullable: true
 	})
-	dosesNumber: number
+	dosesFound: number
 
 	@Column({
 		name: 'doses_should_have',
@@ -373,10 +367,10 @@ export class ArtAdherence {
 	adherenceSinceLastVisit: string
 
 	@Column({
-		name: 'adh_social_familialsituation',
+		name: 'social_familial_situation',
 		nullable: true
 	})
-	adhSocialFamilialsituation: string
+	socialFamilialSituation: string
 
 	@Column({
 		name: 'adh_social_if_problem',
@@ -423,17 +417,17 @@ export class ArtAdherence {
 	caretakerAttendClinicProblem: string
 
 	@Column({
-		name: 'adh_psychological_disorder',
+		name: 'psychological_disorder',
 		type: 'boolean',
 		nullable: true
 	})
-	adhPsychologicalDisorder: boolean
+	psychologicalDisorder: boolean
 
 	@Column({
-		name: 'adh_psycho_if_yes',
+		name: 'psychological_disorder_if_yes',
 		nullable: true
 	})
-	adhPsychoIfYes: string
+	psychologicalDisorderIfYes: string
 
 	@Column({
 		name: 'current_drug_use',

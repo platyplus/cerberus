@@ -160,137 +160,197 @@
       },
       {
         "column": "32. ADH_ARTStopDate1",
-        "relation": "adhArtEpisodes",
-        "property": "artStopDate",
-        "type": "Date"
+        "relation": "treatmentEpisodes",
+        "property": "stopDate",
+        "type": "Date",
+        "entityValues": {
+          "treatment type": "art"
+        }
       },
       {
         "column": "33. ADH_ARTRestartingDate1",
-        "relation": "adhArtEpisodes",
-        "property": "artRestartingDate",
-        "type": "Date"
+        "relation": "treatmentEpisodes",
+        "property": "restartingDate",
+        "type": "Date",
+        "entityValues": {
+          "treatment type": "art"
+        }
       },
       {
         "column": "34. ADH_ARTStopDate2",
-        "relation": "adhArtEpisodes",
-        "property": "artStopDate",
-        "type": "Date"
+        "relation": "treatmentEpisodes",
+        "property": "stopDate",
+        "type": "Date",
+        "entityValues": {
+          "treatment type": "art"
+        }
       },
       {
         "column": "35. ADH_ARTRestartingDate2",
-        "relation": "adhArtEpisodes",
-        "property": "artRestartingDate",
-        "type": "Date"
+        "relation": "treatmentEpisodes",
+        "property": "restartingDate",
+        "type": "Date",
+        "entityValues": {
+          "treatment type": "art"
+        }
       },
       {
         "column": "36. ADH_ARTStopDate3",
-        "relation": "adhArtEpisodes",
-        "property": "artStopDate",
-        "type": "Date"
+        "relation": "treatmentEpisodes",
+        "property": "stopDate",
+        "type": "Date",
+        "entityValues": {
+          "treatment type": "art"
+        }
       },
       {
         "column": "37. ADH_ARTRestartingDate3",
-        "relation": "adhArtEpisodes",
-        "property": "artRestartingDate",
-        "type": "Date"
+        "relation": "treatmentEpisodes",
+        "property": "restartingDate",
+        "type": "Date",
+        "entityValues": {
+          "treatment type": "art"
+        }
       },
       {
         "column": "38. ADH_ARTStopDate4",
-        "relation": "adhArtEpisodes",
-        "property": "artStopDate",
-        "type": "Date"
+        "relation": "treatmentEpisodes",
+        "property": "stopDate",
+        "type": "Date",
+        "entityValues": {
+          "treatment type": "art"
+        }
       },
       {
         "column": "39. ADH_ARTRestartingDate4",
-        "relation": "adhArtEpisodes",
-        "property": "artRestartingDate",
-        "type": "Date"
+        "relation": "treatmentEpisodes",
+        "property": "restartingDate",
+        "type": "Date",
+        "entityValues": {
+          "treatment type": "art"
+        }
       },
       {
         "column": "40. ADH_ARTStopDate5",
-        "relation": "adhArtEpisodes",
-        "property": "artStopDate",
-        "type": "Date"
+        "relation": "treatmentEpisodes",
+        "property": "stopDate",
+        "type": "Date",
+        "entityValues": {
+          "treatment type": "art"
+        }
       },
       {
         "column": "41. ADH_ARTRestartingDate5",
-        "relation": "adhArtEpisodes",
-        "property": "artRestartingDate",
-        "type": "Date"
+        "relation": "treatmentEpisodes",
+        "property": "restartingDate",
+        "type": "Date",
+        "entityValues": {
+          "treatment type": "art"
+        }
       },
       {
         "column": "42. ADH_TBStartDate",
-        "property": "adhTbStartDate",
+        "property": "tbStartDate",
         "type": "Date"
       },
       {
         "column": "43. ADH_TBStopDate1",
-        "relation": "adhTbEpisodes",
-        "property": "tbStopDate",
-        "type": "Date"
+        "relation": "treatmentEpisodes",
+        "property": "stopDate",
+        "type": "Date",
+        "entityValues": {
+          "treatment type": "tb"
+        }
       },
       {
         "column": "44. ADH_TBRestartingDate1",
-        "relation": "adhTbEpisodes",
-        "property": "tbRestartingDate",
-        "type": "Date"
+        "relation": "treatmentEpisodes",
+        "property": "restartingDate",
+        "type": "Date",
+        "entityValues": {
+          "treatment type": "tb"
+        }
       },
       {
         "column": "45. ADH_TBStopDate2",
-        "relation": "adhTbEpisodes",
-        "property": "tbStopDate",
-        "type": "Date"
+        "relation": "treatmentEpisodes",
+        "property": "stopDate",
+        "type": "Date",
+        "entityValues": {
+          "treatment type": "tb"
+        }
       },
       {
         "column": "46. ADH_TBRestartingDate2",
-        "relation": "adhTbEpisodes",
-        "property": "tbRestartingDate",
-        "type": "Date"
+        "relation": "treatmentEpisodes",
+        "property": "restartingDate",
+        "type": "Date",
+        "entityValues": {
+          "treatment type": "tb"
+        }
       },
       {
         "column": "47. ADH_TBStopDate3",
-        "relation": "adhTbEpisodes",
-        "property": "tbStopDate",
-        "type": "Date"
+        "relation": "treatmentEpisodes",
+        "property": "stopDate",
+        "type": "Date",
+        "entityValues": {
+          "treatment type": "tb"
+        }
       },
       {
         "column": "48. ADH_TBRestartingDate3",
-        "relation": "adhTbEpisodes",
-        "property": "tbRestartingDate",
-        "type": "Date"
+        "relation": "treatmentEpisodes",
+        "property": "restartingDate",
+        "type": "Date",
+        "entityValues": {
+          "treatment type": "tb"
+        }
       },
       {
         "column": "49. ADH_TBStopDate4",
-        "relation": "adhTbEpisodes",
-        "property": "tbStopDate",
-        "type": "Date"
+        "relation": "treatmentEpisodes",
+        "property": "stopDate",
+        "type": "Date",
+        "entityValues": {
+          "treatment type": "tb"
+        }
       },
       {
         "column": "50. ADH_TBRestartingDate4",
-        "relation": "adhTbEpisodes",
-        "property": "tbRestartingDate",
-        "type": "Date"
+        "relation": "treatmentEpisodes",
+        "property": "restartingDate",
+        "type": "Date",
+        "entityValues": {
+          "treatment type": "tb"
+        }
       },
       {
         "column": "51. ADH_TBStopDate5",
-        "relation": "adhTbEpisodes",
-        "property": "tbStopDate",
-        "type": "Date"
+        "relation": "treatmentEpisodes",
+        "property": "stopDate",
+        "type": "Date",
+        "entityValues": {
+          "treatment type": "tb"
+        }
       },
       {
         "column": "52. ADH_TBRestartingDate5",
-        "relation": "adhTbEpisodes",
-        "property": "tbRestartingDate",
-        "type": "Date"
+        "relation": "treatmentEpisodes",
+        "property": "restartingDate",
+        "type": "Date",
+        "entityValues": {
+          "treatment type": "tb"
+        }
       },
       {
         "column": "53. ADH_AdherenceProblem",
-        "property": "adherenceProblem",
+        "property": "hasAdherenceProblem",
         "type": "boolean"
       },
       {
         "column": "54. ADH_Problem",
-        "property": "adhProblem",
+        "property": "problem",
         "type": "string"
       },
       {
@@ -320,22 +380,22 @@
       },
       {
         "column": "60. ADH_NoSideEffects",
-        "property": "adhNoSideEffects",
+        "property": "noSideEffects",
         "type": "string"
       },
       {
         "column": "61. ADH_SideEffects",
-        "property": "adhSideEffects",
+        "property": "sideEffects",
         "type": "string"
       },
       {
         "column": "62. ADH_SevereSideEffects",
-        "property": "adhSevereSideEffects",
+        "property": "severeSideEffects",
         "type": "string"
       },
       {
         "column": "63. ADH_LongTermSideEffects",
-        "property": "adhLongTermSideEffects",
+        "property": "longTermSideEffects",
         "type": "string"
       },
       {
@@ -380,7 +440,7 @@
       },
       {
         "column": "72. ADH_DosesFound",
-        "property": "dosesNumber",
+        "property": "dosesFound",
         "type": "number"
       },
       {
@@ -405,7 +465,7 @@
       },
       {
         "column": "77. ADH_SocialFamilialsituation",
-        "property": "adhSocialFamilialsituation",
+        "property": "socialFamilialSituation",
         "type": "string"
       },
       {
@@ -445,12 +505,12 @@
       },
       {
         "column": "85. ADH_PsychologicalDisorder",
-        "property": "adhPsychologicalDisorder",
+        "property": "psychologicalDisorder",
         "type": "boolean"
       },
       {
         "column": "86. ADH_Psycho_IfYes",
-        "property": "adhPsychoIfYes",
+        "property": "psychologicalDisorderIfYes",
         "type": "string"
       },
       {
@@ -894,61 +954,61 @@
       {
         "column": "26. ART_AntiBio_MedicineCode1",
         "relation": "artAntiBioMedicineCodes",
-        "property": "artAntiBioMedicineCode",
+        "property": "medicineCode",
         "type": "string"
       },
       {
         "column": "27. ART_AntiBio_MedicineCode2",
         "relation": "artAntiBioMedicineCodes",
-        "property": "artAntiBioMedicineCode",
+        "property": "medicineCode",
         "type": "string"
       },
       {
         "column": "28. ART_AntiBio_MedicineCode3",
         "relation": "artAntiBioMedicineCodes",
-        "property": "artAntiBioMedicineCode",
+        "property": "medicineCode",
         "type": "string"
       },
       {
         "column": "29. ART_AntiBio_MedicineCode4",
         "relation": "artAntiBioMedicineCodes",
-        "property": "artAntiBioMedicineCode",
+        "property": "medicineCode",
         "type": "string"
       },
       {
         "column": "30. ART_AntiBio_MedicineCode5",
         "relation": "artAntiBioMedicineCodes",
-        "property": "artAntiBioMedicineCode",
+        "property": "medicineCode",
         "type": "string"
       },
       {
         "column": "31. ART_AntiTB_MedicineCode1",
         "relation": "artAntiTbMedicineCodes",
-        "property": "artAntiTbMedicineCode",
+        "property": "medicineCode",
         "type": "string"
       },
       {
         "column": "32. ART_AntiTB_MedicineCode2",
         "relation": "artAntiTbMedicineCodes",
-        "property": "artAntiTbMedicineCode",
+        "property": "medicineCode",
         "type": "string"
       },
       {
         "column": "33. ART_AntiTB_MedicineCode3",
         "relation": "artAntiTbMedicineCodes",
-        "property": "artAntiTbMedicineCode",
+        "property": "medicineCode",
         "type": "string"
       },
       {
         "column": "34. ART_AntiTB_MedicineCode4",
         "relation": "artAntiTbMedicineCodes",
-        "property": "artAntiTbMedicineCode",
+        "property": "medicineCode",
         "type": "string"
       },
       {
         "column": "35. ART_AntiTB_MedicineCode5",
         "relation": "artAntiTbMedicineCodes",
-        "property": "artAntiTbMedicineCode",
+        "property": "medicineCode",
         "type": "string"
       },
       {
@@ -969,151 +1029,151 @@
       {
         "column": "39. ART_MedicineTaken1",
         "relation": "artTreatments",
-        "property": "artMedicineTaken",
+        "property": "medicineTaken",
         "type": "string"
       },
       {
         "column": "40. ART_MedicineName1",
         "relation": "artTreatments",
-        "property": "artMedicineName",
+        "property": "medicineName",
         "type": "string"
       },
       {
         "column": "41. ART_StartDate1",
         "relation": "artTreatments",
-        "property": "artStartDate",
+        "property": "startDate",
         "type": "Date"
       },
       {
         "column": "42. ART_StopDate1",
         "relation": "artTreatments",
-        "property": "artStopDate",
+        "property": "stopDate",
         "type": "Date"
       },
       {
         "column": "43. ART_Interrupted1",
         "relation": "artTreatments",
-        "property": "artInterrupted",
+        "property": "interrupted",
         "type": "string"
       },
       {
         "column": "44. ART_MedicineTaken2",
         "relation": "artTreatments",
-        "property": "artMedicineTaken",
+        "property": "medicineTaken",
         "type": "string"
       },
       {
         "column": "45. ART_MedicineName2",
         "relation": "artTreatments",
-        "property": "artMedicineName",
+        "property": "medicineName",
         "type": "string"
       },
       {
         "column": "46. ART_StartDate2",
         "relation": "artTreatments",
-        "property": "artStartDate",
+        "property": "startDate",
         "type": "Date"
       },
       {
         "column": "47. ART_StopDate2",
         "relation": "artTreatments",
-        "property": "artStopDate",
+        "property": "stopDate",
         "type": "Date"
       },
       {
         "column": "48. ART_Interrupted2",
         "relation": "artTreatments",
-        "property": "artInterrupted",
+        "property": "interrupted",
         "type": "string"
       },
       {
         "column": "49. ART_MedicineTaken3",
         "relation": "artTreatments",
-        "property": "artMedicineTaken",
+        "property": "medicineTaken",
         "type": "string"
       },
       {
         "column": "50. ART_MedicineName3",
         "relation": "artTreatments",
-        "property": "artMedicineName",
+        "property": "medicineName",
         "type": "string"
       },
       {
         "column": "51. ART_StartDate3",
         "relation": "artTreatments",
-        "property": "artStartDate",
+        "property": "startDate",
         "type": "Date"
       },
       {
         "column": "52. ART_StopDate3",
         "relation": "artTreatments",
-        "property": "artStopDate",
+        "property": "stopDate",
         "type": "Date"
       },
       {
         "column": "53. ART_Interrupted3",
         "relation": "artTreatments",
-        "property": "artInterrupted",
+        "property": "interrupted",
         "type": "string"
       },
       {
         "column": "54. ART_MedicineTaken4",
         "relation": "artTreatments",
-        "property": "artMedicineTaken",
+        "property": "medicineTaken",
         "type": "string"
       },
       {
         "column": "55. ART_MedicineName4",
         "relation": "artTreatments",
-        "property": "artMedicineName",
+        "property": "medicineName",
         "type": "string"
       },
       {
         "column": "56. ART_StartDate4",
         "relation": "artTreatments",
-        "property": "artStartDate",
+        "property": "startDate",
         "type": "Date"
       },
       {
         "column": "57. ART_StopDate4",
         "relation": "artTreatments",
-        "property": "artStopDate",
+        "property": "stopDate",
         "type": "Date"
       },
       {
         "column": "58. ART_Interrupted4",
         "relation": "artTreatments",
-        "property": "artInterrupted",
+        "property": "interrupted",
         "type": "string"
       },
       {
         "column": "59. ART_MedicineTaken5",
         "relation": "artTreatments",
-        "property": "artMedicineTaken",
+        "property": "medicineTaken",
         "type": "string"
       },
       {
         "column": "60. ART_MedicineName5",
         "relation": "artTreatments",
-        "property": "artMedicineName",
+        "property": "medicineName",
         "type": "string"
       },
       {
         "column": "61. ART_StartDate5",
         "relation": "artTreatments",
-        "property": "artStartDate",
+        "property": "startDate",
         "type": "Date"
       },
       {
         "column": "62. ART_StopDate5",
         "relation": "artTreatments",
-        "property": "artStopDate",
+        "property": "stopDate",
         "type": "Date"
       },
       {
         "column": "63. ART_Interrupted5",
         "relation": "artTreatments",
-        "property": "artInterrupted",
+        "property": "interrupted",
         "type": "string"
       },
       {
@@ -1553,50 +1613,50 @@
       },
       {
         "column": "143. ART_GHC_DiaCode1",
-        "relation": "artGhcDiagnosiss",
-        "property": "artGhcDiaCode",
+        "relation": "diagnosiss",
+        "property": "code",
         "type": "string"
       },
       {
         "column": "144. ART_GHC_DiaDescription1",
-        "relation": "artGhcDiagnosiss",
-        "property": "artGhcDiaDescription",
+        "relation": "diagnosiss",
+        "property": "description",
         "type": "string"
       },
       {
         "column": "145. ART_GHC_DiaCode2",
-        "relation": "artGhcDiagnosiss",
-        "property": "artGhcDiaCode",
+        "relation": "diagnosiss",
+        "property": "code",
         "type": "string"
       },
       {
         "column": "146. ART_GHC_DiaDescription2",
-        "relation": "artGhcDiagnosiss",
-        "property": "artGhcDiaDescription",
+        "relation": "diagnosiss",
+        "property": "description",
         "type": "string"
       },
       {
         "column": "147. ART_GHC_DiaCode3",
-        "relation": "artGhcDiagnosiss",
-        "property": "artGhcDiaCode",
+        "relation": "diagnosiss",
+        "property": "code",
         "type": "string"
       },
       {
         "column": "148. ART_GHC_DiaDescription3",
-        "relation": "artGhcDiagnosiss",
-        "property": "artGhcDiaDescription",
+        "relation": "diagnosiss",
+        "property": "description",
         "type": "string"
       },
       {
         "column": "149. ART_GHC_DiaCode4",
-        "relation": "artGhcDiagnosiss",
-        "property": "artGhcDiaCode",
+        "relation": "diagnosiss",
+        "property": "code",
         "type": "string"
       },
       {
         "column": "150. ART_GHC_DiaDescription4",
-        "relation": "artGhcDiagnosiss",
-        "property": "artGhcDiaDescription",
+        "relation": "diagnosiss",
+        "property": "description",
         "type": "string"
       },
       {
@@ -1647,55 +1707,55 @@
       {
         "column": "160. TB_Sputum_Smear",
         "relation": "tbSputums",
-        "property": "tbSputumSmear",
+        "property": "smear",
         "type": "string"
       },
       {
         "column": "161. TB_Sputum_Xpert",
         "relation": "tbSputums",
-        "property": "tbSputumXpert",
+        "property": "xpert",
         "type": "string"
       },
       {
         "column": "162. TB_Sputum_Culture",
         "relation": "tbSputums",
-        "property": "tbSputumCulture",
+        "property": "culture",
         "type": "string"
       },
       {
         "column": "163. TB_Sputum_H",
         "relation": "tbSputums",
-        "property": "tbSputumH",
+        "property": "h",
         "type": "string"
       },
       {
         "column": "164. TB_Sputum_R",
         "relation": "tbSputums",
-        "property": "tbSputumR",
+        "property": "r",
         "type": "string"
       },
       {
         "column": "165. TB_Sputum_S",
         "relation": "tbSputums",
-        "property": "tbSputumS",
+        "property": "s",
         "type": "string"
       },
       {
         "column": "166. TB_Sputum_E",
         "relation": "tbSputums",
-        "property": "tbSputumE",
+        "property": "e",
         "type": "string"
       },
       {
         "column": "167. TB_Sputum_LPA",
         "relation": "tbSputums",
-        "property": "tbSputumLpa",
+        "property": "lpa",
         "type": "string"
       },
       {
         "column": "168. TB_Sputum_SampleDate",
         "relation": "tbSputums",
-        "property": "tbSputumSampleDate",
+        "property": "sampleDate",
         "type": "Date"
       },
       {
@@ -1707,55 +1767,55 @@
       {
         "column": "170. TB_OtherSample1_Smear",
         "relation": "tbSputums",
-        "property": "tbOtherSample1Smear",
+        "property": "smear",
         "type": "string"
       },
       {
         "column": "171. TB_OtherSample1_Xpert",
         "relation": "tbSputums",
-        "property": "tbOtherSample1Xpert",
+        "property": "xpert",
         "type": "string"
       },
       {
         "column": "172. TB_OtherSample1_Culture",
         "relation": "tbSputums",
-        "property": "tbOtherSample1Culture",
+        "property": "culture",
         "type": "string"
       },
       {
         "column": "173. TB_OtherSample1_H",
         "relation": "tbSputums",
-        "property": "tbOtherSample1H",
+        "property": "h",
         "type": "string"
       },
       {
         "column": "174. TB_OtherSample1_R",
         "relation": "tbSputums",
-        "property": "tbOtherSample1R",
+        "property": "r",
         "type": "string"
       },
       {
         "column": "175. TB_OtherSample1_S",
         "relation": "tbSputums",
-        "property": "tbOtherSample1S",
+        "property": "s",
         "type": "string"
       },
       {
         "column": "176. TB_OtherSample1_E",
         "relation": "tbSputums",
-        "property": "tbOtherSample1E",
+        "property": "e",
         "type": "string"
       },
       {
         "column": "177. TB_OtherSample1_LPA",
         "relation": "tbSputums",
-        "property": "tbOtherSample1Lpa",
+        "property": "lpa",
         "type": "string"
       },
       {
         "column": "178. TB_OtherSample1_SampleDate",
         "relation": "tbSputums",
-        "property": "tbOtherSample1SampleDate",
+        "property": "sampleDate",
         "type": "Date"
       },
       {
@@ -1767,55 +1827,55 @@
       {
         "column": "180. TB_OtherSample2_Smear",
         "relation": "tbSputums",
-        "property": "tbOtherSample2Smear",
+        "property": "smear",
         "type": "string"
       },
       {
         "column": "181. TB_OtherSample2_Xpert",
         "relation": "tbSputums",
-        "property": "tbOtherSample2Xpert",
+        "property": "xpert",
         "type": "string"
       },
       {
         "column": "182. TB_OtherSample2_Culture",
         "relation": "tbSputums",
-        "property": "tbOtherSample2Culture",
+        "property": "culture",
         "type": "string"
       },
       {
         "column": "183. TB_OtherSample2_H",
         "relation": "tbSputums",
-        "property": "tbOtherSample2H",
+        "property": "h",
         "type": "string"
       },
       {
         "column": "184. TB_OtherSample2_R",
         "relation": "tbSputums",
-        "property": "tbOtherSample2R",
+        "property": "r",
         "type": "string"
       },
       {
         "column": "185. TB_OtherSample2_S",
         "relation": "tbSputums",
-        "property": "tbOtherSample2S",
+        "property": "s",
         "type": "string"
       },
       {
         "column": "186. TB_OtherSample2_E",
         "relation": "tbSputums",
-        "property": "tbOtherSample2E",
+        "property": "e",
         "type": "string"
       },
       {
         "column": "187. TB_OtherSample2_LPA",
         "relation": "tbSputums",
-        "property": "tbOtherSample2Lpa",
+        "property": "lpa",
         "type": "string"
       },
       {
         "column": "188. TB_OtherSample2_SampleDate",
         "relation": "tbSputums",
-        "property": "tbOtherSample2SampleDate",
+        "property": "sampleDate",
         "type": "Date"
       },
       {
@@ -1827,55 +1887,55 @@
       {
         "column": "190. TB_OtherSample3_Smear",
         "relation": "tbSputums",
-        "property": "tbOtherSample3Smear",
+        "property": "smear",
         "type": "string"
       },
       {
         "column": "191. TB_OtherSample3_Xpert",
         "relation": "tbSputums",
-        "property": "tbOtherSample3Xpert",
+        "property": "xpert",
         "type": "string"
       },
       {
         "column": "192. TB_OtherSample3_Culture",
         "relation": "tbSputums",
-        "property": "tbOtherSample3Culture",
+        "property": "culture",
         "type": "string"
       },
       {
         "column": "193. TB_OtherSample3_H",
         "relation": "tbSputums",
-        "property": "tbOtherSample3H",
+        "property": "h",
         "type": "string"
       },
       {
         "column": "194. TB_OtherSample3_R",
         "relation": "tbSputums",
-        "property": "tbOtherSample3R",
+        "property": "r",
         "type": "string"
       },
       {
         "column": "195. TB_OtherSample3_S",
         "relation": "tbSputums",
-        "property": "tbOtherSample3S",
+        "property": "s",
         "type": "string"
       },
       {
         "column": "196. TB_OtherSample3_E",
         "relation": "tbSputums",
-        "property": "tbOtherSample3E",
+        "property": "e",
         "type": "string"
       },
       {
         "column": "197. TB_OtherSample3_LPA",
         "relation": "tbSputums",
-        "property": "tbOtherSample3Lpa",
+        "property": "lpa",
         "type": "string"
       },
       {
         "column": "198. TB_OtherSample3_SampleDate",
         "relation": "tbSputums",
-        "property": "tbOtherSample3SampleDate",
+        "property": "sampleDate",
         "type": "Date"
       },
       {
@@ -1975,123 +2035,183 @@
       },
       {
         "column": "218. ART_ARTMedName1",
-        "relation": "artArtMedications",
-        "property": "artArtMedName",
-        "type": "string"
+        "relation": "medications",
+        "property": "medicationName",
+        "type": "string",
+        "entityValues": {
+          "treatment": "art"
+        }
       },
       {
         "column": "219. ART_Dosage1",
-        "relation": "artArtMedications",
-        "property": "artDosage",
-        "type": "string"
+        "relation": "medications",
+        "property": "dosage",
+        "type": "string",
+        "entityValues": {
+          "treatment": "art"
+        }
       },
       {
         "column": "220. ART_Frequency1",
-        "relation": "artArtMedications",
-        "property": "artFrequency",
-        "type": "string"
+        "relation": "medications",
+        "property": "frequency",
+        "type": "string",
+        "entityValues": {
+          "treatment": "art"
+        }
       },
       {
         "column": "221. ART_NumberDays1",
-        "relation": "artArtMedications",
-        "property": "artNumberDays",
-        "type": "number"
+        "relation": "medications",
+        "property": "numberDays",
+        "type": "number",
+        "entityValues": {
+          "treatment": "art"
+        }
       },
       {
         "column": "222. ART_ARTMedName2",
-        "relation": "artArtMedications",
-        "property": "artArtMedName",
-        "type": "string"
+        "relation": "medications",
+        "property": "medicationName",
+        "type": "string",
+        "entityValues": {
+          "treatment": "art"
+        }
       },
       {
         "column": "223. ART_Dosage2",
-        "relation": "artArtMedications",
-        "property": "artDosage",
-        "type": "string"
+        "relation": "medications",
+        "property": "dosage",
+        "type": "string",
+        "entityValues": {
+          "treatment": "art"
+        }
       },
       {
         "column": "224. ART_Frequency2",
-        "relation": "artArtMedications",
-        "property": "artFrequency",
-        "type": "string"
+        "relation": "medications",
+        "property": "frequency",
+        "type": "string",
+        "entityValues": {
+          "treatment": "art"
+        }
       },
       {
         "column": "225. ART_NumberDays2",
-        "relation": "artArtMedications",
-        "property": "artNumberDays",
-        "type": "number"
+        "relation": "medications",
+        "property": "numberDays",
+        "type": "number",
+        "entityValues": {
+          "treatment": "art"
+        }
       },
       {
         "column": "226. ART_ARTMedName3",
-        "relation": "artArtMedications",
-        "property": "artArtMedName",
-        "type": "string"
+        "relation": "medications",
+        "property": "medicationName",
+        "type": "string",
+        "entityValues": {
+          "treatment": "art"
+        }
       },
       {
         "column": "227. ART_Dosage3",
-        "relation": "artArtMedications",
-        "property": "artDosage",
-        "type": "string"
+        "relation": "medications",
+        "property": "dosage",
+        "type": "string",
+        "entityValues": {
+          "treatment": "art"
+        }
       },
       {
         "column": "228. ART_Frequency3",
-        "relation": "artArtMedications",
-        "property": "artFrequency",
-        "type": "string"
+        "relation": "medications",
+        "property": "frequency",
+        "type": "string",
+        "entityValues": {
+          "treatment": "art"
+        }
       },
       {
         "column": "229. ART_NumberDays3",
-        "relation": "artArtMedications",
-        "property": "artNumberDays",
-        "type": "number"
+        "relation": "medications",
+        "property": "numberDays",
+        "type": "number",
+        "entityValues": {
+          "treatment": "art"
+        }
       },
       {
         "column": "230. ART_ARTMedName4",
-        "relation": "artArtMedications",
-        "property": "artArtMedName",
-        "type": "string"
+        "relation": "medications",
+        "property": "medicationName",
+        "type": "string",
+        "entityValues": {
+          "treatment": "art"
+        }
       },
       {
         "column": "231. ART_Dosage4",
-        "relation": "artArtMedications",
-        "property": "artDosage",
-        "type": "string"
+        "relation": "medications",
+        "property": "dosage",
+        "type": "string",
+        "entityValues": {
+          "treatment": "art"
+        }
       },
       {
         "column": "232. ART_Frequency4",
-        "relation": "artArtMedications",
-        "property": "artFrequency",
-        "type": "string"
+        "relation": "medications",
+        "property": "frequency",
+        "type": "string",
+        "entityValues": {
+          "treatment": "art"
+        }
       },
       {
         "column": "233. ART_NumberDays4",
-        "relation": "artArtMedications",
-        "property": "artNumberDays",
-        "type": "number"
+        "relation": "medications",
+        "property": "numberDays",
+        "type": "number",
+        "entityValues": {
+          "treatment": "art"
+        }
       },
       {
         "column": "234. ART_ARTMedName5",
-        "relation": "artArtMedications",
-        "property": "artArtMedName",
-        "type": "string"
+        "relation": "medications",
+        "property": "medicationName",
+        "type": "string",
+        "entityValues": {
+          "treatment": "art"
+        }
       },
       {
         "column": "235. ART_Dosage5",
-        "relation": "artArtMedications",
-        "property": "artDosage",
-        "type": "string"
+        "relation": "medications",
+        "property": "dosage",
+        "type": "string",
+        "entityValues": {
+          "treatment": "art"
+        }
       },
       {
         "column": "236. ART_Frequency5",
-        "relation": "artArtMedications",
-        "property": "artFrequency",
-        "type": "string"
+        "relation": "medications",
+        "property": "frequency",
+        "type": "string",
+        "entityValues": {
+          "treatment": "art"
+        }
       },
       {
         "column": "237. ART_NumberDays5",
-        "relation": "artArtMedications",
-        "property": "artNumberDays",
-        "type": "number"
+        "relation": "medications",
+        "property": "numberDays",
+        "type": "number",
+        "entityValues": {
+          "treatment": "art"
+        }
       },
       {
         "column": "238. ART_TB_StartingDate",
@@ -2100,99 +2220,147 @@
       },
       {
         "column": "239. ART_TB_MedicineName1",
-        "relation": "artTbMedications",
-        "property": "artTbMedicineName",
-        "type": "string"
+        "relation": "medications",
+        "property": "medicationName",
+        "type": "string",
+        "entityValues": {
+          "treatment": "tb"
+        }
       },
       {
         "column": "240. ART_TB_Dosage1",
-        "relation": "artTbMedications",
-        "property": "artTbDosage",
-        "type": "string"
+        "relation": "medications",
+        "property": "dosage",
+        "type": "string",
+        "entityValues": {
+          "treatment": "tb"
+        }
       },
       {
         "column": "241. ART_TB_Frequency1",
-        "relation": "artTbMedications",
-        "property": "artTbFrequency",
-        "type": "string"
+        "relation": "medications",
+        "property": "frequency",
+        "type": "string",
+        "entityValues": {
+          "treatment": "tb"
+        }
       },
       {
         "column": "242. ART_TB_NumberDays1",
-        "relation": "artTbMedications",
-        "property": "artTbNumberDays",
-        "type": "number"
+        "relation": "medications",
+        "property": "numberDays",
+        "type": "number",
+        "entityValues": {
+          "treatment": "tb"
+        }
       },
       {
         "column": "243. ART_TB_MedicineName2",
-        "relation": "artTbMedications",
-        "property": "artTbMedicineName",
-        "type": "string"
+        "relation": "medications",
+        "property": "medicationName",
+        "type": "string",
+        "entityValues": {
+          "treatment": "tb"
+        }
       },
       {
         "column": "244. ART_TB_Dosage2",
-        "relation": "artTbMedications",
-        "property": "artTbDosage",
-        "type": "string"
+        "relation": "medications",
+        "property": "dosage",
+        "type": "string",
+        "entityValues": {
+          "treatment": "tb"
+        }
       },
       {
         "column": "245. ART_TB_Frequency2",
-        "relation": "artTbMedications",
-        "property": "artTbFrequency",
-        "type": "string"
+        "relation": "medications",
+        "property": "frequency",
+        "type": "string",
+        "entityValues": {
+          "treatment": "tb"
+        }
       },
       {
         "column": "246. ART_TB_NumberDays2",
-        "relation": "artTbMedications",
-        "property": "artTbNumberDays",
-        "type": "number"
+        "relation": "medications",
+        "property": "numberDays",
+        "type": "number",
+        "entityValues": {
+          "treatment": "tb"
+        }
       },
       {
         "column": "247. ART_TB_MedicineName3",
-        "relation": "artTbMedications",
-        "property": "artTbMedicineName",
-        "type": "string"
+        "relation": "medications",
+        "property": "medicationName",
+        "type": "string",
+        "entityValues": {
+          "treatment": "tb"
+        }
       },
       {
         "column": "248. ART_TB_Dosage3",
-        "relation": "artTbMedications",
-        "property": "artTbDosage",
-        "type": "string"
+        "relation": "medications",
+        "property": "dosage",
+        "type": "string",
+        "entityValues": {
+          "treatment": "tb"
+        }
       },
       {
         "column": "249. ART_TB_Frequency3",
-        "relation": "artTbMedications",
-        "property": "artTbFrequency",
-        "type": "string"
+        "relation": "medications",
+        "property": "frequency",
+        "type": "string",
+        "entityValues": {
+          "treatment": "tb"
+        }
       },
       {
         "column": "250. ART_TB_NumberDays3",
-        "relation": "artTbMedications",
-        "property": "artTbNumberDays",
-        "type": "number"
+        "relation": "medications",
+        "property": "numberDays",
+        "type": "number",
+        "entityValues": {
+          "treatment": "tb"
+        }
       },
       {
         "column": "251. ART_TB_MedicineName4",
-        "relation": "artTbMedications",
-        "property": "artTbMedicineName",
-        "type": "string"
+        "relation": "medications",
+        "property": "medicationName",
+        "type": "string",
+        "entityValues": {
+          "treatment": "tb"
+        }
       },
       {
         "column": "252. ART_TB_Dosage4",
-        "relation": "artTbMedications",
-        "property": "artTbDosage",
-        "type": "string"
+        "relation": "medications",
+        "property": "dosage",
+        "type": "string",
+        "entityValues": {
+          "treatment": "tb"
+        }
       },
       {
         "column": "253. ART_TB_Frequency4",
-        "relation": "artTbMedications",
-        "property": "artTbFrequency",
-        "type": "string"
+        "relation": "medications",
+        "property": "frequency",
+        "type": "string",
+        "entityValues": {
+          "treatment": "tb"
+        }
       },
       {
         "column": "254. ART_TB_NumberDays4",
-        "relation": "artTbMedications",
-        "property": "artTbNumberDays",
-        "type": "number"
+        "relation": "medications",
+        "property": "numberDays",
+        "type": "number",
+        "entityValues": {
+          "treatment": "tb"
+        }
       },
       {
         "column": "255. TB_Category",
@@ -2241,267 +2409,399 @@
       },
       {
         "column": "264. ART_OTHMedName1",
-        "relation": "artOthMedications",
-        "property": "artOthMedName",
-        "type": "string"
+        "relation": "medications",
+        "property": "medicationName",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "265. ART_OTH_Dosage1",
-        "relation": "artOthMedications",
-        "property": "artOthDosage",
-        "type": "string"
+        "relation": "medications",
+        "property": "dosage",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "266. ART_OTH_Frequency1",
-        "relation": "artOthMedications",
-        "property": "artOthFrequency",
-        "type": "string"
+        "relation": "medications",
+        "property": "frequency",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "267. ART_OTH_NumberDays1",
-        "relation": "artOthMedications",
-        "property": "artOthNumberDays",
-        "type": "number"
+        "relation": "medications",
+        "property": "numberDays",
+        "type": "number",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "268. ART_OTHMedName2",
-        "relation": "artOthMedications",
-        "property": "artOthMedName",
-        "type": "string"
+        "relation": "medications",
+        "property": "medicationName",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "269. ART_OTH_Dosage2",
-        "relation": "artOthMedications",
-        "property": "artOthDosage",
-        "type": "string"
+        "relation": "medications",
+        "property": "dosage",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "270. ART_OTH_Frequency2",
-        "relation": "artOthMedications",
-        "property": "artOthFrequency",
-        "type": "string"
+        "relation": "medications",
+        "property": "frequency",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "271. ART_OTH_NumberDays2",
-        "relation": "artOthMedications",
-        "property": "artOthNumberDays",
-        "type": "number"
+        "relation": "medications",
+        "property": "numberDays",
+        "type": "number",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "272. ART_OTHMedName3",
-        "relation": "artOthMedications",
-        "property": "artOthMedName",
-        "type": "string"
+        "relation": "medications",
+        "property": "medicationName",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "273. ART_OTH_Dosage3",
-        "relation": "artOthMedications",
-        "property": "artOthDosage",
-        "type": "string"
+        "relation": "medications",
+        "property": "dosage",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "274. ART_OTH_Frequency3",
-        "relation": "artOthMedications",
-        "property": "artOthFrequency",
-        "type": "string"
+        "relation": "medications",
+        "property": "frequency",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "275. ART_OTH_NumberDays3",
-        "relation": "artOthMedications",
-        "property": "artOthNumberDays",
-        "type": "number"
+        "relation": "medications",
+        "property": "numberDays",
+        "type": "number",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "276. ART_OTHMedName4",
-        "relation": "artOthMedications",
-        "property": "artOthMedName",
-        "type": "string"
+        "relation": "medications",
+        "property": "medicationName",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "277. ART_OTH_Dosage4",
-        "relation": "artOthMedications",
-        "property": "artOthDosage",
-        "type": "string"
+        "relation": "medications",
+        "property": "dosage",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "278. ART_OTH_Frequency4",
-        "relation": "artOthMedications",
-        "property": "artOthFrequency",
-        "type": "string"
+        "relation": "medications",
+        "property": "frequency",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "279. ART_OTH_NumberDays4",
-        "relation": "artOthMedications",
-        "property": "artOthNumberDays",
-        "type": "number"
+        "relation": "medications",
+        "property": "numberDays",
+        "type": "number",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "280. ART_OTHMedName5",
-        "relation": "artOthMedications",
-        "property": "artOthMedName",
-        "type": "string"
+        "relation": "medications",
+        "property": "medicationName",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "281. ART_OTH_Dosage5",
-        "relation": "artOthMedications",
-        "property": "artOthDosage",
-        "type": "string"
+        "relation": "medications",
+        "property": "dosage",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "282. ART_OTH_Frequency5",
-        "relation": "artOthMedications",
-        "property": "artOthFrequency",
-        "type": "string"
+        "relation": "medications",
+        "property": "frequency",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "283. ART_OTH_NumberDays5",
-        "relation": "artOthMedications",
-        "property": "artOthNumberDays",
-        "type": "number"
+        "relation": "medications",
+        "property": "numberDays",
+        "type": "number",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "284. ART_OTHMedName6",
-        "relation": "artOthMedications",
-        "property": "artOthMedName",
-        "type": "string"
+        "relation": "medications",
+        "property": "medicationName",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "285. ART_OTH_Dosage6",
-        "relation": "artOthMedications",
-        "property": "artOthDosage",
-        "type": "string"
+        "relation": "medications",
+        "property": "dosage",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "286. ART_OTH_Frequency6",
-        "relation": "artOthMedications",
-        "property": "artOthFrequency",
-        "type": "string"
+        "relation": "medications",
+        "property": "frequency",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "287. ART_OTH_NumberDays6",
-        "relation": "artOthMedications",
-        "property": "artOthNumberDays",
-        "type": "number"
+        "relation": "medications",
+        "property": "numberDays",
+        "type": "number",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "288. ART_OTH_MedName7",
-        "relation": "artOthMedications",
-        "property": "artOthMedName",
-        "type": "string"
+        "relation": "medications",
+        "property": "medicationName",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "289. ART_OTH_Dosage7",
-        "relation": "artOthMedications",
-        "property": "artOthDosage",
-        "type": "string"
+        "relation": "medications",
+        "property": "dosage",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "290. ART_OTH_Frequency7",
-        "relation": "artOthMedications",
-        "property": "artOthFrequency",
-        "type": "string"
+        "relation": "medications",
+        "property": "frequency",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "291. ART_OTH_NumberDays7",
-        "relation": "artOthMedications",
-        "property": "artOthNumberDays",
-        "type": "number"
+        "relation": "medications",
+        "property": "numberDays",
+        "type": "number",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "292. ART_OTH_MedName8",
-        "relation": "artOthMedications",
-        "property": "artOthMedName",
-        "type": "string"
+        "relation": "medications",
+        "property": "medicationName",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "293. ART_OTH_Dosage8",
-        "relation": "artOthMedications",
-        "property": "artOthDosage",
-        "type": "string"
+        "relation": "medications",
+        "property": "dosage",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "294. ART_OTH_Frequency8",
-        "relation": "artOthMedications",
-        "property": "artOthFrequency",
-        "type": "string"
+        "relation": "medications",
+        "property": "frequency",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "295. ART_OTH_NumberDays8",
-        "relation": "artOthMedications",
-        "property": "artOthNumberDays",
-        "type": "number"
+        "relation": "medications",
+        "property": "numberDays",
+        "type": "number",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "296. ART_OTH_MedName9",
-        "relation": "artOthMedications",
-        "property": "artOthMedName",
-        "type": "string"
+        "relation": "medications",
+        "property": "medicationName",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "297. ART_OTH_Dosage9",
-        "relation": "artOthMedications",
-        "property": "artOthDosage",
-        "type": "string"
+        "relation": "medications",
+        "property": "dosage",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "298. ART_OTH_Frequency9",
-        "relation": "artOthMedications",
-        "property": "artOthFrequency",
-        "type": "string"
+        "relation": "medications",
+        "property": "frequency",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "299. ART_OTH_NumberDays9",
-        "relation": "artOthMedications",
-        "property": "artOthNumberDays",
-        "type": "number"
+        "relation": "medications",
+        "property": "numberDays",
+        "type": "number",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "300. ART_OTH_MedName10",
-        "relation": "artOthMedications",
-        "property": "artOthMedName",
-        "type": "string"
+        "relation": "medications",
+        "property": "medicationName",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "301. ART_OTH_Dosage10",
-        "relation": "artOthMedications",
-        "property": "artOthDosage",
-        "type": "string"
+        "relation": "medications",
+        "property": "dosage",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "302. ART_OTH_Frequency10",
-        "relation": "artOthMedications",
-        "property": "artOthFrequency",
-        "type": "string"
+        "relation": "medications",
+        "property": "frequency",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "303. ART_OTH_NumberDays10",
-        "relation": "artOthMedications",
-        "property": "artOthNumberDays",
-        "type": "number"
+        "relation": "medications",
+        "property": "numberDays",
+        "type": "number",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "304. ART_OTH_MedName11",
-        "relation": "artOthMedications",
-        "property": "artOthMedName",
-        "type": "string"
+        "relation": "medications",
+        "property": "medicationName",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "305. ART_OTH_Dosage11",
-        "relation": "artOthMedications",
-        "property": "artOthDosage",
-        "type": "string"
+        "relation": "medications",
+        "property": "dosage",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "306. ART_OTH_Frequency11",
-        "relation": "artOthMedications",
-        "property": "artOthFrequency",
-        "type": "string"
+        "relation": "medications",
+        "property": "frequency",
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "307. ART_OTH_NumberDays11",
-        "relation": "artOthMedications",
-        "property": "artOthNumberDays",
-        "type": "number"
+        "relation": "medications",
+        "property": "numberDays",
+        "type": "number",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "308. ART_ReferredTo",
@@ -2661,877 +2961,877 @@
       },
       {
         "column": "21. Weight",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "22. Date",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "23. CD4_1",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "24. Weight_1",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "25. Date_1",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "26. CD4_2",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "27. Weight_2",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "28. Date_2",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "29. CD4_3",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "30. Weight_3",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "31. Date_3",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "32. CD4_4",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "33. Weight_4",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "34. Date_4",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "35. CD4_5",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "36. Weight_5",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "37. Date_5",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "38. CD4_6",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "39. Weight_6",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "40. Date_6",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "41. CD4_7",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "42. Weight_7",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "43. Date_7",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "44. CD4_8",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "45. Weight_8",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "46. Date_8",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "47. CD4_9",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "48. Weight_9",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "49. Date_9",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "50. CD4_10",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "51. Weight_10",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "52. Date_10",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "53. CD4_11",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "54. Weight_11",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "55. Date_11",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "56. CD4_12",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "57. Weight_12",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "58. Date_12",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "59. CD4_13",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "60. Weight_13",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "61. Date_13",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "62. CD4_14",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "63. Weight_14",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "64. Date_14",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "65. CD4_15",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "66. Weight_15",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "67. Date_15",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "68. CD4_16",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "69. Weight_16",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "70. Date_16",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "71. CD4_17",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "72. Weight_17",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "73. Date_17",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "74. CD4_18",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "75. Weight_18",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "76. Date_18",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "77. CD4_19",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "78. Weight_19",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "79. Date_19",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "80. CD4_20",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "81. Weight_20",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "82. Date_20",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "83. CD4_21",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "84. Weight_21",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "85. Date_21",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "86. CD4_22",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "87. Weight_22",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "88. Date_22",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "89. CD4_23",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "90. Weight_23",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "91. Date_23",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "92. CD4_24",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "93. Weight_24",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "94. Date_24",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "95. CD4_25",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "96. Weight_25",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "97. Date_25",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "98. CD4_26",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "99. Weight_26",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "100. Date_26",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "101. CD4_27",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "102. Weight_27",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "103. Date_27",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "104. CD4_28",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "105. Weight_28",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "106. Date_28",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "107. CD4_29",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "108. Weight_29",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "109. Date_29",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "110. CD4_30",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "111. Weight_30",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "112. Date_30",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "113. CD4_31",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "114. Weight_31",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "115. Date_31",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "116. CD4_32",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "117. Weight_32",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "118. Date_32",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "119. CD4_33",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "120. Weight_33",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "121. Date_33",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "122. CD4_34",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "123. Weight_34",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "124. Date_34",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "125. CD4_35",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "126. Weight_35",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "127. Date_35",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "128. CD4_36",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "129. Weight_36",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "130. Date_36",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "131. CD4_37",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "132. Weight_37",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "133. Date_37",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "134. CD4_38",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "135. Weight_38",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "136. Date_38",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "137. CD4_39",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "138. Weight_39",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "139. Date_39",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "140. CD4_40",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "141. Weight_40",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "142. Date_40",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "143. CD4_41",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "144. Weight_41",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "145. Date_41",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "146. CD4_42",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "147. Weight_42",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "148. Date_42",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "149. CD4_43",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "150. Weight_43",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "151. Date_43",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "152. CD4_44",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "153. Weight_44",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "154. Date_44",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "155. CD4_45",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "156. Weight_45",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "157. Date_45",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "158. CD4_46",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "159. Weight_46",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "160. Date_46",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "161. CD4_47",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "162. Weight_47",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "163. Date_47",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "164. CD4_48",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "cd",
         "type": "number"
       },
       {
         "column": "165. Weight_48",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "weight",
         "type": "number"
       },
       {
         "column": "166. Date_48",
-        "relation": "artKeyCd4Weights",
+        "relation": "cd4Measurements",
         "property": "date",
         "type": "Date"
       },
@@ -3612,199 +3912,199 @@
       },
       {
         "column": "182. NewRegimen1",
-        "relation": "artKeyNewRegimens",
+        "relation": "regimens",
         "property": "newRegimen",
         "type": "string"
       },
       {
         "column": "183. ChangeRegimenDate1",
-        "relation": "artKeyNewRegimens",
+        "relation": "regimens",
         "property": "changeRegimenDate",
         "type": "Date"
       },
       {
         "column": "184. ChangeReason1",
-        "relation": "artKeyNewRegimens",
+        "relation": "regimens",
         "property": "changeReason",
         "type": "string"
       },
       {
         "column": "185. NewRegimen2",
-        "relation": "artKeyNewRegimens",
+        "relation": "regimens",
         "property": "newRegimen",
         "type": "string"
       },
       {
         "column": "186. ChangeRegimenDate2",
-        "relation": "artKeyNewRegimens",
+        "relation": "regimens",
         "property": "changeRegimenDate",
         "type": "Date"
       },
       {
         "column": "187. ChangeReason2",
-        "relation": "artKeyNewRegimens",
+        "relation": "regimens",
         "property": "changeReason",
         "type": "string"
       },
       {
         "column": "188. NewRegimen3",
-        "relation": "artKeyNewRegimens",
+        "relation": "regimens",
         "property": "newRegimen",
         "type": "string"
       },
       {
         "column": "189. ChangeRegimenDate3",
-        "relation": "artKeyNewRegimens",
+        "relation": "regimens",
         "property": "changeRegimenDate",
         "type": "Date"
       },
       {
         "column": "190. ChangeReason3",
-        "relation": "artKeyNewRegimens",
+        "relation": "regimens",
         "property": "changeReason",
         "type": "string"
       },
       {
         "column": "191. NewRegimen4",
-        "relation": "artKeyNewRegimens",
+        "relation": "regimens",
         "property": "newRegimen",
         "type": "string"
       },
       {
         "column": "192. ChangeRegimenDate4",
-        "relation": "artKeyNewRegimens",
+        "relation": "regimens",
         "property": "changeRegimenDate",
         "type": "Date"
       },
       {
         "column": "193. ChangeReason4",
-        "relation": "artKeyNewRegimens",
+        "relation": "regimens",
         "property": "changeReason",
         "type": "string"
       },
       {
         "column": "194. NewRegimen5",
-        "relation": "artKeyNewRegimens",
+        "relation": "regimens",
         "property": "newRegimen",
         "type": "string"
       },
       {
         "column": "195. ChangeRegimenDate5",
-        "relation": "artKeyNewRegimens",
+        "relation": "regimens",
         "property": "changeRegimenDate",
         "type": "Date"
       },
       {
         "column": "196. ChangeReason5",
-        "relation": "artKeyNewRegimens",
+        "relation": "regimens",
         "property": "changeReason",
         "type": "string"
       },
       {
         "column": "197. NewRegimen6",
-        "relation": "artKeyNewRegimens",
+        "relation": "regimens",
         "property": "newRegimen",
         "type": "string"
       },
       {
         "column": "198. ChangeRegimenDate6",
-        "relation": "artKeyNewRegimens",
+        "relation": "regimens",
         "property": "changeRegimenDate",
         "type": "Date"
       },
       {
         "column": "199. ChangeReason6",
-        "relation": "artKeyNewRegimens",
+        "relation": "regimens",
         "property": "changeReason",
         "type": "string"
       },
       {
         "column": "200. NewRegimen7",
-        "relation": "artKeyNewRegimens",
+        "relation": "regimens",
         "property": "newRegimen",
         "type": "string"
       },
       {
         "column": "201. ChangeRegimenDate7",
-        "relation": "artKeyNewRegimens",
+        "relation": "regimens",
         "property": "changeRegimenDate",
         "type": "Date"
       },
       {
         "column": "202. ChangeReason7",
-        "relation": "artKeyNewRegimens",
+        "relation": "regimens",
         "property": "changeReason",
         "type": "string"
       },
       {
         "column": "203. NewRegimen8",
-        "relation": "artKeyNewRegimens",
+        "relation": "regimens",
         "property": "newRegimen",
         "type": "string"
       },
       {
         "column": "204. ChangeRegimenDate8",
-        "relation": "artKeyNewRegimens",
+        "relation": "regimens",
         "property": "changeRegimenDate",
         "type": "Date"
       },
       {
         "column": "205. ChangeReason8",
-        "relation": "artKeyNewRegimens",
+        "relation": "regimens",
         "property": "changeReason",
         "type": "string"
       },
       {
         "column": "206. HAARTToxicity",
-        "relation": "artKeyHaartToxicitys",
+        "relation": "haartToxicitys",
         "property": "toxicity",
         "type": "string"
       },
       {
         "column": "207. ToxicityGrade",
-        "relation": "artKeyHaartToxicitys",
+        "relation": "haartToxicitys",
         "property": "grade",
         "type": "string"
       },
       {
         "column": "208. ToxicityDate",
-        "relation": "artKeyHaartToxicitys",
+        "relation": "haartToxicitys",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "209. HAARTToxicity2",
-        "relation": "artKeyHaartToxicitys",
+        "relation": "haartToxicitys",
         "property": "toxicity",
         "type": "string"
       },
       {
         "column": "210. ToxicityGrade2",
-        "relation": "artKeyHaartToxicitys",
+        "relation": "haartToxicitys",
         "property": "grade",
         "type": "string"
       },
       {
         "column": "211. ToxicityDate2",
-        "relation": "artKeyHaartToxicitys",
+        "relation": "haartToxicitys",
         "property": "date",
         "type": "Date"
       },
       {
         "column": "212. HAARTToxicity3",
-        "relation": "artKeyHaartToxicitys",
+        "relation": "haartToxicitys",
         "property": "toxicity",
         "type": "string"
       },
       {
         "column": "213. ToxicityGrade3",
-        "relation": "artKeyHaartToxicitys",
+        "relation": "haartToxicitys",
         "property": "grade",
         "type": "string"
       },
       {
         "column": "214. ToxicityDate3",
-        "relation": "artKeyHaartToxicitys",
+        "relation": "haartToxicitys",
         "property": "date",
         "type": "Date"
       },
@@ -3820,97 +4120,97 @@
       },
       {
         "column": "217. ART_Stop_Date1",
-        "relation": "artKeyStops",
+        "relation": "treatmentInterruptions",
         "property": "stopDate",
         "type": "Date"
       },
       {
         "column": "218. ART_Restart_Date1",
-        "relation": "artKeyStops",
+        "relation": "treatmentInterruptions",
         "property": "restartDate",
         "type": "Date"
       },
       {
         "column": "219. Reason_1",
-        "relation": "artKeyStops",
+        "relation": "treatmentInterruptions",
         "property": "reasion",
         "type": "string"
       },
       {
         "column": "220. Total_no_of_missed_dose1",
-        "relation": "artKeyStops",
+        "relation": "treatmentInterruptions",
         "property": "missedDoses",
         "type": "number"
       },
       {
         "column": "221. ART_Stop_Date2",
-        "relation": "artKeyStops",
+        "relation": "treatmentInterruptions",
         "property": "stopDate",
         "type": "Date"
       },
       {
         "column": "222. ART_Restart_Date2",
-        "relation": "artKeyStops",
+        "relation": "treatmentInterruptions",
         "property": "restartDate",
         "type": "Date"
       },
       {
         "column": "223. Reason_2",
-        "relation": "artKeyStops",
+        "relation": "treatmentInterruptions",
         "property": "reasion",
         "type": "string"
       },
       {
         "column": "224. Total_no_of_missed_dose2",
-        "relation": "artKeyStops",
+        "relation": "treatmentInterruptions",
         "property": "missedDoses",
         "type": "number"
       },
       {
         "column": "225. ART_Stop_Date3",
-        "relation": "artKeyStops",
+        "relation": "treatmentInterruptions",
         "property": "stopDate",
         "type": "Date"
       },
       {
         "column": "226. ART_Restart_Date3",
-        "relation": "artKeyStops",
+        "relation": "treatmentInterruptions",
         "property": "restartDate",
         "type": "Date"
       },
       {
         "column": "227. Reason_3",
-        "relation": "artKeyStops",
+        "relation": "treatmentInterruptions",
         "property": "reasion",
         "type": "string"
       },
       {
         "column": "228. Total_no_of_missed_dose3",
-        "relation": "artKeyStops",
+        "relation": "treatmentInterruptions",
         "property": "missedDoses",
         "type": "number"
       },
       {
         "column": "229. ART_Stop_Date4",
-        "relation": "artKeyStops",
+        "relation": "treatmentInterruptions",
         "property": "stopDate",
         "type": "Date"
       },
       {
         "column": "230. ART_Restart_Date4",
-        "relation": "artKeyStops",
+        "relation": "treatmentInterruptions",
         "property": "restartDate",
         "type": "Date"
       },
       {
         "column": "231. Reason_4",
-        "relation": "artKeyStops",
+        "relation": "treatmentInterruptions",
         "property": "reasion",
         "type": "string"
       },
       {
         "column": "232. Total_no_of_missed_dose4",
-        "relation": "artKeyStops",
+        "relation": "treatmentInterruptions",
         "property": "missedDoses",
         "type": "number"
       },
@@ -7150,12 +7450,12 @@
       },
       {
         "column": "9. GHC_NewPatient",
-        "property": "ghcNewPatient",
+        "property": "isNewPatient",
         "type": "boolean"
       },
       {
         "column": "10. GHC_VisitDate",
-        "property": "ghcVisitDate",
+        "property": "visitDate",
         "type": "Date"
       },
       {
@@ -7431,49 +7731,49 @@
       {
         "column": "65. GHC_Category1",
         "relation": "ghcCategorys",
-        "property": "ghcCategory",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "66. GHC_Description1",
         "relation": "ghcCategorys",
-        "property": "ghcDescription",
+        "property": "description",
         "type": "string"
       },
       {
         "column": "67. GHC_Category2",
         "relation": "ghcCategorys",
-        "property": "ghcCategory",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "68. GHC_Description2",
         "relation": "ghcCategorys",
-        "property": "ghcDescription",
+        "property": "description",
         "type": "string"
       },
       {
         "column": "69. GHC_Category3",
         "relation": "ghcCategorys",
-        "property": "ghcCategory",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "70. GHC_Description3",
         "relation": "ghcCategorys",
-        "property": "ghcDescription",
+        "property": "description",
         "type": "string"
       },
       {
         "column": "71. GHC_Category4",
         "relation": "ghcCategorys",
-        "property": "ghcCategory",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "72. GHC_Description4",
         "relation": "ghcCategorys",
-        "property": "ghcDescription",
+        "property": "description",
         "type": "string"
       },
       {
@@ -7514,241 +7814,241 @@
       {
         "column": "80. GHC_MedicineName1",
         "relation": "ghcMedications",
-        "property": "ghcMedicineName",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "81. GHC_Dosage1",
         "relation": "ghcMedications",
-        "property": "ghcDosage",
+        "property": "dosage",
         "type": "string"
       },
       {
         "column": "82. GHC_Frequency1",
         "relation": "ghcMedications",
-        "property": "ghcFrequency",
+        "property": "frequency",
         "type": "string"
       },
       {
         "column": "83. GHC_NumberDays1",
         "relation": "ghcMedications",
-        "property": "ghcNumberDays",
+        "property": "numberDays",
         "type": "number"
       },
       {
         "column": "84. GHC_MedicineName2",
         "relation": "ghcMedications",
-        "property": "ghcMedicineName",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "85. GHC_Dosage2",
         "relation": "ghcMedications",
-        "property": "ghcDosage",
+        "property": "dosage",
         "type": "string"
       },
       {
         "column": "86. GHC_Frequency2",
         "relation": "ghcMedications",
-        "property": "ghcFrequency",
+        "property": "frequency",
         "type": "string"
       },
       {
         "column": "87. GHC_NumberDays2",
         "relation": "ghcMedications",
-        "property": "ghcNumberDays",
+        "property": "numberDays",
         "type": "number"
       },
       {
         "column": "88. GHC_MedicineName3",
         "relation": "ghcMedications",
-        "property": "ghcMedicineName",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "89. GHC_Dosage3",
         "relation": "ghcMedications",
-        "property": "ghcDosage",
+        "property": "dosage",
         "type": "string"
       },
       {
         "column": "90. GHC_Frequency3",
         "relation": "ghcMedications",
-        "property": "ghcFrequency",
+        "property": "frequency",
         "type": "string"
       },
       {
         "column": "91. GHC_NumberDays3",
         "relation": "ghcMedications",
-        "property": "ghcNumberDays",
+        "property": "numberDays",
         "type": "number"
       },
       {
         "column": "92. GHC_MedicineName4",
         "relation": "ghcMedications",
-        "property": "ghcMedicineName",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "93. GHC_Dosage4",
         "relation": "ghcMedications",
-        "property": "ghcDosage",
+        "property": "dosage",
         "type": "string"
       },
       {
         "column": "94. GHC_Frequency4",
         "relation": "ghcMedications",
-        "property": "ghcFrequency",
+        "property": "frequency",
         "type": "string"
       },
       {
         "column": "95. GHC_NumberDays4",
         "relation": "ghcMedications",
-        "property": "ghcNumberDays",
+        "property": "numberDays",
         "type": "number"
       },
       {
         "column": "96. GHC_MedicineName5",
         "relation": "ghcMedications",
-        "property": "ghcMedicineName",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "97. GHC_Dosage5",
         "relation": "ghcMedications",
-        "property": "ghcDosage",
+        "property": "dosage",
         "type": "string"
       },
       {
         "column": "98. GHC_Frequency5",
         "relation": "ghcMedications",
-        "property": "ghcFrequency",
+        "property": "frequency",
         "type": "string"
       },
       {
         "column": "99. GHC_NumberDays5",
         "relation": "ghcMedications",
-        "property": "ghcNumberDays",
+        "property": "numberDays",
         "type": "number"
       },
       {
         "column": "100. GHC_MedicineName6",
         "relation": "ghcMedications",
-        "property": "ghcMedicineName",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "101. GHC_Dosage6",
         "relation": "ghcMedications",
-        "property": "ghcDosage",
+        "property": "dosage",
         "type": "string"
       },
       {
         "column": "102. GHC_Frequency6",
         "relation": "ghcMedications",
-        "property": "ghcFrequency",
+        "property": "frequency",
         "type": "string"
       },
       {
         "column": "103. GHC_NumberDays6",
         "relation": "ghcMedications",
-        "property": "ghcNumberDays",
+        "property": "numberDays",
         "type": "number"
       },
       {
         "column": "104. GHC_MedicineName7",
         "relation": "ghcMedications",
-        "property": "ghcMedicineName",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "105. GHC_Dosage7",
         "relation": "ghcMedications",
-        "property": "ghcDosage",
+        "property": "dosage",
         "type": "string"
       },
       {
         "column": "106. GHC_Frequency7",
         "relation": "ghcMedications",
-        "property": "ghcFrequency",
+        "property": "frequency",
         "type": "string"
       },
       {
         "column": "107. GHC_NumberDays7",
         "relation": "ghcMedications",
-        "property": "ghcNumberDays",
+        "property": "numberDays",
         "type": "number"
       },
       {
         "column": "108. GHC_MedicineName8",
         "relation": "ghcMedications",
-        "property": "ghcMedicineName",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "109. GHC_Dosage8",
         "relation": "ghcMedications",
-        "property": "ghcDosage",
+        "property": "dosage",
         "type": "string"
       },
       {
         "column": "110. GHC_Frequency8",
         "relation": "ghcMedications",
-        "property": "ghcFrequency",
+        "property": "frequency",
         "type": "string"
       },
       {
         "column": "111. GHC_NumberDays8",
         "relation": "ghcMedications",
-        "property": "ghcNumberDays",
+        "property": "numberDays",
         "type": "number"
       },
       {
         "column": "112. GHC_MedicineName9",
         "relation": "ghcMedications",
-        "property": "ghcMedicineName",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "113. GHC_Dosage9",
         "relation": "ghcMedications",
-        "property": "ghcDosage",
+        "property": "dosage",
         "type": "string"
       },
       {
         "column": "114. GHC_Frequency9",
         "relation": "ghcMedications",
-        "property": "ghcFrequency",
+        "property": "frequency",
         "type": "string"
       },
       {
         "column": "115. GHC_NumberDays9",
         "relation": "ghcMedications",
-        "property": "ghcNumberDays",
+        "property": "numberDays",
         "type": "number"
       },
       {
         "column": "116. GHC_MedicineName10",
         "relation": "ghcMedications",
-        "property": "ghcMedicineName",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "117. GHC_Dosage10",
         "relation": "ghcMedications",
-        "property": "ghcDosage",
+        "property": "dosage",
         "type": "string"
       },
       {
         "column": "118. GHC_Frequency10",
         "relation": "ghcMedications",
-        "property": "ghcFrequency",
+        "property": "frequency",
         "type": "string"
       },
       {
         "column": "119. GHC_NumberDays10",
         "relation": "ghcMedications",
-        "property": "ghcNumberDays",
+        "property": "numberDays",
         "type": "number"
       },
       {
@@ -8457,241 +8757,241 @@
       {
         "column": "70. STI_Treatment_MedicineName1",
         "relation": "stiMedications",
-        "property": "stiTreatmentMedicineName",
+        "property": "medicineName",
         "type": "string"
       },
       {
         "column": "71. STI_Treatment_Dosage1",
         "relation": "stiMedications",
-        "property": "stiTreatmentDosage",
+        "property": "dosage",
         "type": "string"
       },
       {
         "column": "72. STI_Treatment_Frequency1",
         "relation": "stiMedications",
-        "property": "stiTreatmentFrequency",
+        "property": "frequency",
         "type": "string"
       },
       {
         "column": "73. STI_Treatment_NumberDays1",
         "relation": "stiMedications",
-        "property": "stiTreatmentNumberDays",
+        "property": "numberDays",
         "type": "number"
       },
       {
         "column": "74. STI_Treatment_MedicineName2",
         "relation": "stiMedications",
-        "property": "stiTreatmentMedicineName",
+        "property": "medicineName",
         "type": "string"
       },
       {
         "column": "75. STI_Treatment_Dosage2",
         "relation": "stiMedications",
-        "property": "stiTreatmentDosage",
+        "property": "dosage",
         "type": "string"
       },
       {
         "column": "76. STI_Treatment_Frequency2",
         "relation": "stiMedications",
-        "property": "stiTreatmentFrequency",
+        "property": "frequency",
         "type": "string"
       },
       {
         "column": "77. STI_Treatment_NumberDays2",
         "relation": "stiMedications",
-        "property": "stiTreatmentNumberDays",
+        "property": "numberDays",
         "type": "number"
       },
       {
         "column": "78. STI_Treatment_MedicineName3",
         "relation": "stiMedications",
-        "property": "stiTreatmentMedicineName",
+        "property": "medicineName",
         "type": "string"
       },
       {
         "column": "79. STI_Treatment_Dosage3",
         "relation": "stiMedications",
-        "property": "stiTreatmentDosage",
+        "property": "dosage",
         "type": "string"
       },
       {
         "column": "80. STI_Treatment_Frequency3",
         "relation": "stiMedications",
-        "property": "stiTreatmentFrequency",
+        "property": "frequency",
         "type": "string"
       },
       {
         "column": "81. STI_Treatment_NumberDays3",
         "relation": "stiMedications",
-        "property": "stiTreatmentNumberDays",
+        "property": "numberDays",
         "type": "number"
       },
       {
         "column": "82. STI_Treatment_MedicineName4",
         "relation": "stiMedications",
-        "property": "stiTreatmentMedicineName",
+        "property": "medicineName",
         "type": "string"
       },
       {
         "column": "83. STI_Treatment_Dosage4",
         "relation": "stiMedications",
-        "property": "stiTreatmentDosage",
+        "property": "dosage",
         "type": "string"
       },
       {
         "column": "84. STI_Treatment_Frequency4",
         "relation": "stiMedications",
-        "property": "stiTreatmentFrequency",
+        "property": "frequency",
         "type": "string"
       },
       {
         "column": "85. STI_Treatment_NumberDays4",
         "relation": "stiMedications",
-        "property": "stiTreatmentNumberDays",
+        "property": "numberDays",
         "type": "number"
       },
       {
         "column": "86. STI_Treatment_MedicineName5",
         "relation": "stiMedications",
-        "property": "stiTreatmentMedicineName",
+        "property": "medicineName",
         "type": "string"
       },
       {
         "column": "87. STI_Treatment_Dosage5",
         "relation": "stiMedications",
-        "property": "stiTreatmentDosage",
+        "property": "dosage",
         "type": "string"
       },
       {
         "column": "88. STI_Treatment_Frequency5",
         "relation": "stiMedications",
-        "property": "stiTreatmentFrequency",
+        "property": "frequency",
         "type": "string"
       },
       {
         "column": "89. STI_Treatment_NumberDays5",
         "relation": "stiMedications",
-        "property": "stiTreatmentNumberDays",
+        "property": "numberDays",
         "type": "number"
       },
       {
         "column": "90. STI_Treatment_MedicineName6",
         "relation": "stiMedications",
-        "property": "stiTreatmentMedicineName",
+        "property": "medicineName",
         "type": "string"
       },
       {
         "column": "91. STI_Treatment_Dosage6",
         "relation": "stiMedications",
-        "property": "stiTreatmentDosage",
+        "property": "dosage",
         "type": "string"
       },
       {
         "column": "92. STI_Treatment_Frequency6",
         "relation": "stiMedications",
-        "property": "stiTreatmentFrequency",
+        "property": "frequency",
         "type": "string"
       },
       {
         "column": "93. STI_Treatment_NumberDays6",
         "relation": "stiMedications",
-        "property": "stiTreatmentNumberDays",
+        "property": "numberDays",
         "type": "number"
       },
       {
         "column": "94. STI_Treatment_MedicineName7",
         "relation": "stiMedications",
-        "property": "stiTreatmentMedicineName",
+        "property": "medicineName",
         "type": "string"
       },
       {
         "column": "95. STI_Treatment_Dosage7",
         "relation": "stiMedications",
-        "property": "stiTreatmentDosage",
+        "property": "dosage",
         "type": "string"
       },
       {
         "column": "96. STI_Treatment_Frequency7",
         "relation": "stiMedications",
-        "property": "stiTreatmentFrequency",
+        "property": "frequency",
         "type": "string"
       },
       {
         "column": "97. STI_Treatment_NumberDays7",
         "relation": "stiMedications",
-        "property": "stiTreatmentNumberDays",
+        "property": "numberDays",
         "type": "number"
       },
       {
         "column": "98. STI_Treatment_MedicineName8",
         "relation": "stiMedications",
-        "property": "stiTreatmentMedicineName",
+        "property": "medicineName",
         "type": "string"
       },
       {
         "column": "99. STI_Treatment_Dosage8",
         "relation": "stiMedications",
-        "property": "stiTreatmentDosage",
+        "property": "dosage",
         "type": "string"
       },
       {
         "column": "100. STI_Treatment_Frequency8",
         "relation": "stiMedications",
-        "property": "stiTreatmentFrequency",
+        "property": "frequency",
         "type": "string"
       },
       {
         "column": "101. STI_Treatment_NumberDays8",
         "relation": "stiMedications",
-        "property": "stiTreatmentNumberDays",
+        "property": "numberDays",
         "type": "number"
       },
       {
         "column": "102. STI_Treatment_MedicineName9",
         "relation": "stiMedications",
-        "property": "stiTreatmentMedicineName",
+        "property": "medicineName",
         "type": "string"
       },
       {
         "column": "103. STI_Treatment_Dosage9",
         "relation": "stiMedications",
-        "property": "stiTreatmentDosage",
+        "property": "dosage",
         "type": "string"
       },
       {
         "column": "104. STI_Treatment_Frequency9",
         "relation": "stiMedications",
-        "property": "stiTreatmentFrequency",
+        "property": "frequency",
         "type": "string"
       },
       {
         "column": "105. STI_Treatment_NumberDays9",
         "relation": "stiMedications",
-        "property": "stiTreatmentNumberDays",
+        "property": "numberDays",
         "type": "number"
       },
       {
         "column": "106. STI_Treatment_MedicineName10",
         "relation": "stiMedications",
-        "property": "stiTreatmentMedicineName",
+        "property": "medicineName",
         "type": "string"
       },
       {
         "column": "107. STI_Treatment_Dosage10",
         "relation": "stiMedications",
-        "property": "stiTreatmentDosage",
+        "property": "dosage",
         "type": "string"
       },
       {
         "column": "108. STI_Treatment_Frequency10",
         "relation": "stiMedications",
-        "property": "stiTreatmentFrequency",
+        "property": "frequency",
         "type": "string"
       },
       {
         "column": "109. STI_Treatment_NumberDays10",
         "relation": "stiMedications",
-        "property": "stiTreatmentNumberDays",
+        "property": "numberDays",
         "type": "number"
       },
       {
@@ -9439,55 +9739,55 @@
       {
         "column": "15. VCCT_TypeOfDrugs1",
         "relation": "vcctDrugTypes",
-        "property": "vcctTypeOfDrugs",
+        "property": "typeOfDrugs",
         "type": "string"
       },
       {
         "column": "16. VCCT_DrugName1",
         "relation": "vcctDrugTypes",
-        "property": "vcctDrugName",
+        "property": "drugName",
         "type": "string"
       },
       {
         "column": "17. VCCT_WayOfUse1",
         "relation": "vcctDrugTypes",
-        "property": "vcctWayOfUse",
+        "property": "wayOfUse",
         "type": "string"
       },
       {
         "column": "18. VCCT_TypeOfDrugs2",
         "relation": "vcctDrugTypes",
-        "property": "vcctTypeOfDrugs",
+        "property": "typeOfDrugs",
         "type": "string"
       },
       {
         "column": "19. VCCT_DrugName2",
         "relation": "vcctDrugTypes",
-        "property": "vcctDrugName",
+        "property": "drugName",
         "type": "string"
       },
       {
         "column": "20. VCCT_WayOfUse2",
         "relation": "vcctDrugTypes",
-        "property": "vcctWayOfUse",
+        "property": "wayOfUse",
         "type": "string"
       },
       {
         "column": "21. VCCT_TypeOfDrugs3",
         "relation": "vcctDrugTypes",
-        "property": "vcctTypeOfDrugs",
+        "property": "typeOfDrugs",
         "type": "string"
       },
       {
         "column": "22. VCCT_DrugName3",
         "relation": "vcctDrugTypes",
-        "property": "vcctDrugName",
+        "property": "drugName",
         "type": "string"
       },
       {
         "column": "23. VCCT_WayOfUse3",
         "relation": "vcctDrugTypes",
-        "property": "vcctWayOfUse",
+        "property": "wayOfUse",
         "type": "string"
       },
       {
