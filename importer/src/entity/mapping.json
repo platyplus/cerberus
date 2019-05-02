@@ -465,143 +465,255 @@
       },
       {
         "column": "89. ADH_AlcoholLastUse",
-        "property": "alcoholLastUse",
-        "type": "Date"
+        "relation": "drugTypes",
+        "property": "lastUse",
+        "type": "Date",
+        "entityValues": {
+          "drug": "alcohol"
+        }
       },
       {
         "column": "90. ADH_AlcoholTimeDay",
-        "property": "alcoholTimesDat",
-        "type": "number"
+        "relation": "drugUsages",
+        "property": "timesDay",
+        "type": "number",
+        "entityValues": {
+          "drug": "alcohol"
+        }
       },
       {
         "column": "91. ADH_AlcoholDaysWeek",
-        "property": "alcoholDaysWeek",
-        "type": "number"
+        "relation": "drugUsages",
+        "property": "daysWeek",
+        "type": "number",
+        "entityValues": {
+          "drug": "alcohol"
+        }
       },
       {
         "column": "92. ADH_AlcoholWayOfUse",
-        "property": "alcoholWayOfUse",
-        "type": "string"
+        "relation": "drugUsages",
+        "property": "wayOfUse",
+        "type": "string",
+        "entityValues": {
+          "drug": "alcohol"
+        }
       },
       {
         "column": "93. ADH_AmpheataminelLastUse",
-        "property": "amphetamineLastUse",
-        "type": "Date"
+        "relation": "drugUsages",
+        "property": "lastUse",
+        "type": "Date",
+        "entityValues": {
+          "drug": "amphetamine"
+        }
       },
       {
         "column": "94. ADH_AmpheatamineTimeDay",
-        "property": "amphetamineTimesDay",
-        "type": "number"
+        "relation": "drugUsages",
+        "property": "timesDay",
+        "type": "number",
+        "entityValues": {
+          "drug": "amphetamine"
+        }
       },
       {
         "column": "95. ADH_AmpheatamineDaysWeek",
-        "property": "amphetamineDaysWeek",
-        "type": "number"
+        "relation": "drugUsages",
+        "property": "daysWeek",
+        "type": "number",
+        "entityValues": {
+          "drug": "amphetamine"
+        }
       },
       {
         "column": "96. ADH_AmpheatamineWayOfUse",
-        "property": "amphetamineWayOfUse",
-        "type": "string"
+        "relation": "drugUsages",
+        "property": "wayOfUse",
+        "type": "string",
+        "entityValues": {
+          "drug": "amphetamine"
+        }
       },
       {
         "column": "97. ADH_DiazepineLastUse",
-        "property": "diazepineLastUse",
-        "type": "Date"
+        "relation": "drugUsages",
+        "property": "lastUse",
+        "type": "Date",
+        "entityValues": {
+          "drug": "diazepine"
+        }
       },
       {
         "column": "98. ADH_DiazepineTimeDay",
-        "property": "diazepineTimesDay",
-        "type": "number"
+        "relation": "drugUsages",
+        "property": "timesDay",
+        "type": "number",
+        "entityValues": {
+          "drug": "diazepine"
+        }
       },
       {
         "column": "99. ADH_DiazepineDaysWeek",
-        "property": "diazepineDaysWeek",
-        "type": "number"
+        "relation": "drugUsages",
+        "property": "daysWeek",
+        "type": "number",
+        "entityValues": {
+          "drug": "diazepine"
+        }
       },
       {
         "column": "100. ADH_DiazepineWayOfUse",
-        "property": "diazepineWayOfUse",
-        "type": "string"
+        "relation": "drugUsages",
+        "property": "wayOfUse",
+        "type": "string",
+        "entityValues": {
+          "drug": "diazepine"
+        }
       },
       {
         "column": "101. ADH_CannabisLastUse",
-        "property": "cannabisLastUse",
-        "type": "Date"
+        "relation": "drugUsages",
+        "property": "lastUse",
+        "type": "Date",
+        "entityValues": {
+          "drug": "cannabis"
+        }
       },
       {
         "column": "102. ADH_CannabisTimeDay",
-        "property": "cannabisTimesDay",
-        "type": "number"
+        "relation": "drugUsages",
+        "property": "timesDay",
+        "type": "number",
+        "entityValues": {
+          "drug": "cannabis"
+        }
       },
       {
         "column": "103. ADH_CannabisDaysWeek",
-        "property": "cannabisDaysWeek",
-        "type": "number"
+        "relation": "drugUsages",
+        "property": "daysWeek",
+        "type": "number",
+        "entityValues": {
+          "drug": "cannabis"
+        }
       },
       {
         "column": "104. ADH_CannabisWayOfUse",
-        "property": "cannabisWayOfUse",
-        "type": "string"
+        "relation": "drugUsages",
+        "property": "wayOfUse",
+        "type": "string",
+        "entityValues": {
+          "drug": "cannabis"
+        }
       },
       {
         "column": "105. ADH_EcstasyLastUse",
-        "property": "ecstasyLastUse",
-        "type": "Date"
+        "relation": "drugUsages",
+        "property": "lastUse",
+        "type": "Date",
+        "entityValues": {
+          "drug": "ecstasy"
+        }
       },
       {
         "column": "106. ADH_EcstasyTimeDay",
-        "property": "ecstasyTimesDay",
-        "type": "number"
+        "relation": "drugUsages",
+        "property": "timesDay",
+        "type": "number",
+        "entityValues": {
+          "drug": "ecstasy"
+        }
       },
       {
         "column": "107. ADH_EsctasyDaysWeek",
-        "property": "ecstasyDaysWeek",
-        "type": "number"
+        "relation": "drugUsages",
+        "property": "daysWeek",
+        "type": "number",
+        "entityValues": {
+          "drug": "ecstasy"
+        }
       },
       {
         "column": "108. ADH_EsctasyWayOfUse",
-        "property": "ecstasyWayOfUse",
-        "type": "string"
+        "relation": "drugUsages",
+        "property": "wayOfUse",
+        "type": "string",
+        "entityValues": {
+          "drug": "ecstasy"
+        }
       },
       {
         "column": "109. ADH_HerionLastUse",
-        "property": "heroinLastUse",
-        "type": "Date"
+        "relation": "drugUsages",
+        "property": "lastUse",
+        "type": "Date",
+        "entityValues": {
+          "drug": "heroin"
+        }
       },
       {
         "column": "110. ADH_HerionTimeDay",
-        "property": "heroinTimesDay",
-        "type": "number"
+        "relation": "drugUsages",
+        "property": "timesDay",
+        "type": "number",
+        "entityValues": {
+          "drug": "heroin"
+        }
       },
       {
         "column": "111. ADH_HerionDaysWeek",
-        "property": "heroinDaysWeek",
-        "type": "number"
+        "relation": "drugUsages",
+        "property": "daysWeek",
+        "type": "number",
+        "entityValues": {
+          "drug": "heroin"
+        }
       },
       {
         "column": "112. ADH_HerionWayOfUse",
-        "property": "heroinWayOfUse",
-        "type": "string"
+        "relation": "drugUsages",
+        "property": "wayOfUse",
+        "type": "string",
+        "entityValues": {
+          "drug": "heroin"
+        }
       },
       {
         "column": "113. ADH_OpiumLastUse",
-        "property": "adhOpiumLastUse",
-        "type": "Date"
+        "relation": "drugUsages",
+        "property": "lastUse",
+        "type": "Date",
+        "entityValues": {
+          "drug": "opium"
+        }
       },
       {
         "column": "114. ADH_OpiumTimeDay",
-        "property": "adhOpiumTimeDay",
-        "type": "number"
+        "relation": "drugUsages",
+        "property": "timesDay",
+        "type": "number",
+        "entityValues": {
+          "drug": "opium"
+        }
       },
       {
         "column": "115. ADH_OpiumDaysWeek",
-        "property": "adhOpiumDaysWeek",
-        "type": "number"
+        "relation": "drugUsages",
+        "property": "daysWeek",
+        "type": "number",
+        "entityValues": {
+          "drug": "opium"
+        }
       },
       {
         "column": "116. ADH_OpiumWayOfUse",
-        "property": "adhOpiumWayOfUse",
-        "type": "string"
+        "relation": "drugUsages",
+        "property": "wayOfUse",
+        "type": "string",
+        "entityValues": {
+          "drug": "opium"
+        }
       },
       {
         "column": "117. ADH_DidYouShareNeedleSyringe",
@@ -1331,58 +1443,93 @@
       },
       {
         "column": "129. ART_Adult_Stage",
+        "relation": "artStages",
         "property": "stage",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "category": "adult"
+        }
       },
       {
         "column": "130. ART_Adult_Stage1",
+        "relation": "artStages",
         "property": "stage",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "category": "adult"
+        }
       },
       {
         "column": "131. ART_Adult_Stage2",
+        "relation": "artStages",
         "property": "stage",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "category": "adult"
+        }
       },
       {
         "column": "132. ART_Adult_Stage3",
+        "relation": "artStages",
         "property": "stage",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "category": "adult"
+        }
       },
       {
         "column": "133. ART_Adult_Stage4",
+        "relation": "artStages",
         "property": "stage",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "category": "adult"
+        }
       },
       {
         "column": "134. ART_Child_Stage",
-        "relation": "artChildStages",
-        "property": "artChildStage",
-        "type": "string"
+        "relation": "artStages",
+        "property": "stage",
+        "type": "string",
+        "entityValues": {
+          "category": "child"
+        }
       },
       {
         "column": "135. ART_Child_Stage1",
-        "relation": "artChildStages",
-        "property": "artChildStage",
-        "type": "string"
+        "relation": "artStages",
+        "property": "stage",
+        "type": "string",
+        "entityValues": {
+          "category": "child"
+        }
       },
       {
         "column": "136. ART_Child_Stage2",
-        "relation": "artChildStages",
-        "property": "artChildStage",
-        "type": "string"
+        "relation": "artStages",
+        "property": "stage",
+        "type": "string",
+        "entityValues": {
+          "category": "child"
+        }
       },
       {
         "column": "137. ART_Child_Stage3",
-        "relation": "artChildStages",
-        "property": "artChildStage",
-        "type": "string"
+        "relation": "artStages",
+        "property": "stage",
+        "type": "string",
+        "entityValues": {
+          "category": "child"
+        }
       },
       {
         "column": "138. ART_Child_Stage4",
-        "relation": "artChildStages",
-        "property": "artChildStage",
-        "type": "string"
+        "relation": "artStages",
+        "property": "stage",
+        "type": "string",
+        "entityValues": {
+          "category": "child"
+        }
       },
       {
         "column": "139. ART_PatientStatus",
@@ -2514,6 +2661,7 @@
       },
       {
         "column": "21. Weight",
+        "relation": "artKeyCd4Weights",
         "property": "weight",
         "type": "number"
       },
@@ -3609,55 +3757,55 @@
       {
         "column": "206. HAARTToxicity",
         "relation": "artKeyHaartToxicitys",
-        "property": "haartToxicity",
+        "property": "toxicity",
         "type": "string"
       },
       {
         "column": "207. ToxicityGrade",
         "relation": "artKeyHaartToxicitys",
-        "property": "toxicityGrade",
+        "property": "grade",
         "type": "string"
       },
       {
         "column": "208. ToxicityDate",
         "relation": "artKeyHaartToxicitys",
-        "property": "toxicityDate",
+        "property": "date",
         "type": "Date"
       },
       {
         "column": "209. HAARTToxicity2",
         "relation": "artKeyHaartToxicitys",
-        "property": "haartToxicity",
+        "property": "toxicity",
         "type": "string"
       },
       {
         "column": "210. ToxicityGrade2",
         "relation": "artKeyHaartToxicitys",
-        "property": "toxicityGrade",
+        "property": "grade",
         "type": "string"
       },
       {
         "column": "211. ToxicityDate2",
         "relation": "artKeyHaartToxicitys",
-        "property": "toxicityDate",
+        "property": "date",
         "type": "Date"
       },
       {
         "column": "212. HAARTToxicity3",
         "relation": "artKeyHaartToxicitys",
-        "property": "haartToxicity",
+        "property": "toxicity",
         "type": "string"
       },
       {
         "column": "213. ToxicityGrade3",
         "relation": "artKeyHaartToxicitys",
-        "property": "toxicityGrade",
+        "property": "grade",
         "type": "string"
       },
       {
         "column": "214. ToxicityDate3",
         "relation": "artKeyHaartToxicitys",
-        "property": "toxicityDate",
+        "property": "date",
         "type": "Date"
       },
       {
@@ -3673,97 +3821,97 @@
       {
         "column": "217. ART_Stop_Date1",
         "relation": "artKeyStops",
-        "property": "artStopDate",
+        "property": "stopDate",
         "type": "Date"
       },
       {
         "column": "218. ART_Restart_Date1",
         "relation": "artKeyStops",
-        "property": "artRestartDate",
+        "property": "restartDate",
         "type": "Date"
       },
       {
         "column": "219. Reason_1",
         "relation": "artKeyStops",
-        "property": "reason",
+        "property": "reasion",
         "type": "string"
       },
       {
         "column": "220. Total_no_of_missed_dose1",
         "relation": "artKeyStops",
-        "property": "totalNoOfMissedDose",
+        "property": "missedDoses",
         "type": "number"
       },
       {
         "column": "221. ART_Stop_Date2",
         "relation": "artKeyStops",
-        "property": "artStopDate",
+        "property": "stopDate",
         "type": "Date"
       },
       {
         "column": "222. ART_Restart_Date2",
         "relation": "artKeyStops",
-        "property": "artRestartDate",
+        "property": "restartDate",
         "type": "Date"
       },
       {
         "column": "223. Reason_2",
         "relation": "artKeyStops",
-        "property": "reason",
+        "property": "reasion",
         "type": "string"
       },
       {
         "column": "224. Total_no_of_missed_dose2",
         "relation": "artKeyStops",
-        "property": "totalNoOfMissedDose",
+        "property": "missedDoses",
         "type": "number"
       },
       {
         "column": "225. ART_Stop_Date3",
         "relation": "artKeyStops",
-        "property": "artStopDate",
+        "property": "stopDate",
         "type": "Date"
       },
       {
         "column": "226. ART_Restart_Date3",
         "relation": "artKeyStops",
-        "property": "artRestartDate",
+        "property": "restartDate",
         "type": "Date"
       },
       {
         "column": "227. Reason_3",
         "relation": "artKeyStops",
-        "property": "reason",
+        "property": "reasion",
         "type": "string"
       },
       {
         "column": "228. Total_no_of_missed_dose3",
         "relation": "artKeyStops",
-        "property": "totalNoOfMissedDose",
+        "property": "missedDoses",
         "type": "number"
       },
       {
         "column": "229. ART_Stop_Date4",
         "relation": "artKeyStops",
-        "property": "artStopDate",
+        "property": "stopDate",
         "type": "Date"
       },
       {
         "column": "230. ART_Restart_Date4",
         "relation": "artKeyStops",
-        "property": "artRestartDate",
+        "property": "restartDate",
         "type": "Date"
       },
       {
         "column": "231. Reason_4",
         "relation": "artKeyStops",
-        "property": "reason",
+        "property": "reasion",
         "type": "string"
       },
       {
         "column": "232. Total_no_of_missed_dose4",
         "relation": "artKeyStops",
-        "property": "totalNoOfMissedDose",
+        "property": "missedDoses",
         "type": "number"
       },
       {
@@ -3781,7 +3929,7 @@
       {
         "column": "235. DateOfDiagnosis_1",
         "relation": "artKeyAttbs",
-        "property": "dateOfDiagnosis",
+        "property": "diagnosisDate",
         "type": "Date"
       },
       {
@@ -3811,7 +3959,7 @@
       {
         "column": "240. DateofDiagnosis_2",
         "relation": "artKeyAttbs",
-        "property": "dateofDiagnosis",
+        "property": "diagnosisDate",
         "type": "Date"
       },
       {
@@ -3864,7 +4012,7 @@
       {
         "column": "249. V_Date_1",
         "relation": "artKeyResults",
-        "property": "vDate",
+        "property": "date",
         "type": "Date"
       },
       {
@@ -3876,7 +4024,7 @@
       {
         "column": "251. V_Date_2",
         "relation": "artKeyResults",
-        "property": "vDate",
+        "property": "date",
         "type": "Date"
       },
       {
@@ -3888,7 +4036,7 @@
       {
         "column": "253. V_Date_3",
         "relation": "artKeyResults",
-        "property": "vDate",
+        "property": "date",
         "type": "Date"
       },
       {
@@ -3900,7 +4048,7 @@
       {
         "column": "255. V_Date_4",
         "relation": "artKeyResults",
-        "property": "vDate",
+        "property": "date",
         "type": "Date"
       },
       {
@@ -3912,7 +4060,7 @@
       {
         "column": "257. V_Date_5",
         "relation": "artKeyResults",
-        "property": "vDate",
+        "property": "date",
         "type": "Date"
       },
       {
@@ -3924,7 +4072,7 @@
       {
         "column": "259. V_Date_6",
         "relation": "artKeyResults",
-        "property": "vDate",
+        "property": "date",
         "type": "Date"
       },
       {
@@ -3936,7 +4084,7 @@
       {
         "column": "261. V_Date_7",
         "relation": "artKeyResults",
-        "property": "vDate",
+        "property": "date",
         "type": "Date"
       },
       {
@@ -3948,7 +4096,7 @@
       {
         "column": "263. V_Date_8",
         "relation": "artKeyResults",
-        "property": "vDate",
+        "property": "date",
         "type": "Date"
       },
       {
@@ -4023,7 +4171,7 @@
       },
       {
         "column": "277. ART_SavingDate",
-        "property": "artSavingDate",
+        "property": "savingDate",
         "type": "Date"
       }
     ]
@@ -4124,1678 +4272,2742 @@
         "type": "Date"
       },
       {
-        "column": "2. EDU_001_ARTSessions",
+        "column": "2. DIC_EDU_001_ARTSessions",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "art sessions"
+        }
       },
       {
-        "column": "3. EDU_A01_NewSW",
+        "column": "3. DIC_EDU_A01_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "art sessions"
+        }
       },
       {
-        "column": "4. EDU_A01_NewMSM",
+        "column": "4. DIC_EDU_A01_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "art sessions"
+        }
       },
       {
-        "column": "5. EDU_A01_NewOther",
+        "column": "5. DIC_EDU_A01_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "art sessions"
+        }
       },
       {
-        "column": "6. EDU_B01_RepeaterSW",
+        "column": "6. DIC_EDU_B01_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "art sessions"
+        }
       },
       {
-        "column": "7. EDU_B01_RepeaterMSM",
+        "column": "7. DIC_EDU_B01_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "art sessions"
+        }
       },
       {
-        "column": "8. EDU_B01_RepeaterOther",
+        "column": "8. DIC_EDU_B01_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "art sessions"
+        }
       },
       {
-        "column": "9. EDU_002_ARTSupportGroup",
+        "column": "9. DIC_EDU_002_ARTSupportGroup",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "support group"
+        }
       },
       {
-        "column": "10. EDU_A02_NewSW",
+        "column": "10. DIC_EDU_A02_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "support group"
+        }
       },
       {
-        "column": "11. EDU_A02_NewMSM",
+        "column": "11. DIC_EDU_A02_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "support group"
+        }
       },
       {
-        "column": "12. EDU_A02_NewOther",
+        "column": "12. DIC_EDU_A02_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "support group"
+        }
       },
       {
-        "column": "13. EDU_B02_RepeaterSW",
+        "column": "13. DIC_EDU_B02_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "support group"
+        }
       },
       {
-        "column": "14. EDU_B02_RepeaterMSM",
+        "column": "14. DIC_EDU_B02_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "support group"
+        }
       },
       {
-        "column": "15. EDU_B02_RepeaterOther",
+        "column": "15. DIC_EDU_B02_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "support group"
+        }
       },
       {
-        "column": "16. EDU_003_BombBook",
+        "column": "16. DIC_EDU_003_BombBook",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "bomb group"
+        }
       },
       {
-        "column": "17. EDU_A03_NewSW",
+        "column": "17. DIC_EDU_A03_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "bomb group"
+        }
       },
       {
-        "column": "18. EDU_A03_NewMSM",
+        "column": "18. DIC_EDU_A03_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "bomb group"
+        }
       },
       {
-        "column": "19. EDU_A03_NewOther",
+        "column": "19. DIC_EDU_A03_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "bomb group"
+        }
       },
       {
-        "column": "20. EDU_B03_RepeaterSW",
+        "column": "20. DIC_EDU_B03_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "bomb group"
+        }
       },
       {
-        "column": "21. EDU_B03_RepeaterMSM",
+        "column": "21. DIC_EDU_B03_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "bomb group"
+        }
       },
       {
-        "column": "22. EDU_B03_RepeaterOther",
+        "column": "22. DIC_EDU_B03_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "bomb group"
+        }
       },
       {
-        "column": "23. EDU_004_Contraception",
+        "column": "23. DIC_EDU_004_Contraception",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "contraception"
+        }
       },
       {
-        "column": "24. EDU_A04_NewSW",
+        "column": "24. DIC_EDU_A04_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "contraception"
+        }
       },
       {
-        "column": "25. EDU_A04_NewMSM",
+        "column": "25. DIC_EDU_A04_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "contraception"
+        }
       },
       {
-        "column": "26. EDU_A04_NewOther",
+        "column": "26. DIC_EDU_A04_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "contraception"
+        }
       },
       {
-        "column": "27. EDU_B04_RepeaterSW",
+        "column": "27. DIC_EDU_B04_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "contraception"
+        }
       },
       {
-        "column": "28. EDU_B04_RepeaterMSM",
+        "column": "28. DIC_EDU_B04_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "contraception"
+        }
       },
       {
-        "column": "29. EDU_B04_RepeaterOther",
+        "column": "29. DIC_EDU_B04_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "contraception"
+        }
       },
       {
-        "column": "30. EDU_005_DiceToKnow",
+        "column": "30. DIC_EDU_005_DiceToKnow",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "dice to know"
+        }
       },
       {
-        "column": "31. EDU_A05_NewSW",
+        "column": "31. DIC_EDU_A05_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "dice to know"
+        }
       },
       {
-        "column": "32. EDU_A05_NewMSM",
+        "column": "32. DIC_EDU_A05_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "dice to know"
+        }
       },
       {
-        "column": "33. EDU_A05_NewOther",
+        "column": "33. DIC_EDU_A05_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "dice to know"
+        }
       },
       {
-        "column": "34. EDU_B05_RepeaterSW",
+        "column": "34. DIC_EDU_B05_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "dice to know"
+        }
       },
       {
-        "column": "35. EDU_B05_RepeaterMSM",
+        "column": "35. DIC_EDU_B05_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "dice to know"
+        }
       },
       {
-        "column": "36. EDU_B05_RepeaterOther",
+        "column": "36. DIC_EDU_B05_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "dice to know"
+        }
       },
       {
-        "column": "37. EDU_006_EducationalGames",
+        "column": "37. DIC_EDU_006_EducationalGames",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "educational games"
+        }
       },
       {
-        "column": "38. EDU_A06_NewSW",
+        "column": "38. DIC_EDU_A06_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "educational games"
+        }
       },
       {
-        "column": "39. EDU_A06_NewMSM",
+        "column": "39. DIC_EDU_A06_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "educational games"
+        }
       },
       {
-        "column": "40. EDU_A06_NewOther",
+        "column": "40. DIC_EDU_A06_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "educational games"
+        }
       },
       {
-        "column": "41. EDU_B06_RepeaterSW",
+        "column": "41. DIC_EDU_B06_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "educational games"
+        }
       },
       {
-        "column": "42. EDU_B06_RepeaterMSM",
+        "column": "42. DIC_EDU_B06_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "educational games"
+        }
       },
       {
-        "column": "43. EDU_B06_RepeaterOther",
+        "column": "43. DIC_EDU_B06_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "educational games"
+        }
       },
       {
-        "column": "44. EDU_007_FemaleCondom",
+        "column": "44. DIC_EDU_007_FemaleCondom",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "female condom"
+        }
       },
       {
-        "column": "45. EDU_A07_NewSW",
+        "column": "45. DIC_EDU_A07_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "female condom"
+        }
       },
       {
-        "column": "46. EDU_A07_NewMSM",
+        "column": "46. DIC_EDU_A07_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "female condom"
+        }
       },
       {
-        "column": "47. EDU_A07_NewOther",
+        "column": "47. DIC_EDU_A07_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "female condom"
+        }
       },
       {
-        "column": "48. EDU_B07_RepeaterSW",
+        "column": "48. DIC_EDU_B07_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "female condom"
+        }
       },
       {
-        "column": "49. EDU_B07_RepeaterMSM",
+        "column": "49. DIC_EDU_B07_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "female condom"
+        }
       },
       {
-        "column": "50. EDU_B07_RepeaterOther",
+        "column": "50. DIC_EDU_B07_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "female condom"
+        }
       },
       {
-        "column": "51. EDU_008_FocusGroup",
+        "column": "51. DIC_EDU_008_FocusGroup",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "focus group"
+        }
       },
       {
-        "column": "52. EDU_A08_NewSW",
+        "column": "52. DIC_EDU_A08_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "focus group"
+        }
       },
       {
-        "column": "53. EDU_A08_NewMSM",
+        "column": "53. DIC_EDU_A08_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "focus group"
+        }
       },
       {
-        "column": "54. EDU_A08_NewOther",
+        "column": "54. DIC_EDU_A08_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "focus group"
+        }
       },
       {
-        "column": "55. EDU_B08_RepeaterSW",
+        "column": "55. DIC_EDU_B08_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "focus group"
+        }
       },
       {
-        "column": "56. EDU_B08_RepeaterMSM",
+        "column": "56. DIC_EDU_B08_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "focus group"
+        }
       },
       {
-        "column": "57. EDU_B08_RepeaterOther",
+        "column": "57. DIC_EDU_B08_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "focus group"
+        }
       },
       {
-        "column": "58. EDU_009_MaleCondom",
+        "column": "58. DIC_EDU_009_MaleCondom",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "male condom"
+        }
       },
       {
-        "column": "59. EDU_A09_NewSW",
+        "column": "59. DIC_EDU_A09_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "male condom"
+        }
       },
       {
-        "column": "60. EDU_A09_NewMSM",
+        "column": "60. DIC_EDU_A09_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "male condom"
+        }
       },
       {
-        "column": "61. EDU_A09_NewOther",
+        "column": "61. DIC_EDU_A09_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "male condom"
+        }
       },
       {
-        "column": "62. EDU_B09_RepeaterSW",
+        "column": "62. DIC_EDU_B09_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "male condom"
+        }
       },
       {
-        "column": "63. EDU_B09_RepeaterMSM",
+        "column": "63. DIC_EDU_B09_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "male condom"
+        }
       },
       {
-        "column": "64. EDU_B09_RepeaterOther",
+        "column": "64. DIC_EDU_B09_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "male condom"
+        }
       },
       {
-        "column": "65. EDU_010_MonthlyWorkshops",
+        "column": "65. DIC_EDU_010_MonthlyWorkshops",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "monthly workshop"
+        }
       },
       {
-        "column": "66. EDU_A10_NewSW",
+        "column": "66. DIC_EDU_A10_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "monthly workshop"
+        }
       },
       {
-        "column": "67. EDU_A10_NewMSM",
+        "column": "67. DIC_EDU_A10_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "monthly workshop"
+        }
       },
       {
-        "column": "68. EDU_A10_NewOther",
+        "column": "68. DIC_EDU_A10_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "monthly workshop"
+        }
       },
       {
-        "column": "69. EDU_B10_RepeaterSW",
+        "column": "69. DIC_EDU_B10_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "monthly workshop"
+        }
       },
       {
-        "column": "70. EDU_B10_RepeaterMSM",
+        "column": "70. DIC_EDU_B10_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "monthly workshop"
+        }
       },
       {
-        "column": "71. EDU_B10_RepeaterOther",
+        "column": "71. DIC_EDU_B10_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "monthly workshop"
+        }
       },
       {
-        "column": "72. EDU_011_MSMSupportGroup",
+        "column": "72. DIC_EDU_011_MSMSupportGroup",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "msm support group"
+        }
       },
       {
-        "column": "73. EDU_A11_NewSW",
+        "column": "73. DIC_EDU_A11_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "msm support group"
+        }
       },
       {
-        "column": "74. EDU_A11_NewMSM",
+        "column": "74. DIC_EDU_A11_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "msm support group"
+        }
       },
       {
-        "column": "75. EDU_A11_NewOther",
+        "column": "75. DIC_EDU_A11_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "msm support group"
+        }
       },
       {
-        "column": "76. EDU_B11_RepeaterSW",
+        "column": "76. DIC_EDU_B11_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "msm support group"
+        }
       },
       {
-        "column": "77. EDU_B11_RepeaterMSM",
+        "column": "77. DIC_EDU_B11_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "msm support group"
+        }
       },
       {
-        "column": "78. EDU_B11_RepeaterOther",
+        "column": "78. DIC_EDU_B11_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "msm support group"
+        }
       },
       {
-        "column": "79. EDU_012_Nutrition",
+        "column": "79. DIC_EDU_012_Nutrition",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "nutrition"
+        }
       },
       {
-        "column": "80. EDU_A12_NewSW",
+        "column": "80. DIC_EDU_A12_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "nutrition"
+        }
       },
       {
-        "column": "81. EDU_A12_NewMSM",
+        "column": "81. DIC_EDU_A12_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "nutrition"
+        }
       },
       {
-        "column": "82. EDU_A12_NewOther",
+        "column": "82. DIC_EDU_A12_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "nutrition"
+        }
       },
       {
-        "column": "83. EDU_B12_RepeaterSW",
+        "column": "83. DIC_EDU_B12_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "nutrition"
+        }
       },
       {
-        "column": "84. EDU_B12_RepeaterMSM",
+        "column": "84. DIC_EDU_B12_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "nutrition"
+        }
       },
       {
-        "column": "85. EDU_B12_RepeaterOther",
+        "column": "85. DIC_EDU_B12_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "nutrition"
+        }
       },
       {
-        "column": "86. EDU_013_PLHASessions",
+        "column": "86. DIC_EDU_013_PLHASessions",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "plha sessions"
+        }
       },
       {
-        "column": "87. EDU_A13_NewSW",
+        "column": "87. DIC_EDU_A13_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "plha sessions"
+        }
       },
       {
-        "column": "88. EDU_A13_NewMSM",
+        "column": "88. DIC_EDU_A13_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "plha sessions"
+        }
       },
       {
-        "column": "89. EDU_A13_NewOther",
+        "column": "89. DIC_EDU_A13_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "plha sessions"
+        }
       },
       {
-        "column": "90. EDU_B13_RepeaterSW",
+        "column": "90. DIC_EDU_B13_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "plha sessions"
+        }
       },
       {
-        "column": "91. EDU_B13_RepeaterMSM",
+        "column": "91. DIC_EDU_B13_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "plha sessions"
+        }
       },
       {
-        "column": "92. EDU_B13_RepeaterOther",
+        "column": "92. DIC_EDU_B13_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "plha sessions"
+        }
       },
       {
-        "column": "93. EDU_014_PLHASupportGroup",
+        "column": "93. DIC_EDU_014_PLHASupportGroup",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "plha support group"
+        }
       },
       {
-        "column": "94. EDU_A14_NewSW",
+        "column": "94. DIC_EDU_A14_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "plha support group"
+        }
       },
       {
-        "column": "95. EDU_A14_NewMSM",
+        "column": "95. DIC_EDU_A14_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "plha support group"
+        }
       },
       {
-        "column": "96. EDU_A14_NewOther",
+        "column": "96. DIC_EDU_A14_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "plha support group"
+        }
       },
       {
-        "column": "97. EDU_B14_RepeaterSW",
+        "column": "97. DIC_EDU_B14_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "plha support group"
+        }
       },
       {
-        "column": "98. EDU_B14_RepeaterMSM",
+        "column": "98. DIC_EDU_B14_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "plha support group"
+        }
       },
       {
-        "column": "99. EDU_B14_RepeaterOther",
+        "column": "99. DIC_EDU_B14_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "plha support group"
+        }
       },
       {
-        "column": "100. EDU_015_RolePlays",
+        "column": "100. DIC_EDU_015_RolePlays",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "role plays"
+        }
       },
       {
-        "column": "101. EDU_A15_NewSW",
+        "column": "101. DIC_EDU_A15_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "role plays"
+        }
       },
       {
-        "column": "102. EDU_A15_NewMSM",
+        "column": "102. DIC_EDU_A15_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "role plays"
+        }
       },
       {
-        "column": "103. EDU_A15_NewOther",
+        "column": "103. DIC_EDU_A15_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "role plays"
+        }
       },
       {
-        "column": "104. EDU_B15_RepeaterSW",
+        "column": "104. DIC_EDU_B15_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "role plays"
+        }
       },
       {
-        "column": "105. EDU_B15_RepeaterMSM",
+        "column": "105. DIC_EDU_B15_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "role plays"
+        }
       },
       {
-        "column": "106. EDU_B15_RepeaterOther",
+        "column": "106. DIC_EDU_B15_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "role plays"
+        }
       },
       {
-        "column": "107. EDU_016_SaferSex",
+        "column": "107. DIC_EDU_016_SaferSex",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "safer sex"
+        }
       },
       {
-        "column": "108. EDU_A16_NewSW",
+        "column": "108. DIC_EDU_A16_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "safer sex"
+        }
       },
       {
-        "column": "109. EDU_A16_NewMSM",
+        "column": "109. DIC_EDU_A16_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "safer sex"
+        }
       },
       {
-        "column": "110. EDU_A16_NewOther",
+        "column": "110. DIC_EDU_A16_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "safer sex"
+        }
       },
       {
-        "column": "111. EDU_B16_RepeaterSW",
+        "column": "111. DIC_EDU_B16_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "safer sex"
+        }
       },
       {
-        "column": "112. EDU_B16_RepeaterMSM",
+        "column": "112. DIC_EDU_B16_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "safer sex"
+        }
       },
       {
-        "column": "113. EDU_B16_RepeaterOther",
+        "column": "113. DIC_EDU_B16_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "safer sex"
+        }
       },
       {
-        "column": "114. EDU_017_STIsHIV",
+        "column": "114. DIC_EDU_017_STIsHIV",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "stis hiv"
+        }
       },
       {
-        "column": "115. EDU_A17_NewSW",
+        "column": "115. DIC_EDU_A17_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "stis hiv"
+        }
       },
       {
-        "column": "116. EDU_A17_NewMSM",
+        "column": "116. DIC_EDU_A17_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "stis hiv"
+        }
       },
       {
-        "column": "117. EDU_A17_NewOther",
+        "column": "117. DIC_EDU_A17_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "stis hiv"
+        }
       },
       {
-        "column": "118. EDU_B17_RepeaterSW",
+        "column": "118. DIC_EDU_B17_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "stis hiv"
+        }
       },
       {
-        "column": "119. EDU_B17_RepeaterMSM",
+        "column": "119. DIC_EDU_B17_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "stis hiv"
+        }
       },
       {
-        "column": "120. EDU_B17_RepeaterOther",
+        "column": "120. DIC_EDU_B17_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "stis hiv"
+        }
       },
       {
-        "column": "121. EDU_018_SWSupportGroup",
+        "column": "121. DIC_EDU_018_SWSupportGroup",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "sw support group"
+        }
       },
       {
-        "column": "122. EDU_A18_NewSW",
+        "column": "122. DIC_EDU_A18_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "sw support group"
+        }
       },
       {
-        "column": "123. EDU_A18_NewMSM",
+        "column": "123. DIC_EDU_A18_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "sw support group"
+        }
       },
       {
-        "column": "124. EDU_A18_NewOther",
+        "column": "124. DIC_EDU_A18_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "sw support group"
+        }
       },
       {
-        "column": "125. EDU_B18_RepeaterSW",
+        "column": "125. DIC_EDU_B18_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "sw support group"
+        }
       },
       {
-        "column": "126. EDU_B18_RepeaterMSM",
+        "column": "126. DIC_EDU_B18_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "sw support group"
+        }
       },
       {
-        "column": "127. EDU_B18_RepeaterOther",
+        "column": "127. DIC_EDU_B18_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "sw support group"
+        }
       },
       {
-        "column": "128. EDU_019_TBSessions",
+        "column": "128. DIC_EDU_019_TBSessions",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "tb session"
+        }
       },
       {
-        "column": "129. EDU_A19_NewSW",
+        "column": "129. DIC_EDU_A19_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "tb session"
+        }
       },
       {
-        "column": "130. EDU_A19_NewMSM",
+        "column": "130. DIC_EDU_A19_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "tb session"
+        }
       },
       {
-        "column": "131. EDU_A19_NewOther",
+        "column": "131. DIC_EDU_A19_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "tb session"
+        }
       },
       {
-        "column": "132. EDU_B19_RepeaterSW",
+        "column": "132. DIC_EDU_B19_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "tb session"
+        }
       },
       {
-        "column": "133. EDU_B19_RepeaterMSM",
+        "column": "133. DIC_EDU_B19_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "tb session"
+        }
       },
       {
-        "column": "134. EDU_B19_RepeaterOther",
+        "column": "134. DIC_EDU_B19_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "tb session"
+        }
       },
       {
-        "column": "135. EDU_020_VPeerTraining",
+        "column": "135. DIC_EDU_020_VPeerTraining",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "v peer training"
+        }
       },
       {
-        "column": "136. EDU_A20_NewSW",
+        "column": "136. DIC_EDU_A20_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "v peer training"
+        }
       },
       {
-        "column": "137. EDU_A20_NewMSM",
+        "column": "137. DIC_EDU_A20_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "v peer training"
+        }
       },
       {
-        "column": "138. EDU_A20_NewOther",
+        "column": "138. DIC_EDU_A20_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "v peer training"
+        }
       },
       {
-        "column": "139. EDU_B20_RepeaterSW",
+        "column": "139. DIC_EDU_B20_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "v peer training"
+        }
       },
       {
-        "column": "140. EDU_B20_RepeaterMSM",
+        "column": "140. DIC_EDU_B20_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "v peer training"
+        }
       },
       {
-        "column": "141. EDU_B20_RepeaterOther",
+        "column": "141. DIC_EDU_B20_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "v peer training"
+        }
       },
       {
-        "column": "142. EDU_021_Other",
+        "column": "142. DIC_EDU_021_Other",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "other"
+        }
       },
       {
-        "column": "143. EDU_A21_NewSW",
+        "column": "143. DIC_EDU_A21_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "other"
+        }
       },
       {
-        "column": "144. EDU_A21_NewMSM",
+        "column": "144. DIC_EDU_A21_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "other"
+        }
       },
       {
-        "column": "145. EDU_A21_NewOther",
+        "column": "145. DIC_EDU_A21_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "other"
+        }
       },
       {
-        "column": "146. EDU_B21_RepeaterSW",
+        "column": "146. DIC_EDU_B21_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "other"
+        }
       },
       {
-        "column": "147. EDU_B21_RepeaterMSM",
+        "column": "147. DIC_EDU_B21_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "other"
+        }
       },
       {
-        "column": "148. EDU_B21_RepeaterOther",
+        "column": "148. DIC_EDU_B21_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "educational",
+          "activity": "other"
+        }
       },
       {
-        "column": "149. REC_001_BagMaking",
+        "column": "149. DIC_REC_001_BagMaking",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "bag making"
+        }
       },
       {
-        "column": "150. REC_A01_NewSW",
+        "column": "150. DIC_REC_A01_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "bag making"
+        }
       },
       {
-        "column": "151. REC_A01_NewMSM",
+        "column": "151. DIC_REC_A01_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "bag making"
+        }
       },
       {
-        "column": "152. REC_A01_NewOther",
+        "column": "152. DIC_REC_A01_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "bag making"
+        }
       },
       {
-        "column": "153. REC_B01_RepeaterSW",
+        "column": "153. DIC_REC_B01_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "bag making"
+        }
       },
       {
-        "column": "154. REC_B01_RepeaterMSM",
+        "column": "154. DIC_REC_B01_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "bag making"
+        }
       },
       {
-        "column": "155. REC_B01_RepeaterOther",
+        "column": "155. DIC_REC_B01_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "bag making"
+        }
       },
       {
-        "column": "156. REC_002_BeautySessions",
+        "column": "156. DIC_REC_002_BeautySessions",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "beauty sessions"
+        }
       },
       {
-        "column": "157. REC_A02_NewSW",
+        "column": "157. DIC_REC_A02_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "beauty sessions"
+        }
       },
       {
-        "column": "158. REC_A02_NewMSM",
+        "column": "158. DIC_REC_A02_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "beauty sessions"
+        }
       },
       {
-        "column": "159. REC_A02_NewOther",
+        "column": "159. DIC_REC_A02_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "beauty sessions"
+        }
       },
       {
-        "column": "160. REC_B02_RepeaterSW",
+        "column": "160. DIC_REC_B02_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "beauty sessions"
+        }
       },
       {
-        "column": "161. REC_B02_RepeaterMSM",
+        "column": "161. DIC_REC_B02_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "beauty sessions"
+        }
       },
       {
-        "column": "162. REC_B02_RepeaterOther",
+        "column": "162. DIC_REC_B02_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "beauty sessions"
+        }
       },
       {
-        "column": "163. REC_003_Dancing",
+        "column": "163. DIC_REC_003_Dancing",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "dancing"
+        }
       },
       {
-        "column": "164. REC_A03_NewSW",
+        "column": "164. DIC_REC_A03_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "dancing"
+        }
       },
       {
-        "column": "165. REC_A03_NewMSM",
+        "column": "165. DIC_REC_A03_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "dancing"
+        }
       },
       {
-        "column": "166. REC_A03_NewOther",
+        "column": "166. DIC_REC_A03_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "dancing"
+        }
       },
       {
-        "column": "167. REC_B03_RepeaterSW",
+        "column": "167. DIC_REC_B03_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "dancing"
+        }
       },
       {
-        "column": "168. REC_B03_RepeaterMSM",
+        "column": "168. DIC_REC_B03_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "dancing"
+        }
       },
       {
-        "column": "169. REC_B03_RepeaterOther",
+        "column": "169. DIC_REC_B03_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "dancing"
+        }
       },
       {
-        "column": "170. REC_004_EnglishSessions",
+        "column": "170. DIC_REC_004_EnglishSessions",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "english sessions"
+        }
       },
       {
-        "column": "171. REC_A04_NewSW",
+        "column": "171. DIC_REC_A04_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "english sessions"
+        }
       },
       {
-        "column": "172. REC_A04_NewMSM",
+        "column": "172. DIC_REC_A04_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "english sessions"
+        }
       },
       {
-        "column": "173. REC_A04_NewOther",
+        "column": "173. DIC_REC_A04_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "english sessions"
+        }
       },
       {
-        "column": "174. REC_B04_RepeaterSW",
+        "column": "174. DIC_REC_B04_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "english sessions"
+        }
       },
       {
-        "column": "175. REC_B04_RepeaterMSM",
+        "column": "175. DIC_REC_B04_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "english sessions"
+        }
       },
       {
-        "column": "176. REC_B04_RepeaterOther",
+        "column": "176. DIC_REC_B04_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "english sessions"
+        }
       },
       {
-        "column": "177. REC_005_Game",
+        "column": "177. DIC_REC_005_Game",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "game"
+        }
       },
       {
-        "column": "178. REC_A05_NewSW",
+        "column": "178. DIC_REC_A05_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "game"
+        }
       },
       {
-        "column": "179. REC_A05_NewMSM",
+        "column": "179. DIC_REC_A05_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "game"
+        }
       },
       {
-        "column": "180. REC_A05_NewOther",
+        "column": "180. DIC_REC_A05_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "game"
+        }
       },
       {
-        "column": "181. REC_B05_RepeaterSW",
+        "column": "181. DIC_REC_B05_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "game"
+        }
       },
       {
-        "column": "182. REC_B05_RepeaterMSM",
+        "column": "182. DIC_REC_B05_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "game"
+        }
       },
       {
-        "column": "183. REC_B05_RepeaterOther",
+        "column": "183. DIC_REC_B05_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "game"
+        }
       },
       {
-        "column": "184. REC_006_HairStraight",
+        "column": "184. DIC_REC_006_HairStraight",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "hait straight"
+        }
       },
       {
-        "column": "185. REC_A06_NewSW",
+        "column": "185. DIC_REC_A06_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "hait straight"
+        }
       },
       {
-        "column": "186. REC_A06_NewMSM",
+        "column": "186. DIC_REC_A06_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "hait straight"
+        }
       },
       {
-        "column": "187. REC_A06_NewOther",
+        "column": "187. DIC_REC_A06_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "hait straight"
+        }
       },
       {
-        "column": "188. REC_B06_RepeaterSW",
+        "column": "188. DIC_REC_B06_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "hait straight"
+        }
       },
       {
-        "column": "189. REC_B06_RepeaterMSM",
+        "column": "189. DIC_REC_B06_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "hait straight"
+        }
       },
       {
-        "column": "190. REC_B06_RepeaterOther",
+        "column": "190. DIC_REC_B06_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "hait straight"
+        }
       },
       {
-        "column": "191. REC_007_KTVMovie",
+        "column": "191. DIC_REC_007_KTVMovie",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "ktv movie"
+        }
       },
       {
-        "column": "192. REC_A07_NewSW",
+        "column": "192. DIC_REC_A07_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "ktv movie"
+        }
       },
       {
-        "column": "193. REC_A07_NewMSM",
+        "column": "193. DIC_REC_A07_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "ktv movie"
+        }
       },
       {
-        "column": "194. REC_A07_NewOther",
+        "column": "194. DIC_REC_A07_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "ktv movie"
+        }
       },
       {
-        "column": "195. REC_B07_RepeaterSW",
+        "column": "195. DIC_REC_B07_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "ktv movie"
+        }
       },
       {
-        "column": "196. REC_B07_RepeaterMSM",
+        "column": "196. DIC_REC_B07_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "ktv movie"
+        }
       },
       {
-        "column": "197. REC_B07_RepeaterOther",
+        "column": "197. DIC_REC_B07_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "ktv movie"
+        }
       },
       {
-        "column": "198. REC_008_Leaflet",
+        "column": "198. DIC_REC_008_Leaflet",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "leaflet"
+        }
       },
       {
-        "column": "199. REC_A08_NewSW",
+        "column": "199. DIC_REC_A08_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "leaflet"
+        }
       },
       {
-        "column": "200. REC_A08_NewMSM",
+        "column": "200. DIC_REC_A08_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "leaflet"
+        }
       },
       {
-        "column": "201. REC_A08_NewOther",
+        "column": "201. DIC_REC_A08_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "leaflet"
+        }
       },
       {
-        "column": "202. REC_B08_RepeaterSW",
+        "column": "202. DIC_REC_B08_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "leaflet"
+        }
       },
       {
-        "column": "203. REC_B08_RepeaterMSM",
+        "column": "203. DIC_REC_B08_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "leaflet"
+        }
       },
       {
-        "column": "204. REC_B08_RepeaterOther",
+        "column": "204. DIC_REC_B08_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "leaflet"
+        }
       },
       {
-        "column": "205. REC_009_LegalCounselling",
+        "column": "205. DIC_REC_009_LegalCounselling",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "legal counselling"
+        }
       },
       {
-        "column": "206. REC_A09_NewSW",
+        "column": "206. DIC_REC_A09_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "legal counselling"
+        }
       },
       {
-        "column": "207. REC_A09_NewMSM",
+        "column": "207. DIC_REC_A09_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "legal counselling"
+        }
       },
       {
-        "column": "208. REC_A09_NewOther",
+        "column": "208. DIC_REC_A09_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "legal counselling"
+        }
       },
       {
-        "column": "209. REC_B09_RepeaterSW",
+        "column": "209. DIC_REC_B09_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "legal counselling"
+        }
       },
       {
-        "column": "210. REC_B09_RepeaterMSM",
+        "column": "210. DIC_REC_B09_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "legal counselling"
+        }
       },
       {
-        "column": "211. REC_B09_RepeaterOther",
+        "column": "211. DIC_REC_B09_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "legal counselling"
+        }
       },
       {
-        "column": "212. REC_010_MassageTraining",
+        "column": "212. DIC_REC_010_MassageTraining",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "massage training"
+        }
       },
       {
-        "column": "213. REC_A10_NewSW",
+        "column": "213. DIC_REC_A10_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "massage training"
+        }
       },
       {
-        "column": "214. REC_A10_NewMSM",
+        "column": "214. DIC_REC_A10_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "massage training"
+        }
       },
       {
-        "column": "215. REC_A10_NewOther",
+        "column": "215. DIC_REC_A10_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "massage training"
+        }
       },
       {
-        "column": "216. REC_B10_RepeaterSW",
+        "column": "216. DIC_REC_B10_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "massage training"
+        }
       },
       {
-        "column": "217. REC_B10_RepeaterMSM",
+        "column": "217. DIC_REC_B10_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "massage training"
+        }
       },
       {
-        "column": "218. REC_B10_RepeaterOther",
+        "column": "218. DIC_REC_B10_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "massage training"
+        }
       },
       {
-        "column": "219. REC_011_MeditationSessions",
+        "column": "219. DIC_REC_011_MeditationSessions",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "mediation sessions"
+        }
       },
       {
-        "column": "220. REC_A11_NewSW",
+        "column": "220. DIC_REC_A11_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "mediation sessions"
+        }
       },
       {
-        "column": "221. REC_A11_NewMSM",
+        "column": "221. DIC_REC_A11_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "mediation sessions"
+        }
       },
       {
-        "column": "222. REC_A11_NewOther",
+        "column": "222. DIC_REC_A11_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "mediation sessions"
+        }
       },
       {
-        "column": "223. REC_B11_RepeaterSW",
+        "column": "223. DIC_REC_B11_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "mediation sessions"
+        }
       },
       {
-        "column": "224. REC_B11_RepeaterMSM",
+        "column": "224. DIC_REC_B11_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "mediation sessions"
+        }
       },
       {
-        "column": "225. REC_B11_RepeaterOther",
+        "column": "225. DIC_REC_B11_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "mediation sessions"
+        }
       },
       {
-        "column": "226. REC_012_NailPolish",
+        "column": "226. DIC_REC_012_NailPolish",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "nail polish"
+        }
       },
       {
-        "column": "227. REC_A12_NewSW",
+        "column": "227. DIC_REC_A12_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "nail polish"
+        }
       },
       {
-        "column": "228. REC_A12_NewMSM",
+        "column": "228. DIC_REC_A12_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "nail polish"
+        }
       },
       {
-        "column": "229. REC_A12_NewOther",
+        "column": "229. DIC_REC_A12_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "nail polish"
+        }
       },
       {
-        "column": "230. REC_B12_RepeaterSW",
+        "column": "230. DIC_REC_B12_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "nail polish"
+        }
       },
       {
-        "column": "231. REC_B12_RepeaterMSM",
+        "column": "231. DIC_REC_B12_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "nail polish"
+        }
       },
       {
-        "column": "232. REC_B12_RepeaterOther",
+        "column": "232. DIC_REC_B12_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "nail polish"
+        }
       },
       {
-        "column": "233. REC_013_Relexation",
+        "column": "233. DIC_REC_013_Relexation",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "relaxation"
+        }
       },
       {
-        "column": "234. REC_A13_NewSW",
+        "column": "234. DIC_REC_A13_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "relaxation"
+        }
       },
       {
-        "column": "235. REC_A13_NewMSM",
+        "column": "235. DIC_REC_A13_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "relaxation"
+        }
       },
       {
-        "column": "236. REC_A13_NewOther",
+        "column": "236. DIC_REC_A13_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "relaxation"
+        }
       },
       {
-        "column": "237. REC_B13_RepeaterSW",
+        "column": "237. DIC_REC_B13_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "relaxation"
+        }
       },
       {
-        "column": "238. REC_B13_RepeaterMSM",
+        "column": "238. DIC_REC_B13_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "relaxation"
+        }
       },
       {
-        "column": "239. REC_B13_RepeaterOther",
+        "column": "239. DIC_REC_B13_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "relaxation"
+        }
       },
       {
-        "column": "240. REC_014_SelfEsteem",
+        "column": "240. DIC_REC_014_SelfEsteem",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "self esteem"
+        }
       },
       {
-        "column": "241. REC_A14_NewSW",
+        "column": "241. DIC_REC_A14_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "self esteem"
+        }
       },
       {
-        "column": "242. REC_A14_NewMSM",
+        "column": "242. DIC_REC_A14_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "self esteem"
+        }
       },
       {
-        "column": "243. REC_A14_NewOther",
+        "column": "243. DIC_REC_A14_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "self esteem"
+        }
       },
       {
-        "column": "244. REC_B14_RepeaterSW",
+        "column": "244. DIC_REC_B14_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "self esteem"
+        }
       },
       {
-        "column": "245. REC_B14_RepeaterMSM",
+        "column": "245. DIC_REC_B14_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "self esteem"
+        }
       },
       {
-        "column": "246. REC_B14_RepeaterOther",
+        "column": "246. DIC_REC_B14_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "self esteem"
+        }
       },
       {
-        "column": "247. REC_015_Sewing",
+        "column": "247. DIC_REC_015_Sewing",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "sewing"
+        }
       },
       {
-        "column": "248. REC_A15_NewSW",
+        "column": "248. DIC_REC_A15_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "sewing"
+        }
       },
       {
-        "column": "249. REC_A15_NewMSM",
+        "column": "249. DIC_REC_A15_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "sewing"
+        }
       },
       {
-        "column": "250. REC_A15_NewOther",
+        "column": "250. DIC_REC_A15_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "sewing"
+        }
       },
       {
-        "column": "251. REC_B15_RepeaterSW",
+        "column": "251. DIC_REC_B15_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "sewing"
+        }
       },
       {
-        "column": "252. REC_B15_RepeaterMSM",
+        "column": "252. DIC_REC_B15_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "sewing"
+        }
       },
       {
-        "column": "253. REC_B15_RepeaterOther",
+        "column": "253. DIC_REC_B15_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "sewing"
+        }
       },
       {
-        "column": "254. REC_016_NutritionalActivity",
+        "column": "254. DIC_REC_016_NutritionalActivity",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "nutritional activity"
+        }
       },
       {
-        "column": "255. REC_A16_NewSW",
+        "column": "255. DIC_REC_A16_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "nutritional activity"
+        }
       },
       {
-        "column": "256. REC_A16_NewMSM",
+        "column": "256. DIC_REC_A16_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "nutritional activity"
+        }
       },
       {
-        "column": "257. REC_A16_NewOther",
+        "column": "257. DIC_REC_A16_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "nutritional activity"
+        }
       },
       {
-        "column": "258. REC_B16_RepeaterSW",
+        "column": "258. DIC_REC_B16_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "nutritional activity"
+        }
       },
       {
-        "column": "259. REC_B16_RepeaterMSM",
+        "column": "259. DIC_REC_B16_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "nutritional activity"
+        }
       },
       {
-        "column": "260. REC_B16_RepeaterOther",
+        "column": "260. DIC_REC_B16_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "nutritional activity"
+        }
       },
       {
-        "column": "261. REC_017_Other",
+        "column": "261. DIC_REC_017_Other",
         "relation": "dicDataRows",
         "property": "total",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "other"
+        }
       },
       {
-        "column": "262. REC_A17_NewSW",
+        "column": "262. DIC_REC_A17_NewSW",
         "relation": "dicDataRows",
         "property": "newSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "other"
+        }
       },
       {
-        "column": "263. REC_A17_NewMSM",
+        "column": "263. DIC_REC_A17_NewMSM",
         "relation": "dicDataRows",
         "property": "newMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "other"
+        }
       },
       {
-        "column": "264. REC_A17_NewOther",
+        "column": "264. DIC_REC_A17_NewOther",
         "relation": "dicDataRows",
         "property": "newOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "other"
+        }
       },
       {
-        "column": "265. REC_B17_RepeaterSW",
+        "column": "265. DIC_REC_B17_RepeaterSW",
         "relation": "dicDataRows",
         "property": "repeaterSw",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "other"
+        }
       },
       {
-        "column": "266. REC_B17_RepeaterMSM",
+        "column": "266. DIC_REC_B17_RepeaterMSM",
         "relation": "dicDataRows",
         "property": "repeaterMsm",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "other"
+        }
       },
       {
-        "column": "267. REC_B17_RepeaterOther",
+        "column": "267. DIC_REC_B17_RepeaterOther",
         "relation": "dicDataRows",
         "property": "repeaterOther",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "type": "recreational",
+          "activity": "other"
+        }
       },
       {
-        "column": "268. Total_SW",
+        "column": "268. DIC_Total_SW",
         "property": "totalSw",
         "type": "number"
       },
       {
-        "column": "269. Total_MSM",
+        "column": "269. DIC_Total_MSM",
         "property": "totalMsm",
         "type": "number"
       },
       {
-        "column": "270. Total_Other",
+        "column": "270. DIC_Total_Other",
         "property": "totalOther",
         "type": "number"
       },
       {
-        "column": "271. VPET_SW",
+        "column": "271. DIC_VPET_SW",
         "property": "vpetSw",
         "type": "number"
       },
       {
-        "column": "272. VPET_MSM",
+        "column": "272. DIC_VPET_MSM",
         "property": "vpetMsm",
         "type": "number"
       },
       {
-        "column": "273. NoOfStaffPeer",
+        "column": "273. DIC_NoOfStaffPeer",
         "property": "noOfStaffPeer",
         "type": "number"
       },
       {
-        "column": "274. NoOfPerdiemPeer",
+        "column": "274. DIC_NoOfPerdiemPeer",
         "property": "noOfPerdiemPeer",
         "type": "number"
       },
       {
-        "column": "275. NoOfVolunteerPeer",
+        "column": "275. DIC_NoOfVolunteerPeer",
         "property": "noOfVolunteerPeer",
         "type": "number"
       },
       {
-        "column": "276. Remark",
+        "column": "276. DIC_Remark",
         "property": "remark",
         "type": "string"
       },
       {
-        "column": "277. MaleCondom",
+        "column": "277. DIC_MaleCondom",
         "property": "maleCondom",
         "type": "number"
       },
       {
-        "column": "278. FemaleCondom",
+        "column": "278. DIC_FemaleCondom",
         "property": "femaleCondom",
         "type": "number"
       },
       {
-        "column": "279. TotalCondom",
+        "column": "279. DIC_TotalCondom",
         "property": "totalCondom",
         "type": "number"
       },
       {
-        "column": "280. Leaflet",
+        "column": "280. DIC_Leaflet",
         "property": "leaflet",
         "type": "number"
       },
       {
-        "column": "281. Gadget",
+        "column": "281. DIC_Gadget",
         "property": "gadget",
         "type": "number"
       },
       {
-        "column": "282. Other",
+        "column": "282. DIC_Other",
         "property": "other",
         "type": "number"
       },
       {
-        "column": "283. TotalIEC",
+        "column": "283. DIC_TotalIEC",
         "property": "totalIec",
         "type": "number"
       },

@@ -12,7 +12,8 @@ services:
       - 'traefik.port=3000'
 
   importer:
-    command: sh -c './wait-for.sh postgres:5432 -- npm run dev'
+    #command: sh -c './wait-for.sh postgres:5432 -- npm run dev' # TODO: change TIMEOUT and npm cmd in production
+    command: npm run dev
     volumes:
       - ./importer:/server:delegated
       - ./data:/data # TODO: dev only??

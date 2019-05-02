@@ -1,12 +1,14 @@
 import { ArtAdherence } from './ArtAdherence'
 import { AdhArtEpisode } from './AdhArtEpisode'
 import { AdhTbEpisode } from './AdhTbEpisode'
+import { DrugType } from './DrugType'
+import { DrugUsage } from './DrugUsage'
 import { ArtConsultationPlha } from './ArtConsultationPlha'
 import { ArtAntiRetroMedicineTaken } from './ArtAntiRetroMedicineTaken'
 import { ArtAntiBioMedicineCode } from './ArtAntiBioMedicineCode'
 import { ArtAntiTbMedicineCode } from './ArtAntiTbMedicineCode'
 import { ArtTreatment } from './ArtTreatment'
-import { ArtChildStage } from './ArtChildStage'
+import { ArtStage } from './ArtStage'
 import { ArtGhcDiagnosis } from './ArtGhcDiagnosis'
 import { TbSputum } from './TbSputum'
 import { ArtArtMedication } from './ArtArtMedication'
@@ -42,12 +44,14 @@ export const classes: { [key: string]: any } = {
   'ArtAdherence': ArtAdherence,
 	'AdhArtEpisode': AdhArtEpisode,
 	'AdhTbEpisode': AdhTbEpisode,
+	'DrugType': DrugType,
+	'DrugUsage': DrugUsage,
 	'ArtConsultationPlha': ArtConsultationPlha,
 	'ArtAntiRetroMedicineTaken': ArtAntiRetroMedicineTaken,
 	'ArtAntiBioMedicineCode': ArtAntiBioMedicineCode,
 	'ArtAntiTbMedicineCode': ArtAntiTbMedicineCode,
 	'ArtTreatment': ArtTreatment,
-	'ArtChildStage': ArtChildStage,
+	'ArtStage': ArtStage,
 	'ArtGhcDiagnosis': ArtGhcDiagnosis,
 	'TbSputum': TbSputum,
 	'ArtArtMedication': ArtArtMedication,

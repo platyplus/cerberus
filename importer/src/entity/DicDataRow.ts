@@ -28,7 +28,23 @@ export enum ActivityEnum {
 	SW_SUPPORT_GROUP = 'sw support group', 
 	TB_SESSION = 'tb session', 
 	V_PEER_TRAINING = 'v peer training', 
-	OTHER = 'other' 
+	OTHER = 'other', 
+	BAG_MAKING = 'bag making', 
+	BEAUTY_SESSIONS = 'beauty sessions', 
+	DANCING = 'dancing', 
+	ENGLISH_SESSIONS = 'english sessions', 
+	GAME = 'game', 
+	HAIT_STRAIGHT = 'hait straight', 
+	KTV_MOVIE = 'ktv movie', 
+	LEAFLET = 'leaflet', 
+	LEGAL_COUNSELLING = 'legal counselling', 
+	MASSAGE_TRAINING = 'massage training', 
+	MEDIATION_SESSIONS = 'mediation sessions', 
+	NAIL_POLISH = 'nail polish', 
+	RELAXATION = 'relaxation', 
+	SELF_ESTEEM = 'self esteem', 
+	SEWING = 'sewing', 
+	NUTRITIONAL_ACTIVITY = 'nutritional activity' 
 }
 
 @Entity()
@@ -46,7 +62,7 @@ export class DicDataRow {
 	@Column({
 		name: 'activity',
 		nullable: true,
-		enum: ['art sessions', 'support group', 'bomb group', 'contraception', 'dice to know', 'educational games', 'female condom', 'focus group', 'male condom', 'monthly workshop', 'msm support group', 'nutrition', 'plha sessions', 'plha support group', 'role plays', 'safer sex', 'stis hiv', 'sw support group', 'tb session', 'v peer training', 'other']
+		enum: ['art sessions', 'support group', 'bomb group', 'contraception', 'dice to know', 'educational games', 'female condom', 'focus group', 'male condom', 'monthly workshop', 'msm support group', 'nutrition', 'plha sessions', 'plha support group', 'role plays', 'safer sex', 'stis hiv', 'sw support group', 'tb session', 'v peer training', 'other', 'bag making', 'beauty sessions', 'dancing', 'english sessions', 'game', 'hait straight', 'ktv movie', 'leaflet', 'legal counselling', 'massage training', 'mediation sessions', 'nail polish', 'relaxation', 'self esteem', 'sewing', 'nutritional activity']
 	})
 	activity: ActivityEnum
 

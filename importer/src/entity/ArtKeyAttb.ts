@@ -20,11 +20,11 @@ export class ArtKeyAttb {
 	attbRegimen: string
 
 	@Column({
-		name: 'date_of_diagnosis',
+		name: 'diagnosis_date',
 		type: 'timestamptz',
 		nullable: true
 	})
-	dateOfDiagnosis: Date
+	diagnosisDate: Date
 
 	@Column({
 		name: 'end_date_of_attb_ip',
@@ -45,12 +45,5 @@ export class ArtKeyAttb {
 		nullable: true
 	})
 	tb: string
-
-	@Column({
-		name: 'dateof_diagnosis',
-		type: 'timestamptz',
-		nullable: true
-	})
-	dateofDiagnosis: Date
 
 }

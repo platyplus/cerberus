@@ -137,13 +137,6 @@ export class ArtKey {
 	})
 	baselineCd: number
 
-	@Column({
-		name: 'weight',
-		type: 'integer',
-		nullable: true
-	})
-	weight: number
-
 	@OneToMany(type => ArtKeyCd4Weight, artKeyCd4Weight => artKeyCd4Weight.artKey, {
 		cascade: true
 	})
@@ -340,10 +333,10 @@ export class ArtKey {
 	oDate: string
 
 	@Column({
-		name: 'art_saving_date',
+		name: 'saving_date',
 		type: 'timestamptz',
 		nullable: true
 	})
-	artSavingDate: Date
+	savingDate: Date
 
 }

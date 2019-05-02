@@ -25,15 +25,23 @@ const convertRow: any = (entityMapping: Mapping, row: any) => {
         if (curr.type === 'Date') value = new Date(value) || value
         else if (curr.type === 'number') value = parseInt(value) || undefined
         else if (curr.type === 'boolean') value = value === 'True'
-        if (!curr.relation) prev[curr.property] = value
-        else {
+        if (curr.relation) {
           // TODO: veeery tricky, probably incorrect
           if (!prev[curr.relation]) prev[curr.relation] = []
           let el = prev[curr.relation].find(
             (e: { [key: string]: any }) => e[curr.property] === undefined
           )
-          if (el) el[curr.property] = value
-          else prev[curr.relation].push({ [curr.property]: value })
+          if (el) {
+            el[curr.property] = value
+            el = { ...el, ...curr.entityValues }
+          } else
+            prev[curr.relation].push({
+              [curr.property]: value,
+              ...curr.entityValues
+            })
+        } else {
+          prev[curr.property] = value
+          prev = { ...prev, ...curr.entityValues }
         }
       }
       return prev
@@ -46,6 +54,7 @@ function loadFile(file: string, connection: Connection) {
   if (path.extname(file) !== '.xlsx') return
   const manager = connection.manager
   const shortFileName = path.basename(file, path.extname(file))
+  if (shortFileName !== 'DIC_Data') return // TODO: remove
   const entityMapping = mapping.find(entity => entity.file === shortFileName)
   if (entityMapping) {
     const csvFileName = `${TMP_PATH}/${shortFileName}.csv`
@@ -71,6 +80,7 @@ function loadFile(file: string, connection: Connection) {
       .subscribe((json: any) => {
         return new Promise((resolve, reject) => {
           const data = convertRow(entityMapping, json)
+          log(data)
           let entity = manager.create(entityClass, data)
           manager
             .save(entity)

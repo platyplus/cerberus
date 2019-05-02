@@ -10,7 +10,7 @@ import {
   getName,
   relationName
 } from './helpers'
-import { Row, Mapping, emptyRow } from './excel-metadata'
+import { Row, Mapping, emptyRow, ColumnMapping } from './excel-metadata'
 const log = console.log.bind(console, `[${new Date().toLocaleString()}]`)
 
 // Constants
@@ -177,12 +177,17 @@ class ManyToOneProperty extends RelationProperty {
   }
 }
 
-const createGroupRelations = (entity: Entity, row: Row) => {
-  if (row.group_names && row.group_values) {
-    let groups = _.zipObject(
+const getGroups = (row: Row) => {
+  if (row.group_names && row.group_values)
+    return _.zipObject(
       _.split(row.group_names, ';').map(s => _.trim(s)),
       _.split(row.group_values, ';').map(s => _.trim(s))
     )
+}
+
+const createGroupRelations = (entity: Entity, row: Row) => {
+  let groups = getGroups(row)
+  if (groups) {
     let r = emptyRow()
     for (let key of Object.keys(groups)) {
       let enumPropery = <EnumProperty>entity.findProperty(relationName(key))
@@ -263,7 +268,7 @@ class Entity {
 }
 
 class EntityManager {
-  entities: Entity[] = new Array<Entity>()
+  entities: Entity[] = []
   mapping: Mapping[] = []
 
   findOrCreate(rawName: string): Entity {
@@ -288,12 +293,15 @@ class EntityManager {
       this.mapping.push(entityMapping)
     }
     if (!entityMapping.columns.find(c => c.column === row.excel_name)) {
-      entityMapping.columns.push({
+      let column: ColumnMapping = {
         column: row.excel_name,
         relation: row.relation && relationName(row.relation) + 's',
         property: getName(row),
         type: getType(row)
-      })
+      }
+      const entityValues = getGroups(row)
+      if (!_.isEmpty(entityValues)) column.entityValues = entityValues
+      entityMapping.columns.push(column)
     }
   }
 
@@ -301,7 +309,7 @@ class EntityManager {
     log(`Generating from ${fileName}...`)
     const workbook = readFile(fileName)
     const ws = workbook.Sheets[workbook.SheetNames[0]]
-    var jsMetadata = <Array<Row>>utils.sheet_to_json(ws)
+    var jsMetadata = <Row[]>utils.sheet_to_json(ws)
     for (let row of jsMetadata) {
       this.pushRow(row)
     }

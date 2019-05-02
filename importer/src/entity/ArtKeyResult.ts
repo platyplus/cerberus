@@ -20,10 +20,10 @@ export class ArtKeyResult {
 	result: string
 
 	@Column({
-		name: 'v_date',
+		name: 'date',
 		type: 'timestamptz',
 		nullable: true
 	})
-	vDate: Date
+	date: Date
 
 }

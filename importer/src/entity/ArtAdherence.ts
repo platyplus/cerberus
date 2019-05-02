@@ -2,6 +2,8 @@
 import { Entity, PrimaryColumn, Column, OneToMany } from 'typeorm'
 import { AdhArtEpisode } from './AdhArtEpisode'
 import { AdhTbEpisode } from './AdhTbEpisode'
+import { DrugType } from './DrugType'
+import { DrugUsage } from './DrugUsage'
 
 @Entity()
 export class ArtAdherence {
@@ -447,194 +449,15 @@ export class ArtAdherence {
 	})
 	drug: string
 
-	@Column({
-		name: 'alcohol_last_use',
-		type: 'timestamptz',
-		nullable: true
+	@OneToMany(type => DrugType, drugType => drugType.artAdherence, {
+		cascade: true
 	})
-	alcoholLastUse: Date
+	drugTypes: DrugType[]
 
-	@Column({
-		name: 'alcohol_times_dat',
-		type: 'integer',
-		nullable: true
+	@OneToMany(type => DrugUsage, drugUsage => drugUsage.artAdherence, {
+		cascade: true
 	})
-	alcoholTimesDat: number
-
-	@Column({
-		name: 'alcohol_days_week',
-		type: 'integer',
-		nullable: true
-	})
-	alcoholDaysWeek: number
-
-	@Column({
-		name: 'alcohol_way_of_use',
-		nullable: true
-	})
-	alcoholWayOfUse: string
-
-	@Column({
-		name: 'amphetamine_last_use',
-		type: 'timestamptz',
-		nullable: true
-	})
-	amphetamineLastUse: Date
-
-	@Column({
-		name: 'amphetamine_times_day',
-		type: 'integer',
-		nullable: true
-	})
-	amphetamineTimesDay: number
-
-	@Column({
-		name: 'amphetamine_days_week',
-		type: 'integer',
-		nullable: true
-	})
-	amphetamineDaysWeek: number
-
-	@Column({
-		name: 'amphetamine_way_of_use',
-		nullable: true
-	})
-	amphetamineWayOfUse: string
-
-	@Column({
-		name: 'diazepine_last_use',
-		type: 'timestamptz',
-		nullable: true
-	})
-	diazepineLastUse: Date
-
-	@Column({
-		name: 'diazepine_times_day',
-		type: 'integer',
-		nullable: true
-	})
-	diazepineTimesDay: number
-
-	@Column({
-		name: 'diazepine_days_week',
-		type: 'integer',
-		nullable: true
-	})
-	diazepineDaysWeek: number
-
-	@Column({
-		name: 'diazepine_way_of_use',
-		nullable: true
-	})
-	diazepineWayOfUse: string
-
-	@Column({
-		name: 'cannabis_last_use',
-		type: 'timestamptz',
-		nullable: true
-	})
-	cannabisLastUse: Date
-
-	@Column({
-		name: 'cannabis_times_day',
-		type: 'integer',
-		nullable: true
-	})
-	cannabisTimesDay: number
-
-	@Column({
-		name: 'cannabis_days_week',
-		type: 'integer',
-		nullable: true
-	})
-	cannabisDaysWeek: number
-
-	@Column({
-		name: 'cannabis_way_of_use',
-		nullable: true
-	})
-	cannabisWayOfUse: string
-
-	@Column({
-		name: 'ecstasy_last_use',
-		type: 'timestamptz',
-		nullable: true
-	})
-	ecstasyLastUse: Date
-
-	@Column({
-		name: 'ecstasy_times_day',
-		type: 'integer',
-		nullable: true
-	})
-	ecstasyTimesDay: number
-
-	@Column({
-		name: 'ecstasy_days_week',
-		type: 'integer',
-		nullable: true
-	})
-	ecstasyDaysWeek: number
-
-	@Column({
-		name: 'ecstasy_way_of_use',
-		nullable: true
-	})
-	ecstasyWayOfUse: string
-
-	@Column({
-		name: 'heroin_last_use',
-		type: 'timestamptz',
-		nullable: true
-	})
-	heroinLastUse: Date
-
-	@Column({
-		name: 'heroin_times_day',
-		type: 'integer',
-		nullable: true
-	})
-	heroinTimesDay: number
-
-	@Column({
-		name: 'heroin_days_week',
-		type: 'integer',
-		nullable: true
-	})
-	heroinDaysWeek: number
-
-	@Column({
-		name: 'heroin_way_of_use',
-		nullable: true
-	})
-	heroinWayOfUse: string
-
-	@Column({
-		name: 'adh_opium_last_use',
-		type: 'timestamptz',
-		nullable: true
-	})
-	adhOpiumLastUse: Date
-
-	@Column({
-		name: 'adh_opium_time_day',
-		type: 'integer',
-		nullable: true
-	})
-	adhOpiumTimeDay: number
-
-	@Column({
-		name: 'adh_opium_days_week',
-		type: 'integer',
-		nullable: true
-	})
-	adhOpiumDaysWeek: number
-
-	@Column({
-		name: 'adh_opium_way_of_use',
-		nullable: true
-	})
-	adhOpiumWayOfUse: string
+	drugUsages: DrugUsage[]
 
 	@Column({
 		name: 'shared_syringe',

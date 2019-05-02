@@ -14,6 +14,7 @@ export interface ColumnMapping {
   relation?: string
   property: string
   type: string
+  entityValues?: { [key: string]: string }
 }
 
 export interface Mapping {

@@ -4,7 +4,7 @@ import { ArtAntiRetroMedicineTaken } from './ArtAntiRetroMedicineTaken'
 import { ArtAntiBioMedicineCode } from './ArtAntiBioMedicineCode'
 import { ArtAntiTbMedicineCode } from './ArtAntiTbMedicineCode'
 import { ArtTreatment } from './ArtTreatment'
-import { ArtChildStage } from './ArtChildStage'
+import { ArtStage } from './ArtStage'
 import { ArtGhcDiagnosis } from './ArtGhcDiagnosis'
 import { TbSputum } from './TbSputum'
 import { ArtArtMedication } from './ArtArtMedication'
@@ -570,16 +570,10 @@ export class ArtConsultationPlha {
 	})
 	artChildOrAdult: string
 
-	@Column({
-		name: 'stage',
-		nullable: true
-	})
-	stage: string
-
-	@OneToMany(type => ArtChildStage, artChildStage => artChildStage.artConsultationPlha, {
+	@OneToMany(type => ArtStage, artStage => artStage.artConsultationPlha, {
 		cascade: true
 	})
-	artChildStages: ArtChildStage[]
+	artStages: ArtStage[]
 
 	@Column({
 		name: 'art_patient_status',

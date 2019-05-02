@@ -20,7 +20,9 @@
 - [ ] database column and table comments
 - [ ] migrations after generating new classes? (tricky as we need postgres to be running -> in the readme)
 - [x] structure DIC data in a better way
-- [ ] handle group enums => generation ok, import to be done. But no simple property with type enum!
+- [x] group enums
+- [ ] simple enum column with options
+- [ ] convert Row interface into a class, and add methods such as getGroups, and replace emptyRow()
 
 ## Installation
 
