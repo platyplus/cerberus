@@ -15,7 +15,7 @@ export class ArtStage {
 	@Column({
 		name: 'category',
 		nullable: true,
-		enum: ['adult', 'child']
+		enum: CategoryEnum
 	})
 	category: CategoryEnum
 

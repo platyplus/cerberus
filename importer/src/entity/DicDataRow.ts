@@ -55,14 +55,14 @@ export class DicDataRow {
 	@Column({
 		name: 'type',
 		nullable: true,
-		enum: ['educational', 'recreational']
+		enum: TypeEnum
 	})
 	type: TypeEnum
 
 	@Column({
 		name: 'activity',
 		nullable: true,
-		enum: ['art sessions', 'support group', 'bomb group', 'contraception', 'dice to know', 'educational games', 'female condom', 'focus group', 'male condom', 'monthly workshop', 'msm support group', 'nutrition', 'plha sessions', 'plha support group', 'role plays', 'safer sex', 'stis hiv', 'sw support group', 'tb session', 'v peer training', 'other', 'bag making', 'beauty sessions', 'dancing', 'english sessions', 'game', 'hait straight', 'ktv movie', 'leaflet', 'legal counselling', 'massage training', 'mediation sessions', 'nail polish', 'relaxation', 'self esteem', 'sewing', 'nutritional activity']
+		enum: ActivityEnum
 	})
 	activity: ActivityEnum
 

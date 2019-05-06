@@ -924,92 +924,122 @@
       {
         "column": "21. ART_AntiRetro_MedicineTaken1",
         "relation": "artAntiRetroMedicineTakens",
-        "property": "artAntiRetroMedicineTaken",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "22. ART_AntiRetro_MedicineTaken2",
         "relation": "artAntiRetroMedicineTakens",
-        "property": "artAntiRetroMedicineTaken",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "23. ART_AntiRetro_MedicineTaken3",
         "relation": "artAntiRetroMedicineTakens",
-        "property": "artAntiRetroMedicineTaken",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "24. ART_AntiRetro_MedicineTaken4",
         "relation": "artAntiRetroMedicineTakens",
-        "property": "artAntiRetroMedicineTaken",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "25. ART_AntiRetro_MedicineTaken5",
         "relation": "artAntiRetroMedicineTakens",
-        "property": "artAntiRetroMedicineTaken",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "26. ART_AntiBio_MedicineCode1",
-        "relation": "artAntiBioMedicineCodes",
+        "relation": "medicineCodes",
         "property": "medicineCode",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "type": "antibio"
+        }
       },
       {
         "column": "27. ART_AntiBio_MedicineCode2",
-        "relation": "artAntiBioMedicineCodes",
+        "relation": "medicineCodes",
         "property": "medicineCode",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "type": "antibio"
+        }
       },
       {
         "column": "28. ART_AntiBio_MedicineCode3",
-        "relation": "artAntiBioMedicineCodes",
+        "relation": "medicineCodes",
         "property": "medicineCode",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "type": "antibio"
+        }
       },
       {
         "column": "29. ART_AntiBio_MedicineCode4",
-        "relation": "artAntiBioMedicineCodes",
+        "relation": "medicineCodes",
         "property": "medicineCode",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "type": "antibio"
+        }
       },
       {
         "column": "30. ART_AntiBio_MedicineCode5",
-        "relation": "artAntiBioMedicineCodes",
+        "relation": "medicineCodes",
         "property": "medicineCode",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "type": "antibio"
+        }
       },
       {
         "column": "31. ART_AntiTB_MedicineCode1",
-        "relation": "artAntiTbMedicineCodes",
+        "relation": "medicineCodes",
         "property": "medicineCode",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "type": "antitb"
+        }
       },
       {
         "column": "32. ART_AntiTB_MedicineCode2",
-        "relation": "artAntiTbMedicineCodes",
+        "relation": "medicineCodes",
         "property": "medicineCode",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "type": "antitb"
+        }
       },
       {
         "column": "33. ART_AntiTB_MedicineCode3",
-        "relation": "artAntiTbMedicineCodes",
+        "relation": "medicineCodes",
         "property": "medicineCode",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "type": "antitb"
+        }
       },
       {
         "column": "34. ART_AntiTB_MedicineCode4",
-        "relation": "artAntiTbMedicineCodes",
+        "relation": "medicineCodes",
         "property": "medicineCode",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "type": "antitb"
+        }
       },
       {
         "column": "35. ART_AntiTB_MedicineCode5",
-        "relation": "artAntiTbMedicineCodes",
+        "relation": "medicineCodes",
         "property": "medicineCode",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "type": "antitb"
+        }
       },
       {
         "column": "36. ART_PatientTakingOther",
@@ -1258,242 +1288,393 @@
       },
       {
         "column": "80. ART_Constitutional",
-        "property": "artConstitutional",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "constitutional",
+          "name": "todo"
+        }
       },
       {
         "column": "81. ART_Consti_Fatigue",
-        "property": "artConstiFatigue",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "constitutional",
+          "name": "fatigue"
+        }
       },
       {
         "column": "82. ART_Consti_Pain",
-        "property": "artConstiPain",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "constitutional",
+          "name": "pain"
+        }
       },
       {
         "column": "83. ART_Consti_Other",
-        "property": "artConstiOther",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "constitutional",
+          "name": "other"
+        }
       },
       {
         "column": "84. ART_Gastrointestinal",
-        "property": "artGastrointestinal",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "gastrointestinal",
+          "name": "todo"
+        }
       },
       {
         "column": "85. ART_Gastro_AbdominalPain",
-        "property": "artGastroAbdominalPain",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "gastrointestinal",
+          "name": "abdominal pain"
+        }
       },
       {
         "column": "86. ART_Gastro_Nausea",
-        "property": "artGastroNausea",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "gastrointestinal",
+          "name": "nausea"
+        }
       },
       {
         "column": "87. ART_Gastro_Vomiting",
-        "property": "artGastroVomiting",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "gastrointestinal",
+          "name": "vomiting"
+        }
       },
       {
         "column": "88. ART_Gastro_Dysphagia",
-        "property": "artGastroDysphagia",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "gastrointestinal",
+          "name": "dysphagia"
+        }
       },
       {
         "column": "89. ART_Gastro_Diarrhea",
-        "property": "artGastroDiarrhea",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "gastrointestinal",
+          "name": "diarrhea"
+        }
       },
       {
         "column": "90. ART_Gastro_Other",
-        "property": "artGastroOther",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "gastrointestinal",
+          "name": "other"
+        }
       },
       {
         "column": "91. ART_Respiratory&CVs",
-        "property": "artRespiratoryCVs",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "respiratory",
+          "name": "todo"
+        }
       },
       {
         "column": "92. ART_Respi_DifficultlyBreathing",
-        "property": "artRespiDifficultlyBreathing",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "respiratory",
+          "name": "difficulty breathing"
+        }
       },
       {
         "column": "93. ART_Respi_ChestPain",
-        "property": "artRespiChestPain",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "respiratory",
+          "name": "chest pain"
+        }
       },
       {
         "column": "94. ART_Respi_Palpitation",
-        "property": "artRespiPalpitation",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "respiratory",
+          "name": "palpitation"
+        }
       },
       {
         "column": "95. ART_Respi_Other",
-        "property": "artRespiOther",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "respiratory",
+          "name": "other"
+        }
       },
       {
         "column": "96. ART_Neurological",
-        "property": "artNeurological",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "neurological",
+          "name": "todo"
+        }
       },
       {
         "column": "97. ART_Neuro_Headache",
-        "property": "artNeuroHeadache",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "neurological",
+          "name": "headache"
+        }
       },
       {
         "column": "98. ART_Neuro_Confusion",
-        "property": "artNeuroConfusion",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "neurological",
+          "name": "confusion"
+        }
       },
       {
         "column": "99. ART_Neuro_MemoryProblems",
-        "property": "artNeuroMemoryProblems",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "neurological",
+          "name": "memory problem"
+        }
       },
       {
         "column": "100. ART_Neuro_Tingling",
-        "property": "artNeuroTingling",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "neurological",
+          "name": "Tingling and Numbness of limbs"
+        }
       },
       {
         "column": "101. ART_Neuro_Insomnia",
-        "property": "artNeuroInsomnia",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "neurological",
+          "name": "insomnia"
+        }
       },
       {
         "column": "102. ART_Neuro_Yawning",
-        "property": "artNeuroYawning",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "neurological",
+          "name": "yawning"
+        }
       },
       {
         "column": "103. ART_SkinManifestation",
-        "property": "artSkinManifestation",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "skin manifestation"
+        }
       },
       {
         "column": "104. ART_Skin_Itchiness",
-        "property": "artSkinItchiness",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "skin manifestation"
+        }
       },
       {
         "column": "105. ART_Skin_Rash",
-        "property": "artSkinRash",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "skin manifestation"
+        }
       },
       {
         "column": "106. ART_Skin_Lump",
-        "property": "artSkinLump",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "skin manifestation"
+        }
       },
       {
         "column": "107. ART_Skin_Other",
-        "property": "artSkinOther",
+        "relation": "physicalExams",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "108. ART_SymptomsComments",
-        "property": "artSymptomsComments",
+        "relation": "physicalExams",
+        "property": "comment",
         "type": "string"
       },
       {
         "column": "109. ART_Eye",
-        "property": "artEye",
+        "relation": "physicalExams",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "110. ART_EyeComment",
-        "property": "artEyeComment",
+        "relation": "physicalExams",
+        "property": "comment",
         "type": "string"
       },
       {
         "column": "111. ART_EarsNose",
-        "property": "artEarsNose",
+        "relation": "physicalExams",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "112. ART_EarsNoseComment",
-        "property": "artEarsNoseComment",
+        "relation": "physicalExams",
+        "property": "comment",
         "type": "string"
       },
       {
         "column": "113. ART_Oral",
-        "property": "artOral",
+        "relation": "physicalExams",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "114. ART_OralComment",
-        "property": "artOralComment",
+        "relation": "physicalExams",
+        "property": "comment",
         "type": "string"
       },
       {
         "column": "115. ART_LymphNodes",
-        "property": "artLymphNodes",
+        "relation": "physicalExams",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "116. ART_LymphNodesComment",
-        "property": "artLymphNodesComment",
+        "relation": "physicalExams",
+        "property": "comment",
         "type": "string"
       },
       {
         "column": "117. ART_Heart",
-        "property": "artHeart",
+        "relation": "physicalExams",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "118. ART_HeartComment",
-        "property": "artHeartComment",
+        "relation": "physicalExams",
+        "property": "comment",
         "type": "string"
       },
       {
         "column": "119. ART_Lungs",
-        "property": "artLungs",
+        "relation": "physicalExams",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "120. ART_LungsComment",
-        "property": "artLungsComment",
+        "relation": "physicalExams",
+        "property": "comment",
         "type": "string"
       },
       {
         "column": "121. ART_Abdomen",
-        "property": "abdomen",
+        "relation": "physicalExams",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "122. ART_AbdomenComment",
-        "property": "abdomentComment",
+        "relation": "physicalExams",
+        "property": "comment",
         "type": "string"
       },
       {
         "column": "123. ART_PExam_Neurological",
-        "property": "artPExamNeurological",
+        "relation": "physicalExams",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "124. ART_NeurologicalComment",
-        "property": "artNeurologicalComment",
+        "relation": "physicalExams",
+        "property": "comment",
         "type": "string"
       },
       {
         "column": "125. ART_Skin",
-        "property": "artSkin",
+        "relation": "physicalExams",
+        "property": "name",
         "type": "string"
       },
       {
         "column": "126. ART_SkinComment",
-        "property": "artSkinComment",
+        "relation": "physicalExams",
+        "property": "comment",
         "type": "string"
       },
       {
         "column": "127. ART_PhysicalExamComments",
-        "property": "artPhysicalExamComments",
+        "property": "physicalExamComments",
         "type": "string"
       },
       {
@@ -1706,235 +1887,235 @@
       },
       {
         "column": "160. TB_Sputum_Smear",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "smear",
         "type": "string"
       },
       {
         "column": "161. TB_Sputum_Xpert",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "xpert",
         "type": "string"
       },
       {
         "column": "162. TB_Sputum_Culture",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "culture",
         "type": "string"
       },
       {
         "column": "163. TB_Sputum_H",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "h",
         "type": "string"
       },
       {
         "column": "164. TB_Sputum_R",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "r",
         "type": "string"
       },
       {
         "column": "165. TB_Sputum_S",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "s",
         "type": "string"
       },
       {
         "column": "166. TB_Sputum_E",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "e",
         "type": "string"
       },
       {
         "column": "167. TB_Sputum_LPA",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "lpa",
         "type": "string"
       },
       {
         "column": "168. TB_Sputum_SampleDate",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "sampleDate",
         "type": "Date"
       },
       {
         "column": "169. TB_OtherSample1",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "tbOtherSample",
         "type": "string"
       },
       {
         "column": "170. TB_OtherSample1_Smear",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "smear",
         "type": "string"
       },
       {
         "column": "171. TB_OtherSample1_Xpert",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "xpert",
         "type": "string"
       },
       {
         "column": "172. TB_OtherSample1_Culture",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "culture",
         "type": "string"
       },
       {
         "column": "173. TB_OtherSample1_H",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "h",
         "type": "string"
       },
       {
         "column": "174. TB_OtherSample1_R",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "r",
         "type": "string"
       },
       {
         "column": "175. TB_OtherSample1_S",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "s",
         "type": "string"
       },
       {
         "column": "176. TB_OtherSample1_E",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "e",
         "type": "string"
       },
       {
         "column": "177. TB_OtherSample1_LPA",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "lpa",
         "type": "string"
       },
       {
         "column": "178. TB_OtherSample1_SampleDate",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "sampleDate",
         "type": "Date"
       },
       {
         "column": "179. TB_OtherSample2",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "tbOtherSample",
         "type": "string"
       },
       {
         "column": "180. TB_OtherSample2_Smear",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "smear",
         "type": "string"
       },
       {
         "column": "181. TB_OtherSample2_Xpert",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "xpert",
         "type": "string"
       },
       {
         "column": "182. TB_OtherSample2_Culture",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "culture",
         "type": "string"
       },
       {
         "column": "183. TB_OtherSample2_H",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "h",
         "type": "string"
       },
       {
         "column": "184. TB_OtherSample2_R",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "r",
         "type": "string"
       },
       {
         "column": "185. TB_OtherSample2_S",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "s",
         "type": "string"
       },
       {
         "column": "186. TB_OtherSample2_E",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "e",
         "type": "string"
       },
       {
         "column": "187. TB_OtherSample2_LPA",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "lpa",
         "type": "string"
       },
       {
         "column": "188. TB_OtherSample2_SampleDate",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "sampleDate",
         "type": "Date"
       },
       {
         "column": "189. TB_OtherSample3",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "tbOtherSample",
         "type": "string"
       },
       {
         "column": "190. TB_OtherSample3_Smear",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "smear",
         "type": "string"
       },
       {
         "column": "191. TB_OtherSample3_Xpert",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "xpert",
         "type": "string"
       },
       {
         "column": "192. TB_OtherSample3_Culture",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "culture",
         "type": "string"
       },
       {
         "column": "193. TB_OtherSample3_H",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "h",
         "type": "string"
       },
       {
         "column": "194. TB_OtherSample3_R",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "r",
         "type": "string"
       },
       {
         "column": "195. TB_OtherSample3_S",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "s",
         "type": "string"
       },
       {
         "column": "196. TB_OtherSample3_E",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "e",
         "type": "string"
       },
       {
         "column": "197. TB_OtherSample3_LPA",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "lpa",
         "type": "string"
       },
       {
         "column": "198. TB_OtherSample3_SampleDate",
-        "relation": "tbSputums",
+        "relation": "sputums",
         "property": "sampleDate",
         "type": "Date"
       },
@@ -1985,7 +2166,7 @@
       },
       {
         "column": "208. TB_TypeOfCase",
-        "property": "tbTypeOfCase",
+        "property": "typeOfCare",
         "type": "string"
       },
       {
@@ -1995,7 +2176,7 @@
       },
       {
         "column": "210. ARTAllergy",
-        "property": "artAllergy",
+        "property": "allergy",
         "type": "string"
       },
       {
@@ -2005,7 +2186,7 @@
       },
       {
         "column": "212. ART_Pregnant",
-        "property": "artPregnant",
+        "property": "pregnant",
         "type": "boolean"
       },
       {
@@ -2036,7 +2217,7 @@
       {
         "column": "218. ART_ARTMedName1",
         "relation": "medications",
-        "property": "medicationName",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "treatment": "art"
@@ -2072,7 +2253,7 @@
       {
         "column": "222. ART_ARTMedName2",
         "relation": "medications",
-        "property": "medicationName",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "treatment": "art"
@@ -2108,7 +2289,7 @@
       {
         "column": "226. ART_ARTMedName3",
         "relation": "medications",
-        "property": "medicationName",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "treatment": "art"
@@ -2144,7 +2325,7 @@
       {
         "column": "230. ART_ARTMedName4",
         "relation": "medications",
-        "property": "medicationName",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "treatment": "art"
@@ -2180,7 +2361,7 @@
       {
         "column": "234. ART_ARTMedName5",
         "relation": "medications",
-        "property": "medicationName",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "treatment": "art"
@@ -2221,7 +2402,7 @@
       {
         "column": "239. ART_TB_MedicineName1",
         "relation": "medications",
-        "property": "medicationName",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "treatment": "tb"
@@ -2257,7 +2438,7 @@
       {
         "column": "243. ART_TB_MedicineName2",
         "relation": "medications",
-        "property": "medicationName",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "treatment": "tb"
@@ -2293,7 +2474,7 @@
       {
         "column": "247. ART_TB_MedicineName3",
         "relation": "medications",
-        "property": "medicationName",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "treatment": "tb"
@@ -2329,7 +2510,7 @@
       {
         "column": "251. ART_TB_MedicineName4",
         "relation": "medications",
-        "property": "medicationName",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "treatment": "tb"
@@ -2410,7 +2591,7 @@
       {
         "column": "264. ART_OTHMedName1",
         "relation": "medications",
-        "property": "medicationName",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "treatment": "other"
@@ -2446,7 +2627,7 @@
       {
         "column": "268. ART_OTHMedName2",
         "relation": "medications",
-        "property": "medicationName",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "treatment": "other"
@@ -2482,7 +2663,7 @@
       {
         "column": "272. ART_OTHMedName3",
         "relation": "medications",
-        "property": "medicationName",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "treatment": "other"
@@ -2518,7 +2699,7 @@
       {
         "column": "276. ART_OTHMedName4",
         "relation": "medications",
-        "property": "medicationName",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "treatment": "other"
@@ -2554,7 +2735,7 @@
       {
         "column": "280. ART_OTHMedName5",
         "relation": "medications",
-        "property": "medicationName",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "treatment": "other"
@@ -2590,7 +2771,7 @@
       {
         "column": "284. ART_OTHMedName6",
         "relation": "medications",
-        "property": "medicationName",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "treatment": "other"
@@ -2626,7 +2807,7 @@
       {
         "column": "288. ART_OTH_MedName7",
         "relation": "medications",
-        "property": "medicationName",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "treatment": "other"
@@ -2662,7 +2843,7 @@
       {
         "column": "292. ART_OTH_MedName8",
         "relation": "medications",
-        "property": "medicationName",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "treatment": "other"
@@ -2698,7 +2879,7 @@
       {
         "column": "296. ART_OTH_MedName9",
         "relation": "medications",
-        "property": "medicationName",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "treatment": "other"
@@ -2734,7 +2915,7 @@
       {
         "column": "300. ART_OTH_MedName10",
         "relation": "medications",
-        "property": "medicationName",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "treatment": "other"
@@ -2770,7 +2951,7 @@
       {
         "column": "304. ART_OTH_MedName11",
         "relation": "medications",
-        "property": "medicationName",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "treatment": "other"
@@ -2805,37 +2986,37 @@
       },
       {
         "column": "308. ART_ReferredTo",
-        "property": "artReferredTo",
+        "property": "referredToHospital",
         "type": "boolean"
       },
       {
         "column": "309. ART_PatientShouldReturnIn",
-        "property": "artPatientShouldReturnIn",
+        "property": "shouldReturnIn",
         "type": "string"
       },
       {
         "column": "310. ART_ReturnOther",
-        "property": "artReturnOther",
+        "property": "shouldReturnIn",
         "type": "string"
       },
       {
         "column": "311. ART_DateNextVisit",
-        "property": "artDateNextVisit",
+        "property": "dateNextVisit",
         "type": "Date"
       },
       {
         "column": "312. ART_Motive",
-        "property": "artMotive",
+        "property": "motive",
         "type": "string"
       },
       {
         "column": "313. ART_MotiveOther",
-        "property": "artMotiveOther",
+        "property": "motive",
         "type": "string"
       },
       {
         "column": "314. ART_PlanNextVisit",
-        "property": "artPlanNextVisit",
+        "property": "planNextVisit",
         "type": "string"
       },
       {
@@ -2916,7 +3097,7 @@
       },
       {
         "column": "12. ReferredInDate",
-        "property": "referredInDate",
+        "property": "referralDate",
         "type": "Date"
       },
       {
@@ -4281,32 +4462,32 @@
       },
       {
         "column": "244. OtherOIs1",
-        "relation": "otherOIss",
-        "property": "otherOls",
+        "relation": "otherOis",
+        "property": "otherOi",
         "type": "string"
       },
       {
         "column": "245. OtherOIs2",
-        "relation": "otherOIss",
-        "property": "otherOls",
+        "relation": "otherOis",
+        "property": "otherOi",
         "type": "string"
       },
       {
         "column": "246. OtherOIs3",
-        "relation": "otherOIss",
-        "property": "otherOls",
+        "relation": "otherOis",
+        "property": "otherOi",
         "type": "string"
       },
       {
         "column": "247. OtherOIs4",
-        "relation": "otherOIss",
-        "property": "otherOls",
+        "relation": "otherOis",
+        "property": "otherOi",
         "type": "string"
       },
       {
         "column": "248. OtherOIs5",
-        "relation": "otherOIss",
-        "property": "otherOls",
+        "relation": "otherOis",
+        "property": "otherOi",
         "type": "string"
       },
       {
@@ -7405,8 +7586,8 @@
     ]
   },
   {
-    "file": "General Heath Care(GHC)",
-    "entity": "GeneralHeathCareGhc",
+    "file": "General Heath Care",
+    "entity": "GeneralHeathCare",
     "columns": [
       {
         "column": "1. MDMcode",
@@ -7465,267 +7646,506 @@
       },
       {
         "column": "12. GHC_Symptoms_Constitutional",
-        "property": "ghcSymptomsConstitutional",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "constitutional",
+          "name": "todo"
+        }
       },
       {
         "column": "13. GHC_Constitutional_Fatigue",
-        "property": "ghcConstitutionalFatigue",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "constitutional",
+          "name": "fatigue"
+        }
       },
       {
         "column": "14. GHC_Constitutional_Fever",
-        "property": "ghcConstitutionalFever",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "constitutional",
+          "name": "fever"
+        }
       },
       {
         "column": "15. GHC_Constitutional_NightSweats",
-        "property": "ghcConstitutionalNightSweats",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "constitutional",
+          "name": "night sweats"
+        }
       },
       {
         "column": "16. GHC_Constitutional_AppetitieLoss",
-        "property": "ghcConstitutionalAppetitieLoss",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "constitutional",
+          "name": "appetite loss"
+        }
       },
       {
         "column": "17. GHC_Constitutional_WeightLoss",
-        "property": "ghcConstitutionalWeightLoss",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "constitutional",
+          "name": "weight loss"
+        }
       },
       {
         "column": "18. GHC_Constitutional_Pain",
-        "property": "ghcConstitutionalPain",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "constitutional",
+          "name": "pain"
+        }
       },
       {
         "column": "19. GHC_Constitutional_Other",
-        "property": "ghcConstitutionalOther",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "constitutional",
+          "name": "other"
+        }
       },
       {
         "column": "20. GHC_Symptoms_Respiratory",
-        "property": "ghcSymptomsRespiratory",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "respiratory",
+          "name": "todo"
+        }
       },
       {
         "column": "21. GHC_Respiratory_NonProdCough",
-        "property": "ghcRespiratoryNonProdCough",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "respiratory",
+          "name": "non-productive couch"
+        }
       },
       {
         "column": "22. GHC_Respiratory_ProductiveCough",
-        "property": "ghcRespiratoryProductiveCough",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "respiratory",
+          "name": "productive couch"
+        }
       },
       {
         "column": "23. GHC_Respiratory_Hemoptysis",
-        "property": "ghcRespiratoryHemoptysis",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "respiratory",
+          "name": "hemoptysis"
+        }
       },
       {
         "column": "24. GHC_Respiratory_DiffBreathing",
-        "property": "ghcRespiratoryDiffBreathing",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "respiratory",
+          "name": "difficulty breathing"
+        }
       },
       {
         "column": "25. GHC_Respiratory_ChestPain",
-        "property": "ghcRespiratoryChestPain",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "respiratory",
+          "name": "chest pain"
+        }
       },
       {
         "column": "26. GHC_Respiratory_Palpitation",
-        "property": "ghcRespiratoryPalpitation",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "respiratory",
+          "name": "palpitation"
+        }
       },
       {
         "column": "27. GHC_Respiratory_Other",
-        "property": "ghcRespiratoryOther",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "respiratory",
+          "name": "other"
+        }
       },
       {
         "column": "28. GHC_Symptoms_Gastrointestinal",
-        "property": "ghcSymptomsGastrointestinal",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "gastrointestinal",
+          "name": "todo"
+        }
       },
       {
         "column": "29. GHC_Gastrointestinal_AbdPain",
-        "property": "ghcGastrointestinalAbdPain",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "gastrointestinal",
+          "name": "abdominal pain"
+        }
       },
       {
         "column": "30. GHC_Gastrointestinal_Nausea",
-        "property": "ghcGastrointestinalNausea",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "gastrointestinal",
+          "name": "nausea"
+        }
       },
       {
         "column": "31. GHC_Gastrointestinal_Vomiting",
-        "property": "ghcGastrointestinalVomiting",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "gastrointestinal",
+          "name": "vomiting"
+        }
       },
       {
         "column": "32. GHC_Gastrointestinal_Dysphagia",
-        "property": "ghcGastrointestinalDysphagia",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "gastrointestinal",
+          "name": "dysphagia"
+        }
       },
       {
         "column": "33. GHC_Gastrointestinal_Diarrhea",
-        "property": "ghcGastrointestinalDiarrhea",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "gastrointestinal",
+          "name": "diarrhea"
+        }
       },
       {
         "column": "34. GHC_Gastrointestinal_Other",
-        "property": "ghcGastrointestinalOther",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "gastrointestinal",
+          "name": "other"
+        }
       },
       {
         "column": "35. GHC_Symptoms_Neurological",
-        "property": "ghcSymptomsNeurological",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "neurological",
+          "name": "todo"
+        }
       },
       {
         "column": "36. GHC_Neuro_Headache",
-        "property": "ghcNeuroHeadache",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "neurological",
+          "name": "headache"
+        }
       },
       {
         "column": "37. GHC_Neuro_Confusion",
-        "property": "ghcNeuroConfusion",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "neurological",
+          "name": "confusion"
+        }
       },
       {
         "column": "38. GHC_Neuro_MemProblem",
-        "property": "ghcNeuroMemProblem",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "neurological",
+          "name": "memory problem"
+        }
       },
       {
         "column": "39. GHC_Neuro_Tingling",
-        "property": "ghcNeuroTingling",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "neurological",
+          "name": "Tingling and Numbness of limbs"
+        }
       },
       {
         "column": "40. GHC_Neuro_Insomnia",
-        "property": "ghcNeuroInsomnia",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "neurological",
+          "name": "insomnia"
+        }
       },
       {
         "column": "41. GHC_Neuro_Yawning",
-        "property": "ghcNeuroYawning",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "neurological",
+          "name": "yawning"
+        }
       },
       {
         "column": "42. GHC_Symptoms_SkinManifestation",
-        "property": "ghcSymptomsSkinManifestation",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "skin manifestation",
+          "name": "todo"
+        }
       },
       {
         "column": "43. GHC_Skin_Itchiness",
-        "property": "ghcSkinItchiness",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "skin manifestation",
+          "name": "itchiness"
+        }
       },
       {
         "column": "44. GHC_Skin_Rash",
-        "property": "ghcSkinRash",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "skin manifestation",
+          "name": "rash"
+        }
       },
       {
         "column": "45. GHC_Skin_Lump",
-        "property": "ghcSkinLump",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "skin manifestation",
+          "name": "lump"
+        }
       },
       {
         "column": "46. GHC_Skin_Other",
-        "property": "ghcSkinOther",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "skin manifestation",
+          "name": "other"
+        }
       },
       {
         "column": "47. GHC_Symptoms_AdditionalComments",
-        "property": "ghcSymptomsAdditionalComments",
+        "property": "symptomsComment",
         "type": "string"
       },
       {
         "column": "48. GHC_Eye",
-        "property": "ghcEye",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "eye"
+        }
       },
       {
         "column": "49. GHC_EyeComment",
-        "property": "ghcEyeComment",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "comment",
+        "type": "string",
+        "entityValues": {
+          "category": "eye"
+        }
       },
       {
         "column": "50. GHC_EarsNose",
-        "property": "ghcEarsNose",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "nose"
+        }
       },
       {
         "column": "51. GHC_EarsNoseComment",
-        "property": "ghcEarsNoseComment",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "comment",
+        "type": "string",
+        "entityValues": {
+          "category": "nose"
+        }
       },
       {
         "column": "52. GHC_Oral",
-        "property": "ghcOral",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "oral"
+        }
       },
       {
         "column": "53. GHC_OralComment",
-        "property": "ghcOralComment",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "comment",
+        "type": "string",
+        "entityValues": {
+          "category": "oral"
+        }
       },
       {
         "column": "54. GHC_LymphNodes",
-        "property": "ghcLymphNodes",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "lymph nodes"
+        }
       },
       {
         "column": "55. GHC_LymphNodesComment",
-        "property": "ghcLymphNodesComment",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "comment",
+        "type": "string",
+        "entityValues": {
+          "category": "lymph nodes"
+        }
       },
       {
         "column": "56. GHC_Heart",
-        "property": "heart",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "heart"
+        }
       },
       {
         "column": "57. GHC_HeartComment",
-        "property": "heartComment",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "comment",
+        "type": "string",
+        "entityValues": {
+          "category": "heart"
+        }
       },
       {
         "column": "58. GHC_Lungs",
-        "property": "ghcLungs",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "lungs"
+        }
       },
       {
         "column": "59. GHC_LungsComment",
-        "property": "ghcLungsComment",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "comment",
+        "type": "string",
+        "entityValues": {
+          "category": "lungs"
+        }
       },
       {
         "column": "60. GHC_Abdomen",
-        "property": "ghcAbdomen",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "abdomen"
+        }
       },
       {
         "column": "61. GHC_AbdomenComment",
-        "property": "ghcAbdomenComment",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "comment",
+        "type": "string",
+        "entityValues": {
+          "category": "abdomen"
+        }
       },
       {
         "column": "62. GHC_Neurological",
-        "property": "ghcNeurological",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "neurological"
+        }
       },
       {
         "column": "63. GHC_NeurologicalComment",
-        "property": "ghcNeurologicalComment",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "comment",
+        "type": "string",
+        "entityValues": {
+          "category": "neurological"
+        }
       },
       {
         "column": "64. GHC_AdditionalComments",
-        "property": "ghcAdditionalComments",
+        "property": "physicalExamComment",
         "type": "string"
       },
       {
@@ -7793,277 +8213,397 @@
       },
       {
         "column": "76. GHC_APRI",
-        "property": "ghcApri",
+        "property": "apri",
         "type": "number"
       },
       {
         "column": "77. GHC_Liver_Fibrosis",
-        "property": "ghcLiverFibrosis",
+        "property": "liverFibrosis",
         "type": "string"
       },
       {
         "column": "78. GHC_Allergy",
-        "property": "ghcAllergy",
+        "property": "allergy",
         "type": "string"
       },
       {
         "column": "79. GHC_AllergyOther",
-        "property": "ghcAllergyOther",
+        "property": "allergyOther",
         "type": "string"
       },
       {
         "column": "80. GHC_MedicineName1",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "name",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "81. GHC_Dosage1",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "dosage",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "82. GHC_Frequency1",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "frequency",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "83. GHC_NumberDays1",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "numberDays",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "84. GHC_MedicineName2",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "name",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "85. GHC_Dosage2",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "dosage",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "86. GHC_Frequency2",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "frequency",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "87. GHC_NumberDays2",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "numberDays",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "88. GHC_MedicineName3",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "name",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "89. GHC_Dosage3",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "dosage",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "90. GHC_Frequency3",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "frequency",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "91. GHC_NumberDays3",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "numberDays",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "92. GHC_MedicineName4",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "name",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "93. GHC_Dosage4",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "dosage",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "94. GHC_Frequency4",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "frequency",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "95. GHC_NumberDays4",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "numberDays",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "96. GHC_MedicineName5",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "name",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "97. GHC_Dosage5",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "dosage",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "98. GHC_Frequency5",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "frequency",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "99. GHC_NumberDays5",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "numberDays",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "100. GHC_MedicineName6",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "name",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "101. GHC_Dosage6",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "dosage",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "102. GHC_Frequency6",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "frequency",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "103. GHC_NumberDays6",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "numberDays",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "104. GHC_MedicineName7",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "name",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "105. GHC_Dosage7",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "dosage",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "106. GHC_Frequency7",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "frequency",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "107. GHC_NumberDays7",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "numberDays",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "108. GHC_MedicineName8",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "name",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "109. GHC_Dosage8",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "dosage",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "110. GHC_Frequency8",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "frequency",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "111. GHC_NumberDays8",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "numberDays",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "112. GHC_MedicineName9",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "name",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "113. GHC_Dosage9",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "dosage",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "114. GHC_Frequency9",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "frequency",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "115. GHC_NumberDays9",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "numberDays",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "116. GHC_MedicineName10",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "name",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "117. GHC_Dosage10",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "dosage",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "118. GHC_Frequency10",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "frequency",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "119. GHC_NumberDays10",
-        "relation": "ghcMedications",
+        "relation": "medications",
         "property": "numberDays",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "treatment": "other"
+        }
       },
       {
         "column": "120. GHC_PatientShouldReturnIn",
-        "property": "ghcPatientShouldReturnIn",
+        "property": "shouldReturnIn",
         "type": "string"
       },
       {
         "column": "121. GHC_ShouldReturnIn_Other",
-        "property": "ghcShouldReturnInOther",
+        "property": "shouldReturnIn",
         "type": "string"
       },
       {
         "column": "122. GHC_DateNextVisit",
-        "property": "ghcDateNextVisit",
+        "property": "dateNextVisit",
         "type": "Date"
       },
       {
@@ -8129,12 +8669,12 @@
       },
       {
         "column": "9. GI_PlaceOfMedicalCare",
-        "property": "giPlaceOfMedicalCare",
+        "property": "placeOfMedicalCare",
         "type": "string"
       },
       {
         "column": "10. GI_VisitDate",
-        "property": "giVisitDate",
+        "property": "visitDate",
         "type": "Date"
       },
       {
@@ -8144,7 +8684,7 @@
       },
       {
         "column": "12. B04_CurrentWorkPlace",
-        "property": "b04CurrentWorkPlace",
+        "property": "currentWorkplace",
         "type": "string"
       },
       {
@@ -8154,27 +8694,27 @@
       },
       {
         "column": "14. GI_BW",
-        "property": "giBw",
+        "property": "bodyWeight",
         "type": "number"
       },
       {
         "column": "15. GI_LbOrKg",
-        "property": "giLbOrKg",
+        "property": "lbOrKg",
         "type": "string"
       },
       {
         "column": "16. GI_BMI",
-        "property": "giBmi",
+        "property": "bmi",
         "type": "number"
       },
       {
         "column": "17. GI_Temperature",
-        "property": "giTemperature",
+        "property": "temperature",
         "type": "number"
       },
       {
         "column": "18. GI_CorF",
-        "property": "giCorF",
+        "property": "celsiusOrFahrenheit",
         "type": "string"
       },
       {
@@ -8189,77 +8729,77 @@
       },
       {
         "column": "21. GI_RR",
-        "property": "giRr",
+        "property": "rr",
         "type": "number"
       },
       {
         "column": "22. GI_Pulse",
-        "property": "giPulse",
+        "property": "pulse",
         "type": "number"
       },
       {
         "column": "23. GI_ReproductiveHealth",
-        "property": "giReproductiveHealth",
+        "property": "reproductiveHealth",
         "type": "string"
       },
       {
         "column": "24. GI_Contraception",
-        "property": "giContraception",
+        "property": "contraception",
         "type": "boolean"
       },
       {
         "column": "25. GI_ContraceptionType",
-        "property": "giContraceptionType",
+        "property": "contraceptionType",
         "type": "string"
       },
       {
         "column": "26. GI_OtherContraceptionType",
-        "property": "giOtherContraceptionType",
+        "property": "otherContraceptionType",
         "type": "string"
       },
       {
         "column": "27. GI_DrugTakenOn",
-        "property": "giDrugTakenOn",
+        "property": "drugTakenOn",
         "type": "Date"
       },
       {
         "column": "28. GI_LMPdate",
-        "property": "giLmPdate",
+        "property": "lmpDate",
         "type": "Date"
       },
       {
         "column": "29. GI_Parity",
-        "property": "giParity",
+        "property": "parity",
         "type": "number"
       },
       {
         "column": "30. GI_CondomUseForLastSex",
-        "property": "giCondomUseForLastSex",
+        "property": "condomUseForLastSex",
         "type": "boolean"
       },
       {
         "column": "31. GI_NumberClientsLastWorkingDay",
-        "property": "giNumberClientsLastWorkingDay",
+        "property": "numberClientsLastWorkingDay",
         "type": "number"
       },
       {
         "column": "32. GI_ShareNeedleOrSyringeInLast",
-        "property": "giShareNeedleOrSyringeInLast",
+        "property": "shareNeedleOrSyringeInLast",
         "type": "boolean"
       },
       {
         "column": "33. GI_ShareNeedleOrSyringeInLastMonth",
-        "property": "giShareNeedleOrSyringeInLastMonth",
+        "property": "shareNeedleOrSyringeInLastMonth",
         "type": "boolean"
       },
       {
         "column": "34. GI_ShareNeedleOrSyringeInLast6Months",
-        "property": "giShareNeedleOrSyringeInLast6Months",
+        "property": "shareNeedleOrSyringeInLastSixMonths",
         "type": "boolean"
       },
       {
         "column": "35. GI_Remarks",
-        "property": "giRemarks",
+        "property": "remarks",
         "type": "string"
       },
       {
@@ -8451,7 +8991,7 @@
       },
       {
         "column": "9. STI_VisitDate",
-        "property": "stiVisitDate",
+        "property": "visitDate",
         "type": "Date"
       },
       {
@@ -8461,7 +9001,7 @@
       },
       {
         "column": "11. STI_NewPatient",
-        "property": "stiNewPatient",
+        "property": "newPatient",
         "type": "boolean"
       },
       {
@@ -8471,248 +9011,397 @@
       },
       {
         "column": "13. STI_Symptoms",
-        "property": "stiSymptoms",
+        "relation": "symptoms",
+        "property": "description",
         "type": "string"
       },
       {
         "column": "14. STI_Symptoms_ScoreThroat",
-        "property": "stiSymptomsScoreThroat",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "sti",
+          "type": "score throat"
+        }
       },
       {
         "column": "15. STI_Symptoms_VaginalDOpt",
-        "property": "stiSymptomsVaginalDOpt",
-        "type": "string"
+        "relation": "symptoms",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "sti",
+          "type": "vaginal discharge"
+        }
       },
       {
         "column": "16. STI_Symptoms_VDischarge",
-        "property": "stiSymptomsVDischarge",
+        "relation": "symptoms",
+        "property": "description",
         "type": "string"
       },
       {
         "column": "17. STI_Symptoms_LowAbdoOpt",
-        "property": "stiSymptomsLowAbdoOpt",
+        "relation": "symptoms",
+        "property": "description",
         "type": "string"
       },
       {
         "column": "18. STI_Symptoms_LowAbdoPain",
-        "property": "stiSymptomsLowAbdoPain",
+        "relation": "symptoms",
+        "property": "description",
         "type": "string"
       },
       {
         "column": "19. STI_Symptoms_Dysuria",
-        "property": "stiSymptomsDysuria",
+        "relation": "symptoms",
+        "property": "description",
         "type": "string"
       },
       {
         "column": "20. STI_Symptoms_UlcerOpt",
-        "property": "stiSymptomsUlcerOpt",
+        "relation": "symptoms",
+        "property": "description",
         "type": "string"
       },
       {
         "column": "21. STI_Symptoms_Ulcer",
-        "property": "stiSymptomsUlcer",
+        "relation": "symptoms",
+        "property": "description",
         "type": "string"
       },
       {
         "column": "22. STI_Symptomst_AnalDischarge",
-        "property": "stiSymptomstAnalDischarge",
+        "relation": "symptoms",
+        "property": "description",
         "type": "string"
       },
       {
         "column": "23. STI_Symptoms_ItchinessDescription",
-        "property": "stiSymptomsItchinessDescription",
+        "relation": "symptoms",
+        "property": "description",
         "type": "string"
       },
       {
         "column": "24. STI_Symptoms_SwellingOverGenitalOpt",
-        "property": "stiSymptomsSwellingOverGenitalOpt",
+        "relation": "symptoms",
+        "property": "description",
         "type": "string"
       },
       {
         "column": "25. STI_Symptoms_Swelling",
-        "property": "stiSymptomsSwelling",
+        "relation": "symptoms",
+        "property": "description",
         "type": "string"
       },
       {
         "column": "26. STI_Symptoms_Warts",
-        "property": "stiSymptomsWarts",
+        "relation": "symptoms",
+        "property": "description",
         "type": "string"
       },
       {
         "column": "27. STI_Symptoms_Scrotal",
-        "property": "stiSymptomsScrotal",
+        "relation": "symptoms",
+        "property": "description",
         "type": "string"
       },
       {
         "column": "28. STI_Symptoms_UrethralDischarge",
-        "property": "stiSymptomsUrethralDischarge",
+        "relation": "symptoms",
+        "property": "description",
         "type": "string"
       },
       {
         "column": "29. STI_Symptoms_Other",
-        "property": "stiSymptomsOther",
+        "relation": "symptoms",
+        "property": "description",
         "type": "string"
       },
       {
         "column": "30. STI_Symptoms_Comment",
-        "property": "stiSymptomsComment",
+        "property": "symptomsComment",
         "type": "string"
       },
       {
         "column": "31. STI_PhysicalExam",
-        "property": "stiPhysicalExam",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "32. STI_PExam_OralUlcerOpt",
-        "property": "stiPExamOralUlcerOpt",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "33. STI_PExam_Pyaryngitis",
-        "property": "stiPExamPyaryngitis",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "34. STI_PExam_SkinRash",
-        "property": "stiPExamSkinRash",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "35. STI_PExam_TendernessOverLowerAbdomen",
-        "property": "stiPExamTendernessOverLowerAbdomen",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "36. STI_PExamVulva",
-        "property": "stiPExamVulva",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "37. STI_PExam_VaginalD",
-        "property": "stiPExamVaginalD",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "38. STI_PExam_CervicalD",
-        "property": "stiPExamCervicalD",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "39. STI_PExam_AdnexalTenderness",
-        "property": "stiPExamAdnexalTenderness",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "40. STI_PExam_CervicalMotionTenderness",
-        "property": "stiPExamCervicalMotionTenderness",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "41. STI_PExam_InguinalBubo",
-        "property": "stiPExamInguinalBubo",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "42. STI_PExam_GenitalUlcer",
-        "property": "stiPExamGenitalUlcer",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "43. STI_PExam_Warts",
-        "property": "stiPExamWarts",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "44. STI_PExam_UrethralDischarge",
-        "property": "stiPExamUrethralDischarge",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "45. STI_PExam_AnalDischarge",
-        "property": "stiPExamAnalDischarge",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "46. STI_PExam_Scrotal",
-        "property": "stiPExamScrotal",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "47. STI_PExam_Other",
-        "property": "stiPExamOther",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "48. STI_PExam_Comment",
-        "property": "stiPExamComment",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "comment",
+        "type": "string",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "49. STI_Test_PregnancyTest",
-        "property": "stiTestPregnancyTest",
-        "type": "boolean"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "boolean",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "50. STI_PExam_Test",
-        "property": "stiPExamTest",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "51. STI_Test_SniffTest",
-        "property": "stiTestSniffTest",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "52. STI_Test_PH",
-        "property": "testPh",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "53. STI_Test_UrethralSmear",
-        "property": "stiTestUrethralSmear",
-        "type": "boolean"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "boolean",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "54. STI_Test_VaginalSmear",
-        "property": "stiTestVaginalSmear",
-        "type": "boolean"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "boolean",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "55. STI_Test_AnalSmear",
-        "property": "stiTestAnalSmear",
-        "type": "boolean"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "boolean",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "56. STI_Test_UlcerSmear",
-        "property": "stiTestUlcerSmear",
-        "type": "boolean"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "boolean",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "57. STI_Test_ThroatSwab",
-        "property": "stiTestThroatSwab",
-        "type": "boolean"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "boolean",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "58. STI_Test_Chlamydia",
-        "property": "stiTestChlamydia",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "59. STI_Test_RPR",
-        "property": "rpr",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "60. STI_Test_RPRDil",
-        "property": "rprDil",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "61. STI_Test_OtherInvestigation",
-        "property": "stiTestOtherInvestigation",
-        "type": "string"
+        "relation": "physicalExams",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "category": "sti"
+        }
       },
       {
         "column": "62. STI_PresumptiveDiagnosis",
@@ -8731,277 +9420,397 @@
       },
       {
         "column": "65. STI_Treatment_TreatmentPlan",
-        "property": "stiTreatmentTreatmentPlan",
+        "property": "treatmentPlan",
         "type": "string"
       },
       {
         "column": "66. STI_Treatment_Allergy",
-        "property": "stiTreatmentAllergy",
+        "property": "treatmentAllergy",
         "type": "string"
       },
       {
         "column": "67. STI_Treatment_AllergyOther",
-        "property": "stiTreatmentAllergyOther",
+        "property": "treatmentOtherAllergy",
         "type": "string"
       },
       {
         "column": "68. STI_Treatment_Pregnant",
-        "property": "stiTreatmentPregnant",
+        "property": "isPregnant",
         "type": "boolean"
       },
       {
         "column": "69. STI_Treatment_SurgicalIntervention",
-        "property": "stiTreatmentSurgicalIntervention",
+        "property": "hadSurgicalIntervention",
         "type": "boolean"
       },
       {
         "column": "70. STI_Treatment_MedicineName1",
-        "relation": "stiMedications",
-        "property": "medicineName",
-        "type": "string"
+        "relation": "medications",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "71. STI_Treatment_Dosage1",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "dosage",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "72. STI_Treatment_Frequency1",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "frequency",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "73. STI_Treatment_NumberDays1",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "numberDays",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "74. STI_Treatment_MedicineName2",
-        "relation": "stiMedications",
-        "property": "medicineName",
-        "type": "string"
+        "relation": "medications",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "75. STI_Treatment_Dosage2",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "dosage",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "76. STI_Treatment_Frequency2",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "frequency",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "77. STI_Treatment_NumberDays2",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "numberDays",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "78. STI_Treatment_MedicineName3",
-        "relation": "stiMedications",
-        "property": "medicineName",
-        "type": "string"
+        "relation": "medications",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "79. STI_Treatment_Dosage3",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "dosage",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "80. STI_Treatment_Frequency3",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "frequency",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "81. STI_Treatment_NumberDays3",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "numberDays",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "82. STI_Treatment_MedicineName4",
-        "relation": "stiMedications",
-        "property": "medicineName",
-        "type": "string"
+        "relation": "medications",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "83. STI_Treatment_Dosage4",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "dosage",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "84. STI_Treatment_Frequency4",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "frequency",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "85. STI_Treatment_NumberDays4",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "numberDays",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "86. STI_Treatment_MedicineName5",
-        "relation": "stiMedications",
-        "property": "medicineName",
-        "type": "string"
+        "relation": "medications",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "87. STI_Treatment_Dosage5",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "dosage",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "88. STI_Treatment_Frequency5",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "frequency",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "89. STI_Treatment_NumberDays5",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "numberDays",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "90. STI_Treatment_MedicineName6",
-        "relation": "stiMedications",
-        "property": "medicineName",
-        "type": "string"
+        "relation": "medications",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "91. STI_Treatment_Dosage6",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "dosage",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "92. STI_Treatment_Frequency6",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "frequency",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "93. STI_Treatment_NumberDays6",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "numberDays",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "94. STI_Treatment_MedicineName7",
-        "relation": "stiMedications",
-        "property": "medicineName",
-        "type": "string"
+        "relation": "medications",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "95. STI_Treatment_Dosage7",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "dosage",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "96. STI_Treatment_Frequency7",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "frequency",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "97. STI_Treatment_NumberDays7",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "numberDays",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "98. STI_Treatment_MedicineName8",
-        "relation": "stiMedications",
-        "property": "medicineName",
-        "type": "string"
+        "relation": "medications",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "99. STI_Treatment_Dosage8",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "dosage",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "100. STI_Treatment_Frequency8",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "frequency",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "101. STI_Treatment_NumberDays8",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "numberDays",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "102. STI_Treatment_MedicineName9",
-        "relation": "stiMedications",
-        "property": "medicineName",
-        "type": "string"
+        "relation": "medications",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "103. STI_Treatment_Dosage9",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "dosage",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "104. STI_Treatment_Frequency9",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "frequency",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "105. STI_Treatment_NumberDays9",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "numberDays",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "106. STI_Treatment_MedicineName10",
-        "relation": "stiMedications",
-        "property": "medicineName",
-        "type": "string"
+        "relation": "medications",
+        "property": "name",
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "107. STI_Treatment_Dosage10",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "dosage",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "108. STI_Treatment_Frequency10",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "frequency",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "109. STI_Treatment_NumberDays10",
-        "relation": "stiMedications",
+        "relation": "medications",
         "property": "numberDays",
-        "type": "number"
+        "type": "number",
+        "entityValues": {
+          "treatment": "sti"
+        }
       },
       {
         "column": "110. STI_N03_OtherTreatment",
-        "property": "stiN03OtherTreatment",
+        "property": "otherTreatment",
         "type": "string"
       },
       {
         "column": "111. STI_Referred",
-        "property": "stiReferred",
+        "property": "referredToHospital",
         "type": "boolean"
       },
       {
@@ -9016,17 +9825,17 @@
       },
       {
         "column": "114. STI_Remark",
-        "property": "stiRemark",
+        "property": "remark",
         "type": "string"
       },
       {
         "column": "115. STI_DateNextVisit",
-        "property": "stiDateNextVisit",
+        "property": "dateNextVisit",
         "type": "Date"
       },
       {
         "column": "116. STI_PlanForNextVisit",
-        "property": "stiPlanForNextVisit",
+        "property": "planNextVisit",
         "type": "string"
       },
       {
@@ -9703,17 +10512,17 @@
       },
       {
         "column": "8. VCCT_VisitDate",
-        "property": "vcctVisitDate",
+        "property": "visitDate",
         "type": "Date"
       },
       {
         "column": "9. VCCT_TBPatient",
-        "property": "vcctTbPatient",
+        "property": "isTbPatient",
         "type": "boolean"
       },
       {
         "column": "10. VCCT_PlaceofTesting",
-        "property": "vcctPlaceofTesting",
+        "property": "placeOfTesting",
         "type": "string"
       },
       {
@@ -9738,55 +10547,55 @@
       },
       {
         "column": "15. VCCT_TypeOfDrugs1",
-        "relation": "vcctDrugTypes",
+        "relation": "drugTypes",
         "property": "typeOfDrugs",
         "type": "string"
       },
       {
         "column": "16. VCCT_DrugName1",
-        "relation": "vcctDrugTypes",
+        "relation": "drugTypes",
         "property": "drugName",
         "type": "string"
       },
       {
         "column": "17. VCCT_WayOfUse1",
-        "relation": "vcctDrugTypes",
+        "relation": "drugTypes",
         "property": "wayOfUse",
         "type": "string"
       },
       {
         "column": "18. VCCT_TypeOfDrugs2",
-        "relation": "vcctDrugTypes",
+        "relation": "drugTypes",
         "property": "typeOfDrugs",
         "type": "string"
       },
       {
         "column": "19. VCCT_DrugName2",
-        "relation": "vcctDrugTypes",
+        "relation": "drugTypes",
         "property": "drugName",
         "type": "string"
       },
       {
         "column": "20. VCCT_WayOfUse2",
-        "relation": "vcctDrugTypes",
+        "relation": "drugTypes",
         "property": "wayOfUse",
         "type": "string"
       },
       {
         "column": "21. VCCT_TypeOfDrugs3",
-        "relation": "vcctDrugTypes",
+        "relation": "drugTypes",
         "property": "typeOfDrugs",
         "type": "string"
       },
       {
         "column": "22. VCCT_DrugName3",
-        "relation": "vcctDrugTypes",
+        "relation": "drugTypes",
         "property": "drugName",
         "type": "string"
       },
       {
         "column": "23. VCCT_WayOfUse3",
-        "relation": "vcctDrugTypes",
+        "relation": "drugTypes",
         "property": "wayOfUse",
         "type": "string"
       },
@@ -9937,7 +10746,7 @@
       },
       {
         "column": "53. VCCT_DateNextVisit",
-        "property": "vcctDateNextVisit",
+        "property": "dateNextVisit",
         "type": "Date"
       },
       {

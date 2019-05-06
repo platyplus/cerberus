@@ -1,6 +1,7 @@
 export interface Row {
   form: string
-  relation: string
+  relation_type: string
+  relation_name: string
   constraint: string
   excel_name: string
   property_name: string
@@ -26,7 +27,7 @@ export interface Mapping {
 export const emptyRow = () =>
   ({
     form: '',
-    relation: '',
+    relation_type: '',
     constraint: '',
     excel_name: '',
     property_name: '',

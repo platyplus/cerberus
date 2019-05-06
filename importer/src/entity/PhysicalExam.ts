@@ -4,49 +4,36 @@ import { ArtConsultationPlha } from './ArtConsultationPlha'
 import { GeneralHeathCare } from './GeneralHeathCare'
 import { Sti } from './Sti'
 
-export enum TreatmentEnum { 
-	ART = 'art', 
-	TB = 'tb', 
-	OTHER = 'other', 
+export enum CategoryEnum { 
+	SKIN_MANIFESTATION = 'skin manifestation', 
+	EYE = 'eye', 
+	NOSE = 'nose', 
+	ORAL = 'oral', 
+	LYMPH_NODES = 'lymph nodes', 
+	HEART = 'heart', 
+	LUNGS = 'lungs', 
+	ABDOMEN = 'abdomen', 
+	NEUROLOGICAL = 'neurological', 
 	STI = 'sti' 
 }
 
 @Entity()
-export class Medication {
+export class PhysicalExam {
 	@PrimaryGeneratedColumn('uuid')
 	id: string
 
 	@Column({
-		name: 'treatment',
+		name: 'category',
 		nullable: true,
-		enum: TreatmentEnum
+		enum: CategoryEnum
 	})
-	treatment: TreatmentEnum
+	category: CategoryEnum
 
-	@ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.medications, {
+	@ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.physicalExams, {
 		eager: true
 	})
 	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
 	artConsultationPlha: ArtConsultationPlha
-
-	@Column({
-		name: 'dosage',
-		nullable: true
-	})
-	dosage: string
-
-	@Column({
-		name: 'frequency',
-		nullable: true
-	})
-	frequency: string
-
-	@Column({
-		name: 'number_days',
-		type: 'integer',
-		nullable: true
-	})
-	numberDays: number
 
 	@Column({
 		name: 'name',
@@ -54,13 +41,19 @@ export class Medication {
 	})
 	name: string
 
-	@ManyToOne(type => GeneralHeathCare, generalHeathCare => generalHeathCare.medications, {
+	@Column({
+		name: 'comment',
+		nullable: true
+	})
+	comment: string
+
+	@ManyToOne(type => GeneralHeathCare, generalHeathCare => generalHeathCare.physicalExams, {
 		eager: true
 	})
 	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
 	generalHeathCare: GeneralHeathCare
 
-	@ManyToOne(type => Sti, sti => sti.medications, {
+	@ManyToOne(type => Sti, sti => sti.physicalExams, {
 		eager: true
 	})
 	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])

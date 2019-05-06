@@ -4,7 +4,7 @@ import { Cd4Measurement } from './Cd4Measurement'
 import { HaartToxicity } from './HaartToxicity'
 import { TreatmentInterruption } from './TreatmentInterruption'
 import { ArtKeyAttb } from './ArtKeyAttb'
-import { OtherOIs } from './OtherOIs'
+import { OtherOi } from './OtherOi'
 import { ArtKeyResult } from './ArtKeyResult'
 import { Apri } from './Apri'
 
@@ -78,11 +78,11 @@ export class ArtKey {
 	referral: string
 
 	@Column({
-		name: 'referred_in_date',
+		name: 'referral_date',
 		type: 'timestamptz',
 		nullable: true
 	})
-	referredInDate: Date
+	referralDate: Date
 
 	@Column({
 		name: 'referral_from',
@@ -263,10 +263,10 @@ export class ArtKey {
 	})
 	presentingInitialOIs: string
 
-	@OneToMany(type => OtherOIs, otherOIs => otherOIs.artKey, {
+	@OneToMany(type => OtherOi, otherOi => otherOi.artKey, {
 		cascade: true
 	})
-	otherOIss: OtherOIs[]
+	otherOis: OtherOi[]
 
 	@OneToMany(type => ArtKeyResult, artKeyResult => artKeyResult.artKey, {
 		cascade: true

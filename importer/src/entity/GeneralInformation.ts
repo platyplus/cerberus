@@ -55,17 +55,17 @@ export class GeneralInformation {
 	patientTarget: string
 
 	@Column({
-		name: 'gi_place_of_medical_care',
+		name: 'place_of_medical_care',
 		nullable: true
 	})
-	giPlaceOfMedicalCare: string
+	placeOfMedicalCare: string
 
 	@Column({
-		name: 'gi_visit_date',
+		name: 'visit_date',
 		type: 'timestamptz',
 		nullable: true
 	})
-	giVisitDate: Date
+	visitDate: Date
 
 	@Column({
 		name: 'marital_status',
@@ -74,10 +74,10 @@ export class GeneralInformation {
 	maritalStatus: string
 
 	@Column({
-		name: 'b_04_current_work_place',
+		name: 'current_workplace',
 		nullable: true
 	})
-	b04CurrentWorkPlace: string
+	currentWorkplace: string
 
 	@Column({
 		name: 'height',
@@ -87,37 +87,37 @@ export class GeneralInformation {
 	height: number
 
 	@Column({
-		name: 'gi_bw',
+		name: 'body_weight',
 		type: 'integer',
 		nullable: true
 	})
-	giBw: number
+	bodyWeight: number
 
 	@Column({
-		name: 'gi_lb_or_kg',
+		name: 'lb_or_kg',
 		nullable: true
 	})
-	giLbOrKg: string
+	lbOrKg: string
 
 	@Column({
-		name: 'gi_bmi',
+		name: 'bmi',
 		type: 'integer',
 		nullable: true
 	})
-	giBmi: number
+	bmi: number
 
 	@Column({
-		name: 'gi_temperature',
+		name: 'temperature',
 		type: 'integer',
 		nullable: true
 	})
-	giTemperature: number
+	temperature: number
 
 	@Column({
-		name: 'gi_cor_f',
+		name: 'celsius_or_fahrenheit',
 		nullable: true
 	})
-	giCorF: string
+	celsiusOrFahrenheit: string
 
 	@Column({
 		name: 'blood_pressure_systolic',
@@ -134,105 +134,105 @@ export class GeneralInformation {
 	bloodPressureDiastolic: number
 
 	@Column({
-		name: 'gi_rr',
+		name: 'rr',
 		type: 'integer',
 		nullable: true
 	})
-	giRr: number
+	rr: number
 
 	@Column({
-		name: 'gi_pulse',
+		name: 'pulse',
 		type: 'integer',
 		nullable: true
 	})
-	giPulse: number
+	pulse: number
 
 	@Column({
-		name: 'gi_reproductive_health',
+		name: 'reproductive_health',
 		nullable: true
 	})
-	giReproductiveHealth: string
+	reproductiveHealth: string
 
 	@Column({
-		name: 'gi_contraception',
+		name: 'contraception',
 		type: 'boolean',
 		nullable: true
 	})
-	giContraception: boolean
+	contraception: boolean
 
 	@Column({
-		name: 'gi_contraception_type',
+		name: 'contraception_type',
 		nullable: true
 	})
-	giContraceptionType: string
+	contraceptionType: string
 
 	@Column({
-		name: 'gi_other_contraception_type',
+		name: 'other_contraception_type',
 		nullable: true
 	})
-	giOtherContraceptionType: string
+	otherContraceptionType: string
 
 	@Column({
-		name: 'gi_drug_taken_on',
+		name: 'drug_taken_on',
 		type: 'timestamptz',
 		nullable: true
 	})
-	giDrugTakenOn: Date
+	drugTakenOn: Date
 
 	@Column({
-		name: 'gi_lm_pdate',
+		name: 'lmp_date',
 		type: 'timestamptz',
 		nullable: true
 	})
-	giLmPdate: Date
+	lmpDate: Date
 
 	@Column({
-		name: 'gi_parity',
+		name: 'parity',
 		type: 'integer',
 		nullable: true
 	})
-	giParity: number
+	parity: number
 
 	@Column({
-		name: 'gi_condom_use_for_last_sex',
+		name: 'condom_use_for_last_sex',
 		type: 'boolean',
 		nullable: true
 	})
-	giCondomUseForLastSex: boolean
+	condomUseForLastSex: boolean
 
 	@Column({
-		name: 'gi_number_clients_last_working_day',
+		name: 'number_clients_last_working_day',
 		type: 'integer',
 		nullable: true
 	})
-	giNumberClientsLastWorkingDay: number
+	numberClientsLastWorkingDay: number
 
 	@Column({
-		name: 'gi_share_needle_or_syringe_in_last',
+		name: 'share_needle_or_syringe_in_last',
 		type: 'boolean',
 		nullable: true
 	})
-	giShareNeedleOrSyringeInLast: boolean
+	shareNeedleOrSyringeInLast: boolean
 
 	@Column({
-		name: 'gi_share_needle_or_syringe_in_last_month',
+		name: 'share_needle_or_syringe_in_last_month',
 		type: 'boolean',
 		nullable: true
 	})
-	giShareNeedleOrSyringeInLastMonth: boolean
+	shareNeedleOrSyringeInLastMonth: boolean
 
 	@Column({
-		name: 'gi_share_needle_or_syringe_in_last_6_months',
+		name: 'share_needle_or_syringe_in_last_six_months',
 		type: 'boolean',
 		nullable: true
 	})
-	giShareNeedleOrSyringeInLast6Months: boolean
+	shareNeedleOrSyringeInLastSixMonths: boolean
 
 	@Column({
-		name: 'gi_remarks',
+		name: 'remarks',
 		nullable: true
 	})
-	giRemarks: string
+	remarks: string
 
 	@Column({
 		name: 'verify',

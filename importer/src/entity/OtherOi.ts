@@ -3,20 +3,20 @@ import { Entity, PrimaryGeneratedColumn, ManyToOne, JoinColumn, Column } from 't
 import { ArtKey } from './ArtKey'
 
 @Entity()
-export class OtherOIs {
+export class OtherOi {
 	@PrimaryGeneratedColumn('uuid')
 	id: string
 
-	@ManyToOne(type => ArtKey, artKey => artKey.otherOIss, {
+	@ManyToOne(type => ArtKey, artKey => artKey.otherOis, {
 		eager: true
 	})
 	@JoinColumn([{ name: 'mdmCode', referencedColumnName: 'mdmCode'}])
 	artKey: ArtKey
 
 	@Column({
-		name: 'other_ols',
+		name: 'other_oi',
 		nullable: true
 	})
-	otherOls: string
+	otherOi: string
 
 }

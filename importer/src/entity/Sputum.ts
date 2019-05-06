@@ -3,11 +3,11 @@ import { Entity, PrimaryGeneratedColumn, ManyToOne, JoinColumn, Column } from 't
 import { ArtConsultationPlha } from './ArtConsultationPlha'
 
 @Entity()
-export class TbSputum {
+export class Sputum {
 	@PrimaryGeneratedColumn('uuid')
 	id: string
 
-	@ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.tbSputums, {
+	@ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.sputums, {
 		eager: true
 	})
 	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])

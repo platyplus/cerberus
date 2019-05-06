@@ -3,12 +3,13 @@ import { TreatmentEpisode } from './TreatmentEpisode'
 import { DrugUsage } from './DrugUsage'
 import { ArtConsultationPlha } from './ArtConsultationPlha'
 import { ArtAntiRetroMedicineTaken } from './ArtAntiRetroMedicineTaken'
-import { ArtAntiBioMedicineCode } from './ArtAntiBioMedicineCode'
-import { ArtAntiTbMedicineCode } from './ArtAntiTbMedicineCode'
+import { MedicineCode } from './MedicineCode'
 import { ArtTreatment } from './ArtTreatment'
+import { Symptom } from './Symptom'
+import { PhysicalExam } from './PhysicalExam'
 import { ArtStage } from './ArtStage'
 import { Diagnosis } from './Diagnosis'
-import { TbSputum } from './TbSputum'
+import { Sputum } from './Sputum'
 import { Medication } from './Medication'
 import { ArtKey } from './ArtKey'
 import { Cd4Measurement } from './Cd4Measurement'
@@ -16,25 +17,23 @@ import { Regimen } from './Regimen'
 import { HaartToxicity } from './HaartToxicity'
 import { TreatmentInterruption } from './TreatmentInterruption'
 import { ArtKeyAttb } from './ArtKeyAttb'
-import { OtherOIs } from './OtherOIs'
+import { OtherOi } from './OtherOi'
 import { ArtKeyResult } from './ArtKeyResult'
 import { Apri } from './Apri'
 import { DeathRegister } from './DeathRegister'
 import { DicData } from './DicData'
 import { DicDataRow } from './DicDataRow'
 import { GateAttendance } from './GateAttendance'
-import { GeneralHeathCareGhc } from './GeneralHeathCareGhc'
+import { GeneralHeathCare } from './GeneralHeathCare'
 import { GhcCategory } from './GhcCategory'
-import { GhcMedication } from './GhcMedication'
 import { GeneralInformation } from './GeneralInformation'
 import { PatientGeneralData } from './PatientGeneralData'
 import { Sti } from './Sti'
-import { StiMedication } from './StiMedication'
 import { TbKey } from './TbKey'
 import { AfbToMth } from './AfbToMth'
 import { TbKeySample } from './TbKeySample'
 import { Vcct } from './Vcct'
-import { VcctDrugType } from './VcctDrugType'
+import { DrugType } from './DrugType'
 
 export const classes: { [key: string]: any } = {
   'ArtAdherence': ArtAdherence,
@@ -42,12 +41,13 @@ export const classes: { [key: string]: any } = {
 	'DrugUsage': DrugUsage,
 	'ArtConsultationPlha': ArtConsultationPlha,
 	'ArtAntiRetroMedicineTaken': ArtAntiRetroMedicineTaken,
-	'ArtAntiBioMedicineCode': ArtAntiBioMedicineCode,
-	'ArtAntiTbMedicineCode': ArtAntiTbMedicineCode,
+	'MedicineCode': MedicineCode,
 	'ArtTreatment': ArtTreatment,
+	'Symptom': Symptom,
+	'PhysicalExam': PhysicalExam,
 	'ArtStage': ArtStage,
 	'Diagnosis': Diagnosis,
-	'TbSputum': TbSputum,
+	'Sputum': Sputum,
 	'Medication': Medication,
 	'ArtKey': ArtKey,
 	'Cd4Measurement': Cd4Measurement,
@@ -55,23 +55,21 @@ export const classes: { [key: string]: any } = {
 	'HaartToxicity': HaartToxicity,
 	'TreatmentInterruption': TreatmentInterruption,
 	'ArtKeyAttb': ArtKeyAttb,
-	'OtherOIs': OtherOIs,
+	'OtherOi': OtherOi,
 	'ArtKeyResult': ArtKeyResult,
 	'Apri': Apri,
 	'DeathRegister': DeathRegister,
 	'DicData': DicData,
 	'DicDataRow': DicDataRow,
 	'GateAttendance': GateAttendance,
-	'GeneralHeathCareGhc': GeneralHeathCareGhc,
+	'GeneralHeathCare': GeneralHeathCare,
 	'GhcCategory': GhcCategory,
-	'GhcMedication': GhcMedication,
 	'GeneralInformation': GeneralInformation,
 	'PatientGeneralData': PatientGeneralData,
 	'Sti': Sti,
-	'StiMedication': StiMedication,
 	'TbKey': TbKey,
 	'AfbToMth': AfbToMth,
 	'TbKeySample': TbKeySample,
 	'Vcct': Vcct,
-	'VcctDrugType': VcctDrugType
+	'DrugType': DrugType
 }

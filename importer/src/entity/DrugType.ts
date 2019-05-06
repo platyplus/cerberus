@@ -1,41 +1,34 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
 import { Entity, PrimaryGeneratedColumn, ManyToOne, JoinColumn, Column } from 'typeorm'
-import { Sti } from './Sti'
+import { Vcct } from './Vcct'
 
 @Entity()
-export class StiMedication {
+export class DrugType {
 	@PrimaryGeneratedColumn('uuid')
 	id: string
 
-	@ManyToOne(type => Sti, sti => sti.stiMedications, {
+	@ManyToOne(type => Vcct, vcct => vcct.drugTypes, {
 		eager: true
 	})
 	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
-	sti: Sti
+	vcct: Vcct
 
 	@Column({
-		name: 'dosage',
+		name: 'drug_name',
 		nullable: true
 	})
-	dosage: string
+	drugName: string
 
 	@Column({
-		name: 'frequency',
+		name: 'way_of_use',
 		nullable: true
 	})
-	frequency: string
+	wayOfUse: string
 
 	@Column({
-		name: 'number_days',
-		type: 'integer',
+		name: 'type_of_drugs',
 		nullable: true
 	})
-	numberDays: number
-
-	@Column({
-		name: 'medicine_name',
-		nullable: true
-	})
-	medicineName: string
+	typeOfDrugs: string
 
 }

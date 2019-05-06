@@ -20,7 +20,7 @@ export class DrugUsage {
 	@Column({
 		name: 'drug',
 		nullable: true,
-		enum: ['alcohol', 'amphetamine', 'diazepine', 'cannabis', 'ecstasy', 'heroin', 'opium']
+		enum: DrugEnum
 	})
 	drug: DrugEnum
 

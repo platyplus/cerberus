@@ -92,10 +92,7 @@ class EnumProperty extends SimpleProperty {
   }
   columnOptions(): string[] {
     let colOptions = super.columnOptions()
-    let options = this.options.map(
-      option => `'${_.replace(option, "'", "\\'")}'`
-    )
-    colOptions.push(`enum: [${options.join(', ')}]`)
+    colOptions.push(`enum: ${this.type}`)
     if (this.defaultValue)
       colOptions.push(`default: '${_.replace(this.defaultValue, "'", "\\'")}'`)
     return colOptions
@@ -126,11 +123,12 @@ abstract class RelationProperty extends Property {
 class OneToManyProperty extends RelationProperty {
   constructor(row: Row, parent: Entity, relationEntity: Entity) {
     super(row, parent)
-    this.name = _.camelCase(row.relation)
-    this.type = entityName(row.relation)
+    this.name = _.camelCase(row.relation_name || row.relation_type)
+    this.type = entityName(row.relation_type)
     this.relation =
-      <RelationProperty>relationEntity.findProperty(row.relation) ||
-      new ManyToOneProperty(row, relationEntity, this)
+      <RelationProperty>(
+        relationEntity.findProperty(row.relation_name || row.relation_type)
+      ) || new ManyToOneProperty(row, relationEntity, this)
   }
   dependencies() {
     return {
@@ -219,10 +217,12 @@ class Entity {
     this.properties.find(p => p.name === _.camelCase(prop).replace(/\d+$/, ''))
 
   push = (row: Row, repository: EntityManager) => {
-    if (row.relation) {
-      let relationEntity = repository.findOrCreate(row.relation)
+    if (row.relation_type) {
+      let relationEntity = repository.findOrCreate(
+        row.relation_name || row.relation_type
+      )
       createGroupRelations(relationEntity, row)
-      if (!this.findProperty(row.relation))
+      if (!this.findProperty(row.relation_name || row.relation_type))
         return new OneToManyProperty(row, this, relationEntity)
       if (!relationEntity.findProperty(row.property_name))
         return new SimpleProperty(row, relationEntity)
@@ -295,7 +295,9 @@ class EntityManager {
     if (!entityMapping.columns.find(c => c.column === row.excel_name)) {
       let column: ColumnMapping = {
         column: row.excel_name,
-        relation: row.relation && relationName(row.relation) + 's',
+        relation:
+          row.relation_type &&
+          relationName(row.relation_name || row.relation_type) + 's',
         property: getName(row),
         type: getType(row)
       }

@@ -1,17 +1,17 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
 import { Entity, PrimaryGeneratedColumn, ManyToOne, JoinColumn, Column } from 'typeorm'
-import { GeneralHeathCareGhc } from './GeneralHeathCareGhc'
+import { GeneralHeathCare } from './GeneralHeathCare'
 
 @Entity()
 export class GhcCategory {
 	@PrimaryGeneratedColumn('uuid')
 	id: string
 
-	@ManyToOne(type => GeneralHeathCareGhc, generalHeathCareGhc => generalHeathCareGhc.ghcCategorys, {
+	@ManyToOne(type => GeneralHeathCare, generalHeathCare => generalHeathCare.ghcCategorys, {
 		eager: true
 	})
 	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
-	generalHeathCareGhc: GeneralHeathCareGhc
+	generalHeathCare: GeneralHeathCare
 
 	@Column({
 		name: 'description',

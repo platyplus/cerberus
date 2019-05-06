@@ -2,10 +2,11 @@
 import { Entity, PrimaryColumn, Column, OneToMany } from 'typeorm'
 import { Symptom } from './Symptom'
 import { PhysicalExam } from './PhysicalExam'
+import { GhcCategory } from './GhcCategory'
 import { Medication } from './Medication'
 
 @Entity()
-export class Sti {
+export class GeneralHeathCare {
 	@Column({
 		name: 'mdm_code',
 		nullable: true
@@ -38,6 +39,12 @@ export class Sti {
 	sex: string
 
 	@Column({
+		name: 'patient_target',
+		nullable: true
+	})
+	patientTarget: string
+
+	@Column({
 		name: 'date_of_birth',
 		type: 'timestamptz',
 		nullable: true
@@ -52,10 +59,11 @@ export class Sti {
 	age: number
 
 	@Column({
-		name: 'patient_target',
+		name: 'is_new_patient',
+		type: 'boolean',
 		nullable: true
 	})
-	patientTarget: string
+	isNewPatient: boolean
 
 	@Column({
 		name: 'visit_date',
@@ -70,21 +78,7 @@ export class Sti {
 	})
 	mdmStaff: string
 
-	@Column({
-		name: 'new_patient',
-		type: 'boolean',
-		nullable: true
-	})
-	newPatient: boolean
-
-	@Column({
-		name: 'sti_background_previous_sit_treated',
-		type: 'boolean',
-		nullable: true
-	})
-	stiBackgroundPreviousSitTreated: boolean
-
-	@OneToMany(type => Symptom, symptom => symptom.sti, {
+	@OneToMany(type => Symptom, symptom => symptom.generalHeathCare, {
 		cascade: true
 	})
 	symptoms: Symptom[]
@@ -95,97 +89,75 @@ export class Sti {
 	})
 	symptomsComment: string
 
-	@OneToMany(type => PhysicalExam, physicalExam => physicalExam.sti, {
+	@OneToMany(type => PhysicalExam, physicalExam => physicalExam.generalHeathCare, {
 		cascade: true
 	})
 	physicalExams: PhysicalExam[]
 
 	@Column({
-		name: 'sti_presumptive_diagnosis',
+		name: 'physical_exam_comment',
 		nullable: true
 	})
-	stiPresumptiveDiagnosis: string
+	physicalExamComment: string
+
+	@OneToMany(type => GhcCategory, ghcCategory => ghcCategory.generalHeathCare, {
+		cascade: true
+	})
+	ghcCategorys: GhcCategory[]
 
 	@Column({
-		name: 'partner_diagnosis_other',
+		name: 'hbsag',
 		nullable: true
 	})
-	partnerDiagnosisOther: string
+	hbsag: string
 
 	@Column({
-		name: 'lab_type',
+		name: 'hbsab',
 		nullable: true
 	})
-	labType: string
+	hbsab: string
 
 	@Column({
-		name: 'treatment_plan',
+		name: 'hcvab',
 		nullable: true
 	})
-	treatmentPlan: string
+	hcvab: string
 
 	@Column({
-		name: 'treatment_allergy',
+		name: 'apri',
+		type: 'integer',
 		nullable: true
 	})
-	treatmentAllergy: string
+	apri: number
 
 	@Column({
-		name: 'treatment_other_allergy',
+		name: 'liver_fibrosis',
 		nullable: true
 	})
-	treatmentOtherAllergy: string
+	liverFibrosis: string
 
 	@Column({
-		name: 'is_pregnant',
-		type: 'boolean',
+		name: 'allergy',
 		nullable: true
 	})
-	isPregnant: boolean
+	allergy: string
 
 	@Column({
-		name: 'had_surgical_intervention',
-		type: 'boolean',
+		name: 'allergy_other',
 		nullable: true
 	})
-	hadSurgicalIntervention: boolean
+	allergyOther: string
 
-	@OneToMany(type => Medication, medication => medication.sti, {
+	@OneToMany(type => Medication, medication => medication.generalHeathCare, {
 		cascade: true
 	})
 	medications: Medication[]
 
 	@Column({
-		name: 'other_treatment',
+		name: 'should_return_in',
 		nullable: true
 	})
-	otherTreatment: string
-
-	@Column({
-		name: 'referred_to_hospital',
-		type: 'boolean',
-		nullable: true
-	})
-	referredToHospital: boolean
-
-	@Column({
-		name: 'sti_sti_condom',
-		type: 'boolean',
-		nullable: true
-	})
-	stiStiCondom: boolean
-
-	@Column({
-		name: 'sti_partner_treatment',
-		nullable: true
-	})
-	stiPartnerTreatment: string
-
-	@Column({
-		name: 'remark',
-		nullable: true
-	})
-	remark: string
+	shouldReturnIn: string
 
 	@Column({
 		name: 'date_next_visit',
@@ -193,12 +165,6 @@ export class Sti {
 		nullable: true
 	})
 	dateNextVisit: Date
-
-	@Column({
-		name: 'plan_next_visit',
-		nullable: true
-	})
-	planNextVisit: string
 
 	@Column({
 		name: 'verify',

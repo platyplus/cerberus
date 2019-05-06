@@ -1,13 +1,25 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, ManyToOne, JoinColumn, Column } from 'typeorm'
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm'
 import { ArtConsultationPlha } from './ArtConsultationPlha'
 
+export enum TypeEnum { 
+	ANTIBIO = 'antibio', 
+	ANTITB = 'antitb' 
+}
+
 @Entity()
-export class ArtAntiTbMedicineCode {
+export class MedicineCode {
 	@PrimaryGeneratedColumn('uuid')
 	id: string
 
-	@ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.artAntiTbMedicineCodes, {
+	@Column({
+		name: 'type',
+		nullable: true,
+		enum: TypeEnum
+	})
+	type: TypeEnum
+
+	@ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.medicineCodes, {
 		eager: true
 	})
 	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])

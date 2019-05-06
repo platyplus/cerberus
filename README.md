@@ -2,7 +2,6 @@
 
 ## TODO
 
-- [ ] Reuse relations in more than one form e.g. medication, diagnosis...
 - [ ] Metadata for lab
 - [ ] Metadata for viral load and tracking
 - [x] Metadata for prevention
@@ -14,6 +13,9 @@
 - [ ] Log/output all lines that couldn't be imported
 - [ ] Import files from different field locations e.g. YPO etc
 - [ ] Complete the README
+- [ ] all 'multiple' fields have multiple columns (arrays) => single array columns
+- [ ] split the "relation" metadata column into "relation type" and "relation name" so we can use two times the same relation type in the same entity
+- [ ] abstract & inherited enums e.g. symptoms
 - [ ] (big) Link the excel files together with PKs/FKs
 - [ ] (big) reuse concepts accross tables, e.g. medication
 - [ ] (big) link visit types together

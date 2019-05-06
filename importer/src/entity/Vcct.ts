@@ -1,6 +1,6 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
 import { Entity, PrimaryColumn, Column, OneToMany } from 'typeorm'
-import { VcctDrugType } from './VcctDrugType'
+import { DrugType } from './DrugType'
 
 @Entity()
 export class Vcct {
@@ -50,24 +50,24 @@ export class Vcct {
 	age: number
 
 	@Column({
-		name: 'vcct_visit_date',
+		name: 'visit_date',
 		type: 'timestamptz',
 		nullable: true
 	})
-	vcctVisitDate: Date
+	visitDate: Date
 
 	@Column({
-		name: 'vcct_tb_patient',
+		name: 'is_tb_patient',
 		type: 'boolean',
 		nullable: true
 	})
-	vcctTbPatient: boolean
+	isTbPatient: boolean
 
 	@Column({
-		name: 'vcct_placeof_testing',
+		name: 'place_of_testing',
 		nullable: true
 	})
-	vcctPlaceofTesting: string
+	placeOfTesting: string
 
 	@Column({
 		name: 'patient_target',
@@ -96,10 +96,10 @@ export class Vcct {
 	})
 	vcctDrugUseWithinLast1Year: boolean
 
-	@OneToMany(type => VcctDrugType, vcctDrugType => vcctDrugType.vcct, {
+	@OneToMany(type => DrugType, drugType => drugType.vcct, {
 		cascade: true
 	})
-	vcctDrugTypes: VcctDrugType[]
+	drugTypes: DrugType[]
 
 	@Column({
 		name: 'vcct_share_needle_or_syringe_in_last_six_weeks',
@@ -284,11 +284,11 @@ export class Vcct {
 	vcctEndOfVisitOther: string
 
 	@Column({
-		name: 'vcct_date_next_visit',
+		name: 'date_next_visit',
 		type: 'timestamptz',
 		nullable: true
 	})
-	vcctDateNextVisit: Date
+	dateNextVisit: Date
 
 	@Column({
 		name: 'vcct_hiv_retesting',

@@ -15,7 +15,7 @@ export class TreatmentEpisode {
 	@Column({
 		name: 'treatment_type',
 		nullable: true,
-		enum: ['art', 'tb']
+		enum: TreatmentTypeEnum
 	})
 	treatmentType: TreatmentTypeEnum
 
