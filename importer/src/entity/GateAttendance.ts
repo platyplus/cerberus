@@ -38,30 +38,6 @@ export class GateAttendance {
 	})
 	patientTarget: string
 
-	@Column({
-		name: 'mdm_code_other',
-		nullable: true
-	})
-	mdmCodeOther: string
-
-	@Column({
-		name: 'patient_name_other',
-		nullable: true
-	})
-	patientNameOther: string
-
-	@Column({
-		name: 'sex_other',
-		nullable: true
-	})
-	sexOther: string
-
-	@Column({
-		name: 'patient_target_other',
-		nullable: true
-	})
-	patientTargetOther: string
-
 	@PrimaryColumn({
 		name: 'visit_date',
 		type: 'timestamptz'

@@ -72,12 +72,6 @@ export class DicData {
 	noOfVolunteerPeer: number
 
 	@Column({
-		name: 'remark',
-		nullable: true
-	})
-	remark: string
-
-	@Column({
 		name: 'male_condom',
 		type: 'integer',
 		nullable: true

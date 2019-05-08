@@ -86,17 +86,17 @@ export class Symptom {
 	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
 	generalHeathCare: GeneralHeathCare
 
-	@ManyToOne(type => Sti, sti => sti.symptoms, {
-		eager: true
-	})
-	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
-	sti: Sti
-
 	@Column({
 		name: 'type',
 		nullable: true,
 		enum: TypeEnum
 	})
 	type: TypeEnum
+
+	@ManyToOne(type => Sti, sti => sti.symptoms, {
+		eager: true
+	})
+	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
+	sti: Sti
 
 }

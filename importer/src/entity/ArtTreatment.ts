@@ -1,17 +1,16 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, ManyToOne, JoinColumn, Column } from 'typeorm'
-import { ArtConsultationPlha } from './ArtConsultationPlha'
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm'
 
 @Entity()
 export class ArtTreatment {
 	@PrimaryGeneratedColumn('uuid')
 	id: string
 
-	@ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.artTreatments, {
-		eager: true
+	@Column({
+		name: 'medicine_taken',
+		nullable: true
 	})
-	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
-	artConsultationPlha: ArtConsultationPlha
+	medicineTaken: string
 
 	@Column({
 		name: 'medicine_name',
@@ -38,11 +37,5 @@ export class ArtTreatment {
 		nullable: true
 	})
 	interrupted: string
-
-	@Column({
-		name: 'medicine_taken',
-		nullable: true
-	})
-	medicineTaken: string
 
 }

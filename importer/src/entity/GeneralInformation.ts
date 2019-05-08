@@ -161,12 +161,6 @@ export class GeneralInformation {
 	contraception: boolean
 
 	@Column({
-		name: 'contraception_type',
-		nullable: true
-	})
-	contraceptionType: string
-
-	@Column({
 		name: 'other_contraception_type',
 		nullable: true
 	})

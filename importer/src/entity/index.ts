@@ -1,5 +1,6 @@
 import { ArtAdherence } from './ArtAdherence'
 import { TreatmentEpisode } from './TreatmentEpisode'
+import { AdherenceProblem } from './AdherenceProblem'
 import { DrugUsage } from './DrugUsage'
 import { ArtConsultationPlha } from './ArtConsultationPlha'
 import { ArtAntiRetroMedicineTaken } from './ArtAntiRetroMedicineTaken'
@@ -10,6 +11,7 @@ import { PhysicalExam } from './PhysicalExam'
 import { ArtStage } from './ArtStage'
 import { Diagnosis } from './Diagnosis'
 import { Sputum } from './Sputum'
+import { Prophylaxis } from './Prophylaxis'
 import { Medication } from './Medication'
 import { ArtKey } from './ArtKey'
 import { Cd4Measurement } from './Cd4Measurement'
@@ -38,6 +40,7 @@ import { DrugType } from './DrugType'
 export const classes: { [key: string]: any } = {
   'ArtAdherence': ArtAdherence,
 	'TreatmentEpisode': TreatmentEpisode,
+	'AdherenceProblem': AdherenceProblem,
 	'DrugUsage': DrugUsage,
 	'ArtConsultationPlha': ArtConsultationPlha,
 	'ArtAntiRetroMedicineTaken': ArtAntiRetroMedicineTaken,
@@ -48,6 +51,7 @@ export const classes: { [key: string]: any } = {
 	'ArtStage': ArtStage,
 	'Diagnosis': Diagnosis,
 	'Sputum': Sputum,
+	'Prophylaxis': Prophylaxis,
 	'Medication': Medication,
 	'ArtKey': ArtKey,
 	'Cd4Measurement': Cd4Measurement,

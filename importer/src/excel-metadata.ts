@@ -2,12 +2,15 @@ export interface Row {
   form: string
   relation_type: string
   relation_name: string
+  relation_multiplicity: string
   constraint: string
   excel_name: string
-  property_name: string
   property_type: string
+  property_name: string
+  property_multiplicity: string
   group_names: string
   group_values: string
+  import: string
 }
 
 export interface ColumnMapping {
@@ -28,10 +31,14 @@ export const emptyRow = () =>
   ({
     form: '',
     relation_type: '',
+    relation_name: '',
+    relation_multiplicity: '',
     constraint: '',
     excel_name: '',
-    property_name: '',
     property_type: '',
+    property_name: '',
+    property_multiplicity: '',
     group_names: '',
-    group_values: ''
+    group_values: '',
+    import: ''
   } as Row)

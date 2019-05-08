@@ -2,12 +2,12 @@
 import { Entity, PrimaryColumn, Column, OneToMany } from 'typeorm'
 import { ArtAntiRetroMedicineTaken } from './ArtAntiRetroMedicineTaken'
 import { MedicineCode } from './MedicineCode'
-import { ArtTreatment } from './ArtTreatment'
 import { Symptom } from './Symptom'
 import { PhysicalExam } from './PhysicalExam'
 import { ArtStage } from './ArtStage'
 import { Diagnosis } from './Diagnosis'
 import { Sputum } from './Sputum'
+import { Prophylaxis } from './Prophylaxis'
 import { Medication } from './Medication'
 
 @Entity()
@@ -64,38 +64,31 @@ export class ArtConsultationPlha {
 	patientTarget: string
 
 	@Column({
-		name: 'art_visit_date',
+		name: 'visit_date',
 		type: 'timestamptz',
 		nullable: true
 	})
-	artVisitDate: Date
+	visitDate: Date
 
 	@Column({
-		name: 'art_md_mstaff',
+		name: 'mdm_staff',
 		nullable: true
 	})
-	artMdMstaff: string
+	mdmStaff: string
 
 	@Column({
-		name: 'art_plh_new_patient',
+		name: 'plh_new_patient',
 		type: 'boolean',
 		nullable: true
 	})
-	artPlhNewPatient: boolean
+	plhNewPatient: boolean
 
 	@Column({
-		name: 'art_art_new_patient',
+		name: 'art_treatment',
 		type: 'boolean',
 		nullable: true
 	})
-	artArtNewPatient: boolean
-
-	@Column({
-		name: 'art_art_treatment',
-		type: 'boolean',
-		nullable: true
-	})
-	artArtTreatment: boolean
+	artTreatment: boolean
 
 	@Column({
 		name: 'art_patient_partner_tested',
@@ -166,11 +159,6 @@ export class ArtConsultationPlha {
 		nullable: true
 	})
 	artPatientTakenArVsBefore: string
-
-	@OneToMany(type => ArtTreatment, artTreatment => artTreatment.artConsultationPlha, {
-		cascade: true
-	})
-	artTreatments: ArtTreatment[]
 
 	@Column({
 		name: 'art_arv_comment',
@@ -389,35 +377,17 @@ export class ArtConsultationPlha {
 	sputums: Sputum[]
 
 	@Column({
-		name: 'tb_radiology_date',
+		name: 'radiology_date',
 		type: 'timestamptz',
 		nullable: true
 	})
-	tbRadiologyDate: Date
+	radiologyDate: Date
 
 	@Column({
-		name: 'tb_radio_radiology',
+		name: 'radiology',
 		nullable: true
 	})
-	tbRadioRadiology: string
-
-	@Column({
-		name: 'tb_radio_cx_ray',
-		nullable: true
-	})
-	tbRadioCxRay: string
-
-	@Column({
-		name: 'tb_radio_x_ray',
-		nullable: true
-	})
-	tbRadioXRay: string
-
-	@Column({
-		name: 'tb_radio_usg',
-		nullable: true
-	})
-	tbRadioUsg: string
+	radiology: string[]
 
 	@Column({
 		name: 'tb_persons_screened_tb',
@@ -461,7 +431,7 @@ export class ArtConsultationPlha {
 		name: 'allergy',
 		nullable: true
 	})
-	allergy: string
+	allergy: string[]
 
 	@Column({
 		name: 'pregnant',
@@ -470,23 +440,10 @@ export class ArtConsultationPlha {
 	})
 	pregnant: boolean
 
-	@Column({
-		name: 'art_prophylaxis',
-		nullable: true
+	@OneToMany(type => Prophylaxis, prophylaxis => prophylaxis.artConsultationPlha, {
+		cascade: true
 	})
-	artProphylaxis: string
-
-	@Column({
-		name: 'art_prophyaxis_primary',
-		nullable: true
-	})
-	artProphyaxisPrimary: string
-
-	@Column({
-		name: 'art_prophylaxis_secondary',
-		nullable: true
-	})
-	artProphylaxisSecondary: string
+	prophylaxiss: Prophylaxis[]
 
 	@Column({
 		name: 'art_mdmart_starting_date',
@@ -502,10 +459,10 @@ export class ArtConsultationPlha {
 	})
 	artRemainingPill: number
 
-	@OneToMany(type => Medication, medication => medication.artConsultationPlha, {
+	@OneToMany(type => Medication, medication => medication.artConsultationPlhaArtMedication, {
 		cascade: true
 	})
-	medications: Medication[]
+	artMedications: Medication[]
 
 	@Column({
 		name: 'art_tb_starting_date',
@@ -513,6 +470,11 @@ export class ArtConsultationPlha {
 		nullable: true
 	})
 	artTbStartingDate: Date
+
+	@OneToMany(type => Medication, medication => medication.artConsultationPlhaTbMedication, {
+		cascade: true
+	})
+	tbMedications: Medication[]
 
 	@Column({
 		name: 'tb_category',
@@ -571,6 +533,11 @@ export class ArtConsultationPlha {
 		nullable: true
 	})
 	iptOther: string
+
+	@OneToMany(type => Medication, medication => medication.artConsultationPlha, {
+		cascade: true
+	})
+	medications: Medication[]
 
 	@Column({
 		name: 'referred_to_hospital',

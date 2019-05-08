@@ -75,6 +75,13 @@ class SimpleProperty extends Property {
   }
 }
 
+class MultiplePropery extends SimpleProperty {
+  constructor(row: Row, parent: Entity) {
+    super(row, parent)
+    this.columnName = row.excel_name
+    this.type = this.type + '[]'
+  }
+}
 class EnumProperty extends SimpleProperty {
   defaultValue?: string
   options: string[]
@@ -152,7 +159,9 @@ class OneToManyProperty extends RelationProperty {
 class ManyToOneProperty extends RelationProperty {
   constructor(row: Row, parent: Entity, relation: OneToManyProperty) {
     super(row, parent, relation)
-    this.name = _.camelCase(row.form)
+    this.name = _.camelCase(
+      row.form + (row.relation_name ? `_${row.relation_name}` : '') // adds _relation_name suffix to the many2one property in case it already exists
+    )
     this.type = _.upperFirst(_.camelCase(row.form))
   }
   dependencies() {
@@ -217,10 +226,9 @@ class Entity {
     this.properties.find(p => p.name === _.camelCase(prop).replace(/\d+$/, ''))
 
   push = (row: Row, repository: EntityManager) => {
-    if (row.relation_type) {
-      let relationEntity = repository.findOrCreate(
-        row.relation_name || row.relation_type
-      )
+    // TODO: OneToOne
+    if (row.relation_type && row.relation_multiplicity === 'many') {
+      let relationEntity = repository.findOrCreate(row.relation_type)
       createGroupRelations(relationEntity, row)
       if (!this.findProperty(row.relation_name || row.relation_type))
         return new OneToManyProperty(row, this, relationEntity)
@@ -229,7 +237,9 @@ class Entity {
     } else {
       createGroupRelations(this, row)
       if (!this.findProperty(row.property_name))
-        return new SimpleProperty(row, this)
+        if (row.property_multiplicity === 'many')
+          return new MultiplePropery(row, this)
+        else return new SimpleProperty(row, this)
     }
   }
 
@@ -281,6 +291,7 @@ class EntityManager {
   }
 
   pushRow(row: Row): void {
+    if (row.import === 'no') return
     let entity = this.findOrCreate(row.form)
     entity.push(row, this)
     let entityMapping = this.mapping.find(m => m.entity === entity.name)

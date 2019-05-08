@@ -7,6 +7,13 @@ export enum CategoryEnum {
 	CHILD = 'child' 
 }
 
+export enum StageEnum { 
+	STAGE_1 = 'stage 1', 
+	STAGE_2 = 'stage 2', 
+	STAGE_3 = 'stage 3', 
+	STAGE_4 = 'stage 4' 
+}
+
 @Entity()
 export class ArtStage {
 	@PrimaryGeneratedColumn('uuid')
@@ -19,16 +26,17 @@ export class ArtStage {
 	})
 	category: CategoryEnum
 
+	@Column({
+		name: 'stage',
+		nullable: true,
+		enum: StageEnum
+	})
+	stage: StageEnum
+
 	@ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.artStages, {
 		eager: true
 	})
 	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
 	artConsultationPlha: ArtConsultationPlha
-
-	@Column({
-		name: 'stage',
-		nullable: true
-	})
-	stage: string
 
 }

@@ -23,11 +23,11 @@ export class Medication {
 	})
 	treatment: TreatmentEnum
 
-	@ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.medications, {
+	@ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.artMedications, {
 		eager: true
 	})
 	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
-	artConsultationPlha: ArtConsultationPlha
+	artConsultationPlhaArtMedication: ArtConsultationPlha
 
 	@Column({
 		name: 'dosage',
@@ -53,6 +53,18 @@ export class Medication {
 		nullable: true
 	})
 	name: string
+
+	@ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.tbMedications, {
+		eager: true
+	})
+	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
+	artConsultationPlhaTbMedication: ArtConsultationPlha
+
+	@ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.medications, {
+		eager: true
+	})
+	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
+	artConsultationPlha: ArtConsultationPlha
 
 	@ManyToOne(type => GeneralHeathCare, generalHeathCare => generalHeathCare.medications, {
 		eager: true
