@@ -19,7 +19,8 @@ export class GateAttendance {
 
 	@PrimaryColumn({
 		name: 'mdm_code',
-		type: 'text'
+		type: 'text',
+		default: 'unknown'
 	})
 	mdmCode: string
 

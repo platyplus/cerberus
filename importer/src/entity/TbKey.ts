@@ -7,7 +7,8 @@ import { TbKeySample } from './TbKeySample'
 export class TbKey {
 	@PrimaryColumn({
 		name: 'mdm_code',
-		type: 'text'
+		type: 'text',
+		default: 'unknown'
 	})
 	mdmCode: string
 

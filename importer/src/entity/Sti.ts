@@ -233,7 +233,8 @@ export class Sti {
 
 	@PrimaryColumn({
 		name: 'key',
-		type: 'text'
+		type: 'text',
+		default: 'unknown'
 	})
 	key: string
 

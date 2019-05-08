@@ -368,7 +368,8 @@ export class Vcct {
 
 	@PrimaryColumn({
 		name: 'key',
-		type: 'text'
+		type: 'text',
+		default: 'unknown'
 	})
 	key: string
 

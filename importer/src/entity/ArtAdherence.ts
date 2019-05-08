@@ -8,7 +8,8 @@ import { DrugUsage } from './DrugUsage'
 export class ArtAdherence {
 	@PrimaryColumn({
 		name: 'mdm_code',
-		type: 'text'
+		type: 'text',
+		default: 'unknown'
 	})
 	mdmCode: string
 
@@ -61,9 +62,11 @@ export class ArtAdherence {
 	})
 	patientTarget: string
 
-	@PrimaryColumn({
+	@Column({
 		name: 'place_of_medical_care',
-		type: 'text'
+		type: 'text',
+		nullable: true,
+		default: 'unknown'
 	})
 	placeOfMedicalCare: string
 
@@ -88,9 +91,10 @@ export class ArtAdherence {
 	})
 	visitReason: string
 
-	@PrimaryColumn({
+	@Column({
 		name: 'visit_date',
-		type: 'timestamptz'
+		type: 'timestamptz',
+		nullable: true
 	})
 	visitDate: Date
 
@@ -446,10 +450,9 @@ export class ArtAdherence {
 	})
 	verify: number
 
-	@Column({
+	@PrimaryColumn({
 		name: 'last_registration_date',
-		type: 'timestamptz',
-		nullable: true
+		type: 'timestamptz'
 	})
 	lastRegistrationDate: Date
 

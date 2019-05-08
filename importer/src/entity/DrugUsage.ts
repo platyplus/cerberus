@@ -27,7 +27,7 @@ export class DrugUsage {
 	@ManyToOne(type => ArtAdherence, artAdherence => artAdherence.drugUsages, {
 		eager: true
 	})
-	@JoinColumn([{ name: 'art_adherence_mdm_code', referencedColumnName: 'mdmCode'}, { name: 'art_adherence_place_of_medical_care', referencedColumnName: 'placeOfMedicalCare'}, { name: 'art_adherence_visit_date', referencedColumnName: 'visitDate'}])
+	@JoinColumn([{ name: 'art_adherence_mdm_code', referencedColumnName: 'mdmCode'}, { name: 'art_adherence_last_registration_date', referencedColumnName: 'lastRegistrationDate'}])
 	artAdherence: ArtAdherence
 
 	@Column({

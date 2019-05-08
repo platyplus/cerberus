@@ -4,6 +4,7 @@
 
 - [ ] Metadata for lab
 - [ ] Metadata for viral load and tracking
+- [x] default values
 - [x] Metadata for prevention
 - [x] Filter only excel files to be watched by chokidar
 - [x] Split Property class to an abstract class + inherited classes e.g. OneToManyProperty etc
@@ -14,7 +15,7 @@
 - [ ] Import files from different field locations e.g. YPO etc
 - [ ] Complete the README
 - [ ] all 'multiple' fields have multiple columns (arrays) => single array columns
-- [ ] split the "relation" metadata column into "relation type" and "relation name" so we can use two times the same relation type in the same entity
+- [x] split the "relation" metadata column into "relation type" and "relation name" so we can use two times the same relation type in the same entity
 - [ ] abstract & inherited enums e.g. symptoms
 - [ ] (big) Link the excel files together with PKs/FKs
 - [ ] (big) reuse concepts accross tables, e.g. medication

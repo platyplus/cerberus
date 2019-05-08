@@ -5,7 +5,8 @@ import { Entity, PrimaryColumn, Column } from 'typeorm'
 export class DeathRegister {
 	@PrimaryColumn({
 		name: 'mdm_code',
-		type: 'text'
+		type: 'text',
+		default: 'unknown'
 	})
 	mdmCode: string
 

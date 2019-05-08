@@ -8,7 +8,6 @@ import { spawnSync, SpawnSyncReturns } from 'child_process'
 import _ from 'lodash'
 import csv from 'csvtojson'
 const mapping: Mapping[] = require('./entity/mapping.json')
-
 import { classes } from './entity'
 import { Mapping } from './excel-metadata.js'
 
@@ -19,7 +18,6 @@ const log = console.log.bind(console, `[${new Date().toLocaleString()}]`)
 fs.mkdir(TMP_PATH, { recursive: true }, err => {})
 
 const convertRow: any = (entityMapping: Mapping, row: any) => {
-  log('convert')
   return entityMapping.columns.reduce(
     (prev, curr) => {
       let value = row[curr.column]
@@ -35,7 +33,11 @@ const convertRow: any = (entityMapping: Mapping, row: any) => {
           )
           if (el) {
             // Arrays: add value to the existing one
-            if (curr.array) value = [...el[curr.property], value]
+            if (curr.array && el[curr.property])
+              value = el[curr.property]
+                ? [...el[curr.property], ...value]
+                : [value]
+
             el[curr.property] = value
             el = { ...el, ...curr.entityValues }
           } else
@@ -45,7 +47,10 @@ const convertRow: any = (entityMapping: Mapping, row: any) => {
             })
         } else {
           // Arrays: add value to the existing one
-          if (curr.array) value = [...prev[curr.property], value]
+          if (curr.array && prev[curr.property])
+            value = prev[curr.property]
+              ? [...prev[curr.property], ...value]
+              : [value]
           prev[curr.property] = value
         }
       }
@@ -86,16 +91,11 @@ function loadFile(file: string, connection: Connection) {
             resultRow: { [x: string]: string },
             row: any,
             colIdx: any
-          ) => {
-            log([...resultRow[head], item])
-            return [...resultRow[head], item]
-          }
-          log(curr)
+          ) => (resultRow[head] ? [...resultRow[head], item] : [item])
           return prev
         },
         {} as { [key: string]: any }
       )
-    log(colParser)
     csv({
       checkType: true,
       ignoreEmpty: true,
@@ -106,7 +106,6 @@ function loadFile(file: string, connection: Connection) {
       .fromStream(readStream)
       .subscribe((json: any) => {
         return new Promise((resolve, reject) => {
-          log('line')
           const data = convertRow(entityMapping, json)
           let entity = manager.create(entityClass, data)
           manager

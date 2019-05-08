@@ -12,7 +12,8 @@ export class PatientGeneralData {
 
 	@PrimaryColumn({
 		name: 'mdm_code',
-		type: 'text'
+		type: 'text',
+		default: 'unknown'
 	})
 	mdmCode: string
 

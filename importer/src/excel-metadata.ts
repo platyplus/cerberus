@@ -10,6 +10,7 @@ export interface Row {
   property_multiplicity: string
   group_names: string
   group_values: string
+  default: string
   import: string
 }
 
@@ -41,5 +42,6 @@ export const emptyRow = () =>
     property_multiplicity: '',
     group_names: '',
     group_values: '',
+    default: '',
     import: ''
   } as Row)

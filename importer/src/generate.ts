@@ -23,11 +23,13 @@ abstract class Property {
   name: string
   type: string
   isPk: boolean
+  default: string
   constructor(row: Row, parent: Entity) {
     this.parent = parent
     this.name = getName(row)
     this.type = getType(row)
     this.isPk = _.split(row.constraint, ';').includes('pk')
+    if (row.default) this.default = row.default
     parent.properties.push(this)
   }
   abstract dependencies(): { [key: string]: string[] }
@@ -72,6 +74,7 @@ class SimpleProperty extends Property {
     let options = [`name: '${_.snakeCase(this.name)}'`]
     optionTypes[this.type] && options.push(`type: '${optionTypes[this.type]}'`)
     !this.isPk && options.push('nullable: true')
+    this.default && options.push(`default: '${this.default}'`)
     return options
   }
 }
