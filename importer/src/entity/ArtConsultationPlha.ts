@@ -4,7 +4,6 @@ import { Symptom } from './Symptom'
 import { PhysicalExam } from './PhysicalExam'
 import { HivStage } from './HivStage'
 import { Diagnosis } from './Diagnosis'
-import { Sputum } from './Sputum'
 import { Prophylaxis } from './Prophylaxis'
 import { Medication } from './Medication'
 
@@ -333,10 +332,11 @@ export class ArtConsultationPlha {
 	})
 	livrerFibrosis: string
 
-	@OneToMany(type => Sputum, sputum => sputum.artConsultationPlha, {
-		cascade: true
+	@Column({
+		name: 'smear',
+		nullable: true
 	})
-	sputums: Sputum[]
+	smear: string[]
 
 	@Column({
 		name: 'radiology_date',
@@ -346,10 +346,28 @@ export class ArtConsultationPlha {
 	radiologyDate: Date
 
 	@Column({
-		name: 'radiology',
+		name: 'radiology_type',
 		nullable: true
 	})
-	radiology: string[]
+	radiologyType: string[]
+
+	@Column({
+		name: 'radio_cxray',
+		nullable: true
+	})
+	radioCxray: string
+
+	@Column({
+		name: 'radio_xray',
+		nullable: true
+	})
+	radioXray: string
+
+	@Column({
+		name: 'radio_usg',
+		nullable: true
+	})
+	radioUsg: string
 
 	@Column({
 		name: 'tb_persons_screened_tb',
@@ -427,11 +445,11 @@ export class ArtConsultationPlha {
 	artMedications: Medication[]
 
 	@Column({
-		name: 'art_tb_starting_date',
+		name: 'tb_starting_date',
 		type: 'timestamptz',
 		nullable: true
 	})
-	artTbStartingDate: Date
+	tbStartingDate: Date
 
 	@OneToMany(type => Medication, medication => medication.artConsultationPlhaTbMedication, {
 		cascade: true
@@ -458,11 +476,11 @@ export class ArtConsultationPlha {
 	iptTreatment: boolean
 
 	@Column({
-		name: 'ipt_initiation_date',
+		name: 'ipt_intiation_date',
 		type: 'timestamptz',
 		nullable: true
 	})
-	iptInitiationDate: Date
+	iptIntiationDate: Date
 
 	@Column({
 		name: 'ipt_initial_1st_visitdate',
@@ -496,10 +514,10 @@ export class ArtConsultationPlha {
 	})
 	iptOther: string
 
-	@OneToMany(type => Medication, medication => medication.artConsultationPlha, {
+	@OneToMany(type => Medication, medication => medication.artConsultationPlhaOtherMedication, {
 		cascade: true
 	})
-	medications: Medication[]
+	otherMedications: Medication[]
 
 	@Column({
 		name: 'referred_to_hospital',

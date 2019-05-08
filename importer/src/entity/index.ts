@@ -7,7 +7,6 @@ import { Symptom } from './Symptom'
 import { PhysicalExam } from './PhysicalExam'
 import { HivStage } from './HivStage'
 import { Diagnosis } from './Diagnosis'
-import { Sputum } from './Sputum'
 import { Prophylaxis } from './Prophylaxis'
 import { Medication } from './Medication'
 import { ArtKey } from './ArtKey'
@@ -44,7 +43,6 @@ export const classes: { [key: string]: any } = {
 	'PhysicalExam': PhysicalExam,
 	'HivStage': HivStage,
 	'Diagnosis': Diagnosis,
-	'Sputum': Sputum,
 	'Prophylaxis': Prophylaxis,
 	'Medication': Medication,
 	'ArtKey': ArtKey,

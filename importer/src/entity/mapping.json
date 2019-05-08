@@ -1645,237 +1645,8 @@
       },
       {
         "column": "160. TB_Sputum_Smear",
-        "relation": "sputums",
         "property": "smear",
         "type": "string"
-      },
-      {
-        "column": "161. TB_Sputum_Xpert",
-        "relation": "sputums",
-        "property": "xpert",
-        "type": "string"
-      },
-      {
-        "column": "162. TB_Sputum_Culture",
-        "relation": "sputums",
-        "property": "culture",
-        "type": "string"
-      },
-      {
-        "column": "163. TB_Sputum_H",
-        "relation": "sputums",
-        "property": "h",
-        "type": "string"
-      },
-      {
-        "column": "164. TB_Sputum_R",
-        "relation": "sputums",
-        "property": "r",
-        "type": "string"
-      },
-      {
-        "column": "165. TB_Sputum_S",
-        "relation": "sputums",
-        "property": "s",
-        "type": "string"
-      },
-      {
-        "column": "166. TB_Sputum_E",
-        "relation": "sputums",
-        "property": "e",
-        "type": "string"
-      },
-      {
-        "column": "167. TB_Sputum_LPA",
-        "relation": "sputums",
-        "property": "lpa",
-        "type": "string"
-      },
-      {
-        "column": "168. TB_Sputum_SampleDate",
-        "relation": "sputums",
-        "property": "sampleDate",
-        "type": "Date"
-      },
-      {
-        "column": "169. TB_OtherSample1",
-        "relation": "sputums",
-        "property": "tbOtherSample",
-        "type": "string"
-      },
-      {
-        "column": "170. TB_OtherSample1_Smear",
-        "relation": "sputums",
-        "property": "smear",
-        "type": "string"
-      },
-      {
-        "column": "171. TB_OtherSample1_Xpert",
-        "relation": "sputums",
-        "property": "xpert",
-        "type": "string"
-      },
-      {
-        "column": "172. TB_OtherSample1_Culture",
-        "relation": "sputums",
-        "property": "culture",
-        "type": "string"
-      },
-      {
-        "column": "173. TB_OtherSample1_H",
-        "relation": "sputums",
-        "property": "h",
-        "type": "string"
-      },
-      {
-        "column": "174. TB_OtherSample1_R",
-        "relation": "sputums",
-        "property": "r",
-        "type": "string"
-      },
-      {
-        "column": "175. TB_OtherSample1_S",
-        "relation": "sputums",
-        "property": "s",
-        "type": "string"
-      },
-      {
-        "column": "176. TB_OtherSample1_E",
-        "relation": "sputums",
-        "property": "e",
-        "type": "string"
-      },
-      {
-        "column": "177. TB_OtherSample1_LPA",
-        "relation": "sputums",
-        "property": "lpa",
-        "type": "string"
-      },
-      {
-        "column": "178. TB_OtherSample1_SampleDate",
-        "relation": "sputums",
-        "property": "sampleDate",
-        "type": "Date"
-      },
-      {
-        "column": "179. TB_OtherSample2",
-        "relation": "sputums",
-        "property": "tbOtherSample",
-        "type": "string"
-      },
-      {
-        "column": "180. TB_OtherSample2_Smear",
-        "relation": "sputums",
-        "property": "smear",
-        "type": "string"
-      },
-      {
-        "column": "181. TB_OtherSample2_Xpert",
-        "relation": "sputums",
-        "property": "xpert",
-        "type": "string"
-      },
-      {
-        "column": "182. TB_OtherSample2_Culture",
-        "relation": "sputums",
-        "property": "culture",
-        "type": "string"
-      },
-      {
-        "column": "183. TB_OtherSample2_H",
-        "relation": "sputums",
-        "property": "h",
-        "type": "string"
-      },
-      {
-        "column": "184. TB_OtherSample2_R",
-        "relation": "sputums",
-        "property": "r",
-        "type": "string"
-      },
-      {
-        "column": "185. TB_OtherSample2_S",
-        "relation": "sputums",
-        "property": "s",
-        "type": "string"
-      },
-      {
-        "column": "186. TB_OtherSample2_E",
-        "relation": "sputums",
-        "property": "e",
-        "type": "string"
-      },
-      {
-        "column": "187. TB_OtherSample2_LPA",
-        "relation": "sputums",
-        "property": "lpa",
-        "type": "string"
-      },
-      {
-        "column": "188. TB_OtherSample2_SampleDate",
-        "relation": "sputums",
-        "property": "sampleDate",
-        "type": "Date"
-      },
-      {
-        "column": "189. TB_OtherSample3",
-        "relation": "sputums",
-        "property": "tbOtherSample",
-        "type": "string"
-      },
-      {
-        "column": "190. TB_OtherSample3_Smear",
-        "relation": "sputums",
-        "property": "smear",
-        "type": "string"
-      },
-      {
-        "column": "191. TB_OtherSample3_Xpert",
-        "relation": "sputums",
-        "property": "xpert",
-        "type": "string"
-      },
-      {
-        "column": "192. TB_OtherSample3_Culture",
-        "relation": "sputums",
-        "property": "culture",
-        "type": "string"
-      },
-      {
-        "column": "193. TB_OtherSample3_H",
-        "relation": "sputums",
-        "property": "h",
-        "type": "string"
-      },
-      {
-        "column": "194. TB_OtherSample3_R",
-        "relation": "sputums",
-        "property": "r",
-        "type": "string"
-      },
-      {
-        "column": "195. TB_OtherSample3_S",
-        "relation": "sputums",
-        "property": "s",
-        "type": "string"
-      },
-      {
-        "column": "196. TB_OtherSample3_E",
-        "relation": "sputums",
-        "property": "e",
-        "type": "string"
-      },
-      {
-        "column": "197. TB_OtherSample3_LPA",
-        "relation": "sputums",
-        "property": "lpa",
-        "type": "string"
-      },
-      {
-        "column": "198. TB_OtherSample3_SampleDate",
-        "relation": "sputums",
-        "property": "sampleDate",
-        "type": "Date"
       },
       {
         "column": "199. TB_RadiologyDate",
@@ -1884,22 +1655,22 @@
       },
       {
         "column": "200. TB_Radio_Radiology",
-        "property": "radiology",
+        "property": "radiologyType",
         "type": "string"
       },
       {
         "column": "201. TB_Radio_CXRay",
-        "property": "radiology",
+        "property": "radioCxray",
         "type": "string"
       },
       {
         "column": "202. TB_Radio_XRay",
-        "property": "radiology",
+        "property": "radioXray",
         "type": "string"
       },
       {
         "column": "203. TB_Radio_USG",
-        "property": "radiology",
+        "property": "radioUsg",
         "type": "string"
       },
       {
@@ -1948,12 +1719,6 @@
         "type": "boolean"
       },
       {
-        "column": "213. ART_Prophylaxis",
-        "relation": "prophylaxiss",
-        "property": "name",
-        "type": "string"
-      },
-      {
         "column": "214. ART_Prophyaxis_Primary",
         "relation": "prophylaxiss",
         "property": "name",
@@ -1985,330 +1750,222 @@
         "column": "218. ART_ARTMedName1",
         "relation": "artMedications",
         "property": "name",
-        "type": "string",
-        "entityValues": {
-          "treatment": "art"
-        }
+        "type": "string"
       },
       {
         "column": "219. ART_Dosage1",
         "relation": "artMedications",
         "property": "dosage",
-        "type": "string",
-        "entityValues": {
-          "treatment": "art"
-        }
+        "type": "string"
       },
       {
         "column": "220. ART_Frequency1",
         "relation": "artMedications",
         "property": "frequency",
-        "type": "string",
-        "entityValues": {
-          "treatment": "art"
-        }
+        "type": "string"
       },
       {
         "column": "221. ART_NumberDays1",
         "relation": "artMedications",
         "property": "numberDays",
-        "type": "number",
-        "entityValues": {
-          "treatment": "art"
-        }
+        "type": "number"
       },
       {
         "column": "222. ART_ARTMedName2",
         "relation": "artMedications",
         "property": "name",
-        "type": "string",
-        "entityValues": {
-          "treatment": "art"
-        }
+        "type": "string"
       },
       {
         "column": "223. ART_Dosage2",
         "relation": "artMedications",
         "property": "dosage",
-        "type": "string",
-        "entityValues": {
-          "treatment": "art"
-        }
+        "type": "string"
       },
       {
         "column": "224. ART_Frequency2",
         "relation": "artMedications",
         "property": "frequency",
-        "type": "string",
-        "entityValues": {
-          "treatment": "art"
-        }
+        "type": "string"
       },
       {
         "column": "225. ART_NumberDays2",
         "relation": "artMedications",
         "property": "numberDays",
-        "type": "number",
-        "entityValues": {
-          "treatment": "art"
-        }
+        "type": "number"
       },
       {
         "column": "226. ART_ARTMedName3",
         "relation": "artMedications",
         "property": "name",
-        "type": "string",
-        "entityValues": {
-          "treatment": "art"
-        }
+        "type": "string"
       },
       {
         "column": "227. ART_Dosage3",
         "relation": "artMedications",
         "property": "dosage",
-        "type": "string",
-        "entityValues": {
-          "treatment": "art"
-        }
+        "type": "string"
       },
       {
         "column": "228. ART_Frequency3",
         "relation": "artMedications",
         "property": "frequency",
-        "type": "string",
-        "entityValues": {
-          "treatment": "art"
-        }
+        "type": "string"
       },
       {
         "column": "229. ART_NumberDays3",
         "relation": "artMedications",
         "property": "numberDays",
-        "type": "number",
-        "entityValues": {
-          "treatment": "art"
-        }
+        "type": "number"
       },
       {
         "column": "230. ART_ARTMedName4",
         "relation": "artMedications",
         "property": "name",
-        "type": "string",
-        "entityValues": {
-          "treatment": "art"
-        }
+        "type": "string"
       },
       {
         "column": "231. ART_Dosage4",
         "relation": "artMedications",
         "property": "dosage",
-        "type": "string",
-        "entityValues": {
-          "treatment": "art"
-        }
+        "type": "string"
       },
       {
         "column": "232. ART_Frequency4",
         "relation": "artMedications",
         "property": "frequency",
-        "type": "string",
-        "entityValues": {
-          "treatment": "art"
-        }
+        "type": "string"
       },
       {
         "column": "233. ART_NumberDays4",
         "relation": "artMedications",
         "property": "numberDays",
-        "type": "number",
-        "entityValues": {
-          "treatment": "art"
-        }
+        "type": "number"
       },
       {
         "column": "234. ART_ARTMedName5",
         "relation": "artMedications",
         "property": "name",
-        "type": "string",
-        "entityValues": {
-          "treatment": "art"
-        }
+        "type": "string"
       },
       {
         "column": "235. ART_Dosage5",
         "relation": "artMedications",
         "property": "dosage",
-        "type": "string",
-        "entityValues": {
-          "treatment": "art"
-        }
+        "type": "string"
       },
       {
         "column": "236. ART_Frequency5",
         "relation": "artMedications",
         "property": "frequency",
-        "type": "string",
-        "entityValues": {
-          "treatment": "art"
-        }
+        "type": "string"
       },
       {
         "column": "237. ART_NumberDays5",
         "relation": "artMedications",
         "property": "numberDays",
-        "type": "number",
-        "entityValues": {
-          "treatment": "art"
-        }
+        "type": "number"
       },
       {
         "column": "238. ART_TB_StartingDate",
-        "property": "artTbStartingDate",
+        "property": "tbStartingDate",
         "type": "Date"
       },
       {
         "column": "239. ART_TB_MedicineName1",
         "relation": "tbMedications",
         "property": "name",
-        "type": "string",
-        "entityValues": {
-          "treatment": "tb"
-        }
+        "type": "string"
       },
       {
         "column": "240. ART_TB_Dosage1",
         "relation": "tbMedications",
         "property": "dosage",
-        "type": "string",
-        "entityValues": {
-          "treatment": "tb"
-        }
+        "type": "string"
       },
       {
         "column": "241. ART_TB_Frequency1",
         "relation": "tbMedications",
         "property": "frequency",
-        "type": "string",
-        "entityValues": {
-          "treatment": "tb"
-        }
+        "type": "string"
       },
       {
         "column": "242. ART_TB_NumberDays1",
         "relation": "tbMedications",
         "property": "numberDays",
-        "type": "number",
-        "entityValues": {
-          "treatment": "tb"
-        }
+        "type": "number"
       },
       {
         "column": "243. ART_TB_MedicineName2",
         "relation": "tbMedications",
         "property": "name",
-        "type": "string",
-        "entityValues": {
-          "treatment": "tb"
-        }
+        "type": "string"
       },
       {
         "column": "244. ART_TB_Dosage2",
         "relation": "tbMedications",
         "property": "dosage",
-        "type": "string",
-        "entityValues": {
-          "treatment": "tb"
-        }
+        "type": "string"
       },
       {
         "column": "245. ART_TB_Frequency2",
         "relation": "tbMedications",
         "property": "frequency",
-        "type": "string",
-        "entityValues": {
-          "treatment": "tb"
-        }
+        "type": "string"
       },
       {
         "column": "246. ART_TB_NumberDays2",
         "relation": "tbMedications",
         "property": "numberDays",
-        "type": "number",
-        "entityValues": {
-          "treatment": "tb"
-        }
+        "type": "number"
       },
       {
         "column": "247. ART_TB_MedicineName3",
         "relation": "tbMedications",
         "property": "name",
-        "type": "string",
-        "entityValues": {
-          "treatment": "tb"
-        }
+        "type": "string"
       },
       {
         "column": "248. ART_TB_Dosage3",
         "relation": "tbMedications",
         "property": "dosage",
-        "type": "string",
-        "entityValues": {
-          "treatment": "tb"
-        }
+        "type": "string"
       },
       {
         "column": "249. ART_TB_Frequency3",
         "relation": "tbMedications",
         "property": "frequency",
-        "type": "string",
-        "entityValues": {
-          "treatment": "tb"
-        }
+        "type": "string"
       },
       {
         "column": "250. ART_TB_NumberDays3",
         "relation": "tbMedications",
         "property": "numberDays",
-        "type": "number",
-        "entityValues": {
-          "treatment": "tb"
-        }
+        "type": "number"
       },
       {
         "column": "251. ART_TB_MedicineName4",
         "relation": "tbMedications",
         "property": "name",
-        "type": "string",
-        "entityValues": {
-          "treatment": "tb"
-        }
+        "type": "string"
       },
       {
         "column": "252. ART_TB_Dosage4",
         "relation": "tbMedications",
         "property": "dosage",
-        "type": "string",
-        "entityValues": {
-          "treatment": "tb"
-        }
+        "type": "string"
       },
       {
         "column": "253. ART_TB_Frequency4",
         "relation": "tbMedications",
         "property": "frequency",
-        "type": "string",
-        "entityValues": {
-          "treatment": "tb"
-        }
+        "type": "string"
       },
       {
         "column": "254. ART_TB_NumberDays4",
         "relation": "tbMedications",
         "property": "numberDays",
-        "type": "number",
-        "entityValues": {
-          "treatment": "tb"
-        }
+        "type": "number"
       },
       {
         "column": "255. TB_Category",
@@ -2327,7 +1984,7 @@
       },
       {
         "column": "258. IPT_Initiation_Date",
-        "property": "iptInitiationDate",
+        "property": "iptIntiationDate",
         "type": "Date"
       },
       {
@@ -2357,399 +2014,267 @@
       },
       {
         "column": "264. ART_OTHMedName1",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "name",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "265. ART_OTH_Dosage1",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "dosage",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "266. ART_OTH_Frequency1",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "frequency",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "267. ART_OTH_NumberDays1",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "numberDays",
-        "type": "number",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "number"
       },
       {
         "column": "268. ART_OTHMedName2",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "name",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "269. ART_OTH_Dosage2",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "dosage",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "270. ART_OTH_Frequency2",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "frequency",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "271. ART_OTH_NumberDays2",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "numberDays",
-        "type": "number",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "number"
       },
       {
         "column": "272. ART_OTHMedName3",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "name",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "273. ART_OTH_Dosage3",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "dosage",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "274. ART_OTH_Frequency3",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "frequency",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "275. ART_OTH_NumberDays3",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "numberDays",
-        "type": "number",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "number"
       },
       {
         "column": "276. ART_OTHMedName4",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "name",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "277. ART_OTH_Dosage4",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "dosage",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "278. ART_OTH_Frequency4",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "frequency",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "279. ART_OTH_NumberDays4",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "numberDays",
-        "type": "number",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "number"
       },
       {
         "column": "280. ART_OTHMedName5",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "name",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "281. ART_OTH_Dosage5",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "dosage",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "282. ART_OTH_Frequency5",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "frequency",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "283. ART_OTH_NumberDays5",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "numberDays",
-        "type": "number",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "number"
       },
       {
         "column": "284. ART_OTHMedName6",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "name",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "285. ART_OTH_Dosage6",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "dosage",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "286. ART_OTH_Frequency6",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "frequency",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "287. ART_OTH_NumberDays6",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "numberDays",
-        "type": "number",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "number"
       },
       {
         "column": "288. ART_OTH_MedName7",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "name",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "289. ART_OTH_Dosage7",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "dosage",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "290. ART_OTH_Frequency7",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "frequency",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "291. ART_OTH_NumberDays7",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "numberDays",
-        "type": "number",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "number"
       },
       {
         "column": "292. ART_OTH_MedName8",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "name",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "293. ART_OTH_Dosage8",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "dosage",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "294. ART_OTH_Frequency8",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "frequency",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "295. ART_OTH_NumberDays8",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "numberDays",
-        "type": "number",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "number"
       },
       {
         "column": "296. ART_OTH_MedName9",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "name",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "297. ART_OTH_Dosage9",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "dosage",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "298. ART_OTH_Frequency9",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "frequency",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "299. ART_OTH_NumberDays9",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "numberDays",
-        "type": "number",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "number"
       },
       {
         "column": "300. ART_OTH_MedName10",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "name",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "301. ART_OTH_Dosage10",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "dosage",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "302. ART_OTH_Frequency10",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "frequency",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "303. ART_OTH_NumberDays10",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "numberDays",
-        "type": "number",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "number"
       },
       {
         "column": "304. ART_OTH_MedName11",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "name",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "305. ART_OTH_Dosage11",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "dosage",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "306. ART_OTH_Frequency11",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "frequency",
-        "type": "string",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "string"
       },
       {
         "column": "307. ART_OTH_NumberDays11",
-        "relation": "medications",
+        "relation": "otherMedications",
         "property": "numberDays",
-        "type": "number",
-        "entityValues": {
-          "treatment": "other"
-        }
+        "type": "number"
       },
       {
         "column": "308. ART_ReferredTo",

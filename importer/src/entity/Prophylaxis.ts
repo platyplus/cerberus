@@ -1,5 +1,5 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, ManyToOne, JoinColumn, Column } from 'typeorm'
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm'
 import { ArtConsultationPlha } from './ArtConsultationPlha'
 
 export enum TypeEnum { 
@@ -12,6 +12,13 @@ export class Prophylaxis {
 	@PrimaryGeneratedColumn('uuid')
 	id: string
 
+	@Column({
+		name: 'type',
+		nullable: true,
+		enum: TypeEnum
+	})
+	type: TypeEnum
+
 	@ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.prophylaxiss, {
 		eager: true
 	})
@@ -23,12 +30,5 @@ export class Prophylaxis {
 		nullable: true
 	})
 	name: string
-
-	@Column({
-		name: 'type',
-		nullable: true,
-		enum: TypeEnum
-	})
-	type: TypeEnum
 
 }

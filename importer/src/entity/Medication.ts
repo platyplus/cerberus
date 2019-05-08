@@ -1,12 +1,10 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm'
+import { Entity, PrimaryGeneratedColumn, ManyToOne, JoinColumn, Column } from 'typeorm'
 import { ArtConsultationPlha } from './ArtConsultationPlha'
 import { GeneralHeathCare } from './GeneralHeathCare'
 import { Sti } from './Sti'
 
 export enum TreatmentEnum { 
-	ART = 'art', 
-	TB = 'tb', 
 	OTHER = 'other', 
 	STI = 'sti' 
 }
@@ -15,13 +13,6 @@ export enum TreatmentEnum {
 export class Medication {
 	@PrimaryGeneratedColumn('uuid')
 	id: string
-
-	@Column({
-		name: 'treatment',
-		nullable: true,
-		enum: TreatmentEnum
-	})
-	treatment: TreatmentEnum
 
 	@ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.artMedications, {
 		eager: true
@@ -60,11 +51,18 @@ export class Medication {
 	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
 	artConsultationPlhaTbMedication: ArtConsultationPlha
 
-	@ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.medications, {
+	@ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.otherMedications, {
 		eager: true
 	})
 	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
-	artConsultationPlha: ArtConsultationPlha
+	artConsultationPlhaOtherMedication: ArtConsultationPlha
+
+	@Column({
+		name: 'treatment',
+		nullable: true,
+		enum: TreatmentEnum
+	})
+	treatment: TreatmentEnum
 
 	@ManyToOne(type => GeneralHeathCare, generalHeathCare => generalHeathCare.medications, {
 		eager: true
