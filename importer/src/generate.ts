@@ -66,7 +66,8 @@ class SimpleProperty extends Property {
     const optionTypes = {
       number: 'integer',
       Date: 'timestamptz',
-      boolean: 'boolean'
+      boolean: 'boolean',
+      string: 'text'
     } as { [key: string]: string }
     let options = [`name: '${_.snakeCase(this.name)}'`]
     optionTypes[this.type] && options.push(`type: '${optionTypes[this.type]}'`)
@@ -76,10 +77,11 @@ class SimpleProperty extends Property {
 }
 
 class MultiplePropery extends SimpleProperty {
-  constructor(row: Row, parent: Entity) {
-    super(row, parent)
-    this.columnName = row.excel_name
-    this.type = this.type + '[]'
+  strType() {
+    return super.strType() + '[]'
+  }
+  columnOptions() {
+    return [...super.columnOptions(), 'array: true']
   }
 }
 class EnumProperty extends SimpleProperty {
@@ -98,8 +100,7 @@ class EnumProperty extends SimpleProperty {
     this.defaultValue = defaultValue
   }
   columnOptions(): string[] {
-    let colOptions = super.columnOptions()
-    colOptions.push(`enum: ${this.type}`)
+    let colOptions = [...super.columnOptions(), `enum: ${this.type}`]
     if (this.defaultValue)
       colOptions.push(`default: '${_.replace(this.defaultValue, "'", "\\'")}'`)
     return colOptions
@@ -177,7 +178,10 @@ class ManyToOneProperty extends RelationProperty {
     const fks = this.relation.parent
       .pkProperties()
       .map(
-        p => `{ name: '${p.strName()}', referencedColumnName: '${p.strName()}'}`
+        p =>
+          `{ name: '${_.snakeCase(this.strName())}_${_.snakeCase(
+            p.strName()
+          )}', referencedColumnName: '${p.strName()}'}`
       )
       .join(', ')
     return `\t@ManyToOne(${this.strColumnOptions()})\n\t@JoinColumn([${fks}])`
@@ -317,6 +321,7 @@ class EntityManager {
         type: getType(row)
       }
       const entityValues = getGroups(row)
+      if (row.property_multiplicity === 'many') column.array = true
       if (!_.isEmpty(entityValues)) column.entityValues = entityValues
       entityMapping.columns.push(column)
     }

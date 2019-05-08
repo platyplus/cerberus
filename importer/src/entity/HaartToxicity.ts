@@ -10,17 +10,19 @@ export class HaartToxicity {
 	@ManyToOne(type => ArtKey, artKey => artKey.haartToxicitys, {
 		eager: true
 	})
-	@JoinColumn([{ name: 'mdmCode', referencedColumnName: 'mdmCode'}])
+	@JoinColumn([{ name: 'art_key_mdm_code', referencedColumnName: 'mdmCode'}])
 	artKey: ArtKey
 
 	@Column({
 		name: 'toxicity',
+		type: 'text',
 		nullable: true
 	})
 	toxicity: string
 
 	@Column({
 		name: 'grade',
+		type: 'text',
 		nullable: true
 	})
 	grade: string

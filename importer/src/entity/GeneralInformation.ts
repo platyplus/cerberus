@@ -5,6 +5,7 @@ import { Entity, PrimaryColumn, Column } from 'typeorm'
 export class GeneralInformation {
 	@Column({
 		name: 'mdm_code',
+		type: 'text',
 		nullable: true
 	})
 	mdmCode: string
@@ -18,18 +19,21 @@ export class GeneralInformation {
 
 	@Column({
 		name: 'patient_name',
+		type: 'text',
 		nullable: true
 	})
 	patientName: string
 
 	@Column({
 		name: 'father_name',
+		type: 'text',
 		nullable: true
 	})
 	fatherName: string
 
 	@Column({
 		name: 'sex',
+		type: 'text',
 		nullable: true
 	})
 	sex: string
@@ -50,12 +54,14 @@ export class GeneralInformation {
 
 	@Column({
 		name: 'patient_target',
+		type: 'text',
 		nullable: true
 	})
 	patientTarget: string
 
 	@Column({
 		name: 'place_of_medical_care',
+		type: 'text',
 		nullable: true
 	})
 	placeOfMedicalCare: string
@@ -69,12 +75,14 @@ export class GeneralInformation {
 
 	@Column({
 		name: 'marital_status',
+		type: 'text',
 		nullable: true
 	})
 	maritalStatus: string
 
 	@Column({
 		name: 'current_workplace',
+		type: 'text',
 		nullable: true
 	})
 	currentWorkplace: string
@@ -95,6 +103,7 @@ export class GeneralInformation {
 
 	@Column({
 		name: 'lb_or_kg',
+		type: 'text',
 		nullable: true
 	})
 	lbOrKg: string
@@ -115,6 +124,7 @@ export class GeneralInformation {
 
 	@Column({
 		name: 'celsius_or_fahrenheit',
+		type: 'text',
 		nullable: true
 	})
 	celsiusOrFahrenheit: string
@@ -149,6 +159,7 @@ export class GeneralInformation {
 
 	@Column({
 		name: 'reproductive_health',
+		type: 'text',
 		nullable: true
 	})
 	reproductiveHealth: string
@@ -162,6 +173,7 @@ export class GeneralInformation {
 
 	@Column({
 		name: 'other_contraception_type',
+		type: 'text',
 		nullable: true
 	})
 	otherContraceptionType: string
@@ -224,6 +236,7 @@ export class GeneralInformation {
 
 	@Column({
 		name: 'remarks',
+		type: 'text',
 		nullable: true
 	})
 	remarks: string
@@ -243,7 +256,8 @@ export class GeneralInformation {
 	lastRegistrationDate: Date
 
 	@PrimaryColumn({
-		name: 'key'
+		name: 'key',
+		type: 'text'
 	})
 	key: string
 

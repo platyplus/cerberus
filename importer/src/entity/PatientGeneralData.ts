@@ -5,17 +5,20 @@ import { Entity, PrimaryColumn, Column } from 'typeorm'
 export class PatientGeneralData {
 	@Column({
 		name: 'mdm_location',
+		type: 'text',
 		nullable: true
 	})
 	mdmLocation: string
 
 	@PrimaryColumn({
-		name: 'mdm_code'
+		name: 'mdm_code',
+		type: 'text'
 	})
 	mdmCode: string
 
 	@Column({
 		name: 'serial_number',
+		type: 'text',
 		nullable: true
 	})
 	serialNumber: string
@@ -29,18 +32,21 @@ export class PatientGeneralData {
 
 	@Column({
 		name: 'patient_name',
+		type: 'text',
 		nullable: true
 	})
 	patientName: string
 
 	@Column({
 		name: 'father_name',
+		type: 'text',
 		nullable: true
 	})
 	fatherName: string
 
 	@Column({
 		name: 'sex',
+		type: 'text',
 		nullable: true
 	})
 	sex: string
@@ -61,12 +67,14 @@ export class PatientGeneralData {
 
 	@Column({
 		name: 'date_of_birth_estimated',
+		type: 'text',
 		nullable: true
 	})
 	dateOfBirthEstimated: string
 
 	@Column({
 		name: 'place_of_birth',
+		type: 'text',
 		nullable: true
 	})
 	placeOfBirth: string
@@ -80,42 +88,49 @@ export class PatientGeneralData {
 
 	@Column({
 		name: 'patient_target',
+		type: 'text',
 		nullable: true
 	})
 	patientTarget: string
 
 	@Column({
 		name: 'marital_status',
+		type: 'text',
 		nullable: true
 	})
 	maritalStatus: string
 
 	@Column({
 		name: 'level_education',
+		type: 'text',
 		nullable: true
 	})
 	levelEducation: string
 
 	@Column({
 		name: 'occupation',
+		type: 'text',
 		nullable: true
 	})
 	occupation: string
 
 	@Column({
 		name: 'address_township',
+		type: 'text',
 		nullable: true
 	})
 	addressTownship: string
 
 	@Column({
 		name: 'address_township_name',
+		type: 'text',
 		nullable: true
 	})
 	addressTownshipName: string
 
 	@Column({
 		name: 'geographical_origin',
+		type: 'text',
 		nullable: true
 	})
 	geographicalOrigin: string
@@ -129,6 +144,7 @@ export class PatientGeneralData {
 
 	@Column({
 		name: 'other_id',
+		type: 'text',
 		nullable: true
 	})
 	otherId: string

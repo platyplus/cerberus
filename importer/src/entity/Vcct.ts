@@ -6,6 +6,7 @@ import { DrugType } from './DrugType'
 export class Vcct {
 	@Column({
 		name: 'mdm_code',
+		type: 'text',
 		nullable: true
 	})
 	mdmCode: string
@@ -19,18 +20,21 @@ export class Vcct {
 
 	@Column({
 		name: 'patient_name',
+		type: 'text',
 		nullable: true
 	})
 	patientName: string
 
 	@Column({
 		name: 'father_name',
+		type: 'text',
 		nullable: true
 	})
 	fatherName: string
 
 	@Column({
 		name: 'sex',
+		type: 'text',
 		nullable: true
 	})
 	sex: string
@@ -65,12 +69,14 @@ export class Vcct {
 
 	@Column({
 		name: 'place_of_testing',
+		type: 'text',
 		nullable: true
 	})
 	placeOfTesting: string
 
 	@Column({
 		name: 'patient_target',
+		type: 'text',
 		nullable: true
 	})
 	patientTarget: string
@@ -138,12 +144,14 @@ export class Vcct {
 
 	@Column({
 		name: 'vcct_result_of_last_hiv_testing',
+		type: 'text',
 		nullable: true
 	})
 	vcctResultOfLastHivTesting: string
 
 	@Column({
 		name: 'vcct_pretest_performed',
+		type: 'text',
 		nullable: true
 	})
 	vcctPretestPerformed: string
@@ -157,6 +165,7 @@ export class Vcct {
 
 	@Column({
 		name: 'vcct_hiv_test',
+		type: 'text',
 		nullable: true
 	})
 	vcctHivTest: string
@@ -170,6 +179,7 @@ export class Vcct {
 
 	@Column({
 		name: 'vcct_post_test_performed',
+		type: 'text',
 		nullable: true
 	})
 	vcctPostTestPerformed: string
@@ -183,12 +193,14 @@ export class Vcct {
 
 	@Column({
 		name: 'vcct_test_result',
+		type: 'text',
 		nullable: true
 	})
 	vcctTestResult: string
 
 	@Column({
 		name: 'vcct_test_result_by_nhl',
+		type: 'text',
 		nullable: true
 	})
 	vcctTestResultByNhl: string
@@ -209,24 +221,28 @@ export class Vcct {
 
 	@Column({
 		name: 'vcct_test_for_syphilis_in_current_visit',
+		type: 'text',
 		nullable: true
 	})
 	vcctTestForSyphilisInCurrentVisit: string
 
 	@Column({
 		name: 'vcct_current_ict_test_result',
+		type: 'text',
 		nullable: true
 	})
 	vcctCurrentIctTestResult: string
 
 	@Column({
 		name: 'vcct_current_rpr_test_result',
+		type: 'text',
 		nullable: true
 	})
 	vcctCurrentRprTestResult: string
 
 	@Column({
 		name: 'vcct_rpr_positive_dilution',
+		type: 'text',
 		nullable: true
 	})
 	vcctRprPositiveDilution: string
@@ -261,24 +277,28 @@ export class Vcct {
 
 	@Column({
 		name: 'vcct_known_your_partner_hiv_status',
+		type: 'text',
 		nullable: true
 	})
 	vcctKnownYourPartnerHivStatus: string
 
 	@Column({
 		name: 'vcct_if_you_dont_know_offer_partner_hiv_test',
+		type: 'text',
 		nullable: true
 	})
 	vcctIfYouDontKnowOfferPartnerHivTest: string
 
 	@Column({
 		name: 'vcct_patient_should_return_in',
+		type: 'text',
 		nullable: true
 	})
 	vcctPatientShouldReturnIn: string
 
 	@Column({
 		name: 'vcct_end_of_visit_other',
+		type: 'text',
 		nullable: true
 	})
 	vcctEndOfVisitOther: string
@@ -306,6 +326,7 @@ export class Vcct {
 
 	@Column({
 		name: 'vcct_hiv_retesting_result',
+		type: 'text',
 		nullable: true
 	})
 	vcctHivRetestingResult: string
@@ -319,6 +340,7 @@ export class Vcct {
 
 	@Column({
 		name: 'vcct_nhlhiv_retesting_result',
+		type: 'text',
 		nullable: true
 	})
 	vcctNhlhivRetestingResult: string
@@ -345,7 +367,8 @@ export class Vcct {
 	lastRegistrationDate: Date
 
 	@PrimaryColumn({
-		name: 'key'
+		name: 'key',
+		type: 'text'
 	})
 	key: string
 

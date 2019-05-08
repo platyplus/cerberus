@@ -32,17 +32,19 @@ export class PhysicalExam {
 	@ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.physicalExams, {
 		eager: true
 	})
-	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
+	@JoinColumn([{ name: 'art_consultation_plha_key', referencedColumnName: 'key'}])
 	artConsultationPlha: ArtConsultationPlha
 
 	@Column({
 		name: 'name',
+		type: 'text',
 		nullable: true
 	})
 	name: string
 
 	@Column({
 		name: 'comment',
+		type: 'text',
 		nullable: true
 	})
 	comment: string
@@ -50,13 +52,13 @@ export class PhysicalExam {
 	@ManyToOne(type => GeneralHeathCare, generalHeathCare => generalHeathCare.physicalExams, {
 		eager: true
 	})
-	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
+	@JoinColumn([{ name: 'general_heath_care_key', referencedColumnName: 'key'}])
 	generalHeathCare: GeneralHeathCare
 
 	@ManyToOne(type => Sti, sti => sti.physicalExams, {
 		eager: true
 	})
-	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
+	@JoinColumn([{ name: 'sti_key', referencedColumnName: 'key'}])
 	sti: Sti
 
 }

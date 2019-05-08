@@ -69,7 +69,7 @@ export class DicDataRow {
 	@ManyToOne(type => DicData, dicData => dicData.dicDataRows, {
 		eager: true
 	})
-	@JoinColumn([{ name: 'date', referencedColumnName: 'date'}])
+	@JoinColumn([{ name: 'dic_data_date', referencedColumnName: 'date'}])
 	dicData: DicData
 
 	@Column({

@@ -396,27 +396,27 @@
       },
       {
         "column": "62. ADH_SevereSideEffects",
-        "relation": "sideEffects",
         "property": "sideEffects",
-        "type": "string"
+        "type": "string",
+        "array": true
       },
       {
         "column": "63. ADH_LongTermSideEffects",
-        "relation": "sideEffects",
         "property": "sideEffects",
-        "type": "string"
+        "type": "string",
+        "array": true
       },
       {
         "column": "64. ADH_ShortTermGeneral",
-        "relation": "sideEffects",
         "property": "sideEffects",
-        "type": "string"
+        "type": "string",
+        "array": true
       },
       {
         "column": "65. ADH_ShortTermSideEffects_Other",
-        "relation": "sideEffects",
         "property": "sideEffects",
-        "type": "string"
+        "type": "string",
+        "array": true
       },
       {
         "column": "66. ADH_SevereSE",
@@ -1417,6 +1417,7 @@
         "relation": "hivStages",
         "property": "name",
         "type": "string",
+        "array": true,
         "entityValues": {
           "category": "adult",
           "stage": "stage1"
@@ -1427,6 +1428,7 @@
         "relation": "hivStages",
         "property": "name",
         "type": "string",
+        "array": true,
         "entityValues": {
           "category": "adult",
           "stage": "stage2"
@@ -1437,6 +1439,7 @@
         "relation": "hivStages",
         "property": "name",
         "type": "string",
+        "array": true,
         "entityValues": {
           "category": "adult",
           "stage": "stage3"
@@ -1447,6 +1450,7 @@
         "relation": "hivStages",
         "property": "name",
         "type": "string",
+        "array": true,
         "entityValues": {
           "category": "adult",
           "stage": "stage4"
@@ -1457,6 +1461,7 @@
         "relation": "hivStages",
         "property": "name",
         "type": "string",
+        "array": true,
         "entityValues": {
           "category": "child",
           "stage": "stage1"
@@ -1467,6 +1472,7 @@
         "relation": "hivStages",
         "property": "name",
         "type": "string",
+        "array": true,
         "entityValues": {
           "category": "child",
           "stage": "stage2"
@@ -1477,6 +1483,7 @@
         "relation": "hivStages",
         "property": "name",
         "type": "string",
+        "array": true,
         "entityValues": {
           "category": "child",
           "stage": "stage3"
@@ -1487,6 +1494,7 @@
         "relation": "hivStages",
         "property": "name",
         "type": "string",
+        "array": true,
         "entityValues": {
           "category": "child",
           "stage": "stage4"
@@ -1646,7 +1654,8 @@
       {
         "column": "160. TB_Sputum_Smear",
         "property": "smear",
-        "type": "string"
+        "type": "string",
+        "array": true
       },
       {
         "column": "199. TB_RadiologyDate",
@@ -1656,7 +1665,8 @@
       {
         "column": "200. TB_Radio_Radiology",
         "property": "radiologyType",
-        "type": "string"
+        "type": "string",
+        "array": true
       },
       {
         "column": "201. TB_Radio_CXRay",
@@ -1706,12 +1716,14 @@
       {
         "column": "210. ARTAllergy",
         "property": "allergy",
-        "type": "string"
+        "type": "string",
+        "array": true
       },
       {
         "column": "211. ART_AllergyOther",
         "property": "allergy",
-        "type": "string"
+        "type": "string",
+        "array": true
       },
       {
         "column": "212. ART_Pregnant",

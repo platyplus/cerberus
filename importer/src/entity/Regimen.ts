@@ -8,6 +8,7 @@ export class Regimen {
 
 	@Column({
 		name: 'new_regimen',
+		type: 'text',
 		nullable: true
 	})
 	newRegimen: string
@@ -21,6 +22,7 @@ export class Regimen {
 
 	@Column({
 		name: 'change_reason',
+		type: 'text',
 		nullable: true
 	})
 	changeReason: string

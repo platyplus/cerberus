@@ -7,7 +7,8 @@ import fs from 'fs'
 import { spawnSync, SpawnSyncReturns } from 'child_process'
 import _ from 'lodash'
 import csv from 'csvtojson'
-import mapping from './entity/mapping.json'
+const mapping: Mapping[] = require('./entity/mapping.json')
+
 import { classes } from './entity'
 import { Mapping } from './excel-metadata.js'
 
@@ -18,6 +19,7 @@ const log = console.log.bind(console, `[${new Date().toLocaleString()}]`)
 fs.mkdir(TMP_PATH, { recursive: true }, err => {})
 
 const convertRow: any = (entityMapping: Mapping, row: any) => {
+  log('convert')
   return entityMapping.columns.reduce(
     (prev, curr) => {
       let value = row[curr.column]
@@ -32,6 +34,8 @@ const convertRow: any = (entityMapping: Mapping, row: any) => {
             (e: { [key: string]: any }) => e[curr.property] === undefined
           )
           if (el) {
+            // Arrays: add value to the existing one
+            if (curr.array) value = [...el[curr.property], value]
             el[curr.property] = value
             el = { ...el, ...curr.entityValues }
           } else
@@ -40,8 +44,9 @@ const convertRow: any = (entityMapping: Mapping, row: any) => {
               ...curr.entityValues
             })
         } else {
+          // Arrays: add value to the existing one
+          if (curr.array) value = [...prev[curr.property], value]
           prev[curr.property] = value
-          prev = { ...prev, ...curr.entityValues }
         }
       }
       return prev
@@ -54,7 +59,6 @@ function loadFile(file: string, connection: Connection) {
   if (path.extname(file) !== '.xlsx') return
   const manager = connection.manager
   const shortFileName = path.basename(file, path.extname(file))
-  if (shortFileName !== 'DIC_Data') return // TODO: remove
   const entityMapping = mapping.find(entity => entity.file === shortFileName)
   if (entityMapping) {
     const csvFileName = `${TMP_PATH}/${shortFileName}.csv`
@@ -71,16 +75,39 @@ function loadFile(file: string, connection: Connection) {
     log(`Finished to create ${csvFileName}. Importing...`)
     const readStream = fs.createReadStream(csvFileName)
     let entityClass = classes[entityMapping.entity]
+    // Parses and concatenates each of the array columns with the same name
+    const colParser = entityMapping.columns
+      .filter(col => col.array)
+      .reduce(
+        (prev, curr) => {
+          prev[curr.column] = (
+            item: string,
+            head: string | number,
+            resultRow: { [x: string]: string },
+            row: any,
+            colIdx: any
+          ) => {
+            log([...resultRow[head], item])
+            return [...resultRow[head], item]
+          }
+          log(curr)
+          return prev
+        },
+        {} as { [key: string]: any }
+      )
+    log(colParser)
     csv({
       checkType: true,
       ignoreEmpty: true,
-      flatKeys: true
+      flatKeys: true,
+      trim: true,
+      colParser
     })
       .fromStream(readStream)
       .subscribe((json: any) => {
         return new Promise((resolve, reject) => {
+          log('line')
           const data = convertRow(entityMapping, json)
-          log(data)
           let entity = manager.create(entityClass, data)
           manager
             .save(entity)

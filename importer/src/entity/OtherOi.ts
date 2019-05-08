@@ -10,11 +10,12 @@ export class OtherOi {
 	@ManyToOne(type => ArtKey, artKey => artKey.otherOis, {
 		eager: true
 	})
-	@JoinColumn([{ name: 'mdmCode', referencedColumnName: 'mdmCode'}])
+	@JoinColumn([{ name: 'art_key_mdm_code', referencedColumnName: 'mdmCode'}])
 	artKey: ArtKey
 
 	@Column({
 		name: 'other_oi',
+		type: 'text',
 		nullable: true
 	})
 	otherOi: string

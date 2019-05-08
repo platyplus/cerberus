@@ -5,35 +5,41 @@ import { Entity, PrimaryColumn, Column } from 'typeorm'
 export class GateAttendance {
 	@Column({
 		name: 'other_mdm_center',
+		type: 'text',
 		nullable: true
 	})
 	otherMdmCenter: string
 
 	@Column({
 		name: 'serial_number',
+		type: 'text',
 		nullable: true
 	})
 	serialNumber: string
 
 	@PrimaryColumn({
-		name: 'mdm_code'
+		name: 'mdm_code',
+		type: 'text'
 	})
 	mdmCode: string
 
 	@Column({
 		name: 'patient_name',
+		type: 'text',
 		nullable: true
 	})
 	patientName: string
 
 	@Column({
 		name: 'sex',
+		type: 'text',
 		nullable: true
 	})
 	sex: string
 
 	@Column({
 		name: 'patient_target',
+		type: 'text',
 		nullable: true
 	})
 	patientTarget: string
@@ -46,12 +52,14 @@ export class GateAttendance {
 
 	@Column({
 		name: 'new_repeater',
+		type: 'text',
 		nullable: true
 	})
 	newRepeater: string
 
 	@Column({
 		name: 'current_target',
+		type: 'text',
 		nullable: true
 	})
 	currentTarget: string

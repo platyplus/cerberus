@@ -9,6 +9,7 @@ import { Medication } from './Medication'
 export class GeneralHeathCare {
 	@Column({
 		name: 'mdm_code',
+		type: 'text',
 		nullable: true
 	})
 	mdmCode: string
@@ -22,24 +23,28 @@ export class GeneralHeathCare {
 
 	@Column({
 		name: 'patient_name',
+		type: 'text',
 		nullable: true
 	})
 	patientName: string
 
 	@Column({
 		name: 'father_name',
+		type: 'text',
 		nullable: true
 	})
 	fatherName: string
 
 	@Column({
 		name: 'sex',
+		type: 'text',
 		nullable: true
 	})
 	sex: string
 
 	@Column({
 		name: 'patient_target',
+		type: 'text',
 		nullable: true
 	})
 	patientTarget: string
@@ -74,6 +79,7 @@ export class GeneralHeathCare {
 
 	@Column({
 		name: 'mdm_staff',
+		type: 'text',
 		nullable: true
 	})
 	mdmStaff: string
@@ -85,6 +91,7 @@ export class GeneralHeathCare {
 
 	@Column({
 		name: 'symptoms_comment',
+		type: 'text',
 		nullable: true
 	})
 	symptomsComment: string
@@ -96,6 +103,7 @@ export class GeneralHeathCare {
 
 	@Column({
 		name: 'physical_exam_comment',
+		type: 'text',
 		nullable: true
 	})
 	physicalExamComment: string
@@ -107,18 +115,21 @@ export class GeneralHeathCare {
 
 	@Column({
 		name: 'hbsag',
+		type: 'text',
 		nullable: true
 	})
 	hbsag: string
 
 	@Column({
 		name: 'hbsab',
+		type: 'text',
 		nullable: true
 	})
 	hbsab: string
 
 	@Column({
 		name: 'hcvab',
+		type: 'text',
 		nullable: true
 	})
 	hcvab: string
@@ -132,18 +143,21 @@ export class GeneralHeathCare {
 
 	@Column({
 		name: 'liver_fibrosis',
+		type: 'text',
 		nullable: true
 	})
 	liverFibrosis: string
 
 	@Column({
 		name: 'allergy',
+		type: 'text',
 		nullable: true
 	})
 	allergy: string
 
 	@Column({
 		name: 'allergy_other',
+		type: 'text',
 		nullable: true
 	})
 	allergyOther: string
@@ -155,6 +169,7 @@ export class GeneralHeathCare {
 
 	@Column({
 		name: 'should_return_in',
+		type: 'text',
 		nullable: true
 	})
 	shouldReturnIn: string
@@ -181,7 +196,8 @@ export class GeneralHeathCare {
 	lastRegistrationDate: Date
 
 	@PrimaryColumn({
-		name: 'key'
+		name: 'key',
+		type: 'text'
 	})
 	key: string
 

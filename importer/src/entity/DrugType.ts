@@ -10,23 +10,26 @@ export class DrugType {
 	@ManyToOne(type => Vcct, vcct => vcct.drugTypes, {
 		eager: true
 	})
-	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
+	@JoinColumn([{ name: 'vcct_key', referencedColumnName: 'key'}])
 	vcct: Vcct
 
 	@Column({
 		name: 'type_of_drugs',
+		type: 'text',
 		nullable: true
 	})
 	typeOfDrugs: string
 
 	@Column({
 		name: 'drug_name',
+		type: 'text',
 		nullable: true
 	})
 	drugName: string
 
 	@Column({
 		name: 'way_of_use',
+		type: 'text',
 		nullable: true
 	})
 	wayOfUse: string

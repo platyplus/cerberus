@@ -10,17 +10,19 @@ export class ArtKeyAttb {
 	@ManyToOne(type => ArtKey, artKey => artKey.artKeyAttbs, {
 		eager: true
 	})
-	@JoinColumn([{ name: 'mdmCode', referencedColumnName: 'mdmCode'}])
+	@JoinColumn([{ name: 'art_key_mdm_code', referencedColumnName: 'mdmCode'}])
 	artKey: ArtKey
 
 	@Column({
 		name: 'tb',
+		type: 'text',
 		nullable: true
 	})
 	tb: string
 
 	@Column({
 		name: 'attb_regimen',
+		type: 'text',
 		nullable: true
 	})
 	attbRegimen: string

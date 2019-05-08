@@ -11,6 +11,7 @@ import { Medication } from './Medication'
 export class ArtConsultationPlha {
 	@Column({
 		name: 'mdm_code',
+		type: 'text',
 		nullable: true
 	})
 	mdmCode: string
@@ -24,18 +25,21 @@ export class ArtConsultationPlha {
 
 	@Column({
 		name: 'patient_name',
+		type: 'text',
 		nullable: true
 	})
 	patientName: string
 
 	@Column({
 		name: 'father_name',
+		type: 'text',
 		nullable: true
 	})
 	fatherName: string
 
 	@Column({
 		name: 'sex',
+		type: 'text',
 		nullable: true
 	})
 	sex: string
@@ -56,6 +60,7 @@ export class ArtConsultationPlha {
 
 	@Column({
 		name: 'patient_target',
+		type: 'text',
 		nullable: true
 	})
 	patientTarget: string
@@ -69,6 +74,7 @@ export class ArtConsultationPlha {
 
 	@Column({
 		name: 'mdm_staff',
+		type: 'text',
 		nullable: true
 	})
 	mdmStaff: string
@@ -103,6 +109,7 @@ export class ArtConsultationPlha {
 
 	@Column({
 		name: 'partner_test_status',
+		type: 'text',
 		nullable: true
 	})
 	partnerTestStatus: string
@@ -116,6 +123,7 @@ export class ArtConsultationPlha {
 
 	@Column({
 		name: 'status_disclosed_by',
+		type: 'text',
 		nullable: true
 	})
 	statusDisclosedBy: string
@@ -129,42 +137,49 @@ export class ArtConsultationPlha {
 
 	@Column({
 		name: 'medicine_taken',
+		type: 'text',
 		nullable: true
 	})
 	medicineTaken: string
 
 	@Column({
 		name: 'medication_comments',
+		type: 'text',
 		nullable: true
 	})
 	medicationComments: string
 
 	@Column({
 		name: 'taken_arvs_before',
+		type: 'text',
 		nullable: true
 	})
 	takenArvsBefore: string
 
 	@Column({
 		name: 'art_arv_comment',
+		type: 'text',
 		nullable: true
 	})
 	artArvComment: string
 
 	@Column({
 		name: 'art_medical_history_comment',
+		type: 'text',
 		nullable: true
 	})
 	artMedicalHistoryComment: string
 
 	@Column({
 		name: 'art_t_bhistory',
+		type: 'text',
 		nullable: true
 	})
 	artTBhistory: string
 
 	@Column({
 		name: 'art_previous_t_bdiagnosis',
+		type: 'text',
 		nullable: true
 	})
 	artPreviousTBdiagnosis: string
@@ -185,60 +200,70 @@ export class ArtConsultationPlha {
 
 	@Column({
 		name: 'art_t_bhistory_comments',
+		type: 'text',
 		nullable: true
 	})
 	artTBhistoryComments: string
 
 	@Column({
 		name: 'art_tb_related_symptoms_opt',
+		type: 'text',
 		nullable: true
 	})
 	artTbRelatedSymptomsOpt: string
 
 	@Column({
 		name: 'art_tb_related_symptoms',
+		type: 'text',
 		nullable: true
 	})
 	artTbRelatedSymptoms: string
 
 	@Column({
 		name: 'art_tb_related_fever',
+		type: 'text',
 		nullable: true
 	})
 	artTbRelatedFever: string
 
 	@Column({
 		name: 'art_tb_related_night_sweats',
+		type: 'text',
 		nullable: true
 	})
 	artTbRelatedNightSweats: string
 
 	@Column({
 		name: 'art_tb_related_appetite_loss',
+		type: 'text',
 		nullable: true
 	})
 	artTbRelatedAppetiteLoss: string
 
 	@Column({
 		name: 'art_tb_related_weight_loss',
+		type: 'text',
 		nullable: true
 	})
 	artTbRelatedWeightLoss: string
 
 	@Column({
 		name: 'art_tb_related_cough',
+		type: 'text',
 		nullable: true
 	})
 	artTbRelatedCough: string
 
 	@Column({
 		name: 'art_tb_related_haemoptysis',
+		type: 'text',
 		nullable: true
 	})
 	artTbRelatedHaemoptysis: string
 
 	@Column({
 		name: 'art_tb_related_notice',
+		type: 'text',
 		nullable: true
 	})
 	artTbRelatedNotice: string
@@ -255,6 +280,7 @@ export class ArtConsultationPlha {
 
 	@Column({
 		name: 'physical_exam_comments',
+		type: 'text',
 		nullable: true
 	})
 	physicalExamComments: string
@@ -266,6 +292,7 @@ export class ArtConsultationPlha {
 
 	@Column({
 		name: 'patient_status',
+		type: 'text',
 		nullable: true
 	})
 	patientStatus: string
@@ -277,6 +304,7 @@ export class ArtConsultationPlha {
 
 	@Column({
 		name: 'diagnosis_comments',
+		type: 'text',
 		nullable: true
 	})
 	diagnosisComments: string
@@ -297,24 +325,28 @@ export class ArtConsultationPlha {
 
 	@Column({
 		name: 'viral_load_result',
+		type: 'text',
 		nullable: true
 	})
 	viralLoadResult: string
 
 	@Column({
 		name: 'hbsag',
+		type: 'text',
 		nullable: true
 	})
 	hbsag: string
 
 	@Column({
 		name: 'hsbab',
+		type: 'text',
 		nullable: true
 	})
 	hsbab: string
 
 	@Column({
 		name: 'hcvab',
+		type: 'text',
 		nullable: true
 	})
 	hcvab: string
@@ -328,13 +360,16 @@ export class ArtConsultationPlha {
 
 	@Column({
 		name: 'livrer_fibrosis',
+		type: 'text',
 		nullable: true
 	})
 	livrerFibrosis: string
 
 	@Column({
 		name: 'smear',
-		nullable: true
+		type: 'text',
+		nullable: true,
+		array: true
 	})
 	smear: string[]
 
@@ -347,24 +382,29 @@ export class ArtConsultationPlha {
 
 	@Column({
 		name: 'radiology_type',
-		nullable: true
+		type: 'text',
+		nullable: true,
+		array: true
 	})
 	radiologyType: string[]
 
 	@Column({
 		name: 'radio_cxray',
+		type: 'text',
 		nullable: true
 	})
 	radioCxray: string
 
 	@Column({
 		name: 'radio_xray',
+		type: 'text',
 		nullable: true
 	})
 	radioXray: string
 
 	@Column({
 		name: 'radio_usg',
+		type: 'text',
 		nullable: true
 	})
 	radioUsg: string
@@ -378,6 +418,7 @@ export class ArtConsultationPlha {
 
 	@Column({
 		name: 'tb_screened_tb_yes_where',
+		type: 'text',
 		nullable: true
 	})
 	tbScreenedTbYesWhere: string
@@ -391,25 +432,30 @@ export class ArtConsultationPlha {
 
 	@Column({
 		name: 'tb_refer_yes_where',
+		type: 'text',
 		nullable: true
 	})
 	tbReferYesWhere: string
 
 	@Column({
 		name: 'type_of_care',
+		type: 'text',
 		nullable: true
 	})
 	typeOfCare: string
 
 	@Column({
 		name: 'tb_type',
+		type: 'text',
 		nullable: true
 	})
 	tbType: string
 
 	@Column({
 		name: 'allergy',
-		nullable: true
+		type: 'text',
+		nullable: true,
+		array: true
 	})
 	allergy: string[]
 
@@ -458,12 +504,14 @@ export class ArtConsultationPlha {
 
 	@Column({
 		name: 'tb_category',
+		type: 'text',
 		nullable: true
 	})
 	tbCategory: string
 
 	@Column({
 		name: 'tb_treatment_category',
+		type: 'text',
 		nullable: true
 	})
 	tbTreatmentCategory: string
@@ -491,6 +539,7 @@ export class ArtConsultationPlha {
 
 	@Column({
 		name: 'ipt_outcome',
+		type: 'text',
 		nullable: true
 	})
 	iptOutcome: string
@@ -504,12 +553,14 @@ export class ArtConsultationPlha {
 
 	@Column({
 		name: 'ipt_reason_of_not_starting',
+		type: 'text',
 		nullable: true
 	})
 	iptReasonOfNotStarting: string
 
 	@Column({
 		name: 'ipt_other',
+		type: 'text',
 		nullable: true
 	})
 	iptOther: string
@@ -528,6 +579,7 @@ export class ArtConsultationPlha {
 
 	@Column({
 		name: 'should_return_in',
+		type: 'text',
 		nullable: true
 	})
 	shouldReturnIn: string
@@ -541,12 +593,14 @@ export class ArtConsultationPlha {
 
 	@Column({
 		name: 'motive',
+		type: 'text',
 		nullable: true
 	})
 	motive: string
 
 	@Column({
 		name: 'plan_next_visit',
+		type: 'text',
 		nullable: true
 	})
 	planNextVisit: string
@@ -566,7 +620,8 @@ export class ArtConsultationPlha {
 	lastRegistrationDate: Date
 
 	@PrimaryColumn({
-		name: 'key'
+		name: 'key',
+		type: 'text'
 	})
 	key: string
 

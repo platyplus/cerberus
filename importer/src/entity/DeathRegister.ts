@@ -4,24 +4,28 @@ import { Entity, PrimaryColumn, Column } from 'typeorm'
 @Entity()
 export class DeathRegister {
 	@PrimaryColumn({
-		name: 'mdm_code'
+		name: 'mdm_code',
+		type: 'text'
 	})
 	mdmCode: string
 
 	@Column({
 		name: 'patient_name',
+		type: 'text',
 		nullable: true
 	})
 	patientName: string
 
 	@Column({
 		name: 'father_name',
+		type: 'text',
 		nullable: true
 	})
 	fatherName: string
 
 	@Column({
 		name: 'sex',
+		type: 'text',
 		nullable: true
 	})
 	sex: string
@@ -35,12 +39,14 @@ export class DeathRegister {
 
 	@Column({
 		name: 'patient_target',
+		type: 'text',
 		nullable: true
 	})
 	patientTarget: string
 
 	@Column({
 		name: 'address',
+		type: 'text',
 		nullable: true
 	})
 	address: string
@@ -75,12 +81,14 @@ export class DeathRegister {
 
 	@Column({
 		name: 'place_of_patient_expired',
+		type: 'text',
 		nullable: true
 	})
 	placeOfPatientExpired: string
 
 	@Column({
 		name: 'cause_of_death',
+		type: 'text',
 		nullable: true
 	})
 	causeOfDeath: string

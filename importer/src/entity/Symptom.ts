@@ -71,11 +71,12 @@ export class Symptom {
 	@ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.symptoms, {
 		eager: true
 	})
-	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
+	@JoinColumn([{ name: 'art_consultation_plha_key', referencedColumnName: 'key'}])
 	artConsultationPlha: ArtConsultationPlha
 
 	@Column({
 		name: 'description',
+		type: 'text',
 		nullable: true
 	})
 	description: string
@@ -83,7 +84,7 @@ export class Symptom {
 	@ManyToOne(type => GeneralHeathCare, generalHeathCare => generalHeathCare.symptoms, {
 		eager: true
 	})
-	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
+	@JoinColumn([{ name: 'general_heath_care_key', referencedColumnName: 'key'}])
 	generalHeathCare: GeneralHeathCare
 
 	@Column({
@@ -96,7 +97,7 @@ export class Symptom {
 	@ManyToOne(type => Sti, sti => sti.symptoms, {
 		eager: true
 	})
-	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
+	@JoinColumn([{ name: 'sti_key', referencedColumnName: 'key'}])
 	sti: Sti
 
 }

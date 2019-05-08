@@ -10,7 +10,7 @@ export class TbKeySample {
 	@ManyToOne(type => TbKey, tbKey => tbKey.tbKeySamples, {
 		eager: true
 	})
-	@JoinColumn([{ name: 'mdmCode', referencedColumnName: 'mdmCode'}])
+	@JoinColumn([{ name: 'tb_key_mdm_code', referencedColumnName: 'mdmCode'}])
 	tbKey: TbKey
 
 	@Column({
@@ -22,60 +22,70 @@ export class TbKeySample {
 
 	@Column({
 		name: 'method',
+		type: 'text',
 		nullable: true
 	})
 	method: string
 
 	@Column({
 		name: 'h',
+		type: 'text',
 		nullable: true
 	})
 	h: string
 
 	@Column({
 		name: 'r',
+		type: 'text',
 		nullable: true
 	})
 	r: string
 
 	@Column({
 		name: 'e',
+		type: 'text',
 		nullable: true
 	})
 	e: string
 
 	@Column({
 		name: 's',
+		type: 'text',
 		nullable: true
 	})
 	s: string
 
 	@Column({
 		name: 'amk',
+		type: 'text',
 		nullable: true
 	})
 	amk: string
 
 	@Column({
 		name: 'km',
+		type: 'text',
 		nullable: true
 	})
 	km: string
 
 	@Column({
 		name: 'cm',
+		type: 'text',
 		nullable: true
 	})
 	cm: string
 
 	@Column({
 		name: 'fq',
+		type: 'text',
 		nullable: true
 	})
 	fq: string
 
 	@Column({
 		name: 'other',
+		type: 'text',
 		nullable: true
 	})
 	other: string

@@ -22,17 +22,19 @@ export class Diagnosis {
 	@ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.diagnosiss, {
 		eager: true
 	})
-	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
+	@JoinColumn([{ name: 'art_consultation_plha_key', referencedColumnName: 'key'}])
 	artConsultationPlha: ArtConsultationPlha
 
 	@Column({
 		name: 'code',
+		type: 'text',
 		nullable: true
 	})
 	code: string
 
 	@Column({
 		name: 'description',
+		type: 'text',
 		nullable: true
 	})
 	description: string

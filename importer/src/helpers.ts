@@ -2,7 +2,7 @@ import _ from 'lodash'
 import fs from 'fs'
 import { Row } from './excel-metadata'
 
-const PROPERTY_MAPPING: { [key: string]: string } = {
+export const PROPERTY_MAPPING: { [key: string]: string } = {
   string: 'string',
   number: 'number',
   date: 'Date',

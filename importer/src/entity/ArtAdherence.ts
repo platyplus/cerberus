@@ -7,7 +7,8 @@ import { DrugUsage } from './DrugUsage'
 @Entity()
 export class ArtAdherence {
 	@PrimaryColumn({
-		name: 'mdm_code'
+		name: 'mdm_code',
+		type: 'text'
 	})
 	mdmCode: string
 
@@ -20,18 +21,21 @@ export class ArtAdherence {
 
 	@Column({
 		name: 'patient_name',
+		type: 'text',
 		nullable: true
 	})
 	patientName: string
 
 	@Column({
 		name: 'father_name',
+		type: 'text',
 		nullable: true
 	})
 	fatherName: string
 
 	@Column({
 		name: 'sex',
+		type: 'text',
 		nullable: true
 	})
 	sex: string
@@ -52,17 +56,20 @@ export class ArtAdherence {
 
 	@Column({
 		name: 'patient_target',
+		type: 'text',
 		nullable: true
 	})
 	patientTarget: string
 
 	@PrimaryColumn({
-		name: 'place_of_medical_care'
+		name: 'place_of_medical_care',
+		type: 'text'
 	})
 	placeOfMedicalCare: string
 
 	@Column({
 		name: 'visit',
+		type: 'text',
 		nullable: true
 	})
 	visit: string
@@ -76,6 +83,7 @@ export class ArtAdherence {
 
 	@Column({
 		name: 'visit_reason',
+		type: 'text',
 		nullable: true
 	})
 	visitReason: string
@@ -88,18 +96,21 @@ export class ArtAdherence {
 
 	@Column({
 		name: 'appointment',
+		type: 'text',
 		nullable: true
 	})
 	appointment: string
 
 	@Column({
 		name: 'counselor',
+		type: 'text',
 		nullable: true
 	})
 	counselor: string
 
 	@Column({
 		name: 'marital_status',
+		type: 'text',
 		nullable: true
 	})
 	maritalStatus: string
@@ -113,12 +124,14 @@ export class ArtAdherence {
 
 	@Column({
 		name: 'accomodation',
+		type: 'text',
 		nullable: true
 	})
 	accomodation: string
 
 	@Column({
 		name: 'accomodation_if_stable',
+		type: 'text',
 		nullable: true
 	})
 	accomodationIfStable: string
@@ -132,24 +145,28 @@ export class ArtAdherence {
 
 	@Column({
 		name: 'occupation',
+		type: 'text',
 		nullable: true
 	})
 	occupation: string
 
 	@Column({
 		name: 'financial_situation',
+		type: 'text',
 		nullable: true
 	})
 	financialSituation: string
 
 	@Column({
 		name: 'level_of_education',
+		type: 'text',
 		nullable: true
 	})
 	levelOfEducation: string
 
 	@Column({
 		name: 'social_remark',
+		type: 'text',
 		nullable: true
 	})
 	socialRemark: string
@@ -163,18 +180,21 @@ export class ArtAdherence {
 
 	@Column({
 		name: 'caretaker_name',
+		type: 'text',
 		nullable: true
 	})
 	caretakerName: string
 
 	@Column({
 		name: 'why_no_caretaker',
+		type: 'text',
 		nullable: true
 	})
 	whyNoCaretaker: string
 
 	@Column({
 		name: 'caretaker_relationship',
+		type: 'text',
 		nullable: true
 	})
 	caretakerRelationship: string
@@ -226,21 +246,25 @@ export class ArtAdherence {
 
 	@Column({
 		name: 'comment',
+		type: 'text',
 		nullable: true
 	})
 	comment: string
 
 	@Column({
 		name: 'no_side_effects',
+		type: 'text',
 		nullable: true
 	})
 	noSideEffects: string
 
 	@Column({
 		name: 'side_effects',
-		nullable: true
+		type: 'text',
+		nullable: true,
+		array: true
 	})
-	sideEffects: string
+	sideEffects: string[]
 
 	@Column({
 		name: 'has_severe_side_effect',
@@ -314,30 +338,35 @@ export class ArtAdherence {
 
 	@Column({
 		name: 'adherence_since_last_visit',
+		type: 'text',
 		nullable: true
 	})
 	adherenceSinceLastVisit: string
 
 	@Column({
 		name: 'social_familial_situation',
+		type: 'text',
 		nullable: true
 	})
 	socialFamilialSituation: string
 
 	@Column({
 		name: 'social_problem',
+		type: 'text',
 		nullable: true
 	})
 	socialProblem: string
 
 	@Column({
 		name: 'caretaker_status',
+		type: 'text',
 		nullable: true
 	})
 	caretakerStatus: string
 
 	@Column({
 		name: 'caretaker_problem',
+		type: 'text',
 		nullable: true
 	})
 	caretakerProblem: string
@@ -351,6 +380,7 @@ export class ArtAdherence {
 
 	@Column({
 		name: 'psychological_disorder',
+		type: 'text',
 		nullable: true
 	})
 	psychologicalDisorder: string
@@ -383,18 +413,21 @@ export class ArtAdherence {
 
 	@Column({
 		name: 'conclusion',
+		type: 'text',
 		nullable: true
 	})
 	conclusion: string
 
 	@Column({
 		name: 'suggestions',
+		type: 'text',
 		nullable: true
 	})
 	suggestions: string
 
 	@Column({
 		name: 'checklist',
+		type: 'text',
 		nullable: true
 	})
 	checklist: string

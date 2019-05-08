@@ -10,23 +10,26 @@ export class AfbToMth {
 	@ManyToOne(type => TbKey, tbKey => tbKey.afbToMths, {
 		eager: true
 	})
-	@JoinColumn([{ name: 'mdmCode', referencedColumnName: 'mdmCode'}])
+	@JoinColumn([{ name: 'tb_key_mdm_code', referencedColumnName: 'mdmCode'}])
 	tbKey: TbKey
 
 	@Column({
 		name: 'sputum',
+		type: 'text',
 		nullable: true
 	})
 	sputum: string
 
 	@Column({
 		name: 'x',
+		type: 'text',
 		nullable: true
 	})
 	x: string
 
 	@Column({
 		name: 'culture',
+		type: 'text',
 		nullable: true
 	})
 	culture: string

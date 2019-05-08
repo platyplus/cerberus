@@ -23,11 +23,12 @@ export class AdherenceProblem {
 	@ManyToOne(type => ArtAdherence, artAdherence => artAdherence.adherenceProblems, {
 		eager: true
 	})
-	@JoinColumn([{ name: 'mdmCode', referencedColumnName: 'mdmCode'}, { name: 'placeOfMedicalCare', referencedColumnName: 'placeOfMedicalCare'}, { name: 'visitDate', referencedColumnName: 'visitDate'}])
+	@JoinColumn([{ name: 'art_adherence_mdm_code', referencedColumnName: 'mdmCode'}, { name: 'art_adherence_place_of_medical_care', referencedColumnName: 'placeOfMedicalCare'}, { name: 'art_adherence_visit_date', referencedColumnName: 'visitDate'}])
 	artAdherence: ArtAdherence
 
 	@Column({
 		name: 'name',
+		type: 'text',
 		nullable: true
 	})
 	name: string

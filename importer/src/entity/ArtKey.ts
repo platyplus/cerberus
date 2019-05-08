@@ -12,35 +12,41 @@ import { Apri } from './Apri'
 export class ArtKey {
 	@Column({
 		name: 'site_name',
+		type: 'text',
 		nullable: true
 	})
 	siteName: string
 
 	@Column({
 		name: 'jail_patient',
+		type: 'text',
 		nullable: true
 	})
 	jailPatient: string
 
 	@PrimaryColumn({
-		name: 'mdm_code'
+		name: 'mdm_code',
+		type: 'text'
 	})
 	mdmCode: string
 
 	@Column({
 		name: 'patient_name',
+		type: 'text',
 		nullable: true
 	})
 	patientName: string
 
 	@Column({
 		name: 'father_name',
+		type: 'text',
 		nullable: true
 	})
 	fatherName: string
 
 	@Column({
 		name: 'sex',
+		type: 'text',
 		nullable: true
 	})
 	sex: string
@@ -61,18 +67,21 @@ export class ArtKey {
 
 	@Column({
 		name: 'patient_target',
+		type: 'text',
 		nullable: true
 	})
 	patientTarget: string
 
 	@Column({
 		name: 'who_stage',
+		type: 'text',
 		nullable: true
 	})
 	whoStage: string
 
 	@Column({
 		name: 'referral',
+		type: 'text',
 		nullable: true
 	})
 	referral: string
@@ -86,12 +95,14 @@ export class ArtKey {
 
 	@Column({
 		name: 'referral_from',
+		type: 'text',
 		nullable: true
 	})
 	referralFrom: string
 
 	@Column({
 		name: 'other_mdm_center',
+		type: 'text',
 		nullable: true
 	})
 	otherMdmCenter: string
@@ -112,6 +123,7 @@ export class ArtKey {
 
 	@Column({
 		name: 'outcome',
+		type: 'text',
 		nullable: true
 	})
 	outcome: string
@@ -125,6 +137,7 @@ export class ArtKey {
 
 	@Column({
 		name: 'remarks',
+		type: 'text',
 		nullable: true
 	})
 	remarks: string
@@ -192,6 +205,7 @@ export class ArtKey {
 
 	@Column({
 		name: 'current_haart_regimen',
+		type: 'text',
 		nullable: true
 	})
 	currentHaartRegimen: string
@@ -212,12 +226,14 @@ export class ArtKey {
 
 	@Column({
 		name: 'previous_haart_regimen',
+		type: 'text',
 		nullable: true
 	})
 	previousHaartRegimen: string
 
 	@Column({
 		name: 'regimen',
+		type: 'text',
 		nullable: true
 	})
 	regimen: string
@@ -236,6 +252,7 @@ export class ArtKey {
 
 	@Column({
 		name: 'methadone',
+		type: 'text',
 		nullable: true
 	})
 	methadone: string
@@ -259,6 +276,7 @@ export class ArtKey {
 
 	@Column({
 		name: 'presenting_initial_o_is',
+		type: 'text',
 		nullable: true
 	})
 	presentingInitialOIs: string
@@ -275,30 +293,35 @@ export class ArtKey {
 
 	@Column({
 		name: 'ab_anti_hbs',
+		type: 'text',
 		nullable: true
 	})
 	abAntiHbs: string
 
 	@Column({
 		name: 'hbeag',
+		type: 'text',
 		nullable: true
 	})
 	hbeag: string
 
 	@Column({
 		name: 'hcv',
+		type: 'text',
 		nullable: true
 	})
 	hcv: string
 
 	@Column({
 		name: 'ag_hbs',
+		type: 'text',
 		nullable: true
 	})
 	agHbs: string
 
 	@Column({
 		name: 'vaccinated',
+		type: 'text',
 		nullable: true
 	})
 	vaccinated: string
@@ -310,18 +333,21 @@ export class ArtKey {
 
 	@Column({
 		name: 'liver_fibrosis',
+		type: 'text',
 		nullable: true
 	})
 	liverFibrosis: string
 
 	@Column({
 		name: 's_date',
+		type: 'text',
 		nullable: true
 	})
 	sDate: string
 
 	@Column({
 		name: 'o_date',
+		type: 'text',
 		nullable: true
 	})
 	oDate: string

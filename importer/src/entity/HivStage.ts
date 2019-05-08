@@ -36,11 +36,12 @@ export class HivStage {
 	@ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.hivStages, {
 		eager: true
 	})
-	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
+	@JoinColumn([{ name: 'art_consultation_plha_key', referencedColumnName: 'key'}])
 	artConsultationPlha: ArtConsultationPlha
 
 	@Column({
 		name: 'name',
+		type: 'text',
 		nullable: true
 	})
 	name: string

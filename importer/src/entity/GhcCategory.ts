@@ -10,17 +10,19 @@ export class GhcCategory {
 	@ManyToOne(type => GeneralHeathCare, generalHeathCare => generalHeathCare.ghcCategorys, {
 		eager: true
 	})
-	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
+	@JoinColumn([{ name: 'general_heath_care_key', referencedColumnName: 'key'}])
 	generalHeathCare: GeneralHeathCare
 
 	@Column({
 		name: 'name',
+		type: 'text',
 		nullable: true
 	})
 	name: string
 
 	@Column({
 		name: 'description',
+		type: 'text',
 		nullable: true
 	})
 	description: string

@@ -10,7 +10,7 @@ export class TreatmentInterruption {
 	@ManyToOne(type => ArtKey, artKey => artKey.treatmentInterruptions, {
 		eager: true
 	})
-	@JoinColumn([{ name: 'mdmCode', referencedColumnName: 'mdmCode'}])
+	@JoinColumn([{ name: 'art_key_mdm_code', referencedColumnName: 'mdmCode'}])
 	artKey: ArtKey
 
 	@Column({
@@ -29,6 +29,7 @@ export class TreatmentInterruption {
 
 	@Column({
 		name: 'reasion',
+		type: 'text',
 		nullable: true
 	})
 	reasion: string

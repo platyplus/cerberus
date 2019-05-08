@@ -18,6 +18,7 @@ export interface ColumnMapping {
   relation?: string
   property: string
   type: string
+  array?: boolean
   entityValues?: { [key: string]: string }
 }
 
