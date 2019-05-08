@@ -14,6 +14,12 @@ export class DrugType {
 	vcct: Vcct
 
 	@Column({
+		name: 'type_of_drugs',
+		nullable: true
+	})
+	typeOfDrugs: string
+
+	@Column({
 		name: 'drug_name',
 		nullable: true
 	})
@@ -24,11 +30,5 @@ export class DrugType {
 		nullable: true
 	})
 	wayOfUse: string
-
-	@Column({
-		name: 'type_of_drugs',
-		nullable: true
-	})
-	typeOfDrugs: string
 
 }

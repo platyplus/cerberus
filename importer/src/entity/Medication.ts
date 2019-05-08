@@ -30,6 +30,12 @@ export class Medication {
 	artConsultationPlhaArtMedication: ArtConsultationPlha
 
 	@Column({
+		name: 'name',
+		nullable: true
+	})
+	name: string
+
+	@Column({
 		name: 'dosage',
 		nullable: true
 	})
@@ -47,12 +53,6 @@ export class Medication {
 		nullable: true
 	})
 	numberDays: number
-
-	@Column({
-		name: 'name',
-		nullable: true
-	})
-	name: string
 
 	@ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.tbMedications, {
 		eager: true

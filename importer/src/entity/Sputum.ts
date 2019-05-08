@@ -14,6 +14,12 @@ export class Sputum {
 	artConsultationPlha: ArtConsultationPlha
 
 	@Column({
+		name: 'smear',
+		nullable: true
+	})
+	smear: string
+
+	@Column({
 		name: 'xpert',
 		nullable: true
 	})
@@ -67,11 +73,5 @@ export class Sputum {
 		nullable: true
 	})
 	tbOtherSample: string
-
-	@Column({
-		name: 'smear',
-		nullable: true
-	})
-	smear: string
 
 }

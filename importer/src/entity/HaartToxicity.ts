@@ -14,6 +14,12 @@ export class HaartToxicity {
 	artKey: ArtKey
 
 	@Column({
+		name: 'toxicity',
+		nullable: true
+	})
+	toxicity: string
+
+	@Column({
 		name: 'grade',
 		nullable: true
 	})
@@ -25,11 +31,5 @@ export class HaartToxicity {
 		nullable: true
 	})
 	date: Date
-
-	@Column({
-		name: 'toxicity',
-		nullable: true
-	})
-	toxicity: string
 
 }

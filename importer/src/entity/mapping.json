@@ -883,7 +883,7 @@
       },
       {
         "column": "12. ART_ARTNewPatient",
-        "property": "plhNewPatient",
+        "property": "artNewPatient",
         "type": "boolean"
       },
       {
@@ -893,322 +893,52 @@
       },
       {
         "column": "14. ART_PatientPartnerTested",
-        "property": "artPatientPartnerTested",
-        "type": "string"
+        "property": "partnerIsTested",
+        "type": "boolean"
       },
       {
         "column": "15. ART_PatientPartnerTestStatus",
-        "property": "artPatientPartnerTestStatus",
+        "property": "partnerTestStatus",
         "type": "string"
       },
       {
         "column": "16. ART_PatientDisclosedStatus",
-        "property": "artPatientDisclosedStatus",
-        "type": "string"
+        "property": "statusIsDisclosed",
+        "type": "boolean"
       },
       {
         "column": "17. ART_StatusDisclosedBy",
-        "property": "artStatusDisclosedBy",
+        "property": "statusDisclosedBy",
         "type": "string"
       },
       {
         "column": "18. ART_StatusDisclosedByOther",
-        "property": "artStatusDisclosedByOther",
+        "property": "statusDisclosedBy",
         "type": "string"
       },
       {
         "column": "19. ART_PatientTakingMedicines",
-        "property": "artPatientTakingMedicines",
-        "type": "string"
+        "property": "isTakingMedicines",
+        "type": "boolean"
       },
       {
         "column": "20. ART_PatientTakingFollowingMedicines",
-        "property": "artPatientTakingFollowingMedicines",
+        "property": "medicineTaken",
         "type": "string"
-      },
-      {
-        "column": "21. ART_AntiRetro_MedicineTaken1",
-        "relation": "artAntiRetroMedicineTakens",
-        "property": "name",
-        "type": "string"
-      },
-      {
-        "column": "22. ART_AntiRetro_MedicineTaken2",
-        "relation": "artAntiRetroMedicineTakens",
-        "property": "name",
-        "type": "string"
-      },
-      {
-        "column": "23. ART_AntiRetro_MedicineTaken3",
-        "relation": "artAntiRetroMedicineTakens",
-        "property": "name",
-        "type": "string"
-      },
-      {
-        "column": "24. ART_AntiRetro_MedicineTaken4",
-        "relation": "artAntiRetroMedicineTakens",
-        "property": "name",
-        "type": "string"
-      },
-      {
-        "column": "25. ART_AntiRetro_MedicineTaken5",
-        "relation": "artAntiRetroMedicineTakens",
-        "property": "name",
-        "type": "string"
-      },
-      {
-        "column": "26. ART_AntiBio_MedicineCode1",
-        "relation": "medicineCodes",
-        "property": "medicineCode",
-        "type": "string",
-        "entityValues": {
-          "type": "antibio"
-        }
-      },
-      {
-        "column": "27. ART_AntiBio_MedicineCode2",
-        "relation": "medicineCodes",
-        "property": "medicineCode",
-        "type": "string",
-        "entityValues": {
-          "type": "antibio"
-        }
-      },
-      {
-        "column": "28. ART_AntiBio_MedicineCode3",
-        "relation": "medicineCodes",
-        "property": "medicineCode",
-        "type": "string",
-        "entityValues": {
-          "type": "antibio"
-        }
-      },
-      {
-        "column": "29. ART_AntiBio_MedicineCode4",
-        "relation": "medicineCodes",
-        "property": "medicineCode",
-        "type": "string",
-        "entityValues": {
-          "type": "antibio"
-        }
-      },
-      {
-        "column": "30. ART_AntiBio_MedicineCode5",
-        "relation": "medicineCodes",
-        "property": "medicineCode",
-        "type": "string",
-        "entityValues": {
-          "type": "antibio"
-        }
-      },
-      {
-        "column": "31. ART_AntiTB_MedicineCode1",
-        "relation": "medicineCodes",
-        "property": "medicineCode",
-        "type": "string",
-        "entityValues": {
-          "type": "antitb"
-        }
-      },
-      {
-        "column": "32. ART_AntiTB_MedicineCode2",
-        "relation": "medicineCodes",
-        "property": "medicineCode",
-        "type": "string",
-        "entityValues": {
-          "type": "antitb"
-        }
-      },
-      {
-        "column": "33. ART_AntiTB_MedicineCode3",
-        "relation": "medicineCodes",
-        "property": "medicineCode",
-        "type": "string",
-        "entityValues": {
-          "type": "antitb"
-        }
-      },
-      {
-        "column": "34. ART_AntiTB_MedicineCode4",
-        "relation": "medicineCodes",
-        "property": "medicineCode",
-        "type": "string",
-        "entityValues": {
-          "type": "antitb"
-        }
-      },
-      {
-        "column": "35. ART_AntiTB_MedicineCode5",
-        "relation": "medicineCodes",
-        "property": "medicineCode",
-        "type": "string",
-        "entityValues": {
-          "type": "antitb"
-        }
       },
       {
         "column": "36. ART_PatientTakingOther",
-        "property": "artPatientTakingOther",
+        "property": "medicineTaken",
         "type": "string"
       },
       {
         "column": "37. ART_MedicationsComment",
-        "property": "artMedicationsComment",
+        "property": "medicationComments",
         "type": "string"
       },
       {
         "column": "38. ART_PatientTakenARVsBefore",
-        "property": "artPatientTakenArVsBefore",
-        "type": "string"
-      },
-      {
-        "column": "39. ART_MedicineTaken1",
-        "relation": "artTreatments",
-        "property": "medicineTaken",
-        "type": "string"
-      },
-      {
-        "column": "40. ART_MedicineName1",
-        "relation": "artTreatments",
-        "property": "medicineName",
-        "type": "string"
-      },
-      {
-        "column": "41. ART_StartDate1",
-        "relation": "artTreatments",
-        "property": "startDate",
-        "type": "Date"
-      },
-      {
-        "column": "42. ART_StopDate1",
-        "relation": "artTreatments",
-        "property": "stopDate",
-        "type": "Date"
-      },
-      {
-        "column": "43. ART_Interrupted1",
-        "relation": "artTreatments",
-        "property": "interrupted",
-        "type": "string"
-      },
-      {
-        "column": "44. ART_MedicineTaken2",
-        "relation": "artTreatments",
-        "property": "medicineTaken",
-        "type": "string"
-      },
-      {
-        "column": "45. ART_MedicineName2",
-        "relation": "artTreatments",
-        "property": "medicineName",
-        "type": "string"
-      },
-      {
-        "column": "46. ART_StartDate2",
-        "relation": "artTreatments",
-        "property": "startDate",
-        "type": "Date"
-      },
-      {
-        "column": "47. ART_StopDate2",
-        "relation": "artTreatments",
-        "property": "stopDate",
-        "type": "Date"
-      },
-      {
-        "column": "48. ART_Interrupted2",
-        "relation": "artTreatments",
-        "property": "interrupted",
-        "type": "string"
-      },
-      {
-        "column": "49. ART_MedicineTaken3",
-        "relation": "artTreatments",
-        "property": "medicineTaken",
-        "type": "string"
-      },
-      {
-        "column": "50. ART_MedicineName3",
-        "relation": "artTreatments",
-        "property": "medicineName",
-        "type": "string"
-      },
-      {
-        "column": "51. ART_StartDate3",
-        "relation": "artTreatments",
-        "property": "startDate",
-        "type": "Date"
-      },
-      {
-        "column": "52. ART_StopDate3",
-        "relation": "artTreatments",
-        "property": "stopDate",
-        "type": "Date"
-      },
-      {
-        "column": "53. ART_Interrupted3",
-        "relation": "artTreatments",
-        "property": "interrupted",
-        "type": "string"
-      },
-      {
-        "column": "54. ART_MedicineTaken4",
-        "relation": "artTreatments",
-        "property": "medicineTaken",
-        "type": "string"
-      },
-      {
-        "column": "55. ART_MedicineName4",
-        "relation": "artTreatments",
-        "property": "medicineName",
-        "type": "string"
-      },
-      {
-        "column": "56. ART_StartDate4",
-        "relation": "artTreatments",
-        "property": "startDate",
-        "type": "Date"
-      },
-      {
-        "column": "57. ART_StopDate4",
-        "relation": "artTreatments",
-        "property": "stopDate",
-        "type": "Date"
-      },
-      {
-        "column": "58. ART_Interrupted4",
-        "relation": "artTreatments",
-        "property": "interrupted",
-        "type": "string"
-      },
-      {
-        "column": "59. ART_MedicineTaken5",
-        "relation": "artTreatments",
-        "property": "medicineTaken",
-        "type": "string"
-      },
-      {
-        "column": "60. ART_MedicineName5",
-        "relation": "artTreatments",
-        "property": "medicineName",
-        "type": "string"
-      },
-      {
-        "column": "61. ART_StartDate5",
-        "relation": "artTreatments",
-        "property": "startDate",
-        "type": "Date"
-      },
-      {
-        "column": "62. ART_StopDate5",
-        "relation": "artTreatments",
-        "property": "stopDate",
-        "type": "Date"
-      },
-      {
-        "column": "63. ART_Interrupted5",
-        "relation": "artTreatments",
-        "property": "interrupted",
+        "property": "takenArvsBefore",
         "type": "string"
       },
       {
@@ -1683,219 +1413,234 @@
         "type": "string"
       },
       {
-        "column": "128. ART_Child_or_Adult",
-        "property": "artChildOrAdult",
-        "type": "string"
-      },
-      {
-        "column": "129. ART_Adult_Stage",
-        "relation": "artStages",
-        "property": "stage",
-        "type": "string",
-        "entityValues": {
-          "category": "adult"
-        }
-      },
-      {
         "column": "130. ART_Adult_Stage1",
-        "relation": "artStages",
-        "property": "stage",
+        "relation": "hivStages",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "category": "adult",
-          "stage": "stage 1"
+          "stage": "stage1"
         }
       },
       {
         "column": "131. ART_Adult_Stage2",
-        "relation": "artStages",
-        "property": "stage",
+        "relation": "hivStages",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "category": "adult",
-          "stage": "stage 2"
+          "stage": "stage2"
         }
       },
       {
         "column": "132. ART_Adult_Stage3",
-        "relation": "artStages",
-        "property": "stage",
+        "relation": "hivStages",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "category": "adult",
-          "stage": "stage 3"
+          "stage": "stage3"
         }
       },
       {
         "column": "133. ART_Adult_Stage4",
-        "relation": "artStages",
-        "property": "stage",
+        "relation": "hivStages",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "category": "adult",
-          "stage": "stage 4"
-        }
-      },
-      {
-        "column": "134. ART_Child_Stage",
-        "relation": "artStages",
-        "property": "stage",
-        "type": "string",
-        "entityValues": {
-          "category": "child"
+          "stage": "stage4"
         }
       },
       {
         "column": "135. ART_Child_Stage1",
-        "relation": "artStages",
-        "property": "stage",
+        "relation": "hivStages",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "category": "child",
-          "stage": "stage 1"
+          "stage": "stage1"
         }
       },
       {
         "column": "136. ART_Child_Stage2",
-        "relation": "artStages",
-        "property": "stage",
+        "relation": "hivStages",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "category": "child",
-          "stage": "stage 2"
+          "stage": "stage2"
         }
       },
       {
         "column": "137. ART_Child_Stage3",
-        "relation": "artStages",
-        "property": "stage",
+        "relation": "hivStages",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "category": "child",
-          "stage": "stage 3"
+          "stage": "stage3"
         }
       },
       {
         "column": "138. ART_Child_Stage4",
-        "relation": "artStages",
-        "property": "stage",
+        "relation": "hivStages",
+        "property": "name",
         "type": "string",
         "entityValues": {
           "category": "child",
-          "stage": "stage 4"
+          "stage": "stage4"
         }
       },
       {
         "column": "139. ART_PatientStatus",
-        "property": "artPatientStatus",
+        "property": "patientStatus",
         "type": "string"
       },
       {
         "column": "140. ART_OIDiagnosis",
-        "property": "artOiDiagnosis",
-        "type": "string"
+        "relation": "diagnosiss",
+        "property": "code",
+        "type": "string",
+        "entityValues": {
+          "category": "OI"
+        }
       },
       {
         "column": "141. ART_OIDiagnosisEPTB",
-        "property": "artOiDiagnosisEptb",
-        "type": "string"
+        "relation": "diagnosiss",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "OI",
+          "code": "EPTB"
+        }
       },
       {
         "column": "142. ART_OIDiagnosisOther",
-        "property": "artOiDiagnosisOther",
-        "type": "string"
+        "relation": "diagnosiss",
+        "property": "description",
+        "type": "string",
+        "entityValues": {
+          "category": "OI",
+          "code": "other"
+        }
       },
       {
         "column": "143. ART_GHC_DiaCode1",
         "relation": "diagnosiss",
         "property": "code",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "category": "GHC"
+        }
       },
       {
         "column": "144. ART_GHC_DiaDescription1",
         "relation": "diagnosiss",
         "property": "description",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "category": "GHC"
+        }
       },
       {
         "column": "145. ART_GHC_DiaCode2",
         "relation": "diagnosiss",
         "property": "code",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "category": "GHC"
+        }
       },
       {
         "column": "146. ART_GHC_DiaDescription2",
         "relation": "diagnosiss",
         "property": "description",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "category": "GHC"
+        }
       },
       {
         "column": "147. ART_GHC_DiaCode3",
         "relation": "diagnosiss",
         "property": "code",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "category": "GHC"
+        }
       },
       {
         "column": "148. ART_GHC_DiaDescription3",
         "relation": "diagnosiss",
         "property": "description",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "category": "GHC"
+        }
       },
       {
         "column": "149. ART_GHC_DiaCode4",
         "relation": "diagnosiss",
         "property": "code",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "category": "GHC"
+        }
       },
       {
         "column": "150. ART_GHC_DiaDescription4",
         "relation": "diagnosiss",
         "property": "description",
-        "type": "string"
+        "type": "string",
+        "entityValues": {
+          "category": "GHC"
+        }
       },
       {
         "column": "151. ART_Diagnosis_Comments",
-        "property": "artDiagnosisComments",
+        "property": "diagnosisComments",
         "type": "string"
       },
       {
         "column": "152. ART_FirstCD4",
-        "property": "artFirstCd",
+        "property": "firstCd",
         "type": "number"
       },
       {
         "column": "153. ART_LastCD4",
-        "property": "artLastCd",
+        "property": "lastCd",
         "type": "number"
       },
       {
         "column": "154. ART_ViralLoad_Result",
-        "property": "artViralLoadResult",
+        "property": "viralLoadResult",
         "type": "string"
       },
       {
         "column": "155. ART_HBsAg",
-        "property": "artHBsAg",
+        "property": "hbsag",
         "type": "string"
       },
       {
         "column": "156. ART_HBsAb",
-        "property": "artHBsAb",
+        "property": "hsbab",
         "type": "string"
       },
       {
         "column": "157. ART_HCVAb",
-        "property": "artHcvAb",
+        "property": "hcvab",
         "type": "string"
       },
       {
         "column": "158. ART_APRI",
-        "property": "artApri",
+        "property": "apri",
         "type": "number"
       },
       {
         "column": "159. ART_LiverFibrosis",
-        "property": "artLiverFibrosis",
+        "property": "livrerFibrosis",
         "type": "string"
       },
       {

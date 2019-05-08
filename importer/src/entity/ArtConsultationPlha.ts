@@ -1,10 +1,8 @@
 // AUTOMATICALLY GENERATED FILE - DO NOT EDIT - MODIFICATIONS WILL BE LOST
 import { Entity, PrimaryColumn, Column, OneToMany } from 'typeorm'
-import { ArtAntiRetroMedicineTaken } from './ArtAntiRetroMedicineTaken'
-import { MedicineCode } from './MedicineCode'
 import { Symptom } from './Symptom'
 import { PhysicalExam } from './PhysicalExam'
-import { ArtStage } from './ArtStage'
+import { HivStage } from './HivStage'
 import { Diagnosis } from './Diagnosis'
 import { Sputum } from './Sputum'
 import { Prophylaxis } from './Prophylaxis'
@@ -84,6 +82,13 @@ export class ArtConsultationPlha {
 	plhNewPatient: boolean
 
 	@Column({
+		name: 'art_new_patient',
+		type: 'boolean',
+		nullable: true
+	})
+	artNewPatient: boolean
+
+	@Column({
 		name: 'art_treatment',
 		type: 'boolean',
 		nullable: true
@@ -91,74 +96,55 @@ export class ArtConsultationPlha {
 	artTreatment: boolean
 
 	@Column({
-		name: 'art_patient_partner_tested',
+		name: 'partner_is_tested',
+		type: 'boolean',
 		nullable: true
 	})
-	artPatientPartnerTested: string
+	partnerIsTested: boolean
 
 	@Column({
-		name: 'art_patient_partner_test_status',
+		name: 'partner_test_status',
 		nullable: true
 	})
-	artPatientPartnerTestStatus: string
+	partnerTestStatus: string
 
 	@Column({
-		name: 'art_patient_disclosed_status',
+		name: 'status_is_disclosed',
+		type: 'boolean',
 		nullable: true
 	})
-	artPatientDisclosedStatus: string
+	statusIsDisclosed: boolean
 
 	@Column({
-		name: 'art_status_disclosed_by',
+		name: 'status_disclosed_by',
 		nullable: true
 	})
-	artStatusDisclosedBy: string
+	statusDisclosedBy: string
 
 	@Column({
-		name: 'art_status_disclosed_by_other',
+		name: 'is_taking_medicines',
+		type: 'boolean',
 		nullable: true
 	})
-	artStatusDisclosedByOther: string
+	isTakingMedicines: boolean
 
 	@Column({
-		name: 'art_patient_taking_medicines',
+		name: 'medicine_taken',
 		nullable: true
 	})
-	artPatientTakingMedicines: string
+	medicineTaken: string
 
 	@Column({
-		name: 'art_patient_taking_following_medicines',
+		name: 'medication_comments',
 		nullable: true
 	})
-	artPatientTakingFollowingMedicines: string
-
-	@OneToMany(type => ArtAntiRetroMedicineTaken, artAntiRetroMedicineTaken => artAntiRetroMedicineTaken.artConsultationPlha, {
-		cascade: true
-	})
-	artAntiRetroMedicineTakens: ArtAntiRetroMedicineTaken[]
-
-	@OneToMany(type => MedicineCode, medicineCode => medicineCode.artConsultationPlha, {
-		cascade: true
-	})
-	medicineCodes: MedicineCode[]
+	medicationComments: string
 
 	@Column({
-		name: 'art_patient_taking_other',
+		name: 'taken_arvs_before',
 		nullable: true
 	})
-	artPatientTakingOther: string
-
-	@Column({
-		name: 'art_medications_comment',
-		nullable: true
-	})
-	artMedicationsComment: string
-
-	@Column({
-		name: 'art_patient_taken_ar_vs_before',
-		nullable: true
-	})
-	artPatientTakenArVsBefore: string
+	takenArvsBefore: string
 
 	@Column({
 		name: 'art_arv_comment',
@@ -274,40 +260,16 @@ export class ArtConsultationPlha {
 	})
 	physicalExamComments: string
 
-	@Column({
-		name: 'art_child_or_adult',
-		nullable: true
-	})
-	artChildOrAdult: string
-
-	@OneToMany(type => ArtStage, artStage => artStage.artConsultationPlha, {
+	@OneToMany(type => HivStage, hivStage => hivStage.artConsultationPlha, {
 		cascade: true
 	})
-	artStages: ArtStage[]
+	hivStages: HivStage[]
 
 	@Column({
-		name: 'art_patient_status',
+		name: 'patient_status',
 		nullable: true
 	})
-	artPatientStatus: string
-
-	@Column({
-		name: 'art_oi_diagnosis',
-		nullable: true
-	})
-	artOiDiagnosis: string
-
-	@Column({
-		name: 'art_oi_diagnosis_eptb',
-		nullable: true
-	})
-	artOiDiagnosisEptb: string
-
-	@Column({
-		name: 'art_oi_diagnosis_other',
-		nullable: true
-	})
-	artOiDiagnosisOther: string
+	patientStatus: string
 
 	@OneToMany(type => Diagnosis, diagnosis => diagnosis.artConsultationPlha, {
 		cascade: true
@@ -315,61 +277,61 @@ export class ArtConsultationPlha {
 	diagnosiss: Diagnosis[]
 
 	@Column({
-		name: 'art_diagnosis_comments',
+		name: 'diagnosis_comments',
 		nullable: true
 	})
-	artDiagnosisComments: string
+	diagnosisComments: string
 
 	@Column({
-		name: 'art_first_cd',
+		name: 'first_cd',
 		type: 'integer',
 		nullable: true
 	})
-	artFirstCd: number
+	firstCd: number
 
 	@Column({
-		name: 'art_last_cd',
+		name: 'last_cd',
 		type: 'integer',
 		nullable: true
 	})
-	artLastCd: number
+	lastCd: number
 
 	@Column({
-		name: 'art_viral_load_result',
+		name: 'viral_load_result',
 		nullable: true
 	})
-	artViralLoadResult: string
+	viralLoadResult: string
 
 	@Column({
-		name: 'art_h_bs_ag',
+		name: 'hbsag',
 		nullable: true
 	})
-	artHBsAg: string
+	hbsag: string
 
 	@Column({
-		name: 'art_h_bs_ab',
+		name: 'hsbab',
 		nullable: true
 	})
-	artHBsAb: string
+	hsbab: string
 
 	@Column({
-		name: 'art_hcv_ab',
+		name: 'hcvab',
 		nullable: true
 	})
-	artHcvAb: string
+	hcvab: string
 
 	@Column({
-		name: 'art_apri',
+		name: 'apri',
 		type: 'integer',
 		nullable: true
 	})
-	artApri: number
+	apri: number
 
 	@Column({
-		name: 'art_liver_fibrosis',
+		name: 'livrer_fibrosis',
 		nullable: true
 	})
-	artLiverFibrosis: string
+	livrerFibrosis: string
 
 	@OneToMany(type => Sputum, sputum => sputum.artConsultationPlha, {
 		cascade: true

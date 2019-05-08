@@ -14,6 +14,13 @@ export class TbKeySample {
 	tbKey: TbKey
 
 	@Column({
+		name: 'sample_date',
+		type: 'timestamptz',
+		nullable: true
+	})
+	sampleDate: Date
+
+	@Column({
 		name: 'method',
 		nullable: true
 	})
@@ -72,12 +79,5 @@ export class TbKeySample {
 		nullable: true
 	})
 	other: string
-
-	@Column({
-		name: 'sample_date',
-		type: 'timestamptz',
-		nullable: true
-	})
-	sampleDate: Date
 
 }

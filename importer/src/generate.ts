@@ -197,14 +197,14 @@ const createGroupRelations = (entity: Entity, row: Row) => {
   if (groups) {
     let r = emptyRow()
     for (let key of Object.keys(groups)) {
-      let enumPropery = <EnumProperty>entity.findProperty(relationName(key))
-      if (!enumPropery) {
+      let enumProperty = <EnumProperty>entity.findProperty(relationName(key))
+      if (!enumProperty) {
         r.form = row.form
         r.property_name = relationName(key)
         r.property_type = entityName(key)
-        enumPropery = new EnumProperty(r, entity)
+        enumProperty = new EnumProperty(r, entity)
       }
-      enumPropery.addOption(groups[key])
+      if (enumProperty.addOption) enumProperty.addOption(groups[key])
     }
   }
 }
@@ -231,15 +231,14 @@ class Entity {
       let relationEntity = repository.findOrCreate(row.relation_type)
       createGroupRelations(relationEntity, row)
       if (!this.findProperty(row.relation_name || row.relation_type))
-        return new OneToManyProperty(row, this, relationEntity)
+        new OneToManyProperty(row, this, relationEntity)
       if (!relationEntity.findProperty(row.property_name))
-        return new SimpleProperty(row, relationEntity)
+        new SimpleProperty(row, relationEntity)
     } else {
       createGroupRelations(this, row)
       if (!this.findProperty(row.property_name))
-        if (row.property_multiplicity === 'many')
-          return new MultiplePropery(row, this)
-        else return new SimpleProperty(row, this)
+        if (row.property_multiplicity === 'many') new MultiplePropery(row, this)
+        else new SimpleProperty(row, this)
     }
   }
 
@@ -291,7 +290,12 @@ class EntityManager {
   }
 
   pushRow(row: Row): void {
-    if (row.import === 'no') return
+    if (
+      row.import === 'no' ||
+      _.isEmpty(row.property_type) ||
+      _.isEmpty(row.property_name)
+    )
+      return
     let entity = this.findOrCreate(row.form)
     entity.push(row, this)
     let entityMapping = this.mapping.find(m => m.entity === entity.name)

@@ -14,6 +14,13 @@ export class Cd4Measurement {
 	artKey: ArtKey
 
 	@Column({
+		name: 'weight',
+		type: 'integer',
+		nullable: true
+	})
+	weight: number
+
+	@Column({
 		name: 'date',
 		type: 'timestamptz',
 		nullable: true
@@ -26,12 +33,5 @@ export class Cd4Measurement {
 		nullable: true
 	})
 	cd: number
-
-	@Column({
-		name: 'weight',
-		type: 'integer',
-		nullable: true
-	})
-	weight: number
 
 }

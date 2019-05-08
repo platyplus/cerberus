@@ -19,16 +19,16 @@ export class Prophylaxis {
 	artConsultationPlha: ArtConsultationPlha
 
 	@Column({
+		name: 'name',
+		nullable: true
+	})
+	name: string
+
+	@Column({
 		name: 'type',
 		nullable: true,
 		enum: TypeEnum
 	})
 	type: TypeEnum
-
-	@Column({
-		name: 'name',
-		nullable: true
-	})
-	name: string
 
 }

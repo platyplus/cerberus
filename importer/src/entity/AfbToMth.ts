@@ -14,6 +14,12 @@ export class AfbToMth {
 	tbKey: TbKey
 
 	@Column({
+		name: 'sputum',
+		nullable: true
+	})
+	sputum: string
+
+	@Column({
 		name: 'x',
 		nullable: true
 	})
@@ -24,12 +30,6 @@ export class AfbToMth {
 		nullable: true
 	})
 	culture: string
-
-	@Column({
-		name: 'sputum',
-		nullable: true
-	})
-	sputum: string
 
 	@Column({
 		name: 'positive',

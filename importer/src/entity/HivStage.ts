@@ -8,14 +8,14 @@ export enum CategoryEnum {
 }
 
 export enum StageEnum { 
-	STAGE_1 = 'stage 1', 
-	STAGE_2 = 'stage 2', 
-	STAGE_3 = 'stage 3', 
-	STAGE_4 = 'stage 4' 
+	STAGE_1 = 'stage1', 
+	STAGE_2 = 'stage2', 
+	STAGE_3 = 'stage3', 
+	STAGE_4 = 'stage4' 
 }
 
 @Entity()
-export class ArtStage {
+export class HivStage {
 	@PrimaryGeneratedColumn('uuid')
 	id: string
 
@@ -33,10 +33,16 @@ export class ArtStage {
 	})
 	stage: StageEnum
 
-	@ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.artStages, {
+	@ManyToOne(type => ArtConsultationPlha, artConsultationPlha => artConsultationPlha.hivStages, {
 		eager: true
 	})
 	@JoinColumn([{ name: 'key', referencedColumnName: 'key'}])
 	artConsultationPlha: ArtConsultationPlha
+
+	@Column({
+		name: 'name',
+		nullable: true
+	})
+	name: string
 
 }

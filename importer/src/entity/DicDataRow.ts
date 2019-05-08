@@ -73,6 +73,13 @@ export class DicDataRow {
 	dicData: DicData
 
 	@Column({
+		name: 'total',
+		type: 'integer',
+		nullable: true
+	})
+	total: number
+
+	@Column({
 		name: 'new_sw',
 		type: 'integer',
 		nullable: true
@@ -113,12 +120,5 @@ export class DicDataRow {
 		nullable: true
 	})
 	repeaterOther: number
-
-	@Column({
-		name: 'total',
-		type: 'integer',
-		nullable: true
-	})
-	total: number
 
 }

@@ -26,17 +26,17 @@ export class TreatmentEpisode {
 	artAdherence: ArtAdherence
 
 	@Column({
-		name: 'restarting_date',
-		type: 'timestamptz',
-		nullable: true
-	})
-	restartingDate: Date
-
-	@Column({
 		name: 'stop_date',
 		type: 'timestamptz',
 		nullable: true
 	})
 	stopDate: Date
+
+	@Column({
+		name: 'restarting_date',
+		type: 'timestamptz',
+		nullable: true
+	})
+	restartingDate: Date
 
 }

@@ -14,6 +14,12 @@ export class ArtKeyAttb {
 	artKey: ArtKey
 
 	@Column({
+		name: 'tb',
+		nullable: true
+	})
+	tb: string
+
+	@Column({
 		name: 'attb_regimen',
 		nullable: true
 	})
@@ -39,11 +45,5 @@ export class ArtKeyAttb {
 		nullable: true
 	})
 	endDateOfAttbCp: Date
-
-	@Column({
-		name: 'tb',
-		nullable: true
-	})
-	tb: string
 
 }

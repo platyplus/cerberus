@@ -3,12 +3,9 @@ import { TreatmentEpisode } from './TreatmentEpisode'
 import { AdherenceProblem } from './AdherenceProblem'
 import { DrugUsage } from './DrugUsage'
 import { ArtConsultationPlha } from './ArtConsultationPlha'
-import { ArtAntiRetroMedicineTaken } from './ArtAntiRetroMedicineTaken'
-import { MedicineCode } from './MedicineCode'
-import { ArtTreatment } from './ArtTreatment'
 import { Symptom } from './Symptom'
 import { PhysicalExam } from './PhysicalExam'
-import { ArtStage } from './ArtStage'
+import { HivStage } from './HivStage'
 import { Diagnosis } from './Diagnosis'
 import { Sputum } from './Sputum'
 import { Prophylaxis } from './Prophylaxis'
@@ -43,12 +40,9 @@ export const classes: { [key: string]: any } = {
 	'AdherenceProblem': AdherenceProblem,
 	'DrugUsage': DrugUsage,
 	'ArtConsultationPlha': ArtConsultationPlha,
-	'ArtAntiRetroMedicineTaken': ArtAntiRetroMedicineTaken,
-	'MedicineCode': MedicineCode,
-	'ArtTreatment': ArtTreatment,
 	'Symptom': Symptom,
 	'PhysicalExam': PhysicalExam,
-	'ArtStage': ArtStage,
+	'HivStage': HivStage,
 	'Diagnosis': Diagnosis,
 	'Sputum': Sputum,
 	'Prophylaxis': Prophylaxis,

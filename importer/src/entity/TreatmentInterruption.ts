@@ -14,6 +14,13 @@ export class TreatmentInterruption {
 	artKey: ArtKey
 
 	@Column({
+		name: 'stop_date',
+		type: 'timestamptz',
+		nullable: true
+	})
+	stopDate: Date
+
+	@Column({
 		name: 'restart_date',
 		type: 'timestamptz',
 		nullable: true
@@ -32,12 +39,5 @@ export class TreatmentInterruption {
 		nullable: true
 	})
 	missedDoses: number
-
-	@Column({
-		name: 'stop_date',
-		type: 'timestamptz',
-		nullable: true
-	})
-	stopDate: Date
 
 }
