@@ -32,6 +32,12 @@ import { AfbToMth } from './AfbToMth'
 import { TbKeySample } from './TbKeySample'
 import { Vcct } from './Vcct'
 import { DrugType } from './DrugType'
+import { Afb } from './Afb'
+import { Cd4 } from './Cd4'
+import { Hepatitis } from './Hepatitis'
+import { Oi } from './Oi'
+import { StiLab } from './StiLab'
+import { HivLab } from './HivLab'
 
 export const classes: { [key: string]: any } = {
   'ArtAdherence': ArtAdherence,
@@ -67,5 +73,11 @@ export const classes: { [key: string]: any } = {
 	'AfbToMth': AfbToMth,
 	'TbKeySample': TbKeySample,
 	'Vcct': Vcct,
-	'DrugType': DrugType
+	'DrugType': DrugType,
+	'Afb': Afb,
+	'Cd4': Cd4,
+	'Hepatitis': Hepatitis,
+	'Oi': Oi,
+	'StiLab': StiLab,
+	'HivLab': HivLab
 }

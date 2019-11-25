@@ -10063,5 +10063,65 @@
         "type": "string"
       }
     ]
+  },
+  {
+    "file": "AFB",
+    "entity": "Afb",
+    "columns": [
+      {
+        "property": "mdmLab",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "file": "CD4",
+    "entity": "Cd4",
+    "columns": [
+      {
+        "property": "mdmLab",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "file": "Hepatitis",
+    "entity": "Hepatitis",
+    "columns": [
+      {
+        "property": "mdmLab",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "file": "OI",
+    "entity": "Oi",
+    "columns": [
+      {
+        "property": "mdmLab",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "file": "STI_Lab",
+    "entity": "StiLab",
+    "columns": [
+      {
+        "property": "stiMdmLab",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "file": "HIV_Lab",
+    "entity": "HivLab",
+    "columns": [
+      {
+        "property": "hivMdmLab",
+        "type": "string"
+      }
+    ]
   }
 ]
