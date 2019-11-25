@@ -1,6 +1,6 @@
-# Cerberus
+# Sphinx Metadata normaliser and loader
 
-## TODO
+<!-- ## TODO
 
 - [ ] Metadata for lab
 - [ ] Metadata for viral load and tracking
@@ -16,7 +16,7 @@
 - [ ] database column and table comments
 - [ ] migrations after generating new classes? (tricky as we need postgres to be running -> in the readme)
 - [ ] simple enum column with options
-- [ ] convert Row interface into a class, and add methods such as getGroups, and replace emptyRow()
+- [ ] convert Row interface into a class, and add methods such as getGroups, and replace emptyRow() -->
 
 ## Installation
 
